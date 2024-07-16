@@ -59,7 +59,7 @@ INSERT INTO demo_window (new_id, new_cat) VALUES
 (500, 'Vayu');
 
 --   
-
+create database sales_performance_db;
 USE sales_performance_db;
 
 CREATE TABLE sales (
@@ -92,3 +92,6 @@ SELECT
     SUM(sale_amount) OVER (PARTITION BY salesperson_id ORDER BY sale_date) AS running_total
 FROM 
     sales;
+
+
+-- ==============
