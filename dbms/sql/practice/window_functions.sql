@@ -21,6 +21,7 @@ INSERT INTO sales (sales_id, salesperson_id, sale_date, sale_amount) VALUES
 (9, 102, '2023-01-09', 300.00),
 (10, 103, '2023-01-10', 800.00);
 
+select * from  sales;
 
 -- Example Query 1: Running Total of Sales
 SELECT 
@@ -93,5 +94,37 @@ SELECT
 FROM 
     sales;
 
-
 -- ==============
+
+
+SELECT 
+    salesperson_id,
+    sale_date,
+    sale_amount,
+    RANK() OVER (PARTITION BY salesperson_id ORDER BY sale_amount DESC)
+    AS sales_rank
+FROM 
+    sales;
+    
+ -- ------------- 
+SELECT 
+    salesperson_id,
+    sale_date,
+    sale_amount,
+    RANK() OVER (ORDER BY sale_amount DESC)
+    AS sales_rank
+FROM 
+    sales;
+
+
+-- ------
+
+SELECT 
+    salesperson_id,
+    sale_date,
+    sale_amount,
+    RANK() OVER (PARTITION BY salesperson_id )
+    AS sales_rank
+FROM 
+    sales;
+    
