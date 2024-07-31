@@ -1,7 +1,9 @@
 CREATE DATABASE salesdb1;
 USE salesdb1 ;
-CREATE TABLE Customers (
-    CustomerID INT PRIMARY KEY,
+
+CREATE TABLE students (
+    student VARCHAR(50),
+    student_id int;
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Email VARCHAR(100),
@@ -14,12 +16,12 @@ CREATE TABLE Customers (
     SignUpDate DATE
 );
 
-INSERT INTO Customers VALUES
+INSERT INTO studentns VALUES
 (1, 'John', 'Doe', 'john.doe@example.com', '123-456-7890', '123 Elm St', 'Springfield', 'IL', '62701', 'USA', '2023-01-15'),
 (2, 'Jane', 'Smith', 'jane.smith@example.com', '234-567-8901', '456 Oak St', 'Chicago', 'IL', '60601', 'USA', '2023-02-20'),
 (3, 'Alice', 'Johnson', 'alice.johnson@example.com', '345-678-9012', '789 Pine St', 'Houston', 'TX', '77001', 'USA', '2023-03-10');
 
-CREATE TABLE Products (
+CREATE TABLE students (
     ProductID INT PRIMARY KEY,
     ProductName VARCHAR(100),
     Category VARCHAR(50),
