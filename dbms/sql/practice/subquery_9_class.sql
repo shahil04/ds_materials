@@ -42,3 +42,32 @@ INSERT INTO projects (project_id, project_name, manager_id) VALUES
 (1002, 'Beta', 3),
 (1003, 'Gamma', 5);
 
+SELECT 
+    employee_id, 
+    first_name, 
+    last_name, 
+    salary,
+(select max(salary) from employees) as maxx,
+((select max(salary) from employees)- salary) as difference
+from employees;
+
+
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary = (SELECT MAX(salary) FROM employees);
+
+INSERT INTO employees (employee_id, first_name, last_name, department_id, salary) VALUES
+(6, 'Joe', 'Doe', 101, 80000.00);
+
+SELECT first_name, last_name
+FROM employees
+WHERE department_id IN (SELECT department_id FROM departments WHERE department_name = 'IT');
+
+select * from employees;
+
+SELECT employee_id, first_name, last_name, salary
+FROM employees e
+WHERE salary >= (SELECT AVG(salary) 
+                FROM employees 
+                WHERE department_id = e.department_id)
+;
