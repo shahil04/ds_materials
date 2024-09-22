@@ -1,22 +1,3 @@
-Table,Field,Description
-accounts,account,Company name
-accounts,sector,Industry
-accounts,year_established,Year Established
-accounts,revenue,Annual revenue (in millions of USD)
-accounts,employees,Number of employees
-accounts,office_location,Headquarters
-accounts,subsidiary_of,Parent company
-products,product,Product name
-products,series,Product series
-products,sales_price,Suggested retail price
-sales_teams,sales_agent,Sales agent
-sales_teams,manager,Respective sales manager
-sales_teams,regional_office,Regional office
-sales_pipeline,opportunity_id,Unique identifier
-sales_pipeline,sales_agent,Sales agent 
-sales_pipeline,product,Product name
-sales_pipeline,account,Company name
-sales_pipeline,deal_stage,Sales pipeline stage (Prospecting > Engaging > Won / Lost)
-sales_pipeline,engage_date,"Date in which the ""Engaging"" deal stage was initiated"
-sales_pipeline,close_date,"Date in which the deal was ""Won"" or ""Lost"""
-sales_pipeline,close_value,Revenue from the deal
+version https://git-lfs.github.com/spec/v1
+oid sha256:63ef4f284980ed75526f1f5bab25846e8ba75107ff7d877f151e2021ba355141
+size 974
