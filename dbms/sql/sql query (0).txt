@@ -2,9 +2,9 @@ DAY 1
 
 -- DDL - create , alter , truncate , drop 
 
-create database pwskills;
+create database demodb;
 
-use pwskills;
+use demodb;
 
 
 
@@ -23,7 +23,7 @@ describe pwstudents;
 
 drop table pwStudents;
 
-drop database pwskills;
+drop database demodb;
 
 alter table pwstudents1 add weight float;
 
@@ -53,7 +53,7 @@ drop table insurance_data;
 
 DAY 2
 
-use pwskills;
+use demodb;
 
 -- create table tablename (
 -- columnname1 datatype constraint,
@@ -112,7 +112,7 @@ select t_id from teachers;
 
 -- operations - from , join , where , group by , having , select , order by , limit
 
-use pwskills;
+use demodb;
 
 use mavenmovies;
 
