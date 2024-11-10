@@ -90,5 +90,9 @@ select first_name from actor
 union 
 select awards from actor_award;
 
+use mavenmovies;
+
+-- cross join 
 select * from actor
 cross join actor_award;
+
