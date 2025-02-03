@@ -1,0 +1,29 @@
+Create a dashboard which includes:
+
+KPI for:
+
+Total policies
+Average annual premium
+Total injury claims
+Total property claims
+Total vehicle claims
+Selection Panel for:
+
+Model selection
+Incident type legend
+Claim type legend
+Charts:
+
+Scatter plot: Analyzing model-wise capital gain and loss
+Pie chart: Showing gender-wise percentage of bodily injury
+Side-by-side bar chart: Showing total claims by type contacted to the authority
+Action Filters:
+
+Filter action on the pie chart to filter the side-by-side bar chart based on gender selection.
+"Go to sheet" and "Highlight" action on the side-by-side bar chart. Upon clicking a bar, the control should shift to the 2nd dashboard, where the respective selected bar data should be highlighted.
+Create a title for the dashboard that includes the current date and time.
+
+Dataset Link:
+Insurance Dataset --> https://itv-contentbucket.s3.ap-south-1.amazonaws.com/Exams/Tableau/insurance.xlsx
+
+Note: Upload the assignment in PDF format, including the required code screenshots and output screenshots.
