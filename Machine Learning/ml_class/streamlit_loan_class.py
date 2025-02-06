@@ -45,4 +45,6 @@ if uploaded_file is not None:
     df.to_csv("predicted_loans.csv", index=False)
     st.download_button("Download Predictions", "predicted_loans.csv")
 
-# streamlit run streamlit_loan.py
+# python -m streamlit run streamlit_loan_clas.py
+# python -m streamlit run streamlit_loan_class.py
+# pip install streamlit
