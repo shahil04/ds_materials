@@ -29,16 +29,16 @@ if st.button("Predict Loan Amount"):
     customer_segment = model.predict(input_data)[0]
     
     if customer_segment==0:
-        st.success(f"modrate customer {customer_segment}")
+        st.success(f"modrate customer {customer_segment} 20%")
     elif customer_segment==1:
-        st.success(f"premium customer {customer_segment}")
+        st.success(f"premium customer 70% {customer_segment}")
     elif customer_segment==2:
-        st.success(f"medium customer{customer_segment}")
+        st.success(f"medium customer{customer_segment} 30%" )
     elif customer_segment==3:
-        st.success(f"high income low spending customer {customer_segment}")
+        st.success(f"high income low spending customer {customer_segment} 90%")
 
     else:
-        st.success(f"low income low spending customer {customer_segment}")
+        st.success(f"low income low spending customer {customer_segment} 10%")
 
 #  streamlit run
 # python -m streamlit run unsupervised_project.py
