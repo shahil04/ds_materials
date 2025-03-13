@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<data grt_format="2.0">
+  <value _ptr_="000001791CDD7240" type="list" content-type="object" content-struct-name="db.mgmt.ServerInstance">
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{30B33EA3-7082-4D08-A239-139A373FA892}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{4F5D5397-083E-46FB-962C-0A7ACAA54963}</link>
+      <value _ptr_="0000017923238640" type="dict" key="loginInfo">
+        <value type="string" key="wmi.hostName"></value>
+        <value type="string" key="wmi.userName"></value>
+      </value>
+      <value _ptr_="0000017923238EE0" type="dict" key="serverInfo">
+        <value type="string" key="basedir">C:\Program Files\MySQL\MySQL Server 8.0\</value>
+        <value type="string" key="datadir">C:\ProgramData\MySQL\MySQL Server 8.0\Data\</value>
+        <value type="string" key="errorLogFilePath">5CG7321414.err</value>
+        <value type="string" key="generalLogFilePath">5CG7321414.log</value>
+        <value type="string" key="serverVersion">8.0.39</value>
+        <value type="int" key="setupPending">1</value>
+        <value type="int" key="slowLogEnabled">1</value>
+        <value type="string" key="slowLogFilePath">5CG7321414-slow.log</value>
+        <value type="string" key="sys.config.path">C:\ProgramData\MySQL\MySQL Server 8.0\my.ini</value>
+        <value type="int" key="sys.config.path.lock">1</value>
+        <value type="string" key="sys.config.section">mysqld</value>
+        <value type="string" key="sys.mysqld.service_name">MySQL80</value>
+        <value type="string" key="sys.preset">Custom</value>
+        <value type="string" key="sys.system">Windows</value>
+        <value type="int" key="sys.usesudo">0</value>
+        <value type="int" key="sys.usesudostatus">0</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">Local MySQL80</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{8956F50D-F22A-4702-AEC5-C2913CFC7698}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{05C97EFA-C3BD-4BF9-AF24-BE0F49D5E1A6}</link>
+      <value _ptr_="00000179232387C0" type="dict" key="loginInfo">
+        <value type="string" key="ssh.hostName"></value>
+        <value type="string" key="ssh.key">C:\Users\hp\AppData\Roaming/.ssh/ssh_private_key</value>
+        <value type="string" key="ssh.localPort">3306</value>
+        <value type="int" key="ssh.useKey">0</value>
+        <value type="string" key="ssh.userName">mysql</value>
+      </value>
+      <value _ptr_="00000179232379E0" type="dict" key="serverInfo">
+        <value type="int" key="setupPending">1</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">demo</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{3FE43455-DD57-43CB-B757-B26AD053FF51}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{4F5D5397-083E-46FB-962C-0A7ACAA54963}</link>
+      <value _ptr_="0000017923237BC0" type="dict" key="loginInfo">
+        <value type="string" key="wmi.hostName"></value>
+        <value type="string" key="wmi.userName"></value>
+      </value>
+      <value _ptr_="00000179232393C0" type="dict" key="serverInfo">
+        <value type="int" key="setupPending">1</value>
+        <value type="string" key="sys.config.path">C:\ProgramData\MySQL\MySQL Server 8.0\my.ini</value>
+        <value type="int" key="sys.config.path.lock">1</value>
+        <value type="string" key="sys.config.section">mysqld</value>
+        <value type="string" key="sys.mysqld.service_name">MySQL80</value>
+        <value type="string" key="sys.preset">Custom</value>
+        <value type="string" key="sys.system">Windows</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">Local MySQL80</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{0B7BD249-14FE-4718-8DB9-A7DC7C527700}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{EBFEE3DE-F3EE-4478-90AB-ABAB9C2593C4}</link>
+      <value _ptr_="00000179232399C0" type="dict" key="loginInfo">
+        <value type="string" key="ssh.hostName"></value>
+        <value type="string" key="ssh.key">C:\Users\hp\AppData\Roaming/.ssh/ssh_private_key</value>
+        <value type="string" key="ssh.localPort">3306</value>
+        <value type="int" key="ssh.useKey">0</value>
+        <value type="string" key="ssh.userName">mysql</value>
+      </value>
+      <value _ptr_="0000017923239C00" type="dict" key="serverInfo">
+        <value type="string" key="serverVersion">5.7</value>
+        <value type="int" key="setupPending">0</value>
+        <value type="string" key="sys.config.path">/usr/local/etc/my.cnf</value>
+        <value type="string" key="sys.config.section">mysqld</value>
+        <value type="string" key="sys.mysqld.service_name">MySQL</value>
+        <value type="string" key="sys.mysqld.start">/usr/local/etc/rc.d/mysql-server start</value>
+        <value type="string" key="sys.mysqld.stop">/usr/local/etc/rc.d/mysql-server stop</value>
+        <value type="string" key="sys.preset">FreeBSD (MySQL Package)</value>
+        <value type="string" key="sys.sudo"></value>
+        <value type="string" key="sys.system">FreeBSD</value>
+        <value type="int" key="sys.usesudo">1</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">abc</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{B8E3F57F-8E5D-4FC3-8DB7-D2E50FD4F651}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{BEE074B3-E7BA-440C-BDC6-B9324F81E492}</link>
+      <value _ptr_="0000017923239CC0" type="dict" key="loginInfo">
+        <value type="string" key="ssh.hostName"></value>
+        <value type="string" key="ssh.key">C:\Users\hp\AppData\Roaming/.ssh/ssh_private_key</value>
+        <value type="string" key="ssh.localPort">3306</value>
+        <value type="int" key="ssh.useKey">0</value>
+        <value type="string" key="ssh.userName">mysql</value>
+      </value>
+      <value _ptr_="0000017923239F00" type="dict" key="serverInfo">
+        <value type="string" key="basedir">C:\Program Files\MySQL\MySQL Server 8.0\</value>
+        <value type="string" key="datadir">C:\ProgramData\MySQL\MySQL Server 8.0\Data\</value>
+        <value type="string" key="errorLogFilePath">5CG7321414.err</value>
+        <value type="string" key="generalLogFilePath">5CG7321414.log</value>
+        <value type="string" key="serverVersion">8.0.39</value>
+        <value type="int" key="setupPending">0</value>
+        <value type="int" key="slowLogEnabled">1</value>
+        <value type="string" key="slowLogFilePath">5CG7321414-slow.log</value>
+        <value type="string" key="sys.sudo"></value>
+        <value type="int" key="sys.usesudo">0</value>
+        <value type="int" key="sys.usesudostatus">0</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">class_3_5</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{C678F802-39B5-4E7C-8352-518C5AA4C141}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{9CA21B3A-6D37-43B7-AE28-25940B075B01}</link>
+      <value _ptr_="000001792323A920" type="dict" key="loginInfo">
+        <value type="string" key="ssh.hostName"></value>
+        <value type="string" key="ssh.key">C:\Users\hp\AppData\Roaming/.ssh/ssh_private_key</value>
+        <value type="string" key="ssh.localPort">3306</value>
+        <value type="int" key="ssh.useKey">0</value>
+        <value type="string" key="ssh.userName">mysql</value>
+      </value>
+      <value _ptr_="000001792323AE00" type="dict" key="serverInfo">
+        <value type="int" key="setupPending">0</value>
+        <value type="string" key="sys.sudo"></value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">class_weekends_10_12</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{2BC3B2F8-6649-4FCB-A30B-CFDB4A6984AC}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{3C60ADCD-9025-4DD9-92AD-49DB430F7F37}</link>
+      <value _ptr_="000001792323AF20" type="dict" key="loginInfo">
+        <value type="string" key="ssh.hostName"></value>
+        <value type="string" key="ssh.key">C:\Users\hp\AppData\Roaming/.ssh/ssh_private_key</value>
+        <value type="string" key="ssh.localPort">3306</value>
+        <value type="int" key="ssh.useKey">0</value>
+        <value type="string" key="ssh.userName">mysql</value>
+      </value>
+      <value _ptr_="000001792323AD40" type="dict" key="serverInfo">
+        <value type="string" key="basedir">C:\Program Files\MySQL\MySQL Server 8.0\</value>
+        <value type="string" key="datadir">C:\ProgramData\MySQL\MySQL Server 8.0\Data\</value>
+        <value type="string" key="errorLogFilePath">5CG7321414.err</value>
+        <value type="string" key="generalLogFilePath">5CG7321414.log</value>
+        <value type="string" key="serverVersion">8.0.39</value>
+        <value type="int" key="setupPending">1</value>
+        <value type="int" key="slowLogEnabled">1</value>
+        <value type="string" key="slowLogFilePath">5CG7321414-slow.log</value>
+        <value type="int" key="sys.usesudo">0</value>
+        <value type="int" key="sys.usesudostatus">0</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">class_11_1</value>
+    </value>
+    <value type="object" struct-name="db.mgmt.ServerInstance" id="{28813C43-22AF-4F9F-87CC-CB3C6730266F}" struct-checksum="0x367436e2">
+      <link type="object" struct-name="db.mgmt.Connection" key="connection">{8052946E-218D-4BD7-9039-BF84D1FB90BD}</link>
+      <value _ptr_="000001792323A8C0" type="dict" key="loginInfo">
+        <value type="string" key="ssh.hostName"></value>
+        <value type="string" key="ssh.key">C:\Users\hp\AppData\Roaming/.ssh/ssh_private_key</value>
+        <value type="string" key="ssh.localPort">3306</value>
+        <value type="int" key="ssh.useKey">0</value>
+        <value type="string" key="ssh.userName">mysql</value>
+      </value>
+      <value _ptr_="000001792323AB00" type="dict" key="serverInfo">
+        <value type="string" key="basedir">C:\Program Files\MySQL\MySQL Server 8.0\</value>
+        <value type="string" key="datadir">C:\ProgramData\MySQL\MySQL Server 8.0\Data\</value>
+        <value type="string" key="detected_os_name">Windows 10 Pro</value>
+        <value type="string" key="detected_os_type">windows</value>
+        <value type="string" key="detected_os_variant">Windows</value>
+        <value type="string" key="detected_os_version">Microsoft Windows [Version 10.0.19045.4651]</value>
+        <value type="string" key="errorLogFilePath">5CG7321414.err</value>
+        <value type="string" key="generalLogFilePath">5CG7321414.log</value>
+        <value type="string" key="serverVersion">8.0.39</value>
+        <value type="int" key="setupPending">0</value>
+        <value type="int" key="slowLogEnabled">1</value>
+        <value type="string" key="slowLogFilePath">5CG7321414-slow.log</value>
+        <value type="string" key="sys.mysqld.service_name">MySQL</value>
+        <value type="string" key="sys.sudo"></value>
+        <value type="int" key="sys.usesudo">1</value>
+        <value type="int" key="sys.usesudostatus">0</value>
+        <value type="int" key="windowsAdmin">1</value>
+      </value>
+      <value type="string" key="name">class310</value>
+    </value>
+  </value>
+</data>

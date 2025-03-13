@@ -1,0 +1,72 @@
+-- create data base
+create database class310; 
+use class310;
+
+-- create student table 
+create table students (
+	std_id int,
+    name varchar(100),
+    course varchar(100),
+    fee float,
+    enroll_time date
+);
+show tables;
+desc students;
+describe students;
+
+-- show all data
+select * from students;
+
+-- insert data into table
+-- syntax
+-- INSERT INTO table_name (column1, column2, column3, ...)
+-- VALUES (value1, value2, value3, ...);
+
+insert into students (std_id, name , course,fee, enroll_time)
+value (1, "raj","ds",20000,'2025-02-12');
+
+insert into students
+value (2, "jeet","ds",3000,'2025-02-22');
+
+-- store multiple values
+insert into students
+value (2, "jeet","ds",3000,'2025-02-22'),
+	(3,"alok", "da",10000,"2024-02-25")
+;
+
+-- How do I rename a MySQL database (change schema ...
+https://www.atlassian.com/data/admin/how-to-rename-a-database-in-mysql
+
+
+MySQL ALTER TABLE Statement
+
+-- alter  for columns updates
+-- add new columns 
+alter table students
+add discount float, add xyz int; 
+
+-- delete the columns
+alter table students
+drop column xyz;
+
+desc students;
+
+-- change datatypes and constraints
+alter table students
+modify column discount int;
+
+-- rename the column name 
+alter table students 
+rename column enroll_time  to enroll_date;
+
+
+--truncate 
+truncate table tablename;
+
+-- drop 
+drop table tablename;
+drop database databasename;
+
+
+
+

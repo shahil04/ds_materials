@@ -1,0 +1,60 @@
+/sql
+To connect to MySQL using the MySQL Shell, follow these steps:
+
+### **1. Open MySQL Shell**
+- On **Windows**, open the command prompt (`cmd`) and type:
+  ```sh
+  mysqlsh
+  ```
+- On **Linux/Mac**, open the terminal and type:
+  ```sh
+  mysqlsh
+  ```
+
+### **2. Connect to MySQL Server**
+#### **Option 1: Connect using root user (or any other user)**
+```sh
+\connect root@localhost
+```
+or
+```sh
+\c root@localhost
+```
+You'll be prompted for a password.
+
+#### **Option 2: Connect using a specific host and port**
+```sh
+\connect root@127.0.0.1:3306
+```
+or
+```sh
+\connect root@hostname:port
+```
+Replace `hostname` and `port` accordingly.
+
+#### **Option 3: Connect with password inline (not recommended for security reasons)**
+```sh
+\connect root@localhost --password=yourpassword
+```
+
+#### **Option 4: Connect to a remote MySQL server**
+```sh
+\connect username@remote_host -p
+```
+You'll be prompted to enter the password.
+
+### **3. Verify the Connection**
+Once connected, you'll see a prompt like:
+```
+MySQL Shell 8.0.30
+Copyright (c) 2016, 2024, Oracle and/or its affiliates.
+Type '\help' or '\?' for help.
+
+mysql-js>
+```
+If you want to switch to SQL mode, type:
+```sh
+\sql
+```
+
+Let me know if you need further clarification! 🚀
