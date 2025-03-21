@@ -75,3 +75,6 @@ select * from students;
 
 drop table students;
 drop database class310;
+
+-- backup 
+-- mysqldump -u root -p class310 > class310_backup.sql
