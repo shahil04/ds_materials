@@ -285,3 +285,137 @@ select  customer_id,  sum(amount) as total  from payment
 group by customer_id 
 order by  total  desc
 limit 5;
+
+-- DML  21/03/25
+-- insert , update, delete 
+-- create a table 
+--  coursre  --> c id, name , fee  -- pk 
+-- students   id, name, course_id ,address  --  pk ,fK
+-- insert data 3 students, 3 course data
+create database class313;
+use class313;
+create table course (
+		cid int primary key , 
+        name varchar(50) , 
+        fee float);
+
+create table students (
+				sid  int  primary key, 
+                name varchar(100), 
+                course_id int , 
+                address varchar(100),
+                foreign key (course_id) references course(cid)
+                );
+insert into course values
+					( 1, "ds",3000), 
+                    (2, "java", 2000),
+                    (3, "python", 2000)
+	;
+insert into students values( 1, "deep",2, "delhi"), (2, "raj", 1, "noida"),(3, "arun", 1, "sector 15");
+
+select * from students;
+-- arun change the course python 
+-- update
+update students 
+set  course_id = 2
+where name="arun"  ;
+
+update students 
+set  course_id = 2 , address= "south ex"
+where name="arun"  ;
+
+insert into students values( 4, "alok",2, "delhi");
+select * from students;
+
+-- delete
+delete from  students 
+where sid= 4;
+
+select * from course;
+
+-- show the course name of  the students    -->2 -- > java
+select * from students 
+join course 
+on students.course_id = course.cid;
+
+ -- show the course name of  the students   
+ select students.name ,cid,  course.name from students 
+join course 
+on students.course_id = course.cid;
+
+-- show the course name of  deep    -->2 -- > java
+ select students.name ,cid,  course.name from students 
+join course 
+on students.course_id = course.cid
+
+where students.name= "deep";
+
+desc students;
+
+
+-- single line comments
+/*
+multilline comments  start with /*   -------- end with */ 
+/*
+sdfd
+
+dsfd
+sfddsd
+*/
+/*
+Joins
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+Types of JOins 
+	1. inner join
+    2, left join 
+    3. right joins
+    4. self joins 
+    5. cross joins
+    6. full joins
+*/
+-- inner joins
+ select students.name ,cid,  course.name from students 
+inner join course 
+on students.course_id = course.cid;
+
+insert into students values( 4, "alok",null, "delhi");
+select * from students;
+
+-- left join 
+ select *  from students 
+left join course 
+on students.course_id = course.cid;
+
+-- Right join 
+ select *  from students 
+right join course 
+on students.course_id = course.cid;
+
+-- show only nulls
+ select *  from students 
+left join course 
+on students.course_id = course.cid
+where cid is null;
+
+-- cross join 
+ select  * from students 
+cross join course ;
+-- full join  union  ,, union all 
+-- group by 
+-- having 
+-- existing
+-- case
+-- joins
+
+
+-- optional 
+-- MySQL IFNULL() Function
+-- The MySQL IFNULL() function lets you return an alternative value if an expression is NULL.
+-- The MySQL COALESCE() function returns the first non-null value in a list of expressions.
+-- SELECT COALESCE(NULL, 'A', 'B', NULL); 
+-- comments
+-- single line 
+-- multiline
+
+-- The MySQL ANY and ALL Operators
