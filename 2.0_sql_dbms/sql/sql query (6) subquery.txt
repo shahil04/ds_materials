@@ -21,9 +21,11 @@ select name from category;
 
 select film_id from film_category where category_id = (select category_id from category where name = 'Action');
 
+-- Find the films that have a higher rental rate than any film in the 'comedy' genre.
 select max(rental_rate) from film where film_id in (select film_id from film_category 
 where category_id = (select category_id from category where name = 'comedy'));
 
+-- Find the films that have a higher rental rate than any film in the 'Action' genre.
 select title, rental_rate from film where rental_rate > (
 select max(rental_rate) from film where film_id in (select film_id from film_category 
 where category_id = (select category_id from category where name = 'Action')));
@@ -59,3 +61,50 @@ select first_name , last_name from customer where customer_id in ( select distin
 -- Find the titles of films that are available in the inventory.
 select title from film where film_id in (select distinct film_id from inventory);
 
+
+Practice Questions on sub-query
+	1. -- Retrieve the titles of films that have a rental duration greater than the average rental duration of all films.
+	2.-- Find the titles of films that are available in the inventory. 
+;
+
+Business Question:
+What is the title of the most expensive film in the store?
+SELECT title
+FROM film
+WHERE film_id = (SELECT film_id
+                 FROM film
+                 ORDER BY rental_rate DESC
+                 LIMIT 1);
+
+Multi-Row Subquery
+Business Question:
+Which customers have rented films from stores located in New York?
+SELECT first_name, last_name
+FROM customer
+WHERE store_id IN (SELECT store_id
+                    FROM store
+                    WHERE city = 'New York');
+
+3. Multi-Column Non-Correlated Subquery
+Business Question:
+Which customers rented the same films as customer "John Doe"?
+
+SELECT first_name, last_name, email
+FROM customer
+WHERE (first_name, last_name) IN (SELECT first_name, last_name
+                                   FROM customer
+                                   JOIN rental ON customer.customer_id = rental.customer_id
+                                   JOIN inventory ON rental.inventory_id = inventory.inventory_id
+                                   WHERE inventory.film_id IN (SELECT film_id
+                                                               FROM customer
+                                                               JOIN rental ON customer.customer_id = rental.customer_id
+                                                               WHERE first_name = 'John' AND last_name = 'Doe'));
+Business Question:
+Which customers have not rented films from stores in Los Angeles?
+SELECT first_name, last_name
+FROM customer
+WHERE customer_id NOT IN (SELECT customer_id
+                           FROM rental
+                           JOIN inventory ON rental.inventory_id = inventory.inventory_id
+                           JOIN store ON inventory.store_id = store.store_id
+                           WHERE store.city = 'Los Angeles');

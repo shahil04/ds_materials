@@ -1,3 +1,13 @@
+-- MySQL CREATE FUNCTION Statement
+-- A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.
+
+-- MySQL provides a set of built-in function which performs particular tasks for example the CURDATE() function returns the current date.
+
+-- Syntax
+-- Following is the syntax the CREATE FUNCTION statement −
+-- CREATE FUNCTION function_Name(input_arguments) RETURNS output_parameter
+-- Where, function_name is the name of the function you need to create, input_arguments are the input values of the function and output_parameter is the return value of the function.
+
 CREATE DATABASE mydb2;
 USE mydb2;
 CREATE TABLE country (

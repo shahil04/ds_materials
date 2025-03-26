@@ -1,3 +1,19 @@
+-- What is a Stored Procedure?
+-- A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
+-- So if you have an SQL query that you write over and over again, save it as a stored procedure, and then just call it to execute it.
+-- You can also pass parameters to a stored procedure, so that the stored procedure can act based on the parameter value(s) that is passed.
+-- Syntax
+
+-- DELIMITER //
+-- CREATE PROCEDURE procedure_name(parameter_1, parameter_2, . . ., parameter_n)
+-- BEGIN
+--     instruction_1;
+--     instruction_2;
+--     . . .
+--     instruction_n;
+-- END //
+-- DELIMITER ;
+
 CREATE DATABASE mydb;
 USE mydb;
 CREATE TABLE country (
@@ -25,6 +41,7 @@ INSERT INTO city (city_name, country_id) VALUES
 ('Vancouver', 2),
 ('Mexico City', 3);
 
+select * from city ;
 
 DELIMITER //
 CREATE PROCEDURE GetCityCountByCountry(IN country_name VARCHAR(100), OUT city_count INT)
@@ -47,7 +64,7 @@ CALL GetCityCountByCountry('Mexico', @city_count);
 SELECT @city_count;
 
 
-
+select * from country;
 -- Here’s a guide on how to create a stored procedure in MySQL from scratch, including the process of creating a database, tables, and a stored procedure. The example will include database creation, table creation, data insertion, and a stored procedure that performs a query.
 
 -- ### Step-by-Step Guide

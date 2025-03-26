@@ -402,7 +402,20 @@ where cid is null;
  select  * from students 
 cross join course ;
 -- full join  union  ,, union all 
+
+-- show then employee name and their manager name from single table
+select t1.employee_name ,t2.employee_name as manager from employees as t1
+join employees as t2
+on t1.employee_id = t2.manager_id
+;
+
+
+
+
 -- group by 
+use mavenmovies;
+
+
 -- having 
 -- existing
 -- case
