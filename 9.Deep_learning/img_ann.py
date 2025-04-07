@@ -87,4 +87,3 @@ def app():
         st.experimental_rerun()
 
 app()
-
