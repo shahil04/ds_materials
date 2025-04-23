@@ -1,1 +1,19 @@
+**/.env
+# Ignore Python cache
+__pycache__/
+*.py[cod]
 
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore node_modules
+node_modules/
+**/atsenv/
+**/venv/
