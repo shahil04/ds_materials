@@ -1,0 +1,6 @@
+transformers
+torch
+diffusers
+moviepy
+pyttsx3
+gradio
