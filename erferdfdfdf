@@ -1,0 +1,560 @@
+[33mcommit 60e43f377232ced3c237be76a53706a04849eb54[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Sat Apr 26 21:24:18 2025 +0530
+
+    dL
+
+ .../cv/opencv-python-free-course-code.zip          | Bin [31m1126407734[m -> [32m0[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit 3aed93c8de68a4e7b1875b69beb4770af736b8ef[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Sat Apr 26 21:21:50 2025 +0530
+
+    dL
+
+ .../questions/Python_100_Coding_Questions.docx     |  Bin [31m0[m -> [32m39328[m bytes
+ .../questions/python_questions.docx                |  Bin [31m0[m -> [32m22000[m bytes
+ .../questions/~$thon_100_Coding_Questions.docx     |  Bin [31m0[m -> [32m162[m bytes
+ .../questions/~$thon_it_vedant_syllabus.docx       |  Bin [31m0[m -> [32m162[m bytes
+ .../~$thon_itvedant_Assignment_questions.docx      |  Bin [31m0[m -> [32m162[m bytes
+ .../questions/~$thon_questions.docx                |  Bin [31m0[m -> [32m162[m bytes
+ ...ObjectDetection_with_Single_Stage_Methods.ipynb | 2381 [32m+++++++++[m
+ 9.Deep_learning/SiameseNet.ipynb                   |  185 [32m+[m
+ 9.Deep_learning/class_7_computer_vision.pptx       |  Bin [31m2737399[m -> [32m2743289[m bytes
+ 9.Deep_learning/class_9_CV_Topics_project.pptx     |  Bin [31m1333982[m -> [32m1338940[m bytes
+ ...ive Adversal Networks_FashionGAN-Tutorial.ipynb | 1033 [32m++++[m
+ .../cv/object_detection_projects/MobileNetSSD.py   |    1 [31m-[m
+ ...00_Install-OpenCV-on-Windows-using-anaconda.mp4 |  Bin [31m9248689[m -> [32m0[m bytes
+ .../00_installation/Install_OpenCV_on_Linux.m4v    |  Bin [31m28626180[m -> [32m0[m bytes
+ .../00_installation/Install_OpenCV_on_MACOS.mp4    |  Bin [31m18036858[m -> [32m0[m bytes
+ .../01_Getting_Started_with_Images.ipynb           |  824 [31m---[m
+ .../New_Zealand_Lake.jpg                           |  Bin [31m168404[m -> [32m0[m bytes
+ .../New_Zealand_Lake_SAVED.png                     |  Bin [31m844934[m -> [32m0[m bytes
+ .../checkerboard_18x18.png                         |  Bin [31m133[m -> [32m0[m bytes
+ .../checkerboard_84x84.jpg                         |  Bin [31m1977[m -> [32m0[m bytes
+ .../checkerboard_color.png                         |  Bin [31m93618[m -> [32m0[m bytes
+ .../checkerboard_fuzzy_18x18.jpg                   |  Bin [31m3952[m -> [32m0[m bytes
+ .../coca-cola-logo.png                             |  Bin [31m179864[m -> [32m0[m bytes
+ .../coca-cola-logo_gray.png                        |  Bin [31m57136[m -> [32m0[m bytes
+ .../cropped-region.jpg                             |  Bin [31m49825[m -> [32m0[m bytes
+ .../cropped-region.png                             |  Bin [31m57136[m -> [32m0[m bytes
+ .../display_image.py                               |   42 [31m-[m
+ ...ations_Crop_Resize_Flip_and_Modify_Pixels.ipynb |  601 [31m---[m
+ .../New_Zealand_Boat.jpg                           |  Bin [31m208545[m -> [32m0[m bytes
+ .../New_Zealand_Lake.jpg                           |  Bin [31m168404[m -> [32m0[m bytes
+ .../New_Zealand_Lake_SAVED.png                     |  Bin [31m844934[m -> [32m0[m bytes
+ .../checkerboard_18x18.png                         |  Bin [31m133[m -> [32m0[m bytes
+ .../02_Basic_Image_Manipulation/cropped_region.png |  Bin [31m123764[m -> [32m0[m bytes
+ .../02_Basic_Image_Manipulation/region.png         |  Bin [31m123764[m -> [32m0[m bytes
+ .../resized_cropped_region_2x.png                  |  Bin [31m367560[m -> [32m0[m bytes
+ .../03_Image_Annotation/03_Annotating_Images.ipynb |  415 [31m--[m
+ .../03_Image_Annotation/Apollo_11_Launch.jpg       |  Bin [31m312226[m -> [32m0[m bytes
+ ...Image_Enhancement_Mathematical_Operations.ipynb |  886 [31m----[m
+ .../04_Image_Enhancement/New_Zealand_Coast.jpg     |  Bin [31m370131[m -> [32m0[m bytes
+ .../04_Image_Enhancement/Piano_Sheet_Music.png     |  Bin [31m706823[m -> [32m0[m bytes
+ .../04_Image_Enhancement/building-windows.jpg      |  Bin [31m127185[m -> [32m0[m bytes
+ .../04_Image_Enhancement/checkerboard_18x18.png    |  Bin [31m133[m -> [32m0[m bytes
+ .../04_Image_Enhancement/checkerboard_color.png    |  Bin [31m93618[m -> [32m0[m bytes
+ .../04_Image_Enhancement/circle.jpg                |  Bin [31m6346[m -> [32m0[m bytes
+ .../04_Image_Enhancement/coca-cola-logo.png        |  Bin [31m179864[m -> [32m0[m bytes
+ .../04_Image_Enhancement/logo_final.png            |  Bin [31m116188[m -> [32m0[m bytes
+ .../04_Image_Enhancement/rectangle.jpg             |  Bin [31m4463[m -> [32m0[m bytes
+ .../05_Accessing_the_Camera/05_Camera.py           |   54 [31m-[m
+ .../06_Writing_Video_using_OpenCV.ipynb            |  242 [31m-[m
+ .../06_Video_Writing/race_car.mp4                  |  Bin [31m10866616[m -> [32m0[m bytes
+ .../06_Video_Writing/race_car_out.avi              |  Bin [31m24621112[m -> [32m0[m bytes
+ .../06_Video_Writing/race_car_out.mp4              |  Bin [31m8051337[m -> [32m0[m bytes
+ .../07_CameraFilters.py                            |   97 [31m-[m
+ .../08_Image_Alignment.ipynb                       |  394 [31m--[m
+ .../08_Image_Fetaures_and_Alignment/form.jpg       |  Bin [31m338256[m -> [32m0[m bytes
+ .../homography-example.jpg                         |  Bin [31m106757[m -> [32m0[m bytes
+ .../image-alignment-using-opencv.jpg               |  Bin [31m118686[m -> [32m0[m bytes
+ .../08_Image_Fetaures_and_Alignment/keypoints1.jpg |  Bin [31m476362[m -> [32m0[m bytes
+ .../08_Image_Fetaures_and_Alignment/keypoints2.jpg |  Bin [31m396300[m -> [32m0[m bytes
+ .../08_Image_Fetaures_and_Alignment/matches.jpg    |  Bin [31m1121349[m -> [32m0[m bytes
+ .../motion-models.jpg                              |  Bin [31m29166[m -> [32m0[m bytes
+ .../scanned-form.jpg                               |  Bin [31m353508[m -> [32m0[m bytes
+ .../09_Panorama/09_panorama.ipynb                  |  172 [31m-[m
+ .../09_Panorama/boat/boat1.jpg                     |  Bin [31m73563[m -> [32m0[m bytes
+ .../09_Panorama/boat/boat2.jpg                     |  Bin [31m68522[m -> [32m0[m bytes
+ .../09_Panorama/boat/boat3.jpg                     |  Bin [31m68220[m -> [32m0[m bytes
+ .../09_Panorama/boat/boat4.jpg                     |  Bin [31m66482[m -> [32m0[m bytes
+ .../09_Panorama/boat/boat5.jpg                     |  Bin [31m69104[m -> [32m0[m bytes
+ .../09_Panorama/boat/boat6.jpg                     |  Bin [31m72022[m -> [32m0[m bytes
+ .../10_HDR/10_hdr.ipynb                            |  342 [31m--[m
+ .../10_HDR/aligned-unaligned-hdr-comparison.jpg    |  Bin [31m116393[m -> [32m0[m bytes
+ .../10_HDR/hdr-image-sequence.jpg                  |  Bin [31m50174[m -> [32m0[m bytes
+ .../opencv-python-free-course-code/10_HDR/hdr.jpg  |  Bin [31m261218[m -> [32m0[m bytes
+ .../10_HDR/hdrDebevec.hdr                          |  Bin [31m18949202[m -> [32m0[m bytes
+ .../10_HDR/high-dynamic-range-hdr.jpg              |  Bin [31m50168[m -> [32m0[m bytes
+ .../10_HDR/img_0.033.jpg                           |  Bin [31m902169[m -> [32m0[m bytes
+ .../10_HDR/img_0.25.jpg                            |  Bin [31m1462235[m -> [32m0[m bytes
+ .../10_HDR/img_15.jpg                              |  Bin [31m2396332[m -> [32m0[m bytes
+ .../10_HDR/img_2.5.jpg                             |  Bin [31m2354237[m -> [32m0[m bytes
+ .../10_HDR/ldr-Drago.jpg                           |  Bin [31m1164589[m -> [32m0[m bytes
+ .../10_HDR/ldr-Mantiuk.jpg                         |  Bin [31m874664[m -> [32m0[m bytes
+ .../10_HDR/ldr-Reinhard.jpg                        |  Bin [31m1116379[m -> [32m0[m bytes
+ .../11_Object_Tracking/11_objectTracking.ipynb     |  476 [31m--[m
+ .../11_Object_Tracking/goturn.caffemodel           |  Bin [31m387872732[m -> [32m0[m bytes
+ .../11_Object_Tracking/goturn.jpg                  |  Bin [31m55747[m -> [32m0[m bytes
+ .../11_Object_Tracking/goturn.prototxt             |  587 [31m---[m
+ .../11_Object_Tracking/race_car-BOOSTING.mp4       |  Bin [31m23924879[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-CSRT.mp4           |  Bin [31m23937114[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-GOTURN.mp4         |  Bin [31m23920711[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-KCF.mp4            |  Bin [31m46257282[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-MEDIANFLOW.mp4     |  Bin [31m23935021[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-MIL.mp4            |  Bin [31m23937327[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-MOSSE.mp4          |  Bin [31m23936162[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car-TLD.mp4            |  Bin [31m23926430[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car.mp4                |  Bin [31m10866616[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car_preview.mp4        |  Bin [31m24001054[m -> [32m0[m bytes
+ .../11_Object_Tracking/race_car_tracking.png       |  Bin [31m1254752[m -> [32m0[m bytes
+ .../12_Face_Detection/12_FaceDetection.py          |   93 [31m-[m
+ .../12_Face_Detection/deploy.prototxt              | 1789 [31m-------[m
+ .../res10_300x300_ssd_iter_140000_fp16.caffemodel  |  Bin [31m5351047[m -> [32m0[m bytes
+ .../13_tf_object_detection.ipynb                   |  430 [31m--[m
+ .../13_Object_Detection/README                     |   13 [31m-[m
+ .../13_Object_Detection/coco_class_labels.txt      |   92 [31m-[m
+ .../13_Object_Detection/images/000000001000.jpg    |  Bin [31m321136[m -> [32m0[m bytes
+ .../13_Object_Detection/images/baseball.jpg        |  Bin [31m168639[m -> [32m0[m bytes
+ .../13_Object_Detection/images/giraffe-zebra.jpg   |  Bin [31m859556[m -> [32m0[m bytes
+ .../13_Object_Detection/images/soccer.jpg          |  Bin [31m88267[m -> [32m0[m bytes
+ .../13_Object_Detection/images/street.jpg          |  Bin [31m90758[m -> [32m0[m bytes
+ .../models/ssd_mobilenet_v2_coco_2018_03_29.pbtxt  | 5235 [31m--------------------[m
+ .../frozen_inference_graph.pb                      |  Bin [31m69688296[m -> [32m0[m bytes
+ .../13_Object_Detection/tf_text_graph_ssd.py       |  296 [31m--[m
+ .../14_OpenPose.ipynb                              |  423 [31m--[m
+ .../1611.08050.pdf                                 |  Bin [31m8470523[m -> [32m0[m bytes
+ .../Ice_Hockey.mp4                                 |  Bin [31m29112547[m -> [32m0[m bytes
+ .../Milton_Golf_Swing.png                          |  Bin [31m2954362[m -> [32m0[m bytes
+ .../14_Pose_Estimation_using_Openpose/OpenPose.py  |  118 [31m-[m
+ .../OpenPose_Figure.png                            |  Bin [31m399134[m -> [32m0[m bytes
+ .../Tiger_Woods.png                                |  Bin [31m921483[m -> [32m0[m bytes
+ .../Tiger_Woods_crop.png                           |  Bin [31m384920[m -> [32m0[m bytes
+ .../pose_deploy_linevec_faster_4_stages.prototxt   | 2081 [31m--------[m
+ .../model/pose_iter_160000.caffemodel              |  Bin [31m205950363[m -> [32m0[m bytes
+ .../pose_deploy_linevec_faster_4_stages.prototxt   | 2975 [31m-----------[m
+ 9.Deep_learning/cv/segment_anything_with_sam.ipynb | 1277 [32m+++++[m
+ .../cv/siamese_network_project_v2/README.md        |   19 [32m+[m
+ .../cv/siamese_network_project_v2/app.py           |   27 [32m+[m
+ .../how_to_segment_anything_with_sam (1).ipynb     | 1292 [32m+++++[m
+ .../cv/siamese_network_project_v2/inference.py     |   18 [32m+[m
+ .../cv/siamese_network_project_v2/requirements.txt |    6 [32m+[m
+ .../cv/siamese_network_project_v2/siamese_model.py |   31 [32m+[m
+ .../cv/siamese_network_project_v2/train.py         |   43 [32m+[m
+ .../cv/siamese_network_project_v2/utils.py         |   14 [32m+[m
+ class/class306_python.ipynb                        |  412 [32m++[m
+ 132 files changed, 6738 insertions(+), 18678 deletions(-)
+
+[33mcommit fe14e741ebb1290360f62df0ff82ecd40a6be1ff[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Sat Apr 26 09:06:49 2025 +0530
+
+    nlp
+
+ .../python_libraries/2.pandas/pandas_notes.pdf     | 185716 [32m++++++++++++++++++[m
+ 9.Deep_learning/class_10_Text_Nltk_Spacy.pptx      |    Bin [31m2515244[m -> [32m2318634[m bytes
+ ...ptx => class_11.0_NLP_text_preprocessing_.pptx} |    Bin [31m573666[m -> [32m572137[m bytes
+ ...11.1_text_vectorizarion_sentiment_analysis.pptx |    Bin [31m0[m -> [32m572137[m bytes
+ 9.Deep_learning/class_12_RNN.pptx                  |    Bin [31m0[m -> [32m7748302[m bytes
+ ...a_ChatBot.pptx => class_18.1_rasa_ChatBot.pptx} |    Bin
+ .../class_18.2_weather_forcasting_ARIMA.pptx       |    Bin [31m0[m -> [32m7750026[m bytes
+ .../class_18.3_time_Series_analysis.pptx           |    Bin [31m0[m -> [32m7750026[m bytes
+ ...ck price_prediction_using_sequential_model.pptx |    Bin [31m0[m -> [32m7750026[m bytes
+ 9 files changed, 185716 insertions(+)
+
+[33mcommit 3c106fee668f7ffb3832ca16e3ae521b7c3bd68b[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Fri Apr 25 21:59:58 2025 +0530
+
+    cv projects
+
+ 9.Deep_learning/class_9_CV_Topics_project.pptx     | Bin [31m204842[m -> [32m1333982[m bytes
+ 9.Deep_learning/class_9_Transfer_learning.pptx     | Bin [31m187304[m -> [32m209678[m bytes
+ 9.Deep_learning/cv/mediapipe/HandTracking.py       |  22 [32m+++[m
+ 9.Deep_learning/cv/mediapipe/HolisticModel.py      |  23 [32m+++[m
+ 9.Deep_learning/cv/mediapipe/PoseDetection.py      |  22 [32m+++[m
+ 9.Deep_learning/cv/mediapipe/feshmesh.py           |  25 [32m+++[m
+ .../cv/mediapipe/mediapipe_project/app.py          |  15 [32m++[m
+ .../mediapipe/mediapipe_project/pages/face_mesh.py |  24 [32m+++[m
+ .../mediapipe_project/pages/hand_tracking.py       |  24 [32m+++[m
+ .../mediapipe_project/pages/holistic_model.py      |  29 [32m++++[m
+ .../mediapipe_project/pages/pose_estimation.py     |  23 [32m+++[m
+ 9.Deep_learning/cv/mediapipe/setup.md              | 180 [32m+++++++++++++++++++++[m
+ .../FaceDetectionusingHaarCascade.py               |  20 [32m+++[m
+ .../cv/object_detection_projects/MobileNetSSD.py   |  27 [32m++++[m
+ .../object_detection_project/README.md             |  31 [32m++++[m
+ .../object_detection_project/app.py                |  81 [32m++++++++++[m
+ .../object_detection_project/requirements.txt      |   3 [32m+[m
+ 17 files changed, 549 insertions(+)
+
+[33mcommit 4a021220c9c292b393082cfb3b7733faddc724ba[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Fri Apr 25 18:10:38 2025 +0530
+
+    cv project
+
+ ...x => 4.02_hypothesis_testing_types_in_fig.docx} | Bin
+ 7.stats_notes/inferential/~$i_square.docx          | Bin [31m162[m -> [32m0[m bytes
+ 9.Deep_learning/class_9_CV_Topics_project.pptx     | Bin [31m0[m -> [32m204842[m bytes
+ 9.Deep_learning/class_9_Transfer_learning.pptx     | Bin [31m7743421[m -> [32m187304[m bytes
+ .../cv/car_defect_detection_class/README.md        |   6 [32m+[m
+ .../cv/car_defect_detection_class/data_generate.py |  12 [32m++[m
+ .../car_defect_detection_class/edge_detection.py   |  14 [32m+++[m
+ .../images/defected/car-gavel.jpeg                 | Bin [31m0[m -> [32m85077[m bytes
+ .../images/defected/car1.jpg                       | Bin [31m0[m -> [32m991[m bytes
+ .../images/defected/hq720.jpg                      | Bin [31m0[m -> [32m35551[m bytes
+ .../images/defected/scraped.jpg                    | Bin [31m0[m -> [32m63256[m bytes
+ .../images/lifestyle-02.jpg                        | Bin [31m0[m -> [32m84046[m bytes
+ .../cv/car_defect_detection_class/requirements.txt |   4 [32m+[m
+ .../cv/car_defect_detection_class/streamlit_app.py |  48 [32m++++++++[m
+ .../template_matching.py                           |  23 [32m++++[m
+ .../car_defect_detection_class/templates/logo.jpg  | Bin [31m0[m -> [32m7414[m bytes
+ .../cv/ocr_text_recognition/images/ds_roadmap.jpg  | Bin [31m0[m -> [32m158608[m bytes
+ .../ocr_text_recognition/images/lifestyle-02.jpg   | Bin [31m0[m -> [32m84046[m bytes
+ 9.Deep_learning/cv/ocr_text_recognition/ocr_app.py |  27 [32m+++++[m
+ .../cv/ocr_text_recognition/ocr_utils.py           |  20 [32m++++[m
+ .../cv/ocr_text_recognition/requirements.txt       |   4 [32m+[m
+ 9.Deep_learning/cv/ocr_text_recognition/steps.md   | 121 [32m+++++++++++++++++++++[m
+ 22 files changed, 279 insertions(+)
+
+[33mcommit 32f7f16e42c28419c01415a86e443a2e74599101[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Thu Apr 24 17:27:52 2025 +0530
+
+    update
+
+ 3.0_powerbi/Sample - Superstore.xls                |   Bin [31m3364352[m -> [32m3549696[m bytes
+ 3.0_powerbi/classs313_3.pbix                       |   Bin [31m0[m -> [32m738726[m bytes
+ 3.0_powerbi/questions/i.jpg                        |   Bin [31m0[m -> [32m37638[m bytes
+ 3.0_powerbi/questions/image2_c79419fb32.jpg        |   Bin [31m0[m -> [32m78106[m bytes
+ 3.0_powerbi/questions/q.png                        |   Bin [31m0[m -> [32m78106[m bytes
+ .../questions/unnamed-1-66c705a22fa6a (1).jpg      |   Bin [31m0[m -> [32m39188[m bytes
+ 3.0_powerbi/questions/unnamed-1-66c705a22fa6a.webp |   Bin [31m0[m -> [32m39188[m bytes
+ .../super_store_Sales and Profit Analysis.docx     |   Bin [31m0[m -> [32m16358[m bytes
+ .../~$an_median_mode_corr_std_covar_questions.docx |   Bin [31m162[m -> [32m0[m bytes
+ .../~$ass_4_examples_dispersions.docx              |   Bin [31m162[m -> [32m0[m bytes
+ .../~$estions_preparations_of_descriptive.docx     |   Bin [31m162[m -> [32m0[m bytes
+ ...breif.docx => 0.0_inferencial_notes_breif.docx} |   Bin
+ .../inferential/0.1_Statistics Basics.pdf          |   Bin [31m0[m -> [32m3397963[m bytes
+ ...2Types of Sampling and Sampling Techniques.pdf} |   Bin
+ ..._types_vis.docx => 1.01sampling_types_vis.docx} |   Bin
+ .../{1.0-Estimate.pdf => 2.0-Estimate.pdf}         |   Bin
+ ...mit Theorem.pdf => 3.Central Limit Theorem.pdf} |   Bin
+ ..._gpt.docx => 3._Central Limit Theorem_gpt.docx} |   Bin
+ ...ism.pdf => 4.0-Hypothesis Tesing Mechanism.pdf} |   Bin
+ ...otes.docx => 4.0-hypothesis_testing_notes.docx} |   Bin
+ ...hypothesis.docx => 4.01usecase_hypothesis.docx} |   Bin [31m1146168[m -> [32m1146125[m bytes
+ .../{3.0-P value.pdf => 5.0-P value.pdf}           |   Bin
+ .../inferential/{error.png => 6.error.png}         |   Bin
+ ...tails_test_orig.png => 7.0_tails_test_orig.png} |   Bin
+ ...0-T stats t-test.pdf => 8.0-T stats t-test.pdf} |   Bin
+ ...ribution.pdf => 8.0-student t distribution.pdf} |   Bin
+ .../inferential/{4.0-z-test.pdf => 8.0-z-test.pdf} |   Bin
+ ...ering-dax-in-power-bi-detailed-guide-2024-1.pdf | 42335 [31m-------------------[m
+ 7.stats_notes/inferential/z_test_with_example.docx |   Bin [31m2039542[m -> [32m2040016[m bytes
+ .../~$e of probability distribution in DS_ML.docx  |   Bin [31m162[m -> [32m0[m bytes
+ .../~$lculate_dispersion_and_compare_z_score.docx  |   Bin [31m162[m -> [32m0[m bytes
+ 7.stats_notes/inferential/~WRL0003.tmp             |   Bin [31m566934[m -> [32m0[m bytes
+ 7.stats_notes/inferential/~WRL4066.tmp             |   Bin [31m1017500[m -> [32m0[m bytes
+ 9.Deep_learning/class_7_computer_vision.pptx       |   Bin [31m676894[m -> [32m2737399[m bytes
+ 9.Deep_learning/class_8_CNN - Copy.pptx            |   Bin [31m396026[m -> [32m3022573[m bytes
+ 9.Deep_learning/class_8_cv_architecture_.pptx      |   Bin [31m8050591[m -> [32m0[m bytes
+ .../class_8_image_classifications.ipynb            |   492 [32m+[m
+ ..._classifications_vgg_16_transfer_learning.ipynb |   182 [32m+[m
+ ...-or-dogs-using-cnn-with-transfer-learning.ipynb |  1116 [32m+[m
+ 9.Deep_learning/cv/Automated-Car-Damage-Detection  |     1 [32m+[m
+ 9.Deep_learning/cv/Data Science Roadmap.pdf        |   Bin [31m0[m -> [32m267929[m bytes
+ .../cv/Deep learning part 3 nlp continue.pdf       |   Bin [31m0[m -> [32m2445679[m bytes
+ .../cv/Image Classification with CNN.ipynb         |   217 [32m+[m
+ 9.Deep_learning/cv/Mnist_Hands_on_vgg16.ipynb      |   480 [32m+[m
+ .../cv/Region_Proposal_Techniques.ipynb            |    18 [32m+[m[31m-[m
+ 9.Deep_learning/cv/car-damage-detector             |     1 [32m+[m
+ ...earning part 1 fundamentals then add cv nlp.pdf |   Bin [31m0[m -> [32m6848487[m bytes
+ .../cv/deep learning part 2 cv cnn Gan.pdf         |   Bin [31m0[m -> [32m5364749[m bytes
+ 9.Deep_learning/cv/face_detection_Project.ipynb    |    55 [32m+[m[31m-[m
+ 9.Deep_learning/cv/photo.jpg                       |   Bin [31m0[m -> [32m13348[m bytes
+ 9.Deep_learning/cv/python_revision.ipynb           |  1082 [32m+[m
+ 9.Deep_learning/cv/shahil_Ds_CV_jan2025.pdf        |   Bin [31m0[m -> [32m351705[m bytes
+ .../project/face_recognition_project.zip           |   Bin [31m0[m -> [32m1313[m bytes
+ .../project/face_recognition_project/README.md     |     3 [32m+[m
+ .../project/face_recognition_project/app.py        |   188 [32m+[m
+ .../face_recognition_project/collect_faces.py      |     1 [32m+[m
+ .../face_recognition_model.h5                      |     0
+ .../haarcascade_frontalface_default.xml            |     0
+ .../project/face_recognition_project/label_map.pkl |     0
+ .../preprocess_and_train.py                        |     1 [32m+[m
+ .../realtime_recognition.py                        |     1 [32m+[m
+ .../face_recognition_project/requirements.txt      |     5 [32m+[m
+ 9.Deep_learning/~$class_7_computer_vision.pptx     |   Bin [31m0[m -> [32m165[m bytes
+ 9.Deep_learning/~$class_8_CNN - Copy.pptx          |   Bin [31m0[m -> [32m165[m bytes
+ 9.Deep_learning/~$class_9_Transfer_learning.pptx   |   Bin [31m0[m -> [32m165[m bytes
+ ats_project/resume_ATS_System_LLM_gemini           |     1 [32m+[m
+ class/class310.ipynb                               |     0
+ class/class310.py                                  |    13 [32m+[m
+ class/class310_revions.py                          |     9 [32m+[m
+ class/class_313_sales.pbix                         |   Bin [31m0[m -> [32m996891[m bytes
+ class/document.txt                                 |    13 [32m+[m
+ class/python_class/class1_306.ipynb                |   415 [32m+[m
+ class/python_class/class4_306.ipynb                |   410 [32m+[m
+ class/revision_310.ipynb                           |  1691 [32m+[m
+ llm/text2video-ai/app.py                           |    25 [32m+[m
+ llm/text2video-ai/assets/output/final_video.mp4    |   Bin [31m0[m -> [32m543166[m bytes
+ llm/text2video-ai/assets/temp/audio.wav            |   Bin [31m0[m -> [32m1457930[m bytes
+ llm/text2video-ai/assets/temp/dummy_video.mp4      |   Bin [31m0[m -> [32m5939[m bytes
+ llm/text2video-ai/experiment.ipynb                 |     0
+ llm/text2video-ai/modules/llm.py                   |     6 [32m+[m
+ llm/text2video-ai/modules/tts.py                   |     7 [32m+[m
+ llm/text2video-ai/modules/video_editor.py          |     7 [32m+[m
+ llm/text2video-ai/modules/vision.py                |    25 [32m+[m
+ llm/text2video-ai/requeriments.txt                 |     6 [32m+[m
+ 84 files changed, 6465 insertions(+), 42341 deletions(-)
+
+[33mcommit 65fd7ef1352b458bc5623e9624138809891ec4b9[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Wed Apr 23 18:27:39 2025 +0530
+
+    add .gitignore
+
+ .gitignore | 18 [32m++++++++++++++++++[m
+ 1 file changed, 18 insertions(+)
+
+[33mcommit accc32eb101c9888d268d3d09c0e1229f604c12f[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Sat Apr 12 21:57:16 2025 +0530
+
+    update
+
+ .../cv/Region_Proposal_Techniques.ipynb            |  379 [32m+++++[m
+ 9.Deep_learning/cv/computer_vision.pptx            |  Bin [31m1711081[m -> [32m1712079[m bytes
+ 9.Deep_learning/cv/cv_class.ipynb                  | 1660 [32m++++++++++++[m[31m--------[m
+ 9.Deep_learning/cv/data1.jpg                       |  Bin [31m0[m -> [32m43907[m bytes
+ 9.Deep_learning/cv/demo.jpg                        |  Bin [31m0[m -> [32m97557[m bytes
+ 9.Deep_learning/cv/face_detection_Project.ipynb    |  502 [32m++++++[m
+ 9.Deep_learning/cv/messi_face.jpg                  |  Bin [31m0[m -> [32m1415[m bytes
+ 9.Deep_learning/cv/output.avi                      |  Bin [31m0[m -> [32m887700[m bytes
+ 9.Deep_learning/cv/output.jpg                      |  Bin [31m0[m -> [32m46622[m bytes
+ 9.Deep_learning/cv/output1.jpg                     |  Bin [31m0[m -> [32m46622[m bytes
+ 9.Deep_learning/cv/output1.mp4                     |  Bin [31m0[m -> [32m14790119[m bytes
+ 9.Deep_learning/cv/output_face.avi                 |  Bin [31m0[m -> [32m327360[m bytes
+ 9.Deep_learning/cv/template.jpg                    |  Bin [31m0[m -> [32m6130[m bytes
+ 9.Deep_learning/cv/video.mp4                       |  Bin [31m0[m -> [32m6313402[m bytes
+ class/python_class/class1_306.ipynb                |  660 [32m+++++++[m[31m-[m
+ 15 files changed, 2557 insertions(+), 644 deletions(-)
+
+[33mcommit 48cb00bc12b5b6f4c3c5d38296ae99cf010b9f57[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Thu Apr 10 17:09:19 2025 +0530
+
+    updates
+
+ .gitignore                                         |    1 [32m+[m
+ 0.git_github/git_github.pptx                       |  Bin [31m2096780[m -> [32m2096859[m bytes
+ 3.0_powerbi/class313.pbix                          |  Bin [31m0[m -> [32m2532234[m bytes
+ 3.0_powerbi/module_3_powerbi.pptx                  |  Bin [31m2247504[m -> [32m2250769[m bytes
+ .../1669699834586-Python Data Types 1.png          |  Bin [31m0[m -> [32m12612[m bytes
+ 3.0_powerbi/questions/command_prompt.jpg           |  Bin [31m0[m -> [32m24443[m bytes
+ 4.tableau/module_4_Tableau.pptx                    |  Bin [31m22532004[m -> [32m22532006[m bytes
+ .../questions/~$vedant_tableau_mock_questions.docx |  Bin [31m0[m -> [32m162[m bytes
+ .../module_5_python_beg_to_advance.pptx            |  Bin [31m2531882[m -> [32m2580803[m bytes
+ 7.stats_notes/module_7_dwd_stats_advance.pptx      |  Bin [31m3591441[m -> [32m3591429[m bytes
+ 9.Deep_learning/cv/cv_class.ipynb                  |  323 [32m+[m[31m-[m
+ 9.Deep_learning/cv/cv_code.ipynb                   |   86 [32m+[m[31m-[m
+ 9.Deep_learning/cv/data.png                        |  Bin [31m0[m -> [32m473831[m bytes
+ ...00_Install-OpenCV-on-Windows-using-anaconda.mp4 |  Bin [31m0[m -> [32m9248689[m bytes
+ .../00_installation/Install_OpenCV_on_Linux.m4v    |  Bin [31m0[m -> [32m28626180[m bytes
+ .../00_installation/Install_OpenCV_on_MACOS.mp4    |  Bin [31m0[m -> [32m18036858[m bytes
+ .../01_Getting_Started_with_Images.ipynb           |  824 [32m+++[m
+ .../New_Zealand_Lake.jpg                           |  Bin [31m0[m -> [32m168404[m bytes
+ .../New_Zealand_Lake_SAVED.png                     |  Bin [31m0[m -> [32m844934[m bytes
+ .../checkerboard_18x18.png                         |  Bin [31m0[m -> [32m133[m bytes
+ .../checkerboard_84x84.jpg                         |  Bin [31m0[m -> [32m1977[m bytes
+ .../checkerboard_color.png                         |  Bin [31m0[m -> [32m93618[m bytes
+ .../checkerboard_fuzzy_18x18.jpg                   |  Bin [31m0[m -> [32m3952[m bytes
+ .../coca-cola-logo.png                             |  Bin [31m0[m -> [32m179864[m bytes
+ .../coca-cola-logo_gray.png                        |  Bin [31m0[m -> [32m57136[m bytes
+ .../cropped-region.jpg                             |  Bin [31m0[m -> [32m49825[m bytes
+ .../cropped-region.png                             |  Bin [31m0[m -> [32m57136[m bytes
+ .../display_image.py                               |   42 [32m+[m
+ ...ations_Crop_Resize_Flip_and_Modify_Pixels.ipynb |  601 [32m+++[m
+ .../New_Zealand_Boat.jpg                           |  Bin [31m0[m -> [32m208545[m bytes
+ .../New_Zealand_Lake.jpg                           |  Bin [31m0[m -> [32m168404[m bytes
+ .../New_Zealand_Lake_SAVED.png                     |  Bin [31m0[m -> [32m844934[m bytes
+ .../checkerboard_18x18.png                         |  Bin [31m0[m -> [32m133[m bytes
+ .../02_Basic_Image_Manipulation/cropped_region.png |  Bin [31m0[m -> [32m123764[m bytes
+ .../02_Basic_Image_Manipulation/region.png         |  Bin [31m0[m -> [32m123764[m bytes
+ .../resized_cropped_region_2x.png                  |  Bin [31m0[m -> [32m367560[m bytes
+ .../03_Image_Annotation/03_Annotating_Images.ipynb |  415 [32m++[m
+ .../03_Image_Annotation/Apollo_11_Launch.jpg       |  Bin [31m0[m -> [32m312226[m bytes
+ ...Image_Enhancement_Mathematical_Operations.ipynb |  886 [32m++++[m
+ .../04_Image_Enhancement/New_Zealand_Coast.jpg     |  Bin [31m0[m -> [32m370131[m bytes
+ .../04_Image_Enhancement/Piano_Sheet_Music.png     |  Bin [31m0[m -> [32m706823[m bytes
+ .../04_Image_Enhancement/building-windows.jpg      |  Bin [31m0[m -> [32m127185[m bytes
+ .../04_Image_Enhancement/checkerboard_18x18.png    |  Bin [31m0[m -> [32m133[m bytes
+ .../04_Image_Enhancement/checkerboard_color.png    |  Bin [31m0[m -> [32m93618[m bytes
+ .../04_Image_Enhancement/circle.jpg                |  Bin [31m0[m -> [32m6346[m bytes
+ .../04_Image_Enhancement/coca-cola-logo.png        |  Bin [31m0[m -> [32m179864[m bytes
+ .../04_Image_Enhancement/logo_final.png            |  Bin [31m0[m -> [32m116188[m bytes
+ .../04_Image_Enhancement/rectangle.jpg             |  Bin [31m0[m -> [32m4463[m bytes
+ .../05_Accessing_the_Camera/05_Camera.py           |   54 [32m+[m
+ .../06_Writing_Video_using_OpenCV.ipynb            |  242 [32m+[m
+ .../06_Video_Writing/race_car.mp4                  |  Bin [31m0[m -> [32m10866616[m bytes
+ .../06_Video_Writing/race_car_out.avi              |  Bin [31m0[m -> [32m24621112[m bytes
+ .../06_Video_Writing/race_car_out.mp4              |  Bin [31m0[m -> [32m8051337[m bytes
+ .../07_CameraFilters.py                            |   97 [32m+[m
+ .../08_Image_Alignment.ipynb                       |  394 [32m++[m
+ .../08_Image_Fetaures_and_Alignment/form.jpg       |  Bin [31m0[m -> [32m338256[m bytes
+ .../homography-example.jpg                         |  Bin [31m0[m -> [32m106757[m bytes
+ .../image-alignment-using-opencv.jpg               |  Bin [31m0[m -> [32m118686[m bytes
+ .../08_Image_Fetaures_and_Alignment/keypoints1.jpg |  Bin [31m0[m -> [32m476362[m bytes
+ .../08_Image_Fetaures_and_Alignment/keypoints2.jpg |  Bin [31m0[m -> [32m396300[m bytes
+ .../08_Image_Fetaures_and_Alignment/matches.jpg    |  Bin [31m0[m -> [32m1121349[m bytes
+ .../motion-models.jpg                              |  Bin [31m0[m -> [32m29166[m bytes
+ .../scanned-form.jpg                               |  Bin [31m0[m -> [32m353508[m bytes
+ .../09_Panorama/09_panorama.ipynb                  |  172 [32m+[m
+ .../09_Panorama/boat/boat1.jpg                     |  Bin [31m0[m -> [32m73563[m bytes
+ .../09_Panorama/boat/boat2.jpg                     |  Bin [31m0[m -> [32m68522[m bytes
+ .../09_Panorama/boat/boat3.jpg                     |  Bin [31m0[m -> [32m68220[m bytes
+ .../09_Panorama/boat/boat4.jpg                     |  Bin [31m0[m -> [32m66482[m bytes
+ .../09_Panorama/boat/boat5.jpg                     |  Bin [31m0[m -> [32m69104[m bytes
+ .../09_Panorama/boat/boat6.jpg                     |  Bin [31m0[m -> [32m72022[m bytes
+ .../10_HDR/10_hdr.ipynb                            |  342 [32m++[m
+ .../10_HDR/aligned-unaligned-hdr-comparison.jpg    |  Bin [31m0[m -> [32m116393[m bytes
+ .../10_HDR/hdr-image-sequence.jpg                  |  Bin [31m0[m -> [32m50174[m bytes
+ .../opencv-python-free-course-code/10_HDR/hdr.jpg  |  Bin [31m0[m -> [32m261218[m bytes
+ .../10_HDR/hdrDebevec.hdr                          |  Bin [31m0[m -> [32m18949202[m bytes
+ .../10_HDR/high-dynamic-range-hdr.jpg              |  Bin [31m0[m -> [32m50168[m bytes
+ .../10_HDR/img_0.033.jpg                           |  Bin [31m0[m -> [32m902169[m bytes
+ .../10_HDR/img_0.25.jpg                            |  Bin [31m0[m -> [32m1462235[m bytes
+ .../10_HDR/img_15.jpg                              |  Bin [31m0[m -> [32m2396332[m bytes
+ .../10_HDR/img_2.5.jpg                             |  Bin [31m0[m -> [32m2354237[m bytes
+ .../10_HDR/ldr-Drago.jpg                           |  Bin [31m0[m -> [32m1164589[m bytes
+ .../10_HDR/ldr-Mantiuk.jpg                         |  Bin [31m0[m -> [32m874664[m bytes
+ .../10_HDR/ldr-Reinhard.jpg                        |  Bin [31m0[m -> [32m1116379[m bytes
+ .../11_Object_Tracking/11_objectTracking.ipynb     |  476 [32m++[m
+ .../11_Object_Tracking/goturn.caffemodel           |  Bin [31m0[m -> [32m387872732[m bytes
+ .../11_Object_Tracking/goturn.jpg                  |  Bin [31m0[m -> [32m55747[m bytes
+ .../11_Object_Tracking/goturn.prototxt             |  587 [32m+++[m
+ .../11_Object_Tracking/race_car-BOOSTING.mp4       |  Bin [31m0[m -> [32m23924879[m bytes
+ .../11_Object_Tracking/race_car-CSRT.mp4           |  Bin [31m0[m -> [32m23937114[m bytes
+ .../11_Object_Tracking/race_car-GOTURN.mp4         |  Bin [31m0[m -> [32m23920711[m bytes
+ .../11_Object_Tracking/race_car-KCF.mp4            |  Bin [31m0[m -> [32m46257282[m bytes
+ .../11_Object_Tracking/race_car-MEDIANFLOW.mp4     |  Bin [31m0[m -> [32m23935021[m bytes
+ .../11_Object_Tracking/race_car-MIL.mp4            |  Bin [31m0[m -> [32m23937327[m bytes
+ .../11_Object_Tracking/race_car-MOSSE.mp4          |  Bin [31m0[m -> [32m23936162[m bytes
+ .../11_Object_Tracking/race_car-TLD.mp4            |  Bin [31m0[m -> [32m23926430[m bytes
+ .../11_Object_Tracking/race_car.mp4                |  Bin [31m0[m -> [32m10866616[m bytes
+ .../11_Object_Tracking/race_car_preview.mp4        |  Bin [31m0[m -> [32m24001054[m bytes
+ .../11_Object_Tracking/race_car_tracking.png       |  Bin [31m0[m -> [32m1254752[m bytes
+ .../12_Face_Detection/12_FaceDetection.py          |   93 [32m+[m
+ .../12_Face_Detection/deploy.prototxt              | 1789 [32m+++++++[m
+ .../res10_300x300_ssd_iter_140000_fp16.caffemodel  |  Bin [31m0[m -> [32m5351047[m bytes
+ .../13_tf_object_detection.ipynb                   |  430 [32m++[m
+ .../13_Object_Detection/README                     |   13 [32m+[m
+ .../13_Object_Detection/coco_class_labels.txt      |   92 [32m+[m
+ .../13_Object_Detection/images/000000001000.jpg    |  Bin [31m0[m -> [32m321136[m bytes
+ .../13_Object_Detection/images/baseball.jpg        |  Bin [31m0[m -> [32m168639[m bytes
+ .../13_Object_Detection/images/giraffe-zebra.jpg   |  Bin [31m0[m -> [32m859556[m bytes
+ .../13_Object_Detection/images/soccer.jpg          |  Bin [31m0[m -> [32m88267[m bytes
+ .../13_Object_Detection/images/street.jpg          |  Bin [31m0[m -> [32m90758[m bytes
+ .../models/ssd_mobilenet_v2_coco_2018_03_29.pbtxt  | 5235 [32m++++++++++++++++++++[m
+ .../frozen_inference_graph.pb                      |  Bin [31m0[m -> [32m69688296[m bytes
+ .../13_Object_Detection/tf_text_graph_ssd.py       |  296 [32m++[m
+ .../14_OpenPose.ipynb                              |  423 [32m++[m
+ .../1611.08050.pdf                                 |  Bin [31m0[m -> [32m8470523[m bytes
+ .../Ice_Hockey.mp4                                 |  Bin [31m0[m -> [32m29112547[m bytes
+ .../Milton_Golf_Swing.png                          |  Bin [31m0[m -> [32m2954362[m bytes
+ .../14_Pose_Estimation_using_Openpose/OpenPose.py  |  118 [32m+[m
+ .../OpenPose_Figure.png                            |  Bin [31m0[m -> [32m399134[m bytes
+ .../Tiger_Woods.png                                |  Bin [31m0[m -> [32m921483[m bytes
+ .../Tiger_Woods_crop.png                           |  Bin [31m0[m -> [32m384920[m bytes
+ .../pose_deploy_linevec_faster_4_stages.prototxt   | 2081 [32m++++++++[m
+ .../model/pose_iter_160000.caffemodel              |  Bin [31m0[m -> [32m205950363[m bytes
+ .../pose_deploy_linevec_faster_4_stages.prototxt   | 2975 [32m+++++++++++[m
+ 9.Deep_learning/cv/resizing1.jpg                   |  Bin [31m0[m -> [32m147216[m bytes
+ 9.Deep_learning/cv/test_write.jpg                  |  Bin [31m0[m -> [32m114173[m bytes
+ ... List and sample Project related questions.docx |  Bin [31m52383[m -> [32m52435[m bytes
+ class/class_313_superstore.pbix                    |  Bin [31m0[m -> [32m923114[m bytes
+ project_evaluation_feedback.docx                   |  Bin [31m0[m -> [32m16276[m bytes
+ 128 files changed, 19025 insertions(+), 62 deletions(-)
+
+[33mcommit a89fa4356930ea70b8e82695dd0eb02cf1080bb4[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Mon Apr 7 09:19:00 2025 +0530
+
+    update
+
+ .../MS+Excel+Frequently+used+shortcuts (1).pdf     | Bin [31m0[m -> [32m215579[m bytes
+ .../cv/opencv-python-free-course-code.zip          | Bin [31m0[m -> [32m1126407734[m bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit e7d5fa8072b6fdf8b304a68e45ed83d4abddc8e1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: md shahil ansari <ansarirahish455@gmail.com>
+Date:   Mon Apr 7 09:15:58 2025 +0530
+
+    update
+
+ .../{ptyhon => }/Sample - Superstore (2)-1.xls     |  Bin
+ .../python/class_practice/class_3_5/class1.py      |    1 [31m-[m
+ .../class_practice/class_3_5/class_3_5.ipynb       |    0
+ .../python/class_practice/class_3_5/day2.ipynb     | 2622 [31m--------------------[m
+ .../python/class_practice/class_3_5/day3.ipynb     | 2095 [31m----------------[m
+ .../python/ptyhon/Fraud Detection2 copy.ipynb      |  718 [31m------[m
+ 5.0_python_6.libraries/python/ptyhon/mat_sea.ipynb |   69 [31m-[m
+ .../python/ptyhon/ml_class1_itvedant.ipynb         |  703 [31m------[m
+ .../python/ptyhon/ml_class2_itvedant.ipynb         |  286 [31m---[m
+ .../python/ptyhon/total error_1.jpg                |  Bin [31m249939[m -> [32m0[m bytes
+ .../python/{ptyhon => }/ptyhon_exercies.ipynb      |    0
+ .../python/{ptyhon => }/python_class.ipynb         |    0
+ .../{ptyhon => }/python_class_itvedant.ipynb       |    0
+ .../{numpy => 1.numpy}/Numpy_class.pptx            |  Bin
+ .../class/Numpy_basics - Ajay Kumar Gupta.ipynb    |    0
+ .../{numpy => 1.numpy}/class/class_5_7_numpy.ipynb |    0
+ .../{numpy => 1.numpy}/class/experiment.ipynb      |    0
+ .../{numpy => 1.numpy}/class/numpy_11_1.ipynb      |    0
+ .../class/numpy_2_4_weekends.ipynb                 |    0
+ ...rrays_faster_than_list - Ajay Kumar Gupta.ipynb |    0
+ .../{numpy => 1.numpy}/numpy_class.ipynb           |    0
+ .../{numpy => 1.numpy}/numpy_docs_teaching.docx    |  Bin
+ .../LUSID Excel - Setting up your market data.xlsx |  Bin
+ .../{numpy => 1.numpy}/pw/Numpy Assignment.pdf     |  Bin
+ .../{numpy => 1.numpy}/pw/Numpy advance 2.ipynb    |    0
+ .../pw/Numpy_advance_class_3.ipynb                 |    0
+ .../pw/Numpy_basics -class_1.ipynb                 |    0
+ .../{numpy => 1.numpy}/pw/image scrper hindi.ipynb |    0
+ .../{numpy => 1.numpy}/pw/mat/Bank_churn.csv       |    0
+ .../pw/mat/EDA/18th Feb EDA_US_visa.ipynb          |    0
+ .../EDA/18th feb EDA_cronic_data_analysis.ipynb    |    0
+ .../pw/mat/EDA/24 Feb/24 Feb EDA_travel.ipynb      |    0
+ .../pw/mat/EDA/24 Feb/24 feb EDA_HR_dataset.ipynb  |    0
+ .../24 Feb/24 feb EDA_student_performance.ipynb    |    0
+ .../pw/mat/EDA/EDA_googleplaystore raw.ipynb       |    0
+ .../pw/mat/EDA/EDA_googleplaystore.ipynb           |    0
+ .../pw/mat/EDA/HRDataset_v14.csv                   |    0
+ .../{numpy => 1.numpy}/pw/mat/EDA/Travel.csv       |    0
+ .../{numpy => 1.numpy}/pw/mat/EDA/bokeh.ipynb      |    0
+ .../pw/mat/EDA/class_3_5_EDA.ipynb                 |    0
+ .../pw/mat/EDA/googleplaystore.csv                 |    0
+ .../pw/mat/EDA/kidney_disease.csv                  |    0
+ .../EDA/matplotlib-tutorial-for-beginners.ipynb    |    0
+ .../{numpy => 1.numpy}/pw/mat/EDA/plotly.ipynb     |    0
+ .../{numpy => 1.numpy}/pw/mat/EDA/project1_df.csv  |    0
+ .../{numpy => 1.numpy}/pw/mat/EDA/student-por.csv  |    0
+ .../{numpy => 1.numpy}/pw/mat/Mat_sea.ipynb        |    0
+ .../pw/mat/class_10_12_ ml_1.ipynb                 |    0
+ .../{numpy => 1.numpy}/pw/mat/clss+5_7_mat.ipynb   |    0
+ .../numpy_arrays_faster_than_list -class_2.ipynb   |    0
+ .../{numpy => 1.numpy}/pw/pandas_advance.ipynb     |    0
+ .../{numpy => 1.numpy}/pw/pandas_advance2.ipynb    |    0
+ .../{numpy => 1.numpy}/pw/pandas_basics.ipynb      |    0
+ .../pw/py_file/numpy_advance_2.py                  |    0
+ .../pw/py_file/numpy_advance_class_3.py            |    0
+ ...mpy_arrays_faster_than_list_ajay_kumar_gupta.py |    0
+ .../pw/py_file/numpy_basics_ajay_kumar_gupta.py    |    0
+ .../pw/py_file/pandas_advance.py                   |    0
+ .../pw/py_file/pandas_advance2.py                  |    0
+ .../{numpy => 1.numpy}/pw/py_file/pandas_basics.py |    0
+ .../{numpy => 1.numpy}/pw/services.csv             |    0
+ .../{numpy => 1.numpy}/pw/taxonomy.csv.xls         |    0
+ .../Pandas Cheatsheet for Data Science. .pdf       |  B
