@@ -1,0 +1,62 @@
+offline --> online 
+
+github
+--> https://github.com/shahil04/gen_ai.git
+
+
+
+cd path
+dir --> check file/folders
+mkdir --> create folder
+echo --> create new text file  echo "content >> filename
+cls --> clear screen 
+
+--------------------------------
+For 1st time config 
+usename mail_id  config
+
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+---------------------
+--local git  add 
+1. git init
+2. echo "text" >> filename (optional)
+3. git add Readme.md (optional if added)
+4. git add --all
+or 
+4. git add filename
+
+5. git commit -m "first time upload"
+
+add url for 1st time add github repo
+6. git remote add origin https://github.com/shahil04/gen_ai.git(your github url add )
+7. git push -u origin master
+
+---------
+After 
+git add *
+git status
+git commit -m "add resource files"
+git push
+
+
+git pull
+
+
+
+…or create a new repository on the command line
+echo "# gen_ai" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/shahil04/gen_ai.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/shahil04/gen_ai.git
+git branch -M main
+git push -u origin main
+
+
