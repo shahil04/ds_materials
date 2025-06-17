@@ -31,14 +31,6 @@ if st.button('Predict Fraud'):
         'policy_annual_premium': [policy_annual_premium],
         'auto_year': [auto_year],
         'umbrella_limit': [umbrella_limit],
-        # Add dummy values for other columns required by the model,
-        # assuming the model expects the same number of columns as the training data
-        'insured_education_level': [0], # Example: Assuming this column exists and needs a value
-        'fraud_reported': [0], # Example: Assuming this column exists and needs a value
-        'property_damage': [0], # Example: Assuming this column exists and needs a value
-        'incident_hour_of_the_day': [0], # Example: Assuming this column exists and needs a value
-        'incident_severity': [0], # Example: Assuming this column exists and needs a value
-        'authorities_contacted': [0] # Example: Assuming this column exists and needs a value
     })
 
     # Select only the numerical columns used for prediction based on the original code
