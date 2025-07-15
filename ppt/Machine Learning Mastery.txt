@@ -1,0 +1,207 @@
+[
+    {
+        "heading": "ML Fundamentals",
+        "items": [
+            {
+                "title": "Navigating the ML Landscape: A Beginner’s Guide",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25165/Navigating%20the%20ML%20Landscape%20A%20Beginner%E2%80%99s%20Guide%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "EDA -  Automobile Data",
+        "items": [
+            {
+                "title": "Handling Missing Data (Imputation Techniques)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25167/Handling-Missing-Data-in-Datasets.html"
+            },
+            {
+                "title": "Outlier Detection and Handling",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26304/Outlier-Detection-and-Handling-An-Overview.html"
+            },
+            {
+                "title": "Encoding Categorical Data (One-Hot Encoding, Label Encoding)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26305/Encoding-Categorical-Data-for-Machine-Learning.html"
+            },
+            {
+                "title": "Data Scaling & Normalization (Min-Max, Standardization)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26306/Data-Scaling-and-Normalization.html"
+            },
+            {
+                "title": "Feature Selection & Feature Engineering",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26307/Feature-Selection-and-Feature-Engineering.html"
+            },
+            {
+                "title": "Handling Imbalanced Data (SMOTE, Undersampling, Oversampling)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26308/Handling-Imbalanced-Data-in-Machine-Learning.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Supervised Learning – Regression (Marketing Analysis Sales Prediction & Automobiles Price Prediction )",
+        "items": [
+            {
+                "title": "Simple Linear Regression",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26591/Simple%20Linear%20Regression%20.html"
+            },
+            {
+                "title": "Multiple Linear Regression",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26592/Multiple%20Linear%20Regression%20.html"
+            },
+            {
+                "title": "Polynomial Regression",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26593/Polynomial%20Regression%20.html"
+            },
+            {
+                "title": "Regularisation ,Lasso & Ridge",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26594/Regularization-Lasso-and-Ridge-Regression.html"
+            },
+            {
+                "title": "Model Evaluation Metrics (R²-score, MSE, MAE, RMSE)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26595/Model%20Evaluation%20Metrics%20(R%C2%B2-score,%20MSE,%20MAE,%20RMSE).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Supervised Learning – Classification",
+        "items": [
+            {
+                "title": "Logistic Regression (Customer Churn using classification models)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25169/Logistic%20Regression%20.html"
+            },
+            {
+                "title": "K-Nearest Neighbors (KNN)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26341/K-Nearest%20Neighbors%20(KNN).html"
+            },
+            {
+                "title": "Decision Trees (Including Pruning Techniques) (Heart Diseases Prediction)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26342/Decision%20Trees%20(Including%20Pruning%20Techniques)%20(Heart%20Diseases%20Prediction).html"
+            },
+            {
+                "title": "Random Forest (Wine Quality Prediction)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26343/51-Ensemble-Learning-The-Basics.html"
+            },
+            {
+                "title": "Support Vector Machine (SVM)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26344/Crafting-Decision-Boundaries-The-SVM-Approach.html"
+            },
+            {
+                "title": "Model Evaluation Metrics (Accuracy, Precision, Recall, F1-score, Confusion Matrix, ROC-AUC)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26345/Mastering-Model-Evaluation-Metrics.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Ensemble Learning & Advanced ML Algorithms(Loan Default Prediction)",
+        "items": [
+            {
+                "title": "Bagging & Boosting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25171/Ensemble-Learning-The-Basics.html"
+            },
+            {
+                "title": "AdaBoost",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25172/AdaBoost-Explained-From-Concept-to-Implementation.html"
+            },
+            {
+                "title": "Gradient Boosting and XGBoost",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25173/Boosting-Brilliance-XGBoost-From-Start-to-Optimization.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unsupervised Learning (Clustering-based Customer Segmentation)",
+        "items": [
+            {
+                "title": "K-Means Clustering",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25175/K-Means-Mastery-Beyond-the-Basics.html"
+            },
+            {
+                "title": "Hierarchical Clustering",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26347/Crafting-Clusters-Mastering-Agglomerative-Methods.html"
+            },
+            {
+                "title": "DBSCAN",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26348/DBSCAN-Density-Based-Spatial-Clustering-of-Applications-with-Noise.html"
+            },
+            {
+                "title": "PCA (Principal Component Analysis)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26349/Dimensionality-Reduction-Cutting-Through-the-Noise.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Model Optimization",
+        "items": [
+            {
+                "title": "Cross-Validation Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25177/MLR-with-StatsModels-A-Deep-Dive.html"
+            },
+            {
+                "title": "Hyperparameter Tuning (GridSearchCV, RandomizedSearchCV)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26351/Advanced-Logistic-Regression-Tuning-Scaling-and-ROC.html"
+            },
+            {
+                "title": "Bias-Variance Tradeoff",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26352/Bias-Variance%20Tradeoff%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Model Deployment Basics",
+        "items": [
+            {
+                "title": "Introduction to Streamlit for ML Model Deployment",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25179/Introduction%20to%20Streamlit%20for%20ML%20Model%20Deployment%20.html"
+            },
+            {
+                "title": "Web Application for ML Predictions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26354/Web%20Application%20for%20ML%20Predictions%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Aptitude Session",
+        "items": [
+            {
+                "title": "Exam",
+                "link": ""
+            },
+            {
+                "title": "Solution Discussion",
+                "link": ""
+            }
+        ]
+    }
+]

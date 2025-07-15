@@ -1,0 +1,114 @@
+[
+    {
+        "heading": "Essential Array Operations with NumPy",
+        "items": [
+            {
+                "title": "Shape and Stats with NumPy",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23628/Shape-and-Stats-with-NumPy.html"
+            },
+            {
+                "title": "Array Magic: Indexing and Slicing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23629/Array-Magic-Indexing-and-Slicing.html"
+            },
+            {
+                "title": "Crafting Arrays: From Import to Stats",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23630/Crafting-Arrays-From-Import-to-Stats.html"
+            },
+            {
+                "title": "The Matrix Toolkit",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23631/Matrix-functions.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Decoding Your Data",
+        "items": [
+            {
+                "title": "Unraveling the World of Data and Its Insights",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23606/Unraveling-the-World-of-Data-and-Its-Insights.html"
+            },
+            {
+                "title": "The Basics of Statistics: Descriptive Insights",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23610/The-Basics-of-Statistics-Descriptive-Insights.html"
+            },
+            {
+                "title": "Measuring Data Spread: Dispersion Insights",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23611/Measuring-Data-Spread-Dispersion-Insights.html"
+            },
+            {
+                "title": "Unlocking Relationships: The Power of Association",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23612/Unlocking-Relationships-The-Power-of-Association.html"
+            },
+            {
+                "title": "Decoding Skewness: Understanding Data Distribution",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23613/Decoding-Skewness-Understanding-Data-Distribution.html"
+            },
+            {
+                "title": "Unlocking the World of Probability",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23614/Unlocking-the-World-of-Probability.html"
+            },
+            {
+                "title": "Balancing Data: Understanding Uniform Distribution",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23615/Balancing-Data-Understanding-Uniform-Distribution.html"
+            },
+            {
+                "title": "The Binary World of Binomial Distribution",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23616/The-Binary-World-of-Binomial-Distribution.html"
+            },
+            {
+                "title": "The Z-Score Journey",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23617/The-Z-Score-Journey-Understanding-Distributions.html"
+            },
+            {
+                "title": "The T-Score",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Statistical Inference and Testing",
+        "items": [
+            {
+                "title": "Inferential Statistics: Beyond the Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23619/Inferential-Statistics-Beyond-the-Data.html"
+            },
+            {
+                "title": "Decoding Hypothesis Testing: Methods and P-Values",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23620/Decoding-Hypothesis-Testing-Methods-and-P-Values.html"
+            },
+            {
+                "title": "Mastering the Central Limit Theorem",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23621/Mastering-the-Central-Limit-Theorem.html"
+            },
+            {
+                "title": "Population Parameters: Estimation Made Simple",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23622/Population-Parameters-Estimation-Made-Simple.html"
+            },
+            {
+                "title": "P-Values and Errors: Navigating Statistical Uncertainty",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23623/P-Values-and-Errors-Navigating-Statistical-Uncertainty.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Alumini Connect",
+        "items": [
+            {
+                "title": "Meet with Alumini",
+                "link": ""
+            }
+        ]
+    }
+]

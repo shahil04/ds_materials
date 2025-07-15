@@ -1,0 +1,188 @@
+[
+    {
+        "heading": "Introduction to Data",
+        "items": [
+            {
+                "title": "Data and its types",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24793/Data%20and%20Its%20Types%20(1).html"
+            },
+            {
+                "title": "Introduction to Data Analysis and Data Science",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24795/Introduction%20to%20Data%20Analysis%20and%20Data%20Science.html"
+            },
+            {
+                "title": "Application of Data Science in Different fields",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24796/Applications-of-Data-Science-in-Different-Fields.html"
+            },
+            {
+                "title": "Assignment",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24797/Applications%20of%20Data%20Science%20in%20Different%20Fields.html"
+            }
+        ]
+    },
+    {
+        "heading": "Stepping into the World of Excel: A Quick Guide",
+        "items": [
+            {
+                "title": "Excel Quick Start",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23092/Excel%20Quick%20Start%20Getting%20Started%20with%20Excel.html"
+            },
+            {
+                "title": "Excel Unleashed",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25835/Excel%20Unleashed.html"
+            },
+            {
+                "title": "Exploring Excel Formulas and Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23095/2.1%20Exploring%20Excel%20Formulas%20and%20Functions.html"
+            },
+            {
+                "title": "Mastering Excel Formulas and Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23096/Mastering%20Excel%20Formulas%20and%20Functions.html"
+            },
+            {
+                "title": "Tracing Precedents and Dependents",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23120/Tracing%20Precedents%20and%20Dependents.html"
+            },
+            {
+                "title": "Consolidating Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23121/Consolidating%20Data.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Named Ranges and Table Magic",
+        "items": [
+            {
+                "title": "Named Ranges",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23099/Named%20Ranges.html"
+            },
+            {
+                "title": "Insert a Table and Style Options",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23100/Inserting%20a%20table%20and%20style%20options.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Induction Session",
+        "items": [
+            {
+                "title": "Course Induction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24802/Induction-DSDA-10.0-v2.html"
+            }
+        ]
+    },
+    {
+        "heading": "AutoFill Magic and Custom Lists",
+        "items": [
+            {
+                "title": "AutoFill Series and Flash Fill",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23110/AutoFill%20Series%20and%20Flash%20Fill.html"
+            },
+            {
+                "title": "Creating and Using Custom Lists",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23111/Creating%20and%20Using%20Custom%20Lists.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Conditional Formatting and Statements",
+        "items": [
+            {
+                "title": "Cell Styles and Basic IF Statements",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23103/Cell%20Styles%20and%20Basic%20If%20Statements.html"
+            },
+            {
+                "title": "Advanced Conditional Formatting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23104/Advanced%20Conditional%20Formatting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Advanced Data Analysis in Excel",
+        "items": [
+            {
+                "title": "Nested IF and IFERRORS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23106/Nested%20IF%20and%20IFERRORS.html"
+            },
+            {
+                "title": "Advanced SUM and COUNT Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23107/Advanced%20SUM%20and%20COUNT%20Functions.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Lookup Functions and Data Validation",
+        "items": [
+            {
+                "title": "Looking up the value",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23113/Mastering%20Index%20and%20Match.html"
+            },
+            {
+                "title": "Exploring HLOOKUP and LOOKUP",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23114/Exploring%20HLOOKUP%20and%20LOOKUP.html"
+            },
+            {
+                "title": "Mastering Data Validation in Excel",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23115/Mastering%20Data%20Validation%20in%20Excel.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "PivotTable and PivotChart Mastery",
+        "items": [
+            {
+                "title": "FinTrack: Smart Financial Analytics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25401/FinTrack-Smart-Financial-Analytics.html"
+            },
+            {
+                "title": "Creating PivotTables",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23117/Creating%20PivotTables.html"
+            },
+            {
+                "title": "Creating Graphs and Chart Types",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25347/Creating%20Graphs%20and%20Chart%20Types.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Mastery",
+        "items": [
+            {
+                "title": "Understanding the Interview Flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24804/Understanding%20interview%20flow.html"
+            },
+            {
+                "title": "90-Second Self-Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24805/90-Second%20Self-Introduction.html"
+            }
+        ]
+    }
+]

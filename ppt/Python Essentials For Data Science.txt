@@ -1,0 +1,206 @@
+[
+    {
+        "heading": "Introduction to Python",
+        "items": [
+            {
+                "title": "Hello Python",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24917/hello-python.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Python Starter Kit & Foundations",
+        "items": [
+            {
+                "title": "Python Kickstart",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24850/Python%20Kickstart.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Python Control Flow Unlocked",
+        "items": [
+            {
+                "title": "Control Flows",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24851/Control-flows.html"
+            },
+            {
+                "title": "Mastering Python's Decision Making",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24865/Mastering%20Python's%20Decision%20Making%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Understanding loops in Python",
+        "items": [
+            {
+                "title": "Looping Adventures",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24852/looping-adventures.html"
+            },
+            {
+                "title": "Finding the Exit",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24853/Finding%20the%20Exit.html"
+            },
+            {
+                "title": "QuizMaster: The Ultimate Challenge",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25381/QuizMaster%20The%20Ultimate%20Challenge.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Data Structures in Python",
+        "items": [
+            {
+                "title": "Navigating Through Collections",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24864/Navigating%20Through%20Collections.html"
+            },
+            {
+                "title": "List Level Up!",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24856/List%20Level%20Up!.html"
+            },
+            {
+                "title": "Building & Navigating Dictionaries",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24857/Building%20&%20Navigating%20Dictionaries.html"
+            },
+            {
+                "title": "Dict Mastery: Beyond Basics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24858/Dict%20Mastery%20Beyond%20Basics.html"
+            },
+            {
+                "title": "Cracking String Secrets",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24859/Cracking%20String%20Secrets.html"
+            },
+            {
+                "title": "Mastering Strings in Python",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24860/Mastering%20Strings%20in%20Python.html"
+            },
+            {
+                "title": "Exploring Python's Tuple Magic",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24861/Exploring%20Python's%20Tuple%20Magic.html"
+            },
+            {
+                "title": "Python Sets Made Easy",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24862/Python%20Sets%20Made%20Easy%20.html"
+            },
+            {
+                "title": "Mastering Python's Datetime Features",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24863/Mastering%20Python's%20Datetime%20Features%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Building Functions",
+        "items": [
+            {
+                "title": "Crafting Functions in Python",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24855/Crafting%20Functions%20in%20Python%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "OOPs",
+        "items": [
+            {
+                "title": "Unlocking Object Functionality",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24870/Unlocking%20Object%20Functionality%20.html"
+            },
+            {
+                "title": "Unlocking Object Functionality II",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24871/Unlocking%20Object%20Functionality%20II%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Prep",
+        "items": [
+            {
+                "title": "OOPs Interview Prep",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24929/OOPs-Interview-Prep.html"
+            }
+        ]
+    },
+    {
+        "heading": "File Handling , Exception Handling & Debugging",
+        "items": [
+            {
+                "title": "Python File Handling Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24867/Python%20File%20Handling%20Essentials%20.html"
+            },
+            {
+                "title": "Preventing Crashes with Exceptions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24868/Preventing%20Crashes%20with%20Exceptions%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Regular Expression & WebScraping",
+        "items": [
+            {
+                "title": "Regular Expression & WebScraping",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24920/Regular-Expression-and-Web-Scraping.html"
+            },
+            {
+                "title": "Character Class in Regular Expression",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24921/Character-Class-in-Regular-Expressions.html"
+            },
+            {
+                "title": "WebScraping using request & beautifulSoup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24922/Web-Scraping-using-requests-and-BeautifulSoup.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project",
+        "items": [
+            {
+                "title": "Python-Web Scraping",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24924/Python-Web%20Scraping.html"
+            }
+        ]
+    },
+    {
+        "heading": "Job Application Training",
+        "items": [
+            {
+                "title": "Naukri, Linkedin, Other Job Portals Training",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24926/Naukri,%20Linkedin,%20Other%20Portals%20Training.html"
+            }
+        ]
+    }
+]

@@ -1,0 +1,209 @@
+[
+    {
+        "heading": "Foundations of Business Intelligence and Power BI",
+        "items": [
+            {
+                "title": "Power BI Unboxed",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22392/11-Power-BI-Unboxed.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Kickstarting Power BI Desktop",
+        "items": [
+            {
+                "title": "Power BI Setup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22396/21-Power-BI-Setup.html"
+            },
+            {
+                "title": "Power BI Interface Tour",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22397/Power-BI-Interface-Tour.html"
+            },
+            {
+                "title": "Navigating the Workspace",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22398/Navigating-the-Workspace.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Cleaning and Transforming Data",
+        "items": [
+            {
+                "title": "Query Editor Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22400/Query-Editor-Essentials-in-Power-BI.html"
+            },
+            {
+                "title": "Transforming Data with Ease",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22401/Transforming-Data-with-Ease.html"
+            },
+            {
+                "title": "Advanced Data Tricks",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22402/33-Advanced-Data-Tricks.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Modeling Data in Power BI",
+        "items": [
+            {
+                "title": "Data Modeling Basics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22404/41-Data-Modeling-Basics.html"
+            },
+            {
+                "title": "Relationship Management",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22405/42-Relationship-Management.html"
+            },
+            {
+                "title": "Schema Wonders",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22406/43-Schema-Wonders.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering DAX for Data Analysis",
+        "items": [
+            {
+                "title": "Introduction to DAX",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22408/51-Introduction-to-DAX.html"
+            },
+            {
+                "title": "DAX Power Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22409/DAX-Power-FunctionsOLD.html"
+            },
+            {
+                "title": "Filter Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22410/DAX-Filter-Functions-A-Deep-Dive-converted.html"
+            },
+            {
+                "title": "Advanced DAX Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22411/Advanced-DAX-Techniques.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Crafting Compelling Visuals",
+        "items": [
+            {
+                "title": "Visualization Basics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22414/Visualization-Basics.html"
+            },
+            {
+                "title": "Advanced Visual Crafting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22415/Advanced-Visual-Crafting.html"
+            },
+            {
+                "title": "Customizing Your Visuals",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22416/Customizing-Your-Visuals.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Building Interactive Dashboards and Insights",
+        "items": [
+            {
+                "title": "Creating Interactive Dashboards",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22724/Creating-Interactive-Dashboards.html"
+            },
+            {
+                "title": "Gaining Advanced Insights",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22725/72-Gaining-Advanced-Insights%20.html"
+            },
+            {
+                "title": "Power BI on Mobile",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22726/Power%20BI%20on%20Mobile.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Leveraging Power BI Service",
+        "items": [
+            {
+                "title": "Introduction to Power BI Service",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22734/Introduction-to-Power-BI-Service.html"
+            },
+            {
+                "title": "Managing Data Refreshes",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22735/Managing-Data-Refreshes.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Direct Connectivity in Power BI",
+        "items": [
+            {
+                "title": "Understanding Data Gateways",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22730/Understanding-Data-Gateways.html"
+            },
+            {
+                "title": "Exploring DirectQuery and Live Connection",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22731/Exploring-DirectQuery-and-Live-Connection.html"
+            },
+            {
+                "title": "Connecting to On-premises SQL Server Database Using Gateway",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22732/Connecting-to-On-premises-SQL-Server-Database-Using-Gateway.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project",
+        "items": [
+            {
+                "title": "Dmart Sales Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25380/DMart%20Analysis.html"
+            }
+        ]
+    },
+    {
+        "heading": "Career Accelerator",
+        "items": [
+            {
+                "title": "Linkedin Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24913/LinkedIn%20Introduction.html"
+            },
+            {
+                "title": "Resume Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24914/Resume%20Basics.html"
+            },
+            {
+                "title": "Introduction to HackerRank, LeetCode",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24915/Introduction%20to%20LeetCode%20and%20HackerRank.html"
+            }
+        ]
+    }
+]

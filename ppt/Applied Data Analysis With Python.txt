@@ -1,0 +1,100 @@
+[
+    {
+        "heading": "Data Manipulation and Analysis with Pandas",
+        "items": [
+            {
+                "title": "Navigating DataFrames and Series",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23633/Navigating-DataFrames-and-Series.html"
+            },
+            {
+                "title": "Data Preparation Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23634/Data-Preparation-Essentials.html"
+            },
+            {
+                "title": "Unlocking Pivot Table Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23635/Unlocking-Pivot-Table-Techniques.html"
+            },
+            {
+                "title": "Polishing  Data: From Messy To Meaningful",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23636/Polishing-Data-From-Messy-To-Meaningful.html"
+            },
+            {
+                "title": "Deep Dive Into Data Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23637/Deep-Dive-Into-Data-Analysis.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Transforming Data: Collection, Cleaning, and Preparation",
+        "items": [
+            {
+                "title": "Unveiling Data Collection: Methods and Tools",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23625/Unveiling%20Data%20Collection%20Methods%20and%20Tools.html"
+            },
+            {
+                "title": "Turning Raw Data into Insights: A Step-by-Step Guide",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23626/Turning-Raw-Data-into-Insights-A-Step-by-Step-Guide.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Visualizing Data with Matplotlib - PS4 Sales Analysis",
+        "items": [
+            {
+                "title": "Discovering Matplotlib basics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23639/Discovering%20Matplotlib%20basics.html"
+            },
+            {
+                "title": "Enhancing visuals with Matplotlib",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23640/Enhancing%20visuals%20with%20Matplotlib.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Visualizing Data with Seaborn - Mumbai West House Pricing",
+        "items": [
+            {
+                "title": "Easing visuals with Seaborn",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23641/Easing%20visuals%20with%20Seaborn.html"
+            },
+            {
+                "title": "Customizing Seaborn Charts",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23642/Customizing%20Seaborn%20Charts.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project",
+        "items": [
+            {
+                "title": "Data Preprocessing & Visualization- Automobile Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25151/Automotive-Data-Preprocessing-Challenge.html"
+            }
+        ]
+    },
+    {
+        "heading": "Flip Learning",
+        "items": [
+            {
+                "title": "Student Content Delivery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25159/Flip-learning.html"
+            }
+        ]
+    }
+]

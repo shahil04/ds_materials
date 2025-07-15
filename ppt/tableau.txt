@@ -1,0 +1,154 @@
+[
+    {
+        "heading": "Getting Started with Tableau",
+        "items": [
+            {
+                "title": "Introduction to Tableau",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22332/11-Introduction-to-Tableau%20(1).html"
+            },
+            {
+                "title": "Installation of Tableau",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22333/12-Installation-of-Tableau.html"
+            },
+            {
+                "title": "Workspace Overview",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22339/21-Workspace-Overview.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Working with Data in Tableau",
+        "items": [
+            {
+                "title": "Data Concepts",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22340/22-Data-Concepts.html"
+            },
+            {
+                "title": "Introduction to Calculated Fields",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22341/23-Introduction-to-Calculated-Fields.html"
+            },
+            {
+                "title": "Introduction to Parameters",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22351/42-Introduction-to-Parameters.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Connecting to Data Sources",
+        "items": [
+            {
+                "title": "Data Extracts vs. Live Connections",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22936/Data-Extracts-vs-Live-Connections.html"
+            },
+            {
+                "title": "Basic Data Reading And Connecting to Excel and CSV Files",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22334/13-Basic-Data-Reading-And-Connecting-to-Excel-and-CSV-Files.html"
+            },
+            {
+                "title": "Connecting to Multiple Data Sources",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22935/32-Connecting-to-Multiple-Data-Sources.html"
+            },
+            {
+                "title": "EcomLens: Business at a Glance",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25382/EcomLens-Business-at-a-Glance-Dashboard.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Advanced Data Sorting, Filtering, and Dynamic Visualization Techniques",
+        "items": [
+            {
+                "title": "Sorting Data and Using Filters",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22350/41-Sorting-Data-and-Using-Filters.html"
+            },
+            {
+                "title": "Creating Groups, Sets, and Hierarchies",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22352/43-Creating-Groups-Sets-and-Hierarchies.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Creating Visualizations in Tableau",
+        "items": [
+            {
+                "title": "Basic Visualization Types",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22929/51-Basic-Visualization-Types.html"
+            },
+            {
+                "title": "Custom Visualization Types-I",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22930/53-Custom-Visualization-Types.html"
+            },
+            {
+                "title": "Custom Visualization Types-III",
+                "link": ""
+            },
+            {
+                "title": "Building KPIs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22933/54-Building-KPIs.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Advanced Analytical Techniques",
+        "items": [
+            {
+                "title": "Forecasting and Trend Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22365/71-Forecasting-and-Trend-Analysis.html"
+            },
+            {
+                "title": "Statistical Spellcasting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22366/72-Statistical-Spellcasting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Building Interactive Dashboards",
+        "items": [
+            {
+                "title": "Dashboard Fundamentals",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22368/81-Dashboard-Fundamentals.html"
+            },
+            {
+                "title": "Action Filters",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22369/82-Action-Filters.html"
+            },
+            {
+                "title": "Drill-Down Reports and Visual Best Practices",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22370/83-Drill-Down-Reports-and-Visual-Best-Practices.html"
+            }
+        ]
+    },
+    {
+        "heading": "HR Activity",
+        "items": [
+            {
+                "title": "Debate/Elocution",
+                "link": ""
+            }
+        ]
+    }
+]

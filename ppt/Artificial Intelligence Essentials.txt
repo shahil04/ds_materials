@@ -1,0 +1,314 @@
+[
+    {
+        "heading": "Understanding the world of AI",
+        "items": [
+            {
+                "title": "AI Unveiled: Introduction to AI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23558/AI%20Unveiled%20Introduction%20to%20AI.html"
+            },
+            {
+                "title": "AI vs ML vs DL",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24931/AI%20vs%20ML%20vs%20DL%20.html"
+            },
+            {
+                "title": "Applications of AI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24932/Applications%20of%20AI%20%20.html"
+            },
+            {
+                "title": "Introduction to GenAI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24933/Introduction%20to%20GenAI%20%20.html"
+            },
+            {
+                "title": "Future of AI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24934/Future%20of%20AI.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Introduction to DL",
+        "items": [
+            {
+                "title": "Introduction  to Deep Learning",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24939/Introduction-to-Deep-Learning.html"
+            },
+            {
+                "title": "Perceptron Model",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24940/Perceptron%20Model%20.html"
+            },
+            {
+                "title": "Introduction to Tensorflow,Pytorch and Keras",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24941/Introduction%20to%20Tensorflow,Pytorch%20and%20Keras%20%20.html"
+            },
+            {
+                "title": "Introduction to Types of Neural Networks",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24942/Introduction%20to%20Types%20of%20Neural%20Networks.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Artificial Neural Network Deep Dive",
+        "items": [
+            {
+                "title": "Activation Functions in NN",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26745/Activation%20Functions%20in%20NN%20%20.html"
+            },
+            {
+                "title": "Loss Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26746/Loss%20Functions%20%20.html"
+            },
+            {
+                "title": "Optimization Technique",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26747/Optimization%20Technique%20%20.html"
+            },
+            {
+                "title": "Regularization Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26748/Regularization%20Techniques%20%20.html"
+            },
+            {
+                "title": "CallBacks",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26749/CallBacks.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Computer Vision",
+        "items": [
+            {
+                "title": "Object Detection",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24964/Object%20Detection%20%20.html"
+            },
+            {
+                "title": "Region Proposal Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24965/Region%20Proposal%20Techniques%20%20.html"
+            },
+            {
+                "title": "Semantic Segmentation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24966/Semantic-Segmentation.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Computer Vision with OpenCV-Text Detection with OpenCV in Python | OCR using Tesseract",
+        "items": [
+            {
+                "title": "Working with images",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24968/Working%20with%20images%20%20.html"
+            },
+            {
+                "title": "Working with Videos",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24969/Working%20with%20Videos%20%20%20%20.html"
+            },
+            {
+                "title": "OCR",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24970/OCR.html"
+            },
+            {
+                "title": "Media Pipe - FaceMesh, Pose Detection",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24971/Media%20Pipe%20-%20FaceMesh,%20Pose%20Detection.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Convolution Neural Network",
+        "items": [
+            {
+                "title": "Introduction to CNN",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24973/Introduction%20to%20CNN%20%20.html"
+            },
+            {
+                "title": "Architecture of CNN - Kernel / Filter, Stride, Padding, Activation Function Max Pooling and Avg Pooling",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24974/Architecture-of-Convolutional-Neural-Networks-CNNs.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Sentiment Analysis on Amazon Reviews- Natural Language Processing",
+        "items": [
+            {
+                "title": "Introduction to NLP",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24976/Introduction%20to%20NLP%20.html"
+            },
+            {
+                "title": "Text Preprocessing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24977/Text%20Preprocessing.html"
+            },
+            {
+                "title": "Text Vecorization and Classification",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24978/Text%20Vecorization%20and%20Classification%20.html"
+            },
+            {
+                "title": "Embedding Layer in Natural Language Processing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24979/Embedding%20Layer%20in%20Natural%20Language%20Processing.html"
+            },
+            {
+                "title": "Sentiment Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24980/Sentiment-Analysis.html"
+            },
+            {
+                "title": "Sequence Model",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24981/Sequence%20Model%20.html"
+            },
+            {
+                "title": "Email Spam Detection",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24982/Email%20Spam%20Detection.html"
+            },
+            {
+                "title": "Machine Translation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24983/Machine-Translation.html"
+            },
+            {
+                "title": "Introduction to LLM - Working with OpenAI API",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24984/Introduction%20to%20LLM%20-%20Working%20with%20OpenAI%20API.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Fake News Detection Analysis",
+        "items": [
+            {
+                "title": "Introduction to RNN",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24953/Introduction%20to%20RNN%20.html"
+            },
+            {
+                "title": "LSTM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24954/LSTM.html"
+            },
+            {
+                "title": "GRU",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24955/GRU.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Chatbot",
+        "items": [
+            {
+                "title": "Creating Chatbot",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24951/Creating%20Chatbot.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Time Series Analysis",
+        "items": [
+            {
+                "title": "Time Series Data in ML",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23569/Time%20Series%20Data%20in%20ML.html"
+            },
+            {
+                "title": "Working with Time-Series data with Python",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23570/Working%20with%20Time-Series%20data%20with%20Python.html"
+            },
+            {
+                "title": "Quest for Stationarity: Analyzing Stationarity in Time Series",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23571/Quest-for-Stationarity-Analyzing-Stationarity-in-Time-Series.html"
+            },
+            {
+                "title": "Decomposing Time Mysteries: Time Decomposition in Time Series",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23572/Decomposing-Time-Mysteries.html"
+            },
+            {
+                "title": "Pattern Recognition Chronicles",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/23573/Pattern-Recognition-Chronicles.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Weather Forecasting using ARIMA  & SARIMA Model",
+        "items": [
+            {
+                "title": "Introduction to AR and MA model",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24945/Introduction%20to%20AR%20and%20MA%20model%20.html"
+            },
+            {
+                "title": "Stationarity & Differencing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24946/Stationarity-and-Differencing-Time-Series-Analysis.html"
+            },
+            {
+                "title": "SariMax of Seasonal Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26821/SariMax%20of%20Seasonal%20Data.html"
+            },
+            {
+                "title": "Identifying order AR(p), I(d), MA(q)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24947/Identifying%20order%20AR(p),%20I(d),%20MA(q)%20.html"
+            },
+            {
+                "title": "Implementation of ARIMA",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24948/Implementation%20of%20ARIMA.html"
+            },
+            {
+                "title": "Implementation of SARIMA",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24949/Implementation-of-SARIMA-A-Comprehensive-Guide.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Stock Price Prediction using Sequence Model",
+        "items": [
+            {
+                "title": "Introduction to Sequence Models RNN, LSTM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24986/Introduction%20to%20Sequence%20Models%20RNN,%20LSTM%20.html"
+            },
+            {
+                "title": "Preparing Time Series Data for LSTM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24987/Preparing%20Time%20Series%20Data%20for%20LSTM.html"
+            },
+            {
+                "title": "Forecasting using LSTM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24988/Forecasting%20using%20LSTM%20.html"
+            },
+            {
+                "title": "Future Forecast",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24989/Future%20Forecast.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]
