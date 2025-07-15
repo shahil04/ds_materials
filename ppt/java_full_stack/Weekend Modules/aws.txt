@@ -1,0 +1,211 @@
+[
+    {
+        "heading": "Stepping into The World of Cloud Computing",
+        "items": [
+            {
+                "title": "Getting started with Cloud",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22268/Getting%20started%20with%20Cloud.html"
+            },
+            {
+                "title": "Exploring The World of AWS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22269/Exploring%20The%20World%20of%20AWS.html"
+            },
+            {
+                "title": "IAM: Unlocking AWS Security",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22270/IAM-Unlocking-AWS-Security.html"
+            },
+            {
+                "title": "Crafting IAM Groups and Roles",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22271/Crafting%20IAM%20Groups%20and%20Roles.html"
+            },
+            {
+                "title": "Deep Dive Into IAM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22272/Deep%20Dive%20Into%20IAM.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Getting started with Computing",
+        "items": [
+            {
+                "title": "EC2 Mastery: Fundamentals to Pricing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22274/EC2%20Mastery%20Fundamentals%20to%20Pricing.html"
+            },
+            {
+                "title": "EC2 Launch Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22275/EC2%20Launch%20Essentials.html"
+            },
+            {
+                "title": "Autoscaling Your Cloud Fleet",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22276/Autoscaling%20Your%20Cloud%20Fleet.html"
+            },
+            {
+                "title": "Mastering ELB: Types & Algorithms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22277/Mastering-ELB-Types-and-Algorithms.html"
+            },
+            {
+                "title": "Beyond Servers: Architecting Modern Web Apps",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22278/Beyond%20Servers%20Architecting%20Modern%20Web%20Apps.html"
+            },
+            {
+                "title": "Monitoring The Cloud",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25257/Monitoring%20The%20Cloud.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Deep Dive Into Storage",
+        "items": [
+            {
+                "title": "S3 Mastery: Unlocking Cloud Storage",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22280/S3%20Mastery%20Unlocking%20Cloud%20Storage.html"
+            },
+            {
+                "title": "Optimize Storage with EBS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22281/Optimize%20Storage%20with%20EBS.html"
+            },
+            {
+                "title": "Master RDS in a Flash",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22282/Master%20RDS%20in%20a%20Flash.html"
+            },
+            {
+                "title": "DynamoDB Unveiled: Key Insights",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22283/DynamoDB%20Unveiled%20Key%20Insights.html"
+            },
+            {
+                "title": "Database Dynamics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22284/Database%20Dynamics.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Exploring Networking essentials in AWS",
+        "items": [
+            {
+                "title": "Networking with VPC",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22287/Networking%20with%20VPC.html"
+            },
+            {
+                "title": "Understanding VPC Gateways",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22288/Understanding%20VPC%20Gateways.html"
+            },
+            {
+                "title": "Route 53 Mastery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22289/Route%2053%20Mastery.html"
+            },
+            {
+                "title": "Cloudfront Magic: Geo-targeted Delivery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22290/Cloudfront%20Magic%20Geo-targeted%20Delivery.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Devops  Essentials",
+        "items": [
+            {
+                "title": "Cracking The DevOps Code",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22654/Cracking%20The%20DevOps%20Code%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Linux Fundamentals and Scripting Mastery",
+        "items": [
+            {
+                "title": "Diving Into Linux Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22650/Diving%20Into%20Linux%20Essentials.html"
+            },
+            {
+                "title": "The Art Of Editing & Securing Files",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22651/The%20Art%20Of%20Editing%20&%20Securing%20Files.html"
+            },
+            {
+                "title": "Unlocking The Power Of Shell Scripting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22652/Unlocking%20The%20Power%20Of%20Shell%20Scripting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering DevOps & Docker Essentials",
+        "items": [
+            {
+                "title": "Docker: Shipping Code Made Simple",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22655/Docker%20Shipping%20Code%20Made%20Simple.html"
+            },
+            {
+                "title": "Commanding the Container Ship",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22656/Commanding-the-Container-Ship.html"
+            },
+            {
+                "title": "Scaling With Docker Storage Solutions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22657/Scaling%20With%20Docker%20Storage%20Solutions.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Kubernetes In Action",
+        "items": [
+            {
+                "title": "Diving Into Kubernetes: From Nodes To Pods",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22659/Diving%20Into%20Kubernetes%20From%20Nodes%20To%20Pods.html"
+            },
+            {
+                "title": "Mastering Deployments In  A Flash",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22660/Mastering%20Deployments%20In%20%20A%20Flash.html"
+            },
+            {
+                "title": "Journey With Pods & Storage",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22661/Journey%20With%20Pods%20&%20Storage.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlocking CI/CD In AWS",
+        "items": [
+            {
+                "title": "Build & Automate With AWS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22663/Build%20&%20Automate%20With%20AWS.html"
+            },
+            {
+                "title": "Transformers Of AWS DevOps",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22664/Transformers%20Of%20AWS%20DevOps.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

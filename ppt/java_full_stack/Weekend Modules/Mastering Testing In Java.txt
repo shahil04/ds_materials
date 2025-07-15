@@ -1,0 +1,32 @@
+[
+    {
+        "heading": "Getting Started with Testing in Java",
+        "items": [
+            {
+                "title": "The Essentials of Software Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25278/Introduction-to-Software-Testing.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering JUnit and Integration Testing with Java",
+        "items": [
+            {
+                "title": "Mastering Unit Testing with JUnit",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25280/Mastering-Integration-Testing-in-Spring-Boot.html"
+            },
+            {
+                "title": "Seamless Integration Testing Unlocked",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25281/Seamless%20Integration%20Testing%20Unlocked.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

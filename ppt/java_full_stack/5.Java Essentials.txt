@@ -1,0 +1,257 @@
+[
+    {
+        "heading": "Getting started with Core Java",
+        "items": [
+            {
+                "title": "Getting Started with Java: Core, Evolution, and Comparisons",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22143/Getting%20Started%20with%20Java%20Core,%20Evolution,%20and%20Comparisons.html"
+            },
+            {
+                "title": "Java Architecture: Platform Independence & JVM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22144/Java%20Architecture%20Platform%20Independence%20&%20JVM.html"
+            },
+            {
+                "title": "Mastering Java Setup: JDK, CMD, and Eclipse",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22145/Mastering%20Java%20Setup%20JDK,%20CMD,%20and%20Eclipse.html"
+            },
+            {
+                "title": "Getting Started: Your First Java Program and Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22146/Getting%20Started%20Your%20First%20Java%20Program%20and%20Essentials.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Java Essentials",
+        "items": [
+            {
+                "title": "Java Essentials: Data Types, Variables, and Literals",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22148/Java%20Essentials%20Data%20Types,%20Variables,%20and%20Literals.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Java Power Moves",
+        "items": [
+            {
+                "title": "Java Power Moves: Operators",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22149/Java%20Power%20Moves%20Operators.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Java Flow",
+        "items": [
+            {
+                "title": "Java Control Statements",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22150/Java%20Control%20Statements.html"
+            },
+            {
+                "title": "Loop Like a Pro: For, While in Java",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22151/Loop%20Like%20a%20Pro%20For,%20While%20in%20Java.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Array Adventures",
+        "items": [
+            {
+                "title": "Array Adventures: Mastering Syntax, Types, and Operations",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22155/Array%20Adventures%20Mastering%20Syntax,%20Types,%20and%20Operations.html"
+            },
+            {
+                "title": "QuizPro: Console-Based Trivia",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25378/QuizPro-Console-Based-Quiz-Program.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Object Oriented Programming",
+        "items": [
+            {
+                "title": "Java Functions: Basics and Beyond",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22152/Java%20Functions%20Basics%20and%20Beyond.html"
+            },
+            {
+                "title": "Encapsulation Essential: Mastering Classes and Visibility",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22157/Encapsulation%20Essential%20Mastering%20Classes%20and%20Visibility%20.html"
+            },
+            {
+                "title": "BankEase: Console Banking System",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25379/BankEase-Console-Banking-System.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Object Oriented Programming : Inheritance & Polymorphism",
+        "items": [
+            {
+                "title": "Inheritance in Java: Unlocking the Power of Reusability",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22158/Inheritance%20in%20Java%20Unlocking%20the%20Power%20of%20Reusability.html"
+            },
+            {
+                "title": "Abstract and Interfaces: Decoding Concepts and Differences",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22159/Abstract%20and%20Interfaces%20Decoding%20Concepts%20and%20Differences.html"
+            },
+            {
+                "title": "Polymorphism Power: Overloading, Overriding, and Real-World Uses",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22160/Polymorphism%20Power%20Overloading,%20Overriding,%20and%20Real-World%20Uses.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "String Secrets",
+        "items": [
+            {
+                "title": "String Secrets: Creation, Storage, and Immutability",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22153/String%20Secrets%20Creation,%20Storage,%20and%20Immutability.html"
+            },
+            {
+                "title": "String Mastery: Class Hierarchy, Buffer, Builder, and Methods",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22154/String%20Mastery%20Class%20Hierarchy,%20Buffer,%20Builder,%20and%20Methods.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Flip Learning",
+        "items": [
+            {
+                "title": "Student Content Delivery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25311/Flip-learning.html"
+            }
+        ]
+    },
+    {
+        "heading": "Exception Handling",
+        "items": [
+            {
+                "title": "Exception Handling Unveiled: Types, Hierarchy, and Advantages",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22162/Exception%20Handling%20Unveiled%20Types,%20Hierarchy,%20and%20Advantages.html"
+            },
+            {
+                "title": "Exception Mastery: Secrets of Handling, Customizing, and Keywords",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22163/Exception%20Mastery%20Secrets%20of%20Handling,%20Customizing,%20and%20Keywords.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "JDBC (Java Database Connectivity)",
+        "items": [
+            {
+                "title": "JDBC Essentials: Cracking the Code of Drivers and Purpose",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22177/JDBC%20Essentials%20Cracking%20the%20Code%20of%20Drivers%20and%20Purpose.html"
+            },
+            {
+                "title": "JDBC Jive: Set Up, Connect, and Conquer Exceptions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22178/JDBC%20Jive%20Set%20Up,%20Connect,%20and%20Conquer%20Exceptions.html"
+            },
+            {
+                "title": "JDBC CRUD Craze: Creating, Reading, Updating, and Deleting Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22179/JDBC%20CRUD%20Craze%20Creating,%20Reading,%20Updating,%20and%20Deleting%20Data.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Collection Framework",
+        "items": [
+            {
+                "title": "Framework Fusion: Mastering Java",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22165/Framework%20Fusion%20Mastering%20Java%20.html"
+            },
+            {
+                "title": "Generics and Collections: Navigating Lists, Queues, and More",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22166/Generics%20and%20Collections%20Navigating%20Lists,%20Queues,%20and%20More.html"
+            },
+            {
+                "title": "Sets & Maps Unlocked: Hashes, Trees, and Collection Power",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22167/Sets%20&%20Maps%20Unlocked%20Hashes,%20Trees,%20and%20Collection%20Power.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Major Java 8 Features Introduced",
+        "items": [
+            {
+                "title": "Lambda Leap: Expressions, Interfaces, and Method Magic",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22169/Lambda%20Leap%20Expressions,%20Interfaces,%20and%20Method%20Magic.html"
+            },
+            {
+                "title": "Streamline Your Data: Streams, Operations, and Comparators",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22170/Streamline%20Your%20Data%20Streams,%20Operations,%20and%20Comparators.html"
+            },
+            {
+                "title": "Optional Wonders & Date/Time Dynamics: Modern Solutions Unveiled",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22171/Optional%20Wonders%20&%20DateTime%20Dynamics%20Modern%20Solutions%20Unveiled.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Multithreading",
+        "items": [
+            {
+                "title": "Thread Thrills: Multithreading, Sync, and Advanced Tricks",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22173/Thread%20Thrills%20Multithreading,%20Sync,%20and%20Advanced%20Tricks.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Alumni Connect",
+        "items": [
+            {
+                "title": "Meet with Alumni",
+                "link": ""
+            }
+        ]
+    }
+]

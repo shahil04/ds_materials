@@ -1,0 +1,147 @@
+[
+    {
+        "heading": "React Introduction  & JSX",
+        "items": [
+            {
+                "title": "Kickstart React: Basics, Benefits, and Key Concepts",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22232/11-Kickstart-React-Basics-Benefits-and-Key-Concepts.html"
+            },
+            {
+                "title": "Getting Started: Setting Up React and Creating Your First Element",
+                "link": ""
+            },
+            {
+                "title": "JSX & Virtual DOM: Unlocking React's Magic",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22235/JSX%20&%20Virtual%20DOM%20Unlocking%20React's%20Magic.html"
+            },
+            {
+                "title": "PlanEase: Daily Planner",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25373/BlogShelf-Your-React-Powered-Daily-Planner.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Deep Dive into Component & Props",
+        "items": [
+            {
+                "title": "React Basics: Lists, Keys, and Intro to Components",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22236/22-React-Basics-Lists-Keys-and-Intro-to-Components.html"
+            },
+            {
+                "title": "Mastering React Components: Class vs. Function, Structure, and Syntax",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22241/Mastering%20React%20Components%20Class%20vs.%20Function,%20Structure,%20and%20Syntax.html"
+            },
+            {
+                "title": "React Events & Props: Handling, Syntax, and Conventions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22242/React%20Props%20Handling,%20Syntax,%20and%20Conventions.html"
+            },
+            {
+                "title": "React: Conditional Rendering & State with useState",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22243/React%20Conditional%20Rendering%20&%20State%20with%20useState.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Handling Side-Effects",
+        "items": [
+            {
+                "title": "Side Effects in React: useEffect Hook & Cleanup Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22253/Side%20Effects%20in%20React%20useEffect%20Hook%20&%20Cleanup%20Functions.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "React Router (v6)",
+        "items": [
+            {
+                "title": "Navigating the React Universe: From Routing to Local Storage and Beyond",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22261/Navigating%20the%20React%20Universe%20From%20Routing%20to%20Local%20Storage%20and%20Beyond.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Handling Forms in React",
+        "items": [
+            {
+                "title": "Controlled vs. Uncontrolled: Forms, useRef, and Optimization",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22258/Controlled%20vs.%20Uncontrolled%20Forms,%20useRef,%20and%20Optimization.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "React Context & Reducers",
+        "items": [
+            {
+                "title": "Props vs. Context API: Drilling, useContext, and Pros & Cons",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22257/91-Props-vs-Context-API-Drilling-useContext-and-Pros-and-Cons.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Handline Errors in React",
+        "items": [
+            {
+                "title": "Mastering Error Handling and Performance",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25059/Mastering-Error-Handling-and-Performance-in-React.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Deploying on platforms",
+        "items": [
+            {
+                "title": "Deploy Your React App: GitHub & Vercel in Action",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22266/Deploy%20Your%20React%20App_%20GitHub%20&%20Vercel%20in%20Action.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Career Accelerator",
+        "items": [
+            {
+                "title": "Linkedin Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25063/LinkedIn%20Introduction.html"
+            },
+            {
+                "title": "Resume Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25064/Resume%20Basics.html"
+            },
+            {
+                "title": "Introduction to HackerRank and LeetCode",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25065/Introduction%20to%20LeetCode%20and%20HackerRank.html"
+            }
+        ]
+    }
+]

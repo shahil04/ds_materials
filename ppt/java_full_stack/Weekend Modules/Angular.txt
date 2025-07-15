@@ -1,0 +1,212 @@
+[
+    {
+        "heading": "Angular Ignition: Sparking Your Development Journey",
+        "items": [
+            {
+                "title": "Jumpstart Your Journey: A Beginner's Guide to Angular Mastery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22292/Jumpstart%20Your%20Journey%20A%20Beginner's%20Guide%20to%20Angular%20Mastery.html"
+            },
+            {
+                "title": "Building Blocks of Angular: Create and Master Components",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22300/Building%20Blocks%20of%20Angular_%20Create%20and%20Master%20Components.html"
+            },
+            {
+                "title": "Angular Essentials: Metadata, Styling, and Module Mastery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22301/Angular%20Essentials_%20Metadata,%20Styling,%20and%20Module%20Mastery.html"
+            },
+            {
+                "title": "Mastering Angular Lifecycle: A Guide to 8 Essential Hooks",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22302/Mastering%20Angular%20Lifecycle_%20A%20Guide%20to%208%20Essential%20Hooks.html"
+            },
+            {
+                "title": "ChefBook: Recipe Manager",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25377/ChefBook-Recipe-Manager.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlocking Angular's Data Binding Magic",
+        "items": [
+            {
+                "title": "Angular Basics: Master String Interpolation and Event Binding",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22304/Angular%20Basics_%20Master%20String%20Interpolation%20and%20Event%20Binding.html"
+            },
+            {
+                "title": "Property & Two-Way Binding in Angular: Essentials and Examples",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22305/Property%20&%20Two-Way%20Binding%20in%20Angular_%20Essentials%20and%20Examples.html"
+            },
+            {
+                "title": "Directives Demystified: Essentials of Angular’s Power Tools",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22307/Directives%20Demystified_%20Essentials%20of%20Angular%E2%80%99s%20Power%20Tools.html"
+            },
+            {
+                "title": "Structural Directives Unveiled: Mastering ngIf, ngFor, and ng-container",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22308/Structural%20Directives%20Unveiled_%20Mastering%20ngIf,%20ngFor,%20and%20ng-container.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Data Transformation with Angular Pipes",
+        "items": [
+            {
+                "title": "TypeScript Essentials: Power Up with Strong Typing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22293/TypeScript%20Essentials_%20Power%20Up%20with%20Strong%20Typing.html"
+            },
+            {
+                "title": "Mastering Interfaces and Classes: Encapsulation Made Simple",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22294/Mastering%20Interfaces%20and%20Classes_%20Encapsulation%20Made%20Simple.html"
+            },
+            {
+                "title": "Data Transformation with Angular Pipes: Built-In & Custom",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22310/Data%20Transformation%20with%20Angular%20Pipes_%20Built-In%20&%20Custom.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Component Communication : Bridging The Gap",
+        "items": [
+            {
+                "title": "Nested Components in Angular: Pass Data and Enhance Reusability",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22313/Nested%20Components%20in%20Angular_%20Pass%20Data%20and%20Enhance%20Reusability.html"
+            },
+            {
+                "title": "Data Flow Mastery: Passing Data Up with @Output in Angular",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22314/Data%20Flow%20Mastery_%20Passing%20Data%20Up%20with%20@Output%20in%20Angular.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Component Communication : Bridging The Gap",
+        "items": [
+            {
+                "title": "Harnessing Services & Dependency Injection in Angular: A Complete Guide",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22316/Harnessing%20Services%20&%20Dependency%20Injection%20in%20Angular_%20A%20Complete%20Guide.html"
+            },
+            {
+                "title": "Services in Angular: Data Sharing & Dependency Injection Essentials",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22317/Services%20in%20Angular_%20Data%20Sharing%20&%20Dependency%20Injection%20Essentials.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "RxJS & Calling API",
+        "items": [
+            {
+                "title": "RxJS Basics: Creating Observables and Managing Async Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22319/RxJS%20Basics_%20Creating%20Observables%20and%20Managing%20Async%20Data.html"
+            },
+            {
+                "title": "RxJS Operators & Subjects: Managing Subscriptions and Async Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22320/RxJS%20Operators%20&%20Subjects_%20Managing%20Subscriptions%20and%20Async%20Data.html"
+            },
+            {
+                "title": "HTTP Requests with RxJS: Fetch, Send, and Handle Errors",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22321/HTTP%20Requests%20with%20RxJS_%20Fetch,%20Send,%20and%20Handle%20Errors.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Routing and Navigation",
+        "items": [
+            {
+                "title": "Angular Routing Essentials: Configure, Navigate, and Manage Routes",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22323/Angular%20Routing%20Essentials_%20Configure,%20Navigate,%20and%20Manage%20Routes.html"
+            },
+            {
+                "title": "Advanced Angular Routing: Parameters, Navigation, and Nested Routes",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22324/Advanced%20Angular%20Routing_%20Parameters,%20Navigation,%20and%20Nested%20Routes%20(1).html"
+            },
+            {
+                "title": "Mastering Route Guards: Secure and Control Angular Navigation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22325/Mastering%20Route%20Guards_%20Secure%20and%20Control%20Angular%20Navigation.html"
+            },
+            {
+                "title": "Optimizing Angular: Advanced Modules and Lazy Loading",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22326/Optimizing%20Angular_%20Advanced%20Modules%20and%20Lazy%20Loading.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Angular Forms",
+        "items": [
+            {
+                "title": "Angular Forms Essentials: Key Concepts, Approaches, and Benefits",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22328/Angular%20Forms%20Essentials_%20Key%20Concepts,%20Approaches,%20and%20Benefits.html"
+            },
+            {
+                "title": "Mastering Angular Template-Driven Forms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22329/Mastering%20Angular%20Template-Driven%20Forms.html"
+            },
+            {
+                "title": "Building Reactive Forms: Creation, Validation, and Advanced Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22330/Building%20Reactive%20Forms_%20Creation,%20Validation,%20and%20Advanced%20Techniques.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Angular Signals",
+        "items": [
+            {
+                "title": "Angular Signals: Basics and Managing Signal Values",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22336/Angular%20Signals_%20Basics%20and%20Managing%20Signal%20Values.html"
+            },
+            {
+                "title": "Mastering Angular Signals: Utilization and Advanced Operations",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22337/Mastering%20Angular%20Signals_%20Utilization%20and%20Advanced%20Operations.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Building & Deploying with CLI",
+        "items": [
+            {
+                "title": "Angular CLI & Routing: Essentials for Build and Navigation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22343/Angular%20CLI%20&%20Routing_%20Essentials%20for%20Build%20and%20Navigation.html"
+            },
+            {
+                "title": "Angular Deployment: Production Builds and Hosting Strategies",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22344/Angular%20Deployment_%20Production%20Builds%20and%20Hosting%20Strategies.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "heading": "Stepping into the world of NoSQL",
+        "items": [
+            {
+                "title": "Stepping into the world of NoSQL",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25080/Stepping%20into%20the%20world%20of%20NoSQL.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Get Started Building with NoSQL",
+        "items": [
+            {
+                "title": "Get Started Building with NoSQL",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25081/Get%20Started%20Building%20with%20NoSQL.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Build Data in MongoDB",
+        "items": [
+            {
+                "title": "Build Data in MongoDB",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25082/Build%20Data%20in%20MongoDB.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

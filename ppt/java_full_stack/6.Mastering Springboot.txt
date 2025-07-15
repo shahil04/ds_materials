@@ -1,0 +1,138 @@
+[
+    {
+        "heading": "Introduction to Spring Boot",
+        "items": [
+            {
+                "title": "Understanding Spring Framework",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25259/Understanding-Spring-Framework.html"
+            },
+            {
+                "title": "Mastering Spring Boot for Modern Applications",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25844/Mastering-Spring-Boot-for-Modern-Applications.html"
+            },
+            {
+                "title": "Mastering Spring Boot: Architecture and Implementation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25845/Mastering-Spring-Boot-Architecture-and-Implementation.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Spring Boot Model (JPA & Hibernate)",
+        "items": [
+            {
+                "title": "Introduction to ORM, Hibernate and JPA",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25267/Introduction-to-ORM-Hibernate-Spring-and-JPA.html"
+            },
+            {
+                "title": "Spring Boot Validation : Ensuring Data Integrity",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25851/Spring-Boot-Validation-Ensuring-Data-Integrity.html"
+            },
+            {
+                "title": "Pet Store Project : Building a Full Stack Pet Management System",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25852/Pet%20Store%20Project%20%20Building%20a%20Full%20Stack%20Pet%20Management%20System.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Spring Boot Controllers & REST APIs",
+        "items": [
+            {
+                "title": "Mastering Spring Boot Controller and Rest API : A Developer's Guide",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25272/Mastering%20Spring%20Boot%20Controller%20and%20Rest%20API%20%20A%20Developer's%20Guide.html"
+            },
+            {
+                "title": "Building Restful  APIs for your pet store : A developer 's Guide",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25857/Building%20Restful%20%20APIs%20for%20your%20pet%20store%20%20A%20developer%20's%20Guide.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Aptitude Session",
+        "items": [
+            {
+                "title": "Exam & Solution Discussion",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Spring Boot Views (React)",
+        "items": [
+            {
+                "title": "Building Mordern Web Application with React and Spring Boot",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25283/Building%20Mordern%20Web%20Application%20with%20React%20and%20Spring%20Boot.html"
+            },
+            {
+                "title": "Building Pet Management App using React",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25866/Building%20Pet%20Management%20App%20using%20React.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Security & Session Management",
+        "items": [
+            {
+                "title": "Spring Security: User Registration & Authentication with JWT",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25285/Spring%20Security%20User%20Registration%20&%20Authentication%20with%20JWT.html"
+            },
+            {
+                "title": "Web Security: Implementing Role-Based Access Controls & CSRF Protection",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25874/Web%20Security%20Implementing%20Role-Based%20Access%20Controls%20&%20CSRF%20Protection.html"
+            },
+            {
+                "title": "Spring Boot Session and Cookies Management",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25875/Spring%20Boot%20Session%20and%20Cookies%20Management.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Additional Components in Project",
+        "items": [
+            {
+                "title": "Spring Data JPA Query Methods, Paging and Sorting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25289/Spring%20Data%20JPA%20Query%20Methods,%20Paging%20and%20Sorting%20.html"
+            },
+            {
+                "title": "Building Search & Cart Functionality in Spring Boot Pet Management",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25879/Building%20Search%20&%20Cart%20Functionality%20in%20Spring%20Boot%20Pet%20Management.html"
+            },
+            {
+                "title": "Building E-Commerce Systems: Spring Boot Payment & Verification",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "HR Activity",
+        "items": [
+            {
+                "title": "Debate/Elocution",
+                "link": ""
+            }
+        ]
+    }
+]n
