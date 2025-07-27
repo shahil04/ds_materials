@@ -6,6 +6,7 @@
     <title>Flask To-Do List</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="container">
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -15,7 +16,7 @@
             {% endfor %}
           {% endif %}
         {% endwith %}
-        {% block content %}{% endblock %}
+        {% block content %}    {% endblock %}
     </div>
 </body>
 </html>
