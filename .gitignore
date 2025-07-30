@@ -17,3 +17,4 @@ __pycache__/
 node_modules/
 **/atsenv/
 **/venv/
+**/FLASK/to-do_flask_app/main_version
