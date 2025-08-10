@@ -1,0 +1,9 @@
+techgen --> name 
+python 3.11
+django 4.2
+html css
+react optional 
+
+
+server --> rrunway, vercial
+gcp

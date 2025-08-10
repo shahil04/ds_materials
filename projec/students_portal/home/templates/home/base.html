@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anima App</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+  content: [],
+  theme: {
+    extend: {
+      fontFamily: {
+        inter: [
+          'Inter',
+          'sans-serif'
+        ],
+        aeonik_pro: [
+          'Aeonik Pro',
+          'sans-serif'
+        ],
+        material_icons_outlined: [
+          'Material Icons Outlined'
+        ],
+        font_awesome_6_pro: [
+          'Font Awesome 6 Pro'
+        ],
+        poppins: [
+          'Poppins',
+          'sans-serif'
+        ],
+        ionicons: [
+          'Ionicons'
+        ],
+        neuton: [
+          'Neuton',
+          'serif'
+        ],
+        fontawesome: [
+          'FontAwesome'
+        ],
+        font_awesome_6_brands: [
+          'Font Awesome 6 Brands'
+        ]
+      }
+    }
+  }
+};
+</script>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Ionicons';
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Material Icons Outlined';
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 6 Brands';
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 6 Pro';
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 6 Pro';
+      font-weight: 900;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 5 Brands';
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 900;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      font-family: 'Neuton';
+      src: url('https://fonts.gstatic.com/s/neuton/v23/UMBQrPtMoH62xUZKAKkvfQr4.woff2') format("woff2");
+      font-weight: 200;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body role="application" class="text-slate-600 text-[14.4px] not-italic normal-nums font-normal accent-auto bg-white box-border block h-full tracking-[normal] leading-[21.6px] list-outside list-disc overflow-x-hidden overflow-y-auto text-start indent-[0px] normal-case visible w-full border-separate font-inter md:text-base md:leading-6">
+    <div class="text-[14.4px] bg-white box-border leading-[21.6px] font-aeonik_pro md:text-base md:leading-6">
+    <header class="relative text-[14.4px] items-stretch box-border flex flex-wrap justify-between leading-[21.6px] max-w-[1250px] min-h-20 w-full mx-auto px-[7.2px] md:text-base md:leading-6 md:px-2 after:accent-auto after:box-border after:clear-both after:text-slate-600 after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[21.6px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-6"><div class="absolute text-[14.4px] items-center box-border flex leading-[21.6px] right-[27px] top-[18px] md:text-base md:[align-items:normal] md:hidden md:leading-6 md:right-[30px] md:top-5"><a href="javascript://void(0);" class="relative text-black text-sm font-medium box-border block leading-[21px] min-h-[auto] min-w-[auto] text-center capitalize text-nowrap border mr-[7.2px] px-[10.8px] py-[9px] border-solid border-transparent md:inline md:min-h-0 md:min-w-0 md:mr-2 md:px-3 md:py-2.5 after:accent-auto after:bg-black after:box-border after:text-white after:hidden after:text-[12.6px] after:not-italic after:normal-nums after:font-medium after:h-[16.2px] after:tracking-[normal] after:leading-[12.6px] after:list-outside after:list-disc after:min-w-[16.2px] after:text-center after:indent-[0px] after:capitalize after:text-nowrap after:visible after:px-[3.6px] after:py-[1.8px] after:rounded-[9px] after:border-separate after:font-aeonik_pro after:md:text-sm after:md:h-[18px] after:md:leading-[14px] after:md:min-w-[18px] after:md:px-1 after:md:py-0.5 after:md:rounded-[10px]"><i class="text-2xl font-normal box-border inline-block leading-6 normal-case text-nowrap font-material_icons_outlined">shopping_cart</i>
+</a>
+<a href="javascript://void(0);" class="text-blue-500 text-[14.4px] box-border block leading-[18px] min-h-[auto] min-w-[auto] text-center text-nowrap align-middle w-[32.4px] bg-[position:0px_50%] ml-[7.2px] py-[6.3px] md:text-base md:inline-block md:leading-5 md:min-h-0 md:min-w-0 md:w-9 md:ml-2 md:py-[7px]"><i class="text-2xl box-border inline-block leading-[18px] text-nowrap align-top font-material_icons_outlined md:leading-5">menu</i>
+</a>
+</div>
+<section class="text-[14.4px] items-center box-border flex grow shrink-0 leading-[21.6px] max-w-full min-h-20 md:text-base md:leading-6 md:max-w-none"><a href="/" class="text-black text-[14.4px] box-border block leading-[21.6px] md:text-base md:leading-6"><img alt="logo" src="https://c.animaapp.com/me5i19opt4J09N/assets/43.png" class="text-[14.4px] box-border leading-[21.6px] max-h-[53.3333px] max-w-full md:text-base md:leading-6" />
+</a>
+</section>
+<section class="text-[14.4px] items-center box-border hidden grow shrink-0 justify-end leading-[21.6px] max-w-full min-h-0 min-w-[30%] w-full md:text-base md:flex md:leading-6 md:max-w-none md:min-h-[auto] md:w-auto"><a href="/s/store" class="text-black text-lg font-normal box-border block h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 before:md:accent-auto before:md:box-border before:md:text-black before:md:inline-block before:md:text-sm before:md:not-italic before:md:normal-nums before:md:font-medium before:md:h-full before:md:tracking-[normal] before:md:leading-[21px] before:md:list-outside before:md:list-disc before:md:text-center before:md:indent-[0px] before:md:capitalize before:md:align-middle before:md:visible before:md:border-separate before:md:font-aeonik_pro">Courses</a>
+<a href="/blog" class="text-black text-lg font-normal box-border block h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 before:md:accent-auto before:md:box-border before:md:text-black before:md:inline-block before:md:text-sm before:md:not-italic before:md:normal-nums before:md:font-medium before:md:h-full before:md:tracking-[normal] before:md:leading-[21px] before:md:list-outside before:md:list-disc before:md:text-center before:md:indent-[0px] before:md:capitalize before:md:align-middle before:md:visible before:md:border-separate before:md:font-aeonik_pro">Blog</a>
+<a href="/aboutus" class="text-black text-lg font-normal box-border block h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 before:md:accent-auto before:md:box-border before:md:text-black before:md:inline-block before:md:text-sm before:md:not-italic before:md:normal-nums before:md:font-medium before:md:h-full before:md:tracking-[normal] before:md:leading-[21px] before:md:list-outside before:md:list-disc before:md:text-center before:md:indent-[0px] before:md:capitalize before:md:align-middle before:md:visible before:md:border-separate before:md:font-aeonik_pro">About</a>
+<a href="/contactus" class="text-black text-lg font-normal box-border block h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 before:md:accent-auto before:md:box-border before:md:text-black before:md:inline-block before:md:text-sm before:md:not-italic before:md:normal-nums before:md:font-medium before:md:h-full before:md:tracking-[normal] before:md:leading-[21px] before:md:list-outside before:md:list-disc before:md:text-center before:md:indent-[0px] before:md:capitalize before:md:align-middle before:md:visible before:md:border-separate before:md:font-aeonik_pro">Contact Us</a>
+<a href="/s/pages/become-a-teacher" class="text-black text-lg font-normal box-border block h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 before:md:accent-auto before:md:box-border before:md:text-black before:md:inline-block before:md:text-sm before:md:not-italic before:md:normal-nums before:md:font-medium before:md:h-full before:md:tracking-[normal] before:md:leading-[21px] before:md:list-outside before:md:list-disc before:md:text-center before:md:indent-[0px] before:md:capitalize before:md:align-middle before:md:visible before:md:border-separate before:md:font-aeonik_pro">Become a Teacher</a>
+<a href="/products#nav_bar" class="text-black text-lg font-normal box-border block h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 before:md:accent-auto before:md:box-border before:md:text-black before:md:inline-block before:md:text-sm before:md:not-italic before:md:normal-nums before:md:font-medium before:md:h-full before:md:tracking-[normal] before:md:leading-[21px] before:md:list-outside before:md:list-disc before:md:text-center before:md:indent-[0px] before:md:capitalize before:md:align-middle before:md:visible before:md:border-separate before:md:font-aeonik_pro">Digital Products</a>
+<a href="javascript://void(0);" class="relative text-black text-lg font-normal box-border hidden h-[45px] leading-[27px] min-h-0 min-w-0 text-center capitalize text-nowrap border mt-[5px] px-[10.8px] py-[9px] border-solid border-transparent md:text-sm md:font-medium md:block md:h-auto md:leading-[21px] md:min-h-[auto] md:min-w-[auto] md:mt-0 md:px-3 md:py-2.5 after:accent-auto after:bg-black after:box-border after:text-white after:hidden after:text-[12.6px] after:not-italic after:normal-nums after:font-normal after:h-[16.2px] after:tracking-[normal] after:leading-[12.6px] after:list-outside after:list-disc after:min-w-[16.2px] after:text-center after:indent-[0px] after:capitalize after:text-nowrap after:visible after:px-[3.6px] after:py-[1.8px] after:rounded-[9px] after:border-separate after:font-aeonik_pro after:md:text-sm after:md:font-medium after:md:h-[18px] after:md:leading-[14px] after:md:min-w-[18px] after:md:px-1 after:md:py-0.5 after:md:rounded-[10px]"><i class="text-lg box-border inline-block leading-[18px] text-nowrap font-font_awesome_6_pro md:text-sm md:leading-[14px] before:accent-auto before:box-border before:text-black before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[18px] before:list-outside before:list-disc before:text-center before:indent-[0px] before:capitalize before:text-nowrap before:visible before:border-separate before:font-font_awesome_6_pro before:md:text-sm before:md:leading-[14px]"></i>
+</a>
+<a href="javascript://void(0);" class="text-blue-500 text-lg font-normal bg-transparent box-border block h-[45px] tracking-[0.09px] leading-4 min-h-0 min-w-[150px] text-center text-nowrap align-middle bg-[position:0px_50%] ml-0 mt-[5px] px-[18px] py-[13px] rounded-[25px] md:text-white md:text-sm md:font-semibold md:bg-blue-500 md:h-auto md:tracking-[0.07px] md:min-h-[auto] md:bg-left-top md:ml-10 md:mt-0 md:px-5">Login</a>
+</section>
+</header>
+</div>
+<div class="text-[14.4px] box-border leading-[21.6px] font-aeonik_pro md:text-base md:leading-6"></div>
+<div class="text-[14.4px] box-border leading-[21.6px] font-aeonik_pro md:text-base md:leading-6"></div>
+<input type="hidden" value="INR" class="text-black text-[14.4px] bg-transparent box-border hidden leading-[21.6px] p-0 font-aeonik_pro md:text-base md:leading-6" />
+<div class="text-[14.4px] box-border leading-[21.6px] font-aeonik_pro md:text-base md:leading-6"></div>
+<input type="hidden" value="CampusX Coins" class="text-black text-[14.4px] bg-transparent box-border hidden leading-[21.6px] p-0 font-aeonik_pro md:text-base md:leading-6" />
+<div class="text-[14.4px] box-border leading-[21.6px] font-aeonik_pro md:text-base md:leading-6"></div>
+<div class="text-black text-[14.4px] font-light box-border h-full leading-[28.8px] max-w-full w-full font-aeonik_pro md:text-base md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="relative text-[14.4px] bg-gray-100 shadow-[rgba(0,0,0,0.07)_0px_0px_9px_0px] box-border table float-left h-auto leading-[28.8px] w-full overflow-hidden md:text-base md:h-3/4 md:leading-8"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-neutral-900 text-[14.4px] bg-white box-border table h-auto leading-[28.8px] min-h-[300px] w-full md:text-base md:table-cell md:h-full md:leading-8 md:min-h-0 md:w-6/12"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[900px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:ml-[100px] md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[40px] box-border float-none leading-[80px] w-auto px-0 md:float-left md:w-full md:px-5"><div class="box-border float-none w-auto px-0 md:float-left md:w-full md:px-5"><div class="box-border mb-[9px] md:mb-2.5"><h1 class="text-[55px] font-extrabold box-border leading-[70px] text-left uppercase"><span class="text-blue-700 box-border font-poppins">CampusX DSMP </span>
+<span class="text-red-600 box-border font-poppins">2.0</span>
+</h1>
+<h5 class="text-2xl font-bold box-border leading-[33.6px] md:text-[28px] md:font-light md:leading-[39.2px]"> Data Science Mentorship Program 2.0 </h5>
+<ul class="text-xs box-border leading-6 list-none my-[14.4px] pl-0 md:my-4"><li class="text-lg font-semibold box-border leading-9 text-left font-poppins"><i class="text-blue-700 italic box-border mr-[5px] before:accent-auto before:box-border before:text-blue-700 before:inline-block before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[18px] before:list-outside before:list-none before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons"></i>
+Live Session</li>
+<li class="text-lg font-semibold box-border leading-9 text-left font-poppins"><i class="text-blue-700 italic box-border mr-[5px] before:accent-auto before:box-border before:text-blue-700 before:inline-block before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[18px] before:list-outside before:list-none before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons"></i>
+500+ Hours of Content</li>
+<li class="text-lg font-semibold box-border leading-9 text-left font-poppins"><i class="text-blue-700 italic box-border mr-[5px] before:accent-auto before:box-border before:text-blue-700 before:inline-block before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[18px] before:list-outside before:list-none before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons"></i>
+5 End to End Case Studies</li>
+<li class="text-lg font-semibold box-border leading-9 text-left font-poppins"><i class="text-blue-700 italic box-border mr-[5px] before:accent-auto before:box-border before:text-blue-700 before:inline-block before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[18px] before:list-outside before:list-none before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons"></i>
+Job Preparation Module</li>
+<li class="text-lg font-semibold box-border leading-9 text-left font-poppins"><i class="text-blue-700 italic box-border mr-[5px] before:accent-auto before:box-border before:text-blue-700 before:inline-block before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[18px] before:list-outside before:list-none before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons"></i>
+3 Years of Validity</li>
+<h2 class="text-[31.14px] box-border leading-[43.596px] my-[10.8px] font-neuton md:text-[40px] md:leading-[56px] md:my-3"><b class="text-[31.14px] font-semibold box-border leading-[43.596px] font-aeonik_pro md:text-[40px] md:leading-[56px]"><span class="box-border leading-[16.8px]"><font class="text-[26px] box-border leading-[36.4px] md:text-[32px] md:leading-[44.8px]">Course Fee - Rs 10,600/-</font>
+</span>
+</b>
+</h2>
+<h3 class="text-lg box-border leading-[25.2px] my-[12.6px] md:my-3.5">Already a student of DSMP 1.0? <a href="https://forms.gle/1aKTdeLDJSuUP5QZA" title="Apply for Coupon Code" class="box-border underline">Apply for Discount</a>
+</h3>
+</ul>
+</div>
+<div class="items-center box-border flex flex-wrap"><a title="" class="text-neutral-100 text-sm font-semibold bg-blue-700 box-border block tracking-[1px] leading-[21px] border-blue-700 mt-2.5 px-8 py-[13px] rounded-[125px] border-2 border-solid font-poppins">Watch Video</a>
+<a href="https://learnwith.campusx.in/single-checkout/653f50d1e4b0d2eae855480a?pid=p1" title="Payment Link" class="text-blue-700 text-sm font-semibold bg-transparent box-border block tracking-[1px] leading-[21px] border-blue-700 mt-2.5 mx-2.5 px-8 py-[13px] rounded-[25px] border-2 border-solid font-poppins">Enroll for course </a>
+</div>
+<span class="box-border"></span>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><br class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8" />
+<div class="fixed text-[14.4px] bg-black/70 box-border hidden h-full leading-[28.8px] w-full left-0 top-0 md:text-base md:leading-8"><div class="absolute text-[14.4px] bg-white shadow-[rgba(0,0,0,0.5)_0px_2px_5px_0px] box-border h-[300px] leading-[28.8px] w-[500px] p-5 rounded-[10px] left-2/4 top-2/4 md:text-base md:leading-8"><span class="absolute text-white text-[35px] bg-red-600 box-border block h-10 leading-10 text-center w-10 rounded-[50%] right-2.5 top-2.5">×</span>
+<iframe class="text-[14.4px] box-border h-full leading-[28.8px] w-full md:text-base md:leading-8"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><br class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8" />
+<div class="fixed text-[14.4px] bg-black/70 box-border hidden h-full leading-[28.8px] w-full left-0 top-0 md:text-base md:leading-8"><div class="absolute text-[14.4px] bg-white shadow-[rgba(0,0,0,0.5)_0px_2px_5px_0px] box-border h-[300px] leading-[28.8px] w-[500px] p-5 rounded-[10px] left-2/4 top-2/4 md:text-base md:leading-8"><span class="absolute text-white text-[35px] bg-red-600 box-border block h-10 leading-10 text-center w-10 rounded-[50%] right-2.5 top-2.5">×</span>
+<iframe class="text-[14.4px] box-border h-full leading-[28.8px] w-full md:text-base md:leading-8"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-[14.4px] box-border table h-[300px] leading-[28.8px] min-h-[300px] w-full md:text-base md:table-cell md:h-full md:leading-8 md:min-h-0 md:w-6/12"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="absolute text-[14.4px] box-border h-full leading-[28.8px] w-full overflow-hidden left-0 top-0 md:text-base md:leading-8"><div class="absolute text-[14.4px] bg-[url('https://d502jbuhuh9wk.cloudfront.net/orgData/63720d30e4b06ff06d1f4547/pages/assets/images/EVMbGuntitleddesign4.jpg')] bg-no-repeat bg-cover box-border h-full leading-[28.8px] w-full bg-[position:50%_30%] left-0 top-0 md:text-base md:leading-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-white text-[14.4px] bg-slate-950 box-border table float-left h-full leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h3 class="text-[50px] box-border tracking-[0.7px] leading-[62px] text-center mb-[12.6px] font-poppins md:mb-3.5">Why join this course?</h3>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border h-[30px] leading-[28.8px] md:text-base md:h-10 md:leading-8"></div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/7ySOVonlinelearning.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">LIVE CLASSES</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins">Thrive in a vibrant learning environment with live classes that foster interaction and immersive learning</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/TtwaPsyllabus.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">INDUSTRY BASED CURRICULUM</h3>
+<p class="text-[13.9px] box-border tracking-[0.7px] leading-[22.24px] mb-5 font-poppins">Dive deep with a meticulously crafted curriculum that navigates the realms of data science with precision and clarity.</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/R1sVjworkorder.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">HANDS-ON PRACTICAL TRAINING</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins">Immerse yourself with tasks, quizzes, and projects following each topic, ensuring that theory marries practice seamlessly.</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/nDZmNlanguages.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">EASY TO FOLLOW LANGUAGE</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins">Experience the comfort of learning in Hinglish, making complex concepts seem like a friendly chat.</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/H4UPiclient.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">ROBUST DOUBT SUPPORT</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins">Erase uncertainties with robust doubt support, turning every question into a stepping stone toward mastery.</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/16yJ5presentation.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">REAL-TIME PROJECTS</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins">Elevate your expertise with real-time projects that propel your practical understanding into the professional universe.</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/B5P9Xuntitleddesign20231102t133236.473.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">DEDICATED JOB PREPARATION</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins"></p>
+<div class="text-sm box-border leading-[22.4px] font-poppins">
+         Harness the power of strategic job preparation that polishes your profile and preps you for your dream job.
+        </div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><br class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8" />
+</div>
+<p class="text-[19.26px] box-border leading-[38.52px] my-[18px] md:text-[21.4px] md:leading-[42.8px] md:my-5"></p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/jiEUTuntitleddesign20231102t133137.892.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[130px] mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-base font-semibold box-border tracking-[0.7px] leading-[22.4px] mb-[12.6px] font-poppins md:mb-3.5">AFFORDABLE FEE STRUCTURE</h3>
+<p class="text-sm box-border tracking-[0.7px] leading-[22.4px] mb-5 font-poppins">Unlock a treasure trove of knowledge without breaking the bank, with fees that champion affordability and value.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-[14.4px] bg-sky-50 box-border table float-left h-1/5 leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1100px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] font-poppins md:text-[56px] md:leading-[78.4px]">Let’s talk about our curriculum</h1>
+<p class="text-[28.8px] font-normal box-border leading-[57.6px] mb-[50px] font-poppins md:text-[32px] md:leading-[64px]"> We plan to cover the entirety of Data Science </p>
+<a href="https://docs.google.com/document/d/1a_fXfzT2uOELerf4gi009E3NYhPH05zV45mrASocy0I/edit?usp=sharing" title="" class="text-sm font-normal bg-zinc-300 box-border inline-block tracking-[3px] leading-[21px] uppercase border-zinc-300 px-7 py-[13px] border-2 border-solid">View FULL SYLLABUS</a>
+<span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-white box-border table float-left h-1/5 leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="absolute text-black text-[14.4px] box-border h-full leading-[28.8px] w-full overflow-hidden left-0 top-0 md:text-base md:leading-8"><div class="absolute text-[14.4px] bg-[url('https://c.animaapp.com/me5i19opt4J09N/assets/Atk0Jpython9.png')] bg-no-repeat bg-cover box-border h-full leading-[28.8px] translate-y-[-120px] w-full bg-[position:50%_60%] scale-[1.05px] left-0 top-0 md:text-base md:leading-8"><div class="absolute text-[14.4px] bg-black box-border h-full leading-[28.8px] opacity-10 w-full left-0 top-0 md:text-base md:leading-8"></div>
+</div>
+</div>
+<div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center font-poppins md:text-[56px] md:leading-[78.4px]">Course Modules</h1>
+<p class="text-[22px] box-border leading-[44px] text-center mb-[50px] font-poppins md:text-2xl md:leading-[48px]">The entire course is divided into 10 modules</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/0PAEppython.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/BeHyepython1.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/Zqs3Spython2.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/WEIe8python3.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border h-[30px] leading-[28.8px] md:text-base md:h-10 md:leading-8"></div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ie0Dwpython4.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/mJanZpython5.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/6YcYlpython7.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/KqYvWpython8.png" class="text-[14.4px] box-border h-[200px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto rounded-[30px] md:text-base md:leading-8 md:mt-7" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-sky-50 box-border table float-left h-full leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1100px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center font-poppins md:text-[56px] md:leading-[78.4px]">End-to-End Case Studies </h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/L3J1cspotifylogotransparentfreepng.png" class="text-[14.4px] box-border h-[150px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto md:text-base md:leading-8 md:mt-7" />
+<h5 class="text-[21.6px] font-medium box-border leading-[30.24px] text-center my-[14.4px] font-poppins md:text-2xl md:leading-[33.6px] md:my-4">Spotify Hybrid Recommender System</h5>
+<p class="text-sm box-border leading-7 text-center mb-[30px] font-poppins">Enhancing user music discovery on Spotify through a hybrid recommender system that combines collaborative and content-based filtering techniques.</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/74rsbyoutubelogoyoutubelogotransparentyoutubeicontransparentfreefreepng.png" class="text-[14.4px] box-border h-[150px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto md:text-base md:leading-8 md:mt-7" />
+<h5 class="text-[21.6px] font-medium box-border leading-[30.24px] text-center my-[14.4px] font-poppins md:text-2xl md:leading-[33.6px] md:my-4">YouTube Comments Sentiment Analysis </h5>
+<p class="text-sm box-border leading-7 text-center mb-[30px] font-poppins">Empowering Chrome users to gauge the sentiment of YouTube comments instantly with a plugin, utilizing natural language processing techniques.</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/UxiZG4644647468uberlogograysocialmediaiconspng.png" class="text-[14.4px] box-border h-[150px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto md:text-base md:leading-8 md:mt-7" />
+<h5 class="text-[21.6px] font-medium box-border leading-[30.24px] text-center my-[14.4px] font-poppins md:text-2xl md:leading-[33.6px] md:my-4">Uber Demand Forecasting </h5>
+<p class="text-sm box-border leading-7 text-center mb-[30px] font-poppins">Predicting Uber ride demand using historical data and machine learning, enabling efficient allocation of resources and improved rider experience.</p>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/zHsu599.png" class="text-[14.4px] box-border h-[150px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto md:text-base md:leading-8 md:mt-7" />
+<h5 class="text-[21.6px] font-medium box-border leading-[30.24px] text-center my-[14.4px] font-poppins md:text-2xl md:leading-[33.6px] md:my-4">99 Acres Property Price Predictor </h5>
+<p class="text-sm box-border leading-7 text-center mb-[30px] font-poppins">Utilizing data analysis &amp; machine learning to accurately predict real estate prices, aiding buyers and sellers in making informed decisions.</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/kqv1Kredhearticonpng2.png" class="text-[14.4px] box-border h-[150px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto md:text-base md:leading-8 md:mt-7" />
+<h5 class="text-[21.6px] font-medium box-border leading-[30.24px] text-center my-[14.4px] font-poppins md:text-2xl md:leading-[33.6px] md:my-4">Rare Disease Prediction on Unbalanced Data</h5>
+<p class="text-sm box-border leading-7 text-center mb-[30px] font-poppins">Leveraging machine learning to predict rare diseases from clinical data, employing techniques to manage unbalanced datasets for enhanced predictive accuracy.</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/o4KY9freeswiggy16133711369418.png" class="text-[14.4px] box-border h-[150px] leading-[28.8px] max-w-full mt-[25.2px] mx-auto md:text-base md:leading-8 md:mt-7" />
+<h5 class="text-[21.6px] font-medium box-border leading-[30.24px] text-center my-[14.4px] font-poppins md:text-2xl md:leading-[33.6px] md:my-4">Swiggy Delivery Time Prediction(Optional)</h5>
+<p class="text-sm box-border leading-7 text-center mb-[30px] font-poppins">Enhancing Swiggy’s customer experience by employing data science &amp; machine learning to accurately predict and optimize food delivery times.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-white box-border table float-left h-full leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center font-poppins md:text-[56px] md:leading-[78.4px]">Tools covered </h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/mo1Kwuntitleddesign20231102t135029.060.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"></p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img src="https://c.animaapp.com/me5i19opt4J09N/assets/pGaCxdownload.png" class="text-[14.4px] box-border h-[107px] leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img src="https://c.animaapp.com/me5i19opt4J09N/assets/Ymfw7untitleddesign20231102t135137.478.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-6/12 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/SXCgBflaskicon2048x1826nxzeqh6a.png" class="text-[14.4px] box-border h-[107px] leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"></p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img src="https://c.animaapp.com/me5i19opt4J09N/assets/PpazOz3ahdkytzwi1jxlpazje.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img src="https://c.animaapp.com/me5i19opt4J09N/assets/fyA6Tmysqlworkbench93532.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ZK5wSawslogosmile1200x630.png" class="text-[14.4px] box-border h-[107px] leading-[28.8px] max-w-full w-3/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"></p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img src="https://c.animaapp.com/me5i19opt4J09N/assets/HCN0eicons8github96.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><img src="https://c.animaapp.com/me5i19opt4J09N/assets/wvsjVicons8docker96.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-2/5 mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><p class="text-sm box-border leading-7 my-[18px] md:my-5"><br class="box-border" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-white box-border table float-left h-3/5 leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center mb-[50px] font-poppins md:text-[56px] md:leading-[78.4px]">Doubt Clearance</h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><h1 class="text-[42px] font-semibold box-border leading-[58.8px] text-center mt-2.5 mb-[30px] font-poppins">Our Awesome Doubt Support</h1>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+One-on-one doubt clearance over Zoom call </p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Discord server for paid members</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Doubt clearance after live classes</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ On-demand doubt clearance classes on difficult topics</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Past batch students rated our doubt support 9.24 out of 10.</p>
+<h3 class="text-[22px] box-border leading-[30.8px] text-center my-[12.6px] pt-[30px] md:text-2xl md:leading-[33.6px] md:my-3.5">Checkout the video to see how doubt support works</h3>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[66.7%] md:px-5"><div class="relative text-[14.4px] box-border h-0 leading-[28.8px] overflow-hidden mt-[20.16px] mb-[14.4px] pb-[56.25%] md:text-base md:leading-8 md:mt-[22.4px] md:mb-4"><iframe src="https://www.youtube.com/embed/zicIMQNObA0?rel=0" class="absolute text-[14.4px] box-border h-full leading-[28.8px] w-full left-0 inset-y-0 md:text-base md:leading-8"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-[14.4px] bg-sky-50 box-border table float-left h-3/5 leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] mb-[50px] font-poppins md:text-[56px] md:leading-[78.4px]">Job Preparation</h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-neutral-900 text-[14.4px] bg-white shadow-[rgba(0,0,0,0.12)_0px_1px_3px_0px,rgba(0,0,0,0.24)_0px_1px_2px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-black text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/IMvFdjobinterviewicon2048x2048jptxkgwb.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[200px] mt-[25.2px] mb-[18px] rounded-[500px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-[21px] font-extrabold box-border tracking-[1px] leading-[29.4px] my-[12.6px] font-poppins md:my-3.5">Interview Preparation</h3>
+<p class="text-lg box-border leading-9 my-[18px] font-poppins md:my-5">Dedicated interview prep of the 200 most important interview questions.</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-neutral-900 text-[14.4px] bg-white shadow-[rgba(0,0,0,0.12)_0px_1px_3px_0px,rgba(0,0,0,0.24)_0px_1px_2px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-black text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/bPelj6614677.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[200px] mt-[25.2px] mb-[18px] rounded-[500px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-[21px] font-extrabold box-border tracking-[1px] leading-[29.4px] my-[12.6px] font-poppins md:my-3.5">Profile Building</h3>
+<p class="text-lg box-border leading-9 my-[18px] font-poppins md:my-5">Dedicated sessions on resume building, LinkedIn branding, etc.</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-[33.3%] md:px-5"><div class="text-neutral-900 text-[14.4px] bg-white shadow-[rgba(0,0,0,0.12)_0px_1px_3px_0px,rgba(0,0,0,0.24)_0px_1px_2px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-black text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ny5uK354652.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[200px] mt-[25.2px] mb-[18px] rounded-[500px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<h3 class="text-[21px] font-extrabold box-border tracking-[1px] leading-[29.4px] my-[12.6px] font-poppins md:my-3.5">Industry Connect</h3>
+<p class="text-lg box-border leading-9 my-[18px] font-poppins md:my-5">Guest lectures by people from the industry each month.</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-white box-border table float-left h-full leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center mb-[50px] font-poppins md:text-[56px] md:leading-[78.4px]">DSMP 1.0 Feedback</h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(0,0,0,0.15)_0px_30px_50px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><h1 class="text-[115.2px] font-bold box-border tracking-[2px] leading-[161.28px] text-center my-[7.2px] md:text-9xl md:leading-[179.2px] md:my-2">9.82</h1>
+<p class="text-zinc-600 text-[19.26px] box-border leading-[26.964px] text-center mb-[18px] md:text-[21.4px] md:leading-[29.96px] md:mb-5">Out of 10 was the average rating for the quality of lectures in DSMP 1.0</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(0,0,0,0.15)_0px_30px_50px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><h1 class="text-[115.2px] font-bold box-border tracking-[2px] leading-[161.28px] text-center my-[7.2px] md:text-9xl md:leading-[179.2px] md:my-2">77% </h1>
+<p class="text-zinc-600 text-[19.26px] box-border leading-[26.964px] text-center mb-[18px] md:text-[21.4px] md:leading-[29.96px] md:mb-5">students said the course delivered more than what was charged.</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(0,0,0,0.15)_0px_30px_50px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><h1 class="text-[115.2px] font-bold box-border tracking-[2px] leading-[161.28px] text-center my-[7.2px] md:text-9xl md:leading-[179.2px] md:my-2">97% </h1>
+<p class="text-zinc-600 text-[19.26px] box-border leading-[26.964px] text-center mb-[18px] md:text-[21.4px] md:leading-[29.96px] md:mb-5">students felt an improvement in their skills and knowledge</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(0,0,0,0.15)_0px_30px_50px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-[14.4px] box-border table leading-[28.8px] w-full p-[25px] md:text-base md:leading-8"><h1 class="text-[115.2px] font-bold box-border tracking-[2px] leading-[161.28px] text-center my-[7.2px] md:text-9xl md:leading-[179.2px] md:my-2">100</h1>
+<p class="text-zinc-600 text-[19.26px] box-border leading-[26.964px] text-center mb-[18px] md:text-[21.4px] md:leading-[29.96px] md:mb-5">percent students said they would like to do another course with us.</p>
+<div class="text-[14.4px] box-border leading-[28.8px] my-5 md:text-base md:leading-8"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><a href="https://docs.google.com/spreadsheets/d/1s7nf2wcYFAzCUmcggTtGiQOlTovat2VZ3l8zI_dbgbo/edit?usp=sharing" title="" class="text-blue-700 text-lg font-semibold bg-transparent box-border inline-block tracking-[1px] leading-[27px] border-blue-700 mt-10 mx-2.5 px-[42px] py-[19px] rounded-[35px] border-2 border-solid font-poppins">View Feedback</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-[14.4px] bg-sky-50 box-border table float-left h-3/6 leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center mb-[50px] font-poppins md:text-[56px] md:leading-[78.4px]">Success Stories</h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] box-border leading-[28.8px] mb-5 px-[15px] py-2.5 rounded-[15px] md:text-base md:leading-8"><p class="text-sm box-border leading-7 text-justify my-[18px] font-poppins md:my-5">&quot;CampusX DSMP 2.0 is a game-changer! Live sessions, extensive content, and job prep module for just Rs 10,600 – unbeatable value.&quot;</p>
+<div class="text-[14.4px] items-center box-border flex justify-end leading-[28.8px] md:text-base md:leading-8"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><h5 class="text-base font-semibold box-border leading-[22.4px] font-poppins"> Ayush Singh </h5>
+<h6 class="text-sm font-bold box-border leading-[19.6px] md:font-light">Working in microsoft </h6>
+</div>
+<img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ZpYKMman1.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[60px] ml-2.5 md:text-base md:leading-8" />
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] box-border leading-[28.8px] mb-5 px-[15px] py-2.5 rounded-[15px] md:text-base md:leading-8"><p class="text-sm box-border leading-7 text-justify my-[18px] font-poppins md:my-5">&quot;Impressive! DSMP 2.0 offers 500+ hours of quality content and 5 case studies. A great investment for aspiring data scientists.&quot;</p>
+<div class="text-[14.4px] items-center box-border flex justify-end leading-[28.8px] md:text-base md:leading-8"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><h5 class="text-base font-semibold box-border leading-[22.4px] font-poppins"> Prakash Maurya </h5>
+<h6 class="text-sm font-bold box-border leading-[19.6px] md:font-light">From Hydrabad </h6>
+</div>
+<img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ZpYKMman1.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[60px] ml-2.5 md:text-base md:leading-8" />
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] box-border leading-[28.8px] mb-5 px-[15px] py-2.5 rounded-[15px] md:text-base md:leading-8"><p class="text-sm box-border leading-7 text-justify my-[18px] font-poppins md:my-5">&quot;DSMP 2.0 provides a comprehensive data science mentorship with 3 years of validity – perfect for long-term career planning.&quot;</p>
+<div class="text-[14.4px] items-center box-border flex justify-end leading-[28.8px] md:text-base md:leading-8"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><h5 class="text-base font-semibold box-border leading-[22.4px] font-poppins"> Harmeet Sinha </h5>
+<h6 class="text-sm font-bold box-border leading-[19.6px] md:font-light">From Noida</h6>
+</div>
+<img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ZpYKMman1.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[60px] ml-2.5 md:text-base md:leading-8" />
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-3/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] box-border leading-[28.8px] mb-5 px-[15px] py-2.5 rounded-[15px] md:text-base md:leading-8"><p class="text-sm box-border leading-7 text-justify my-[18px] font-poppins md:my-5">&quot;Outstanding value for money! This program offers 5 case studies and job preparation support at an affordable price.</p>
+<div class="text-[14.4px] items-center box-border flex justify-end leading-[28.8px] md:text-base md:leading-8"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><h5 class="text-base font-semibold box-border leading-[22.4px] font-poppins"> Prashma Gupta </h5>
+<h6 class="text-sm font-bold box-border leading-[19.6px] md:font-light">From Banglore </h6>
+</div>
+<img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/buG0Ogirl1.png" class="text-[14.4px] box-border leading-[28.8px] max-w-full w-[60px] ml-2.5 md:text-base md:leading-8" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-white box-border table float-left h-full leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1100px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center mb-[50px] font-poppins md:text-[56px] md:leading-[78.4px]">DSMP 1.0 Vs DSMP 2.0 </h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-6/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(0,0,0,0.2)_0px_0px_100px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-[14.4px] box-border table leading-[28.8px] text-center w-full p-[30px] md:text-base md:leading-8"><h3 class="text-[22px] box-border tracking-[2px] leading-[30.8px] my-[12.6px] md:text-2xl md:leading-[33.6px] md:my-3.5">DSMP 1.0</h3>
+<p class="text-red-500 text-2xl box-border leading-[33.6px] my-[18px] md:my-5">Rs<span class="text-4xl font-semibold box-border leading-[50.4px] font-poppins md:text-[64px] md:leading-[89.6px]">5600</span>
+</p>
+<div class="text-[26px] box-border leading-[52px] md:text-[32px] md:leading-[64px]"><p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Course Validity - <b class="font-semibold box-border block font-aeonik_pro"> till Feb 2025</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Total content - <b class="font-semibold box-border block font-aeonik_pro"> 300+ Hours</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Live Classes - <b class="font-semibold box-border block font-aeonik_pro"> No</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Doubt Support - <b class="font-semibold box-border block font-aeonik_pro"> Over Email</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Total Case Studies - <b class="font-semibold box-border block font-aeonik_pro"> One</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Dedicated Interview Prep - <b class="font-semibold box-border block font-aeonik_pro"> No</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+MLOPs + Advanced ML - <b class="font-semibold box-border block font-aeonik_pro">No</b>
+</p>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] my-[17.28px] md:text-base md:leading-8 md:my-[19.2px]"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-6/12 md:px-5"><div class="text-[14.4px] bg-white shadow-[rgba(0,0,0,0.2)_0px_0px_100px_0px] box-border table leading-[28.8px] w-full md:text-base md:leading-8"><div class="text-[14.4px] box-border table leading-[28.8px] text-center w-full p-[30px] md:text-base md:leading-8"><h3 class="text-[22px] box-border tracking-[2px] leading-[30.8px] my-[12.6px] md:text-2xl md:leading-[33.6px] md:my-3.5">DSMP 2.0</h3>
+<p class="text-red-500 text-2xl box-border leading-[33.6px] my-[18px] md:my-5">Rs<span class="text-4xl font-semibold box-border leading-[50.4px] font-poppins md:text-[64px] md:leading-[89.6px]">10,600</span>
+</p>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"><p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Course Validity- <b class="font-semibold box-border block font-aeonik_pro">3 Years from the date of purchase</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Total content - <b class="font-semibold box-border block font-aeonik_pro"> 500+ Hours</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Live Classes - <b class="font-semibold box-border block font-aeonik_pro">Yes</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Doubt Support - <b class="font-semibold box-border block font-aeonik_pro"> One-on-One Zoom Call</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+Total Case Studies - <b class="font-semibold box-border block font-aeonik_pro"> Five</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ Dedicated Interview Prep - <b class="font-semibold box-border block font-aeonik_pro">Yes</b>
+</p>
+<p class="relative text-base font-normal box-border flex leading-6 text-left mt-2 pl-8 font-poppins"><i class="absolute font-black bg-lime-500 box-border block h-5 leading-5 text-center w-5 mr-[5px] mt-[5px] rounded-[50%] left-0 top-0 font-font_awesome_6_pro before:accent-auto before:box-border before:text-black before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+MLOPs + Advanced ML - <b class="font-semibold box-border block font-aeonik_pro"> Yes</b>
+</p>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] my-[17.28px] md:text-base md:leading-8 md:my-[19.2px]"><span class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-sky-50 box-border table float-left h-[30%] leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1100px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border leading-[28.8px] mb-[9px] md:text-base md:leading-8 md:mb-2.5"><h1 class="text-4xl font-extrabold box-border leading-[50.4px] text-center uppercase mt-[7.2px] mb-[50px] md:text-[50px] md:leading-[70px] md:mt-2">Become a Certified Data Scientist</h1>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/3zpALwhatsappimage20231103at16.26.22.jpg" class="text-[14.4px] box-border leading-[28.8px] max-w-full mt-[25.2px] mb-[18px] md:text-base md:leading-8 md:mt-7 md:mb-5" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-neutral-900 text-[14.4px] bg-white box-border table float-left h-3/6 leading-[28.8px] min-h-[300px] w-full overflow-hidden md:text-base md:leading-8 md:min-h-0"><div class="relative text-black text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[1400px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-blue-700 text-[50.4px] box-border leading-[70.56px] text-center font-poppins md:text-[56px] md:leading-[78.4px]">Frequently Asked Questions</h1>
+<p class="text-[19.26px] box-border leading-[38.52px] my-[18px] md:text-[21.4px] md:leading-[42.8px] md:my-5"><br class="text-[19.26px] box-border leading-[38.52px] md:text-[21.4px] md:leading-[42.8px]" />
+</p>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><div class="text-[14.4px] box-border flex flex-wrap justify-between leading-[28.8px] md:text-base md:leading-8"><div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome">1. What will be the total duration of the course?</h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> The duration of the course would be 6-8 months. </p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome">2. Will Deep Learning and NLP be a part of this program? </h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> No, NLP and Deep Learning both are not a part of this program’s curriculum.</p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome">3. What if I miss a live session? Will I get a recording of the session?</h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> Yes all our sessions are recorded, so even if you miss a session you can go back and watch the recording.</p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome">4.What is the time duration of all the live sessions? </h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> Roughly, all the sessions last 2 hours. </p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome"> 5. What is the language spoken by the instructor during the sessions? </h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> Hinglish</p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome"> 6. How will I be informed about the upcoming class? </h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> You will get a mail from our side before every paid session once you become a paid user. </p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome"> 7. Can I do this course if I am from a non-tech background? </h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> Yes, absolutely.</p>
+</div>
+</div>
+<div class="text-[14.4px] backdrop-blur-[10px] shadow-[rgba(0,0,0,0.2)_20px_20px_40px_-6px] box-border leading-[28.8px] w-[48%] border mb-2.5 border-solid border-white/30 md:text-base md:leading-8"><h3 class="relative text-blue-700 text-base font-medium box-border tracking-[0.5px] leading-[22.4px] p-4 rounded-bl rounded-br rounded-tl rounded-tr font-poppins before:accent-auto before:box-border before:text-blue-700 before:block before:text-base before:not-italic before:normal-nums before:font-black before:tracking-[0.5px] before:leading-[22.4px] before:list-outside before:list-disc before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:right-[15px] before:top-[15px] before:font-fontawesome"> 8. Will we get placement/interview opportunities? </h3>
+<div class="text-[14.4px] box-border hidden leading-[28.8px] mt-5 font-poppins md:text-base md:leading-8"><p class="text-[15px] box-border leading-[23px] pb-2.5 px-2.5"> No, this is not a placement guarantee program.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-black before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-black after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] text-center w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><a href="https://docs.google.com/document/d/1OsMe9jGHoZS67FH8TdIzcUaDWuu5RAbCbBKk2cNq6Dk/edit?usp=sharing" title="" class="text-blue-700 text-lg font-semibold bg-transparent box-border inline-block tracking-[1px] leading-[27px] border-blue-700 mt-10 mx-2.5 px-[42px] py-[19px] rounded-[35px] border-2 border-solid font-poppins">See all FAQs</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-[14.4px] bg-white shadow-[rgba(0,0,0,0.07)_0px_0px_9px_0px] box-border table float-left h-auto leading-[28.8px] w-full overflow-hidden md:text-base md:h-1/5 md:leading-8"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-white text-[14.4px] bg-slate-950 box-border table h-auto leading-[28.8px] min-h-[300px] w-full md:text-base md:table-cell md:h-full md:leading-8 md:min-h-0 md:w-[41.6667%]"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="absolute text-[14.4px] box-border h-full leading-[28.8px] w-full overflow-hidden left-0 top-0 md:text-base md:leading-8"><div class="absolute text-[14.4px] box-border h-full leading-[28.8px] w-full overflow-hidden left-0 top-0 md:text-base md:leading-8"></div>
+</div>
+<div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[440px] z-[1] ml-auto my-10 p-[15px] md:text-base md:leading-8 md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><img alt="" src="https://c.animaapp.com/me5i19opt4J09N/assets/ovBqSzooybnitishremovebgpreview2.png" class="text-[14.4px] shadow-[rgba(17,12,46,0.15)_0px_48px_100px_0px] box-border leading-[28.8px] max-w-full border-blue-700 mt-[25.2px] mb-[18px] rounded-[500px] border-2 border-solid md:text-base md:leading-8 md:mt-7 md:mb-5" />
+<div class="text-[14.4px] box-border leading-[14.4px] text-center mb-[21.6px] md:text-base md:leading-4 md:mb-6"><a href="https://www.youtube.com/c/CampusX-official" title="" class="text-[14.4px] box-border leading-[14.4px] underline md:text-base md:leading-4"><i class="text-[17.28px] italic box-border leading-[17.28px] mr-[17.28px] md:text-[19.2px] md:leading-[19.2px] md:mr-[19.2px] before:accent-auto before:box-border before:text-white before:inline-block before:text-[17.28px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[17.28px] before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons before:md:text-[19.2px] before:md:leading-[19.2px]"></i>
+</a>
+<a href="https://discord.com/invite/w5YxmZtp6u" title="" class="text-[14.4px] box-border leading-[14.4px] underline md:text-base md:leading-4"><i class="text-[17.28px] italic box-border leading-[17.28px] ml-[15px] mr-[17.28px] md:text-[19.2px] md:leading-[19.2px] md:mr-[19.2px] before:accent-auto before:box-border before:text-white before:inline-block before:text-[17.28px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[17.28px] before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons before:md:text-[19.2px] before:md:leading-[19.2px]"></i>
+</a>
+<a href="https://github.com/campusx-official" title="" class="text-[14.4px] box-border leading-[14.4px] underline md:text-base md:leading-4"><i class="text-[17.28px] italic box-border leading-[17.28px] mx-[15px] md:text-[19.2px] md:leading-[19.2px] before:accent-auto before:box-border before:text-white before:inline-block before:text-[17.28px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[17.28px] before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons before:md:text-[19.2px] before:md:leading-[19.2px]"></i>
+</a>
+<a href="https://www.linkedin.com/company/campusx-official/" title="" class="text-[14.4px] box-border leading-[14.4px] underline md:text-base md:leading-4"><i class="text-[17.28px] italic box-border leading-[17.28px] mx-[15px] md:text-[19.2px] md:leading-[19.2px] before:accent-auto before:box-border before:text-white before:inline-block before:text-[17.28px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[17.28px] before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons before:md:text-[19.2px] before:md:leading-[19.2px]"></i>
+</a>
+<a href="https://www.instagram.com/campusx.official/" title="" class="text-[14.4px] box-border leading-[14.4px] underline md:text-base md:leading-4"><i class="text-[17.28px] italic box-border leading-[17.28px] ml-[15px] md:text-[19.2px] md:leading-[19.2px] before:accent-auto before:box-border before:text-white before:inline-block before:text-[17.28px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[17.28px] before:list-outside before:list-disc before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-ionicons before:md:text-[19.2px] before:md:leading-[19.2px]"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative text-white text-[14.4px] bg-slate-950 box-border table h-auto leading-[28.8px] min-h-[300px] w-full md:text-base md:table-cell md:h-full md:leading-8 md:min-h-0 md:w-[58.3333%]"><div class="relative text-[14.4px] box-border table float-left h-full leading-[28.8px] min-h-[200px] table-fixed w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border table-cell leading-[28.8px] align-middle w-full md:text-base md:leading-8"><div class="relative text-[14.4px] box-border leading-[28.8px] max-w-[800px] z-[1] mx-auto my-10 p-[15px] md:text-base md:leading-8 md:ml-[100px] md:px-[30px] md:py-0"><div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><h1 class="text-[40px] box-border tracking-[3px] leading-10 text-right my-5 py-[15px] border-y-2 border-white font-poppins">Meet Nitish Singh <br class="box-border font-aeonik_pro" />
+<span class="text-sm box-border leading-[14px] font-aeonik_pro">(YouTuber, Educator, Entrepreneur) </span>
+</h1>
+</div>
+</div>
+<div class="text-[14.4px] box-border leading-[28.8px] md:text-base md:leading-8 before:accent-auto before:box-border before:text-white before:table before:text-[14.4px] before:not-italic before:normal-nums before:font-light before:tracking-[normal] before:leading-[28.8px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-aeonik_pro before:md:text-base before:md:leading-8 after:accent-auto after:box-border after:clear-both after:text-white after:table after:text-[14.4px] after:not-italic after:normal-nums after:font-light after:tracking-[normal] after:leading-[28.8px] after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-aeonik_pro after:md:text-base after:md:leading-8"><div class="text-[14.4px] box-border float-none leading-[28.8px] w-auto px-0 md:text-base md:float-left md:leading-8 md:w-full md:px-5"><p class="text-lg box-border leading-9 text-justify my-[18px] font-poppins md:my-5"> Hi, my name is Nitish. I am an educational content creator on YouTube with 130K+ Subscribers in the domain of Data Science. I have been in the tech industry for the past 10 years and taught more than 50,000 students offline. I am passionate about data and take pride in creating content that simplifies complex topics. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-neutral-800 text-[14.4px] items-center bg-neutral-100 box-border clear-both flex flex-col justify-center leading-[21.6px] gap-y-[30px] w-full pt-20 pb-[200px] px-2.5 font-aeonik_pro md:text-base md:leading-6 md:pb-20"><a href="https://graphy.com/products/create-and-sell-course-online?utm_campaign=campusx1040&utm_source=gc&utm_device=website&gref=campusx1040" class="text-white text-sm font-semibold items-center bg-black box-border flex justify-center leading-5 px-5 py-3 rounded-bl rounded-br rounded-tl rounded-tr"><img alt="Launch your Graphy" src="https://c.animaapp.com/me5i19opt4J09N/assets/grvector.svg" class="box-border h-5 max-w-full w-[11px] mr-3" />
+Launch your Graphy</a>
+<div class="text-xs box-border tracking-[0.18px] leading-5 text-center">100K+ creators trust <a href="https://graphy.com/products/create-and-sell-course-online?utm_campaign=campusx1040&utm_source=gc&utm_device=website&gref=campusx1040" class="text-black box-border underline">Graphy</a>
+ to teach online</div>
+<div class="text-[14.4px] items-center box-border gap-x-3 flex justify-center leading-[21.6px] md:text-base md:leading-6"><a href="https://www.instagram.com/campusx.official/" class="text-black text-[14.4px] items-center box-border flex h-6 justify-center leading-[21.6px] w-6 border border-neutral-200 border-solid md:text-base md:leading-6"><i class="text-[11px] box-border block leading-[11px] font-font_awesome_6_brands before:accent-auto before:box-border before:text-black before:text-[11px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[11px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+<a href="https://www.linkedin.com/company/campusx-official/" class="text-black text-[14.4px] items-center box-border flex h-6 justify-center leading-[21.6px] w-6 border border-neutral-200 border-solid md:text-base md:leading-6"><i class="text-[11px] box-border block leading-[11px] font-font_awesome_6_brands before:accent-auto before:box-border before:text-black before:text-[11px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[11px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+<a href="https://www.youtube.com/c/GraphyUniversity" class="text-black text-[14.4px] items-center box-border flex h-6 justify-center leading-[21.6px] w-6 border border-neutral-200 border-solid md:text-base md:leading-6"><i class="text-[11px] box-border block leading-[11px] font-font_awesome_6_brands before:accent-auto before:box-border before:text-black before:text-[11px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[11px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+<a href="" class="text-black text-[14.4px] items-center box-border flex h-6 justify-center leading-[21.6px] w-6 border border-neutral-200 border-solid md:text-base md:leading-6"><i class="text-[11px] box-border block leading-[11px] font-font_awesome_6_brands before:accent-auto before:box-border before:text-black before:text-[11px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[11px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+</div>
+<div class="text-sm font-medium items-center box-border gap-x-3 flex flex-wrap justify-center tracking-[0.21px] leading-5"><span class="box-border block">CampusX <i class="font-normal box-border inline-block leading-[14px] font-font_awesome_6_pro before:accent-auto before:box-border before:text-neutral-800 before:text-sm before:not-italic before:normal-nums before:font-normal before:tracking-[0.21px] before:leading-[14px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+ 2025</span>
+<i class="text-[4px] font-black box-border block leading-[4px] font-font_awesome_6_pro before:accent-auto before:box-border before:text-neutral-800 before:text-[4px] before:not-italic before:normal-nums before:font-black before:tracking-[0.21px] before:leading-[4px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+<a href="/privacypolicy" class="box-border block underline">Privacy policy</a>
+<i class="text-[4px] font-black box-border block leading-[4px] font-font_awesome_6_pro before:accent-auto before:box-border before:text-neutral-800 before:text-[4px] before:not-italic before:normal-nums before:font-black before:tracking-[0.21px] before:leading-[4px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+<a href="/termsofuse" class="box-border block underline">Terms of use</a>
+<i class="text-[4px] font-black box-border block leading-[4px] font-font_awesome_6_pro before:accent-auto before:box-border before:text-neutral-800 before:text-[4px] before:not-italic before:normal-nums before:font-black before:tracking-[0.21px] before:leading-[4px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+<a href="/contactus" class="box-border block underline">Contact us</a>
+<i class="text-[4px] font-black box-border block leading-[4px] font-font_awesome_6_pro before:accent-auto before:box-border before:text-neutral-800 before:text-[4px] before:not-italic before:normal-nums before:font-black before:tracking-[0.21px] before:leading-[4px] before:list-outside before:list-disc before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_pro"></i>
+<a href="/refundpolicy" class="box-border block underline">Refund policy</a>
+</div>
+</div>
+<div class="absolute text-[14.4px] box-border leading-[21.6px] w-[300px] z-[2147483647] right-2.5 top-2.5 font-aeonik_pro md:text-base md:leading-6"></div>
+</body>
+
+</html>
