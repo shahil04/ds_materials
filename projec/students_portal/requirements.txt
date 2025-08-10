@@ -1,0 +1,14 @@
+# Core Framework
+Django==4.2.*
+
+# Database (PostgreSQL)
+psycopg2-binary==2.9.*
+
+# Production Server
+gunicorn==21.2.*
+
+# Environment Variable Management
+python-decouple==3.8
+
+# Payment Gateway
+stripe==8.7.0  # or use razorp
