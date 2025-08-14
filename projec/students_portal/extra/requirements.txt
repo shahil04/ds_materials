@@ -12,3 +12,6 @@ python-decouple==3.8
 
 # Payment Gateway
 stripe==8.7.0  # or use razorp
+
+razorpay
+django-allauth

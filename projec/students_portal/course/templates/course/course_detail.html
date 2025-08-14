@@ -1,0 +1,9 @@
+{% if user.is_authenticated %}
+  {% if enrolled %}
+    <a href="{% url 'student_course_panel' course.slug %}">Go to Course</a>
+  {% else %}
+    <a href="{% url 'courses:enroll' course.slug %}">Enroll / Buy</a>
+  {% endif %}
+{% else %}
+  <a href="{% url 'account_login' %}">Login to enroll</a>
+{% endif %}
