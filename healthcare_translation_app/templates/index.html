@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Healthcare Voice Translator (Prototype)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; background: #f6f8fa; color: #111; }
+    .card { background: #fff; border-radius: 8px; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); max-width:800px; margin:auto; }
+    h1 { font-size: 20px; margin:0 0 8px 0; }
+    .row { display:flex; gap:8px; margin-bottom:8px; align-items:center; }
+    select, button { padding:8px; font-size:14px; }
+    #original, #translated { white-space:pre-wrap; background:#f3f6f8; padding:10px; border-radius:6px; min-height:60px; }
+    .controls { display:flex; gap:8px; flex-wrap:wrap; }
+    .status { color: #666; font-size:13px; }
+    .big { font-size:18px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Healthcare Voice Translator — English ↔ Indian Languages</h1>
+    <p class="status">Tip: Use Chrome for best Web Speech API support. Click "Start" and speak. The app uses your browser for speech recognition and the server for translation + TTS.</p>
+
+    <div class="row controls">
+      <label>Source:</label>
+      <select id="sourceLang">
+        <option value="en-IN">English (India)</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="bn-BD">Bengali</option>
+        <option value="ta-IN">Tamil</option>
+        <option value="te-IN">Telugu</option>
+        <option value="mr-IN">Marathi</option>
+        <option value="gu-IN">Gujarati</option>
+        <option value="kn-IN">Kannada</option>
+      </select>
+
+      <label>Target:</label>
+      <select id="targetLang">
+        <option value="hi">Hindi</option>
+        <option value="en">English</option>
+        <option value="bn">Bengali</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="mr">Marathi</option>
+        <option value="gu">Gujarati</option>
+        <option value="kn">Kannada</option>
+      </select>
+
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <button id="playBtn" disabled>Play Last</button>
+    </div>
+
+    <div style="margin-top:10px;">
+      <div class="big">Original transcript</div>
+      <div id="original"></div>
+    </div>
+    <div style="margin-top:10px;">
+      <div class="big">Translated text</div>
+      <div id="translated"></div>
+    </div>
+    <div style="margin-top:10px;" id="debug"></div>
+  </div>
+
+<script>
+let recognition;
+let listening = false;
+let lastAudioUrl = null;
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+const playBtn = document.getElementById('playBtn');
+const originalEl = document.getElementById('original');
+const translatedEl = document.getElementById('translated');
+const debugEl = document.getElementById('debug');
+const sourceLangSel = document.getElementById('sourceLang');
+const targetLangSel = document.getElementById('targetLang');
+
+function supportsRecognition() {
+  return ('webkitSpeechRecognition' in window) || ('SpeechRecognition' in window);
+}
+
+function createRecognition() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const r = new SpeechRecognition();
+  r.continuous = true;
+  r.interimResults = true;
+  r.lang = sourceLangSel.value || 'en-IN';
+  r.maxAlternatives = 1;
+  r.onresult = (event) => {
+    let interim = '';
+    let final = '';
+    for (let i = event.resultIndex; i < event.results.length; ++i) {
+      const res = event.results[i];
+      if (res.isFinal) final += res[0].transcript;
+      else interim += res[0].transcript;
+    }
+    originalEl.textContent = final + (interim ? '\\n' + interim : '');
+    // send final parts to server for translation
+    if (final.trim()) {
+      sendForTranslation(final.trim());
+    }
+  };
+  r.onerror = (e) => {
+    debugEl.textContent = 'Recognition error: ' + JSON.stringify(e);
+  };
+  r.onend = () => {
+    listening = false;
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+    debugEl.textContent = 'Recognition stopped.';
+  };
+  return r;
+}
+
+async function sendForTranslation(text) {
+  const targetLang = targetLangSel.value;
+  const sourceLang = sourceLangSel.value.split('-')[0];
+  debugEl.textContent = 'Translating...';
+  try {
+    const res = await fetch('/api/translate_text', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ text, target_lang: targetLang, source_lang: sourceLang })
+    });
+    const data = await res.json();
+    if (data.error) {
+      debugEl.textContent = 'Translate error: ' + data.error;
+      return;
+    }
+    translatedEl.textContent = data.translated;
+    lastAudioUrl = data.audio_url;
+    if (lastAudioUrl) {
+      playBtn.disabled = false;
+    }
+    debugEl.textContent = 'Translated.';
+  } catch (e) {
+    debugEl.textContent = 'Network error: ' + e;
+  }
+}
+
+startBtn.onclick = () => {
+  if (!supportsRecognition()) {
+    alert('Web Speech API not supported in this browser. Use Chrome.');
+    return;
+  }
+  recognition = createRecognition();
+  recognition.start();
+  listening = true;
+  startBtn.disabled = true;
+  stopBtn.disabled = false;
+  debugEl.textContent = 'Listening...';
+};
+
+stopBtn.onclick = () => {
+  if (recognition) recognition.stop();
+};
+
+playBtn.onclick = () => {
+  if (!lastAudioUrl) return;
+  const a = new Audio(lastAudioUrl);
+  a.play();
+};
+
+</script>
+
+</body>
+</html>

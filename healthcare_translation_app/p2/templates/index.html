@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Translation App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        textarea { width: 90%; height: 100px; margin: 10px; }
+        button { padding: 10px; font-size: 16px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Healthcare Translation (English ⇄ Hindi)</h2>
+
+    <h4>Speak or Type Your Message</h4>
+    <textarea id="original_text" placeholder="Type or speak..."></textarea>
+    <br>
+    <button onclick="startRecognition()">🎤 Speak</button>
+    <br>
+    <select id="source_lang">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+    </select>
+    <select id="target_lang">
+        <option value="Hindi">Hindi</option>
+        <option value="English">English</option>
+    </select>
+    <br>
+    <button onclick="translateText()">Translate</button>
+
+    <h4>Translation:</h4>
+    <p id="translated_text"></p>
+    <audio id="audio_player" controls></audio>
+
+    <script>
+        function startRecognition() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = document.getElementById('source_lang').value === 'Hindi' ? 'hi-IN' : 'en-US';
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                document.getElementById('original_text').value = event.results[0][0].transcript;
+            };
+        }
+
+        function translateText() {
+            const text = document.getElementById('original_text').value;
+            const source_lang = document.getElementById('source_lang').value;
+            const target_lang = document.getElementById('target_lang').value;
+
+            fetch('/translate', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ text, source_lang, target_lang })
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('translated_text').innerText = data.translated_text;
+                document.getElementById('audio_player').src = data.audio_url;
+            });
+        }
+    </script>
+</body>
+</html>
