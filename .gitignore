@@ -19,3 +19,4 @@ node_modules/
 **/venv/
 **/FLASK/to-do_flask_app/main_version
 **/env/
+**/ds_materials/9.Deep_learning/cv/cvenv
