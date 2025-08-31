@@ -1,0 +1,4 @@
+1. Predict Energy Consumption
+In the Predict Energy Consumption project, you will use regression and machine learning models to predict daily power consumption based on temporal factors like time of day and temperature. The goal is to uncover patterns that can optimize energy usage, improving efficiency and reducing costs. This is particularly important for utilities and businesses aiming to reduce operational expenses, promote energy conservation, and better manage their resources in a more sustainable way.
+
+The Predict Energy Consumption project is a guided project, but you can replicate the objectives on a different dataset, such as Seoul's Bike Sharing Demand. Working on a completely new dataset will help you with code debugging and improve your problem-solving skills.
