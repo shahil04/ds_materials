@@ -2,6 +2,8 @@ import cv2
 import pytesseract
 import numpy as np
 
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 def load_image(image_bytes):
     file_bytes = np.asarray(bytearray(image_bytes), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, 1)
