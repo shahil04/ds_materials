@@ -2,8 +2,6 @@ import cv2
 import pytesseract
 import numpy as np
 
-
-# Path where Tesseract is installed
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def load_image(image_bytes):
