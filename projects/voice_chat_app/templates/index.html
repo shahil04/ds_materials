@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Voice & Chat Translator</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Voice ↔ Chat Translator (English ↔ Indian Languages)</h1>
+    <div class="panel">
+      <h2>Voice Mode</h2>
+      <div class="controls">
+        <label>Source:</label>
+        <select id="v_source">
+          <option value="en-IN">English (India)</option>
+          <option value="hi-IN">Hindi</option>
+          <option value="bn-BD">Bengali</option>
+          <option value="ta-IN">Tamil</option>
+        </select>
+        <label>Target:</label>
+        <select id="v_target">
+          <option value="hi">Hindi</option>
+          <option value="en">English</option>
+          <option value="bn">Bengali</option>
+          <option value="ta">Tamil</option>
+        </select>
+        <button id="v_start">Start</button>
+        <button id="v_stop" disabled>Stop</button>
+        <button id="v_play" disabled>Play Last</button>
+      </div>
+      <div class="box">
+        <div><strong>Original:</strong></div>
+        <div id="v_orig" class="textbox"></div>
+        <div><strong>Translated:</strong></div>
+        <div id="v_trans" class="textbox"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Chat Mode</h2>
+      <div class="chatbox" id="chatbox"></div>
+      <div class="controls">
+        <input id="chat_input" placeholder="Type your message..." />
+        <button id="send_chat">Send</button>
+        <button id="play_chat" disabled>Play Reply</button>
+      </div>
+    </div>
+  </div>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
