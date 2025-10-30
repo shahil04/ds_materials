@@ -1,0 +1,143 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS With Shahil — Technical Courses</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo" class="logo">
+      <nav class="nav">
+        <button id="exploreBtn" class="btn">Explore Courses</button>
+        <a class="btn green" href="#contact">Get Career Guidance</a>
+        <button id="menuToggle" class="menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>India's Trusted Technical Training Institute</h1>
+        <p>Practical courses | Live projects | Placement assistance</p>
+        <div class="logos">
+          <img src="{{ url_for('static', filename='assets/partner1.png') }}" alt="partner">
+          <img src="{{ url_for('static', filename='assets/partner2.png') }}" alt="partner">
+          <img src="{{ url_for('static', filename='assets/partner3.png') }}" alt="partner">
+        </div>
+        <a class="btn download" href="{{ url_for('static', filename='assets/brochure.pdf') }}" download>Download Brochure</a>
+      </div>
+
+      <aside class="enquiry-card" id="contact">
+        <h3>Let's talk about your career growth!</h3>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-area">
+            {% for category, msg in messages %}
+              <div class="flash {{ category }}">{{ msg }}</div>
+            {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        <form action="/submit-enquiry" method="post" class="enq-form">
+          <label>Mobile Number<input name="mobile" type="text" placeholder="Enter 10-digit Mobile Number" required></label>
+          <label>Full Name<input name="name" type="text" placeholder="Your Name" required></label>
+          <label>Email<input name="email" type="email" placeholder="e.g. yourname@gmail.com"></label>
+          <label>Interested Course
+            <select name="course">
+              <option>Data Science</option>
+              <option>Full Stack Web Dev</option>
+              <option>AI & ML</option>
+              <option>Python with SQL</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="3" placeholder="Any message (optional)"></textarea></label>
+          <button class="btn submit" type="submit">Submit ➤</button>
+        </form>
+      </aside>
+    </section>
+
+    <section class="courses container">
+      <h2>Popular Courses</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="{{ url_for('static', filename='assets/course1.jpg') }}" alt="course">
+          <h4>Data Science Bootcamp</h4>
+          <p>Live projects, placement support, 6 months</p>
+          <a class="btn ghost" href="#">Know More</a>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='assets/course2.jpg') }}" alt="course">
+          <h4>Full Stack Web Dev</h4>
+          <p>Frontend + Backend + Deployment</p>
+          <a class="btn ghost" href="#">Know More</a>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='assets/course3.jpg') }}" alt="course">
+          <h4>AI & ML</h4>
+          <p>Hands-on models and deployment</p>
+          <a class="btn ghost" href="#">Know More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="why container">
+      <h2>Why Learners Choose Us</h2>
+      <div class="icons-row">
+        <div class="icon-box">Learn 360°</div>
+        <div class="icon-box">Live Projects</div>
+        <div class="icon-box">Placement Support</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sidebar menu (hidden on mobile) -->
+  <aside class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#">All Courses</a></li>
+      <li><a href="#">Placements</a></li>
+      <li><a href="#">Hire From Us</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Pay Fees</a></li>
+      <li><a href="#">Refer & Earn</a></li>
+      <li><a href="#">Success Stories</a></li>
+      <li><a href="#">Corporate Training</a></li>
+    </ul>
+  </aside>
+
+  <!-- Floating icons -->
+  <a class="float whatsapp" href="https://wa.me/919999999999" target="_blank" title="Chat on WhatsApp">
+    <img src="{{ url_for('static', filename='assets/whatsapp.png') }}" alt="whatsapp">
+  </a>
+  <a class="float review" href="https://www.google.com/search?q=cs+with+shahil+reviews" target="_blank" title="Google Reviews">
+    <img src="{{ url_for('static', filename='assets/google-review.png') }}" alt="reviews">
+  </a>
+  <button class="float chatbot" id="chatbotBtn" title="Open Chatbot">
+    <img src="{{ url_for('static', filename='assets/chatbot.png') }}" alt="chatbot">
+  </button>
+
+  <!-- Simple chatbot modal -->
+  <div id="chatModal" class="modal">
+    <div class="modal-content">
+      <button class="close" id="closeChat">✕</button>
+      <h4>Career Chat</h4>
+      <div class="chat-body">
+        <div class="msg bot">Hi! I can help with course details and schedules. What's your query?</div>
+      </div>
+      <form id="chatForm">
+        <input id="chatInput" placeholder="Type your question..." autocomplete="off">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© CS With Shahil — All rights reserved</div>
+  </footer>
+</body>
+</html>
