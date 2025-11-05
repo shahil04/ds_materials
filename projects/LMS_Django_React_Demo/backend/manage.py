@@ -1,0 +1,1 @@
+print('Django manage.py placeholder')
