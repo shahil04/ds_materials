@@ -1,0 +1,88 @@
+[
+    {
+        "heading": "Excel Foundations",
+        "items": [
+            {
+                "title": "Lookup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26122/11-Lookup.html"
+            },
+            {
+                "title": "IFs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26123/12-IFs.html"
+            },
+            {
+                "title": "Pivot",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26124/13-Pivot-updated.html"
+            },
+            {
+                "title": "Cleaning",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26125/14-Cleaning.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Excel for Ops Tasks",
+        "items": [
+            {
+                "title": "Reconciliation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26128/Reconciliation..html"
+            },
+            {
+                "title": "Linking Sheets",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26129/Linking%20Sheets.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "NSDC",
+        "items": [
+            {
+                "title": "NSDC Registration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26623/NSDC%20Process%20Mar-25.html"
+            }
+        ]
+    },
+    {
+        "heading": "Prompt Engineering",
+        "items": [
+            {
+                "title": "Report Generation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26132/Report%20Generation.html"
+            },
+            {
+                "title": "Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26133/Analysis.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "ChatGpt",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Presentation Skills",
+        "items": [
+            {
+                "title": "Understanding Presentation Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26136/Understanding%20Presentation%20Techniques.html"
+            }
+        ]
+    }
+]

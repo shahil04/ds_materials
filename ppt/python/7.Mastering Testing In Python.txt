@@ -1,0 +1,36 @@
+[
+    {
+        "heading": "Getting Started with Software Testing in Python",
+        "items": [
+            {
+                "title": "The Essentials of Software Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25261/The%20Essentials%20of%20Software%20Testing.html"
+            },
+            {
+                "title": "Exploring Python's Powerful Testing Tools and Frameworks",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25262/Exploring%20Python's%20Powerful%20Testing%20Tools%20and%20Frameworks.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Unit and Integration Testing with Python",
+        "items": [
+            {
+                "title": "Unlocking the Power of Unit Testing with unittest in Python",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25264/Unlocking%20the%20Power%20of%20Unit%20Testing%20with%20unittest%20in%20Python.html"
+            },
+            {
+                "title": "Mastering Integration Testing with unit test",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25265/Mastering%20Integration%20Testing%20with%20unit%20test.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

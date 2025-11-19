@@ -1,0 +1,219 @@
+[
+    {
+        "heading": "Diving into Django: Mastering Framework Fundamentals",
+        "items": [
+            {
+                "title": "Unlocking Django’s Hidden Potential",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22190/11-Unlocking-Djangos-Hidden-Potential.html"
+            },
+            {
+                "title": "Crafting Your Django Project",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22192/Crafting-Your-Django-Project.html"
+            },
+            {
+                "title": "PetStore: Online Pet Store",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25376/PetStore%20Online%20Pet%20Store.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Building Robust Data Models",
+        "items": [
+            {
+                "title": "Building Robust Data Models",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22196/Building-Robust-Data-Models.html"
+            },
+            {
+                "title": "Streamlining Media and File Uploads",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22198/Streamlining-Media-and-File-Uploads.html"
+            },
+            {
+                "title": "Navigating ORM Relationships",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22203/Navigating-ORM-Relationships-Final.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "From Models to Views: Navigating Django’s Data and Template System",
+        "items": [
+            {
+                "title": "Elevating Your App with Templates",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22193/Elevating-Your-App-with-Templates.html"
+            },
+            {
+                "title": "Mapping URLs and Views Seamlessly",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22194/Mapping-URLs-and-Views-Seamlessly.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Navigating Django’s Template System",
+        "items": [
+            {
+                "title": "Templating with Django's Power Tools",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22197/Templating-with-Djangos-Power-Tools.html"
+            },
+            {
+                "title": "Stylish Apps with Bootstrap Integration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22200/Stylish-Apps-with-Bootstrap-Integration.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlocking Django Admin: Advanced Customizations and Permissions Management",
+        "items": [
+            {
+                "title": "Taking Control of Django Admin Customization",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22219/Taking-Control-of-Django-Admin-Customization.html"
+            },
+            {
+                "title": "Effortless CRUD Operations in Admin Panel",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22220/Effortless-CRUD-Operations-in-Admin-Panel.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Aptitude Session",
+        "items": [
+            {
+                "title": "Aptitude",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25042/Aptitude%20test-Activity.html"
+            }
+        ]
+    },
+    {
+        "heading": "Security and Sessions with Django",
+        "items": [
+            {
+                "title": "Custom Forms for Seamless User Interaction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22202/Custom-Forms-for-Seamless-User-Interaction.html"
+            },
+            {
+                "title": "Enhancing User Experience with Secure Sessions and Cookies",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22207/Enhancing-User-Experience-with-Secure-Sessions-and-Cookies.html"
+            },
+            {
+                "title": "Managing Permissions and Roles Like a Pro",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22221/Managing-Permissions-and-Roles-Like-a-Pro.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Connecting Django to Payment Gateways: Razorpay and PayPal Integration",
+        "items": [
+            {
+                "title": "Powering Up Your App with Payment Gateway",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22205/Powering-Up-Your-App-with-Payment-Gateway.html"
+            },
+            {
+                "title": "Razorpay and PayPal Setup for Seamless Transactions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22206/Razorpay-and-PayPal-Setup-for-Seamless-Transactions.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "From QuerySets to Cookies: Advanced Django Techniques for Data and Session Management",
+        "items": [
+            {
+                "title": "Mastering Complex QuerySets for Data Wizards",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22216/Mastering-Complex-QuerySets-for-Data-Wizards.html"
+            },
+            {
+                "title": "Seamless Email and OTP Integration for Secure Apps",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22217/Seamless-Email-and-OTP-Integration-for-Secure-Apps%20(1).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Launching Your App with Scrum & PythonAnywhere",
+        "items": [
+            {
+                "title": "Deploying Your App with PythonAnywhere",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22228/Deploying-Your-App-with-PythonAnywhere.html"
+            },
+            {
+                "title": "A Deep Dive into Scrum and Beyond",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22230/A-Deep-Dive-into-Scrum-and-Beyond.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Django REST: Full CRUD Control",
+        "items": [
+            {
+                "title": "Mastering Django Rest Framework for APIs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22223/Mastering-Django-Rest-Framework-for-APIs.html"
+            },
+            {
+                "title": "Full Control with CRUD Operations in DRF",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22224/Full-Control-with-CRUD-Operations-in-DRF%20(1).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Connecting Frontend and Backend: A Guide to React and Django Integration",
+        "items": [
+            {
+                "title": "Bridging Frontend and Backend with React and Django",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22225/Bridging-Frontend-and-Backend-with-React-and-Django%20(1).html"
+            },
+            {
+                "title": "Rendering React Components in Django for a Seamless UI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/22226/Rendering-React-Components-in-Django-for-a-Seamless-UI%20(1).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "HR Activity",
+        "items": [
+            {
+                "title": "Debate/Elocution",
+                "link": ""
+            }
+        ]
+    }
+]

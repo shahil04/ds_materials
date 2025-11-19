@@ -1,0 +1,187 @@
+[
+    {
+        "heading": "Google Ads Ecosystem Overview",
+        "items": [
+            {
+                "title": "Account Structure",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26423/Account-Structure.html"
+            },
+            {
+                "title": "Campaign Types",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26424/Campaign-Types.html"
+            },
+            {
+                "title": "PPC",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26425/PPC.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Search Advertising",
+        "items": [
+            {
+                "title": "Text Ads",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26428/Text-Ads.html"
+            },
+            {
+                "title": "Keywords",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26429/Keywords.html"
+            },
+            {
+                "title": "Ad Extensions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26430/Ad-Extensions.html"
+            },
+            {
+                "title": "Quality Score",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26431/Quality-Score.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Display Advertising",
+        "items": [
+            {
+                "title": "Banner Ads",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26434/Banner-Ads.html"
+            },
+            {
+                "title": "Responsive Ads",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26435/Responsive-Ads.html"
+            },
+            {
+                "title": "Audience Targeting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26436/Audience-Targeting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Video Advertising (YouTube Ads)",
+        "items": [
+            {
+                "title": "Skippable/Non-skippable",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26439/41-Skippable-vs-Non-Skippable.html"
+            },
+            {
+                "title": "Bumper",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26440/42-Bumper.html"
+            },
+            {
+                "title": "Targeting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26441/43-Targeting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Shopping & Performance Max",
+        "items": [
+            {
+                "title": "Merchant Center",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26444/Merchant-Center.html"
+            },
+            {
+                "title": "Product Feed",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26445/Product-Feed.html"
+            },
+            {
+                "title": "Performance Max",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26446/Performance-Max.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Conversion Tracking & UTM Tagging",
+        "items": [
+            {
+                "title": "Goals",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26449/Goals.html"
+            },
+            {
+                "title": "Events",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26450/Events.html"
+            },
+            {
+                "title": "UTM Parameters",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26451/UTM-Parameters.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Bidding Strategies & Optimization",
+        "items": [
+            {
+                "title": "Manual/Automated",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26454/Manual-Automated.html"
+            },
+            {
+                "title": "CPA",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26455/CPA.html"
+            },
+            {
+                "title": "ROAS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26456/ROAS.html"
+            },
+            {
+                "title": "Bid Adj",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26457/Bid-Adjustments.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "A/B Testing in Google Ads",
+        "items": [
+            {
+                "title": "Ad Variants",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26460/Ad-Variants%20.html"
+            },
+            {
+                "title": "Experiments",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26461/Experiments.html"
+            },
+            {
+                "title": "Split Tests",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26462/Split-Tests%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Prep",
+        "items": [
+            {
+                "title": "Interview Preparation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26465/common-interview-stages.html"
+            }
+        ]
+    }
+]

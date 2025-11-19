@@ -1,0 +1,137 @@
+[
+    {
+        "heading": "Email Marketing",
+        "items": [
+            {
+                "title": "Opt-ins",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26490/Opt-ins.html"
+            },
+            {
+                "title": "Email Sequences",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26491/Email-Sequences.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Automation & Push Channels",
+        "items": [
+            {
+                "title": "CRM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26494/CRM.html"
+            },
+            {
+                "title": "Drip Campaigns",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26495/Drip-Campaigns.html"
+            },
+            {
+                "title": "WhatsApp Bots",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26496/WhatsApp-Bots.html"
+            },
+            {
+                "title": "SMS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26497/SMS-Marketing.html"
+            },
+            {
+                "title": "Push",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26498/Push.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Influencer & Affiliate Marketing",
+        "items": [
+            {
+                "title": "Influencer Types",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26501/Influencer-Types.html"
+            },
+            {
+                "title": "Outreach",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26502/Outreach.html"
+            },
+            {
+                "title": "ROI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26503/ROI-Tracking.html"
+            },
+            {
+                "title": "Affiliate Setup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26504/Affiliate-Setup.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Ecommerce & Marketplace",
+        "items": [
+            {
+                "title": "Product Listing SEO",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26507/Product-Listing-SEO.html"
+            },
+            {
+                "title": "Dynamic Ads",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26508/Dynamic-Ads.html"
+            },
+            {
+                "title": "Cart Recovery",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26509/Cart-Recovery.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Google Ads Remarketing",
+        "items": [
+            {
+                "title": "Understand the Fundamentals of Google ads remarketing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26512/Google-Ads-Remarketing-Understanding-the-Fundamentals.html"
+            },
+            {
+                "title": "Set Up Ads Remarketing Campaigns",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26513/Google-Ads-Remarketing-Setting-Up-Effective-Campaigns.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Meta Ads Remarketing",
+        "items": [
+            {
+                "title": "Understand the Fundamentals of Meta ads remarketing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26516/Meta-Ads-Remarketing-Understanding-the-Fundamentals.html"
+            },
+            {
+                "title": "Set Up Meta Ads Remarketing Campaigns",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26517/Meta-Ads-Remarketing-Setting-Up-Effective-Campaigns.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Job Application Training",
+        "items": [
+            {
+                "title": "Job Portal",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26520/Naukri,%20Linkedin,%20Other%20Portals%20Training.html"
+            }
+        ]
+    }
+]

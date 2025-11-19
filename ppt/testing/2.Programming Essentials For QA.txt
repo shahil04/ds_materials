@@ -1,0 +1,147 @@
+[
+    {
+        "heading": "SQL for Testers",
+        "items": [
+            {
+                "title": "Database Basics, DDL/DML Commands",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/27608/Database-Basics-DDLDML-Commands.html"
+            },
+            {
+                "title": "Joins, Aggregates, Data Validation with SQL",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25933/Joins,%20Aggregates,%20Data%20Validation%20with%20SQL.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "HTML Basics",
+        "items": [
+            {
+                "title": "HTML Tags, Forms, Input Fields, Tables",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25935/HTML%20Tags,%20Forms,%20Input%20Fields,%20Tables.html"
+            },
+            {
+                "title": "Understanding Webpage UI Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25937/Understanding%20Webpage%20UI%20Testing.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "NSDC",
+        "items": [
+            {
+                "title": "NSDC Registration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26615/NSDC%20Process%20Mar-25.html"
+            }
+        ]
+    },
+    {
+        "heading": "Java Basics",
+        "items": [
+            {
+                "title": "Data Types, Variables",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25940/Data%20Types,%20Variables%20.html"
+            },
+            {
+                "title": "Loops",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25942/Java-Basics-Loops.html"
+            },
+            {
+                "title": "Conditionals",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25943/Java-Basics-Conditionals.html"
+            },
+            {
+                "title": "Arrays",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25944/Java-Basics-Arrays.html"
+            },
+            {
+                "title": "Strings",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25945/What-Are-Strings.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "OOPs in Java",
+        "items": [
+            {
+                "title": "Classes and Objects",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25947/Classes-and-Objects.html"
+            },
+            {
+                "title": "OOPS features",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25949/Object-Oriented-Programming.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Java for QA",
+        "items": [
+            {
+                "title": "Exception Handling",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25951/Exception-Handling.html"
+            },
+            {
+                "title": "File Handling",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25952/File-Handling-for-Test-Automation.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Git & GitHub",
+        "items": [
+            {
+                "title": "Version Control Concepts",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25955/Version%20Control%20Concepts%20.html"
+            },
+            {
+                "title": "Clone, Commit, Push, Pull",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25956/Clone,%20Commit,%20Push,%20Pull%20.html"
+            },
+            {
+                "title": "Branching and Merging",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25957/Git-and-GitHub-Branching-and-Merging.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "GitHub Copilot: AI-based code suggestions and completions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25962/GitHub%20Copilot%20AI-based%20code%20suggestions%20and%20completions.html"
+            }
+        ]
+    },
+    {
+        "heading": "Flip Learning",
+        "items": [
+            {
+                "title": "Topic Assignment",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25960/Flip-learning.html"
+            }
+        ]
+    }
+]

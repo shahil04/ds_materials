@@ -1,0 +1,175 @@
+[
+    {
+        "heading": "Introduction to DevOps",
+        "items": [
+            {
+                "title": "What is DevOps?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25723/What-is-DevOps.html"
+            },
+            {
+                "title": "History of DevOps?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24540/History-of-DevOps%20(1).html"
+            },
+            {
+                "title": "DevOps Lifecycle?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24541/The-DevOps-Lifecycle%20(1).html"
+            },
+            {
+                "title": "Benefits of DevOps. Industry Relevance.  Challenges.",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24542/Benefits-of-Devops-Industry-Relevance-and-Challenges.html"
+            },
+            {
+                "title": "Overview of Tools - Git Jenkins  Docker  Kubernetes  Terraform  AWS Cloud",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24543/Overview-of-Tools-Git-Jenkins-Docker-Kubernetes-Terraform-AWS-Cloud.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Introduction to Git",
+        "items": [
+            {
+                "title": "History of Git.",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24534/History-of-git.html"
+            },
+            {
+                "title": "Why Git?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24537/Why-Git.html"
+            },
+            {
+                "title": "Version Control Concepts",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24538/Version-Control-concepts.html"
+            },
+            {
+                "title": "Commands git init,  git clone,  git commit,  git push,  git pull,  git branch,  git merge",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24539/Commands-git-init-git-clone-git-commit-git-push-git-pull-git-branch-git-merge.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Induction Session",
+        "items": [
+            {
+                "title": "Course Induction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25728/Induction-AWS-DevOps-10.0-v2.html"
+            }
+        ]
+    },
+    {
+        "heading": "Linux Basics",
+        "items": [
+            {
+                "title": "Commands - ls, cd, pwd, whoami, id.",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24545/Commands-ls-cd-pwd-whoami-id.html"
+            },
+            {
+                "title": "File permissions (chmod, chown).",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24548/File-permissions-chmod-chown.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Package & Process Management with Networking",
+        "items": [
+            {
+                "title": "Package Management Commands (apt, yum, netstat, ping, curl)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24584/Package-Management-Commands-apt-yum-netstat-ping-curl.html"
+            },
+            {
+                "title": "Process Management Commands (ps, top, kill, nohup, crontab)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24587/Process-Management-Commands-ps-top-kill-nohup-crontab.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Bash Scripting Essentials",
+        "items": [
+            {
+                "title": "Variables",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24596/Variables%20(1).html"
+            },
+            {
+                "title": "Loops & functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26289/Loops-and-Functions.html"
+            },
+            {
+                "title": "Error handling & Commands like echo, read",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26290/Error-handling-and-Commands-like-echo-read.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Log Management & Monitoring",
+        "items": [
+            {
+                "title": "Log Commands (top, Free, Iostat, Df, Ps, Uptime)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24602/Log-Commands-top-Free-Iostat-Df-Ps-Uptime.html"
+            },
+            {
+                "title": "Monitoring Commands (tail, grep, journalctl, syslog)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24605/Monitoring-Commands-tail-grep-journalctl-syslog.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Introduction to AWS Cloud",
+        "items": [
+            {
+                "title": "What is Cloud Computing?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24612/What-is-Cloud-Computing.html"
+            },
+            {
+                "title": "IAM user, IAM role",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24615/IAM-user-IAM-role.html"
+            },
+            {
+                "title": "VPC, EC2, S3",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24616/VPC-EC2-S3.html"
+            },
+            {
+                "title": "Global Infra",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24617/Global-Infra.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Mastery",
+        "items": [
+            {
+                "title": "Understanding Interview Flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24991/Understanding%20interview%20flow.html"
+            },
+            {
+                "title": "90-Second Self-Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25664/90-Second%20Self-Introduction.html"
+            }
+        ]
+    }
+]

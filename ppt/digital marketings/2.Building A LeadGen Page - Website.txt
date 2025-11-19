@@ -1,0 +1,78 @@
+[
+    {
+        "heading": "Website Planning & UI/UX",
+        "items": [
+            {
+                "title": "Domain",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26388/Domain.html"
+            },
+            {
+                "title": "Hosting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26389/Hosting.html"
+            },
+            {
+                "title": "Pages",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26390/Pages%20.html"
+            },
+            {
+                "title": "UI/UX",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26391/UIUX.html"
+            },
+            {
+                "title": "Wireframing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26392/Wireframing.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "NSDC",
+        "items": [
+            {
+                "title": "NSDC Registration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26575/NSDC%20Process%20Mar-25.html"
+            }
+        ]
+    },
+    {
+        "heading": "Website Development (No Code)",
+        "items": [
+            {
+                "title": "WordPress Setup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26395/WordPress%20Setup.html"
+            },
+            {
+                "title": "Plugins",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26396/Plugins%20.html"
+            },
+            {
+                "title": "Forms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26397/Form-Setup.html"
+            },
+            {
+                "title": "Speed Optimization",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26398/Speed-Optimization%20.html"
+            },
+            {
+                "title": "Security",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26399/Security.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Presentation Skills",
+        "items": [
+            {
+                "title": "Understanding Presentation Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26402/Understanding%20Presentation%20Techniques.html"
+            }
+        ]
+    }
+]

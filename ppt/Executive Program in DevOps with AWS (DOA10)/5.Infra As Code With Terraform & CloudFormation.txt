@@ -1,0 +1,62 @@
+[
+    {
+        "heading": "Introduction to Terraform & it's basics",
+        "items": [
+            {
+                "title": "History of Terraform? Why Terraform? Declarative vs Imperative",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24634/History-of-Terraform-Why-Terraform-Declarative-vs-Imperative.html"
+            },
+            {
+                "title": "Concepts: Providers, Resources, Variables, Outputs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24637/Concepts-providersresourcesvariablesoutputs.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Terraform Modules",
+        "items": [
+            {
+                "title": "Writing and Using Modules",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24644/Writing-and-Using-Modules.html"
+            },
+            {
+                "title": "Deploying infra using modules & Review infra using Modules",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24647/Deploying-infra-using-modules-and-Review-infra-using-Modules.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Industry Expert Session",
+        "items": [
+            {
+                "title": "Industry Experts Meet",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Terraform on AWS and AWS Cloudformation",
+        "items": [
+            {
+                "title": "Setting Up AWS Resources: EC2, S3, VPC",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24654/Setting-Up-AWS-Resources-EC2-S3-VPC-with-terraform.html"
+            },
+            {
+                "title": "Introduction to AWS Cloudformation, Templates, Stacks, Resources, Output, CDK",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24657/Introduction-to-AWS-Cloudformation-Templates-Stacks-Resources-Output-CDK.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

@@ -1,0 +1,136 @@
+[
+    {
+        "heading": "Marketing Fundamentals",
+        "items": [
+            {
+                "title": "Traditional vs Digital",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26356/Traditional-vs-Digital-Marketing.html"
+            },
+            {
+                "title": "Inbound vs Outbound",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26357/Inbound-vs-Outbound-Marketing%20(2).html"
+            },
+            {
+                "title": "Buyer Journey",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26358/Understanding-the-Buyers-Journey.html"
+            },
+            {
+                "title": "STP",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26359/STP-Digital-Marketing.html"
+            },
+            {
+                "title": "4Ps & 7Ps",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26360/The-4Ps-and-7Ps-of-Marketing-Essential-Frameworks.html"
+            },
+            {
+                "title": "Basics of Copyright",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26361/Basics-of-Copyright-in-Digital-Marketing%20(1).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Digital Marketing Basics",
+        "items": [
+            {
+                "title": "Branding",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26364/Digital-Marketing-Basics-Branding.html"
+            },
+            {
+                "title": "Online Presence",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26365/Online%20Presence.html"
+            },
+            {
+                "title": "Digital Channels",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26366/Digital%20Channels.html"
+            },
+            {
+                "title": "7Cs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26367/The-7Cs-of-Digital-Marketing.html"
+            },
+            {
+                "title": "Components of Digital Marketing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26368/Components%20of%20Digital%20Marketing.html"
+            },
+            {
+                "title": "Funnel",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26369/Funnel.html"
+            },
+            {
+                "title": "KPIs & Metrics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26370/KPIs%20&%20Metrics.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Induction Session",
+        "items": [
+            {
+                "title": "Course Induction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26573/Digital-Marketing-10.0.html"
+            }
+        ]
+    },
+    {
+        "heading": "Customer Centricity & Profiling",
+        "items": [
+            {
+                "title": "Persona Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26373/Digital-Marketing-Personas.html"
+            },
+            {
+                "title": "Psychographics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26374/Psychographics-in-Digital-Marketing.html"
+            },
+            {
+                "title": "Demographics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26375/Demographics-in-Digital-Marketing.html"
+            },
+            {
+                "title": "Behavioral Targeting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26376/Behavioral-Targeting-in-Digital-Marketing.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Funnel Design",
+        "items": [
+            {
+                "title": "TOFU-MOFU-BOFU",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26379/TOFU-MOFU-BOFU.html"
+            },
+            {
+                "title": "Lead Magnets",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26380/Lead%20Magnets.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Mastery",
+        "items": [
+            {
+                "title": "Understanding Interview flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26383/Understanding%20interview%20flow.html"
+            },
+            {
+                "title": "Crafting a compelling 90-second self-introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26384/90-Second%20Self-Introduction.html"
+            }
+        ]
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "heading": "SEO Fundamentals & Strategy",
+        "items": [
+            {
+                "title": "Keyword Research",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26406/Keyword-Research.html"
+            },
+            {
+                "title": "Google Algorithms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26407/Google-Algorithms.html"
+            },
+            {
+                "title": "Local SEO",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26408/Local-SEO.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "On-Page & Technical SEO",
+        "items": [
+            {
+                "title": "On-Page SEO",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26824/SEO-Foundations-and-On-Page-SEO.html"
+            },
+            {
+                "title": "Technical SEO",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26825/Technical-SEO.html"
+            },
+            {
+                "title": "SEO Audit",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26826/SEO-Audit.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Off-Page SEO & Authority Building",
+        "items": [
+            {
+                "title": "Off-Page SEO",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26831/Off-Page%20SEO.html"
+            },
+            {
+                "title": "Link Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26832/Link-Building.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Career Accelerator",
+        "items": [
+            {
+                "title": "Linkedin Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26414/LinkedIn%20Introduction.html"
+            },
+            {
+                "title": "Resume Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26415/Resume%20Basics.html"
+            }
+        ]
+    }
+]
