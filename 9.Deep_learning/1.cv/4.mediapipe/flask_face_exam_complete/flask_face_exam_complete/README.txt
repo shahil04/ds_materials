@@ -22,6 +22,16 @@ How to run (local):
 
 4. Open http://localhost:5000 in your browser. Allow webcam access when prompted.
 
+
+#4.11.0 cv2
+#0.10.21 mediapipe
+#2.12.1 tensorflow
+
+
+pip uninstall -y tensorflow protobuf
+pip install "tensorflow>=2.13,<2.15"   # These use protobuf 4.x
+pip install "protobuf>=4.25.3,<5"
+
 Notes:
 - This is a prototype/demo. For production use:
   * Use per-student sessions and persistent DB storage for violations.
