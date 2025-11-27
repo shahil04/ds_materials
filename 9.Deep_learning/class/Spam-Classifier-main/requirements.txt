@@ -1,4 +1,0 @@
-nltk
-scikit-learn
-Flask
-Flask-Cors
