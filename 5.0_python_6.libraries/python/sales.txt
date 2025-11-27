@@ -1,9 +1,0 @@
-The Great Gatsby, 10, 15.50
-To Kill a Mockingbird, 5, 12.00
-1984, abc, 18.75
-Moby Dick, 7, 20.00
-Pride and Prejudice, 3, 10.00
-
-
-DEC23-D410 #15110- Alok Mishra
-July24-D306 Suresh Raikwar ,Abdulla Mirza
