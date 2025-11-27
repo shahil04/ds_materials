@@ -1,7 +1,0 @@
-streamlit
-opencv-python
-opencv-contrib-python
-numpy
-Pillow
-pyzbar
-imutils

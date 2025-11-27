@@ -1,6 +1,0 @@
-flask
-opencv-python
-mediapipe==0.10.21
-numpy
-tensorflow==2.13.0
-protobuf>=4.25.3,<5
