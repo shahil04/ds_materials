@@ -1,0 +1,14 @@
+management 
+billing
+IAM
+API
+Compute engines
+basic Kubarnetics
+cloud storage
+big query
+looker studio
+VPC
+Cloud run
+sql
+cloud build
+ai vertex
