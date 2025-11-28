@@ -1,0 +1,119 @@
+:root {
+    --pulse-rgb: 76, 175, 80;
+    --pulse: #4CAF50;
+}
+
+html {
+    font-size: 16px;
+}
+
+.nav-item.active .nav-link {
+    background-color: var(--nav-link-active-bg);
+}
+
+.dropdown-toggle::after {
+    border: none;
+}
+
+.btn-pulse {
+    --btn-color: #fff;
+    --btn-bg: #4CAF50;
+    --btn-border-color: #4CAF50;
+    --btn-hover-color: #fff;
+    --btn-hover-bg: #4ca54f;
+    --btn-hover-border-color: #4ca54f;
+    --btn-focus-shadow-rgb: 71, 179, 169;
+    --btn-active-color: #fff;
+    --btn-active-bg: #41c132;
+    --btn-active-border-color: #41c132;
+    --btn-active-shadow: inset 0 0 0 0 transparent;
+    --btn-disabled-color: #fff;
+    --btn-disabled-bg: #4CAF50;
+    --btn-disabled-border-color: #4CAF50;
+}
+
+.btn-flat-pulse {
+    --btn-bg: rgba(var(--pulse-rgb), .1);
+    --btn-color: var(--pulse);
+    --btn-border-color: var(--pulse);
+    --btn-hover-color: var(--btn-color);
+    --btn-hover-bg: rgba(var(--pulse-rgb), .2);
+    --btn-hover-border-color: var(--pulse);
+    --btn-focus-shadow-rgb: var(--pulse-rgb);
+    --btn-active-color: var(--pulse);
+    --btn-active-bg: rgba(var(--pulse-rgb), .25);
+    --btn-active-border-color: var(--pulse);
+    --btn-disabled-color: rgba(var(--pulse-rgb), .65);
+    --btn-disabled-bg: rgba(var(--pulse-rgb), .05);
+}
+
+.btn-outline-pulse {
+    --btn-color: #4CAF50;
+    --btn-border-color: #4caf50;
+    --btn-hover-color: #000;
+    --btn-hover-bg: #4CAF50;
+    --btn-hover-border-color: #4CAF50;
+    --btn-focus-shadow-rgb: 255, 214, 72;
+    --btn-active-color: #000;
+    --btn-active-bg: #41c132;
+    --btn-active-border-color: #4CAF50;
+    --btn-active-shadow: inset 0 0 0 0 transparent;
+    --btn-disabled-color: #4CAF50;
+    --btn-disabled-bg: transparent;
+    --gradient: none;
+}
+
+.bg-pulse {
+    --bg-opacity: 1;
+    background-color: rgba(var(--pulse-rgb), var(--bg-opacity)) !important;
+}
+
+.alert-pulse {
+    --alert-color: #4caf50;
+    --alert-bg: #e9f6f5;
+    --alert-border-color: #6cd570;
+    --alert-link-color: #267e2a;
+    --alert-link-hover-color: #329436;
+}
+
+.border-pulse {
+    --border-opacity: 1;
+    border-color: rgba(var(--pulse-rgb), var(--border-opacity)) !important;
+}
+
+.border-top-pulse {
+    --border-opacity: 1;
+    border-top-color: rgba(var(--pulse-rgb), var(--border-opacity)) !important;
+}
+
+.border-bottom-pulse {
+    --border-opacity: 1;
+    border-bottom-color: rgba(var(--pulse-rgb), var(--border-opacity)) !important;
+}
+
+.border-start-pulse {
+    --border-opacity: 1;
+    border-left-color: rgba(var(--pulse-rgb), var(--border-opacity)) !important;
+}
+
+.border-end-pulse {
+    --border-opacity: 1;
+    border-right-color: rgba(var(--pulse-rgb), var(--border-opacity)) !important;
+}
+
+.text-pulse {
+    --text-opacity: 1;
+    color: rgba(var(--pulse-rgb), var(--text-opacity)) !important;
+}
+
+/* only rows with an onclick get the pointer cursor */
+tr[onclick],
+td[onclick] {
+  cursor: pointer;
+}
+
+/* any links will naturally show pointer, 
+   but ensure it if you’ve overridden defaults */
+a[href] {
+  cursor: pointer;
+}
