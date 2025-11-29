@@ -10,7 +10,7 @@ def load_image(image_bytes):
 def preprocess_image(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     gray = cv2.medianBlur(gray, 3)
-    _, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+    _, thresh = cv2.threshold(gray, 111, 255, cv2.THRESH_BINARY)
     return thresh
 
 def extract_text(image):
