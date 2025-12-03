@@ -1,35 +1,42 @@
-    # bengaluru_app.py
-
+# Save the Streamlit app code to app.py
+# with Dropdown meanu use
 import streamlit as st
 import pandas as pd
-import numpy as np
-import joblib
+import pickle
 
-# Load model and location list
-model = joblib.load("bengaluru_house_model.pkl")
-locations = joblib.load("location_list.pkl")
+# ----------------------
+# Load Model & Dropdown Data
+# ----------------------
+pipe = pickle.load(open("model.pkl", "rb"))
+locations = pickle.load(open("locations.pkl", "rb"))
+area_types = pickle.load(open("area_type.pkl", "rb"))
 
-# Streamlit UI
-st.set_page_config(page_title="Bengaluru House Price Predictor", layout="centered")
-st.title("🏠 Bengaluru House Price Predictor")
+# ----------------------
+# Streamlit App
+# ----------------------
+st.set_page_config(page_title="House Price Prediction", layout="centered")
+st.title("🏠 House Price Prediction App")
+st.write("Enter property details below to get an estimated price (in Lakhs).")
 
-st.sidebar.header("Input House Details")
+# User inputs
+location = st.selectbox("Select Location", locations)
+area_type = st.selectbox("Select Area Type", area_types)
+total_sqft = st.number_input("Enter Total Square Feet", min_value=100.0, step=10.0)
+bath = st.number_input("Enter Number of Bathrooms", min_value=1.0, step=1.0)
+bhk = st.number_input("Enter Number of Bedrooms (BHK)", min_value=1, step=1)
+balcony = st.number_input("Enter number of Balcony: ", min_value=0)
 
-location = st.sidebar.selectbox("Select Location", sorted(locations))
-total_sqft = st.sidebar.number_input("Total Square Feet", min_value=300.0, max_value=10000.0, value=1000.0)
-bhk = st.sidebar.slider("Bedrooms (BHK)", 1, 10, 2)
-bath = st.sidebar.slider("Bathrooms", 1, 10, 2)
 
-if st.sidebar.button("Predict Price"):
-    input_data = pd.DataFrame({
-        "location": [location],
-        "total_sqft": [total_sqft],
-        "bhk": [bhk],
-        "bath": [bath]
-    })
-    
-    prediction = model.predict(input_data)[0]
-    st.success(f"💰 Estimated Price: ₹{prediction:.2f} Lakhs")
+# Prediction button
+if st.button("Predict Price"):
+    # Create DataFrame from inputs
+    user_input = pd.DataFrame([[location, area_type, total_sqft, bath, bhk,balcony]],
+                          columns=['location', 'area_type', 'total_sqft', 'bath', 'bhk','balcony'])
 
-st.markdown("---")
-st.caption("Built with ❤️ using Streamlit and Scikit-Learn")
+    # Make prediction
+    predicted_price = pipe.predict(user_input)[0]
+
+    st.success(f"💰 Estimated Price: **{predicted_price:.2f} Lakhs**")
+
+
+
