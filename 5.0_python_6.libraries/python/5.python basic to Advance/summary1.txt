@@ -1,0 +1,4 @@
+1 s is summary file
+{'phone': 30, 'pc': 40}
+ this is new data add on using append
+ this is new data add on using append
