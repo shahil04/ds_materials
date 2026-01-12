@@ -1,0 +1,2 @@
+- uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+- python -m spacy download en_core_web_sm
