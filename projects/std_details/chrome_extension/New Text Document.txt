@@ -1,0 +1,12 @@
+https://pulse.itvedant.com/student/course-completed-learners?page=2&per-page=10
+https://pulse.itvedant.com/student/all-learners?page=2&per-page=10
+
+https://pulse.itvedant.com/student/alumni-learners?page=3&per-page=10
+
+
+https://pulse.itvedant.com/student/placed-learners?page=2
+
+
+https://pulse.itvedant.com/student/intern-learners?page=2
+
+https://pulse.itvedant.com/student/update?id=1001

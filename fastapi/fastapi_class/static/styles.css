@@ -1,0 +1,339 @@
+:root {
+    /* Default Dark Mode */
+    --bg-gradient: linear-gradient(135deg, #21263a 0%, #090211 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --accent-color: #00d2ff;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --input-focus-bg: rgba(255, 255, 255, 0.15);
+    --list-item-bg: rgba(255, 255, 255, 0.05);
+    --list-item-hover-bg: rgba(255, 255, 255, 0.1);
+    --danger-color: #ff4b2b;
+    --success-color: #00b09b;
+    --shadow-color: rgba(31, 38, 135, 0.37);
+}
+
+[data-theme="light"] {
+    /* Light Mode Overrides */
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --accent-color: #3182ce;
+    --input-bg: rgba(0, 0, 0, 0.03);
+    --input-focus-bg: rgba(0, 0, 0, 0.06);
+    --list-item-bg: rgba(255, 255, 255, 0.5);
+    --list-item-hover-bg: rgba(255, 255, 255, 0.8);
+    --danger-color: #e53e3e;
+    --success-color: #38a169;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background 0.5s ease;
+}
+
+.container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+    animation: fadeIn 0.8s ease-out;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, var(--accent-color), #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: rotate(15deg);
+}
+
+/* Hide sun by default in dark mode (assuming dark is default) */
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+/* In light mode, show moon, hide sun */
+[data-theme="light"] .sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .moon-icon {
+    display: block;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 80px 100px 130px 50px;
+    gap: 10px;
+    margin-bottom: 2rem;
+    position: relative;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    background: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    background: var(--input-focus-bg);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    color: var(--text-primary);
+}
+
+/* Specific styling for inputs */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="light"] input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+button#add-btn {
+    background: var(--accent-color);
+    border: none;
+    border-radius: 12px;
+    width: 50px;
+    height: 42px;
+    /* manual fix for height alignment */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button#add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+}
+
+button#add-btn:active {
+    transform: translateY(0);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: var(--list-item-bg);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    color: var(--text-primary);
+}
+
+li:hover {
+    background: var(--list-item-hover-bg);
+    transform: translateX(5px);
+    border-color: var(--glass-border);
+}
+
+li.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+li.completed .todo-text {
+    color: var(--text-secondary);
+}
+
+.todo-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    min-width: 20px;
+}
+
+li.completed .checkbox {
+    background: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.checkbox::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    display: none;
+}
+
+li.completed .checkbox::after {
+    display: block;
+}
+
+.todo-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.todo-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.serial-no {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: var(--danger-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .input-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "main main"
+            "serial time"
+            "date btn";
+    }
+
+    #serial-input {
+        grid-area: serial;
+    }
+
+    #todo-input {
+        grid-area: main;
+    }
+
+    #date-input {
+        grid-area: date;
+    }
+
+    #time-input {
+        grid-area: time;
+    }
+
+    #add-btn {
+        grid-area: btn;
+        width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Student Profile Scraper",
+    "version": "1.0",
+    "description": "Scrapes individual student profiles from pulse.itvedant.com by ID range.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "downloads"
+    ],
+    "host_permissions": [
+        "*://pulse.itvedant.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://pulse.itvedant.com/student/update*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}

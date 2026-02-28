@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>AI Interview SaaS</title></head>
+<body>
+<h1>AI Interview SaaS</h1>
+<button onclick="start()">Start Interview</button>
+<script>
+function start(){
+ fetch("http://localhost:8000/api/interview/init",{
+   method:"POST",
+   headers:{"Content-Type":"application/json"},
+   body:JSON.stringify({job_role:"Python Dev",resume_text:"demo"})
+ }).then(r=>r.json()).then(console.log)
+}
+</script>
+</body>
+</html>
