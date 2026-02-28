@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Report</title></head>
+<body>
+    <h2>Exam Submitted</h2>
+    <h3>Violations</h3>
+    <ul>
+        {% for v in violations %}
+        <li>{{ v[0] }} <br><img src="/static/evidence/{{ v[1] }}" width="200"></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

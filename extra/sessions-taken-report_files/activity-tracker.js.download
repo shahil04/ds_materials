@@ -1,0 +1,219 @@
+/**
+ * Activity Tracker for PostHog
+ * Tab-specific tracking with sessionStorage
+ */
+
+(function() {
+    'use strict';
+    
+    // Generate unique tab ID
+    var tabId = 'tab_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    sessionStorage.setItem('tab_id', tabId);
+    
+    // Store page load time
+    var pageLoadTime = Date.now();
+    sessionStorage.setItem('page_load_time', pageLoadTime.toString());
+    
+    // SessionStorage helper functions
+    function setSessionStorage(name, value) {
+        try {
+            sessionStorage.setItem(name, value);
+        } catch (e) {
+            console.log('SessionStorage error:', e);
+        }
+    }
+    
+    function getSessionStorage(name) {
+        try {
+            return parseInt(sessionStorage.getItem(name)) || 0;
+        } catch (e) {
+            console.log('SessionStorage error:', e);
+            return 0;
+        }
+    }
+    
+    // Track active time
+    var SESSION_STORAGE_NAME = 'page_active_time';
+    var isTracking = true;
+    var lastActivityTime = Date.now();
+    var totalActiveTime = 0;
+    var isUserActive = true;
+    
+    // Listen for user activity
+    var activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart', 'click', 'keypress'];
+    activityEvents.forEach(function(eventName) {
+        document.addEventListener(eventName, function() {
+            if (isTracking) {
+                var currentTime = Date.now();
+                var timeSinceLastActivity = Math.floor((currentTime - lastActivityTime) / 1000);
+                
+                // Add time if user active
+                if (isUserActive && timeSinceLastActivity > 0 && timeSinceLastActivity < 60) {
+                    totalActiveTime += timeSinceLastActivity;
+                    setSessionStorage(SESSION_STORAGE_NAME, totalActiveTime.toString());
+                }
+                
+                // Reset activity state
+                isUserActive = true;
+                lastActivityTime = currentTime;
+            }
+        }, true);
+    });
+    
+    // Update timer every second
+    setInterval(function() {
+        if (isTracking) {
+            // Check inactivity timeout
+            var timeSinceLastActivity = Math.floor((Date.now() - lastActivityTime) / 1000);
+            if (timeSinceLastActivity > 10) {
+                isUserActive = false;
+            }
+            
+            if (isUserActive) {
+                totalActiveTime += 1;
+                setSessionStorage(SESSION_STORAGE_NAME, totalActiveTime.toString());
+            }
+        }
+    }, 1000);
+    
+    // Calculate prev page duration
+    function getPrevPageDuration() {
+        var pageLoadTime = getSessionStorage('page_load_time');
+        var currentTime = Date.now();
+        return Math.floor((currentTime - pageLoadTime) / 1000);
+    }
+    
+    // Send data to PostHog
+    var hasSentData = false;
+    function sendActiveTimeToPostHog() {
+        if (hasSentData) return;
+        
+        var activeTime = getSessionStorage(SESSION_STORAGE_NAME) || 0;
+        if (activeTime > 0) {
+            hasSentData = true;
+            var currentUrl = window.location.href;
+            var baseUrl = getBaseUrl();
+            var prevDuration = getPrevPageDuration();
+            
+            // Use sendBeacon for non-blocking request 
+            if (navigator.sendBeacon) {
+                var data = new FormData();
+                data.append('active', activeTime);
+                data.append('page_url', currentUrl);
+                data.append('tab_id', tabId);
+                data.append('prev_duration', prevDuration);
+                navigator.sendBeacon(baseUrl + '/track-posthog-page-time-spent', data);
+            } else {
+                // Fallback for IE and older browsers
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', baseUrl + '/track-posthog-page-time-spent', false);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.send('active=' + activeTime + '&page_url=' + encodeURIComponent(currentUrl) + '&tab_id=' + encodeURIComponent(tabId) + '&prev_duration=' + prevDuration);
+            }            
+            sessionStorage.removeItem(SESSION_STORAGE_NAME);
+        }
+    }
+
+    // Track page view
+    function trackPageView() {
+        var currentUrl = window.location.href;
+        var baseUrl = getBaseUrl();
+        var activeTime = getSessionStorage(SESSION_STORAGE_NAME) || 0;
+        
+        fetch(baseUrl + '/track-posthog-page-view?page_url=' + encodeURIComponent(currentUrl) + '&tab_id=' + encodeURIComponent(tabId) + '&active=' + activeTime, {
+            method: 'GET',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        }).catch(function() {
+            // Ignore errors
+        });
+    }
+    
+    // Get base URL
+    function getBaseUrl() {
+        var currentUrl = window.location.href;
+        var urlObj = new URL(currentUrl);
+        var pathname = urlObj.pathname;
+        
+        // Split path into parts
+        var pathParts = pathname.split('/').filter(function(part) {
+            return part.length > 0;
+        });
+        
+        // Find index.php
+        var indexPos = pathParts.indexOf('index.php');
+        if (indexPos !== -1) {
+            // Build URL up to index.php
+            var basePath = pathParts.slice(0, indexPos + 1).join('/');
+            return urlObj.origin + '/' + basePath + '/site';
+        } else {
+            // Fallback method
+            pathParts = pathParts.slice(0, -2);
+            var basePath = pathParts.join('/');
+            return urlObj.origin + '/' + basePath + '/site';
+        }
+    }
+    
+    // Handle link clicks
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (link && link.href && link.href.indexOf('javascript:') !== 0 && link.href.indexOf('#') !== 0) {
+            sendActiveTimeToPostHog();
+        }
+    });
+    
+    // Handle page unload
+    window.addEventListener('beforeunload', function() {
+        if (isTracking) {
+            var finalTime = Math.floor((Date.now() - lastActivityTime) / 1000);
+            if (finalTime > 0 && finalTime < 60) {
+                totalActiveTime += finalTime;
+                setSessionStorage(SESSION_STORAGE_NAME, totalActiveTime.toString());
+            }
+        }
+        sendActiveTimeToPostHog();
+    });
+    
+    // Initialize sessionStorage
+    if (!getSessionStorage(SESSION_STORAGE_NAME)) {
+        setSessionStorage(SESSION_STORAGE_NAME, '0');
+    }
+
+    // Track page view on load
+    document.addEventListener('DOMContentLoaded', trackPageView);
+    
+    // Add form-control class to Summernote file inputs
+    jQuery(document).ready(function($) {
+
+        // Function to add form-control class to note-image-input elements
+        function addFormControlClass() {
+            $('.note-image-input').not('.form-control').addClass('form-control');
+        }
+        addFormControlClass();
+        
+        // Watch for dynamically added elements
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'childList') {
+                    mutation.addedNodes.forEach(function(node) {
+                        if (node.nodeType === 1) {
+                            // Check if the node itself is a note-image-input
+                            if ($(node).hasClass('note-image-input') && !$(node).hasClass('form-control')) {
+                                $(node).addClass('form-control');
+                            }
+                            // Check for note-image-input elements within the node
+                            $(node).find('.note-image-input').not('.form-control').addClass('form-control');
+                        }
+                    });
+                }
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+        // Also check when Summernote dialogs are shown
+        $(document).on('shown.bs.modal', function() {
+            addFormControlClass();
+        });
+    });
+})(); 

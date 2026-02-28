@@ -1,0 +1,87 @@
+[
+    {
+        "heading": "Introduction to Monitoring",
+        "items": [
+            {
+                "title": "Why Monitoring is Essential in DevOps?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24649/Why-Monitoring-is-Essential-in-DevOps.html"
+            },
+            {
+                "title": "Tools Overview: Prometheus, Grafana",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24652/Tools-Overview-Prometheus-and-Grafana.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Implementation of Monitoring",
+        "items": [
+            {
+                "title": "What is Prometheus? Why Prometheus? Use Cases. Setting up Prometheus, Architecture of Prometheus, Prometheus Server, Scraping Metrics, Storing Metrics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24659/What-is-Prometheus-Why-Prometheus-Use-Cases-Setting-up-Prometheus-Architecture-of-Prometheus-Prometh.html"
+            },
+            {
+                "title": "What is Grafana? Why Grafana? Use Cases Setting up Grafana, Querying Prometheus Metrics, Creating Prometheus data source, Creating Visualization, Creating Graphs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24662/What-is-Grafana-Why-Grafana-Use-Cases-Setting-up-Grafana-Querying-Prometheus-Metrics-Creating-Promet.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Monitoring on AWS",
+        "items": [
+            {
+                "title": "Introduction to Monitoring on Cloud, Introduction to AWS Cloud Watch",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24664/Introduction-to-Monitoring-on-Cloud-Introduction-to-AWS-Cloud-Watch.html"
+            },
+            {
+                "title": "Cloud Watch Metrics, Cloud Watch Alarms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24667/Cloud-Watch-Metrics-Cloud-Watch-Alarms.html"
+            },
+            {
+                "title": "Monitoring EC2, Monitoring S3, Custom Metrics, Integrated Dashboard",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24668/Monitoring-EC2-Monitoring-S3-Custom-Metrics-Integrated-Dashboard.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mock Interview",
+        "items": [
+            {
+                "title": "Mock Interview Preparation and conduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25040/slides-4-5-technical-interview-preparation.html"
+            }
+        ]
+    },
+    {
+        "heading": "ELK Stack",
+        "items": [
+            {
+                "title": "What is ELK? What is ElasticSearch? What is LogStash? What is Kibana? History of ELK? Use Cases",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24670/What-is-ELK-What-is-ElasticSearch-What-is-LogStash-What-is-Kibana-History-of-ELK-Use-Cases.html"
+            },
+            {
+                "title": "Analyze Metric using ElasticSearch, Collect Logs using LogStash, Visualize and Query Metrics using Kibana",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24673/Analyze-Metric-using-ElasticSearch-Collect-Logs-using-LogStash-Visualize-and-Query-Metrics-using-Kib.html"
+            },
+            {
+                "title": "ELK on AWS Cloud - Elastic Cloud Stack",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24674/ELK-on-AWS-Cloud-Elastic-Cloud-Stack.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

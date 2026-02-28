@@ -1,0 +1,170 @@
+[
+    {
+        "heading": "Weaving The World Wide Web",
+        "items": [
+            {
+                "title": "Navigating the world of web",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/18297/Navigating%20the%20world%20of%20web.html"
+            },
+            {
+                "title": "Building blocks of websites",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/18298/Building%20blocks%20of%20websites.html"
+            },
+            {
+                "title": "Tag Titans: Fundamental  web constructs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/18299/Tag%20Titans%20Fundamental%20web%20constructs.html"
+            },
+            {
+                "title": "InfoMedia",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25369/InfoMedia%20.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Working with text and lists in HTML",
+        "items": [
+            {
+                "title": "Power of HTML text tags",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/18332/Power%20of%20HTML%20text%20tags.html"
+            },
+            {
+                "title": "Linking and Listing it right using HTML",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/18333/Linking%20and%20Listing%20it%20right%20using%20HTML.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlocking Table and Form Secrets in HTML",
+        "items": [
+            {
+                "title": "Crafting Dynamic Tables with HTML",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20139/Crafting%20Dynamic%20Tables%20with%20HTML.html"
+            },
+            {
+                "title": "Semantic Elements & Multimedia Embedding",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20140/Semantic%20Elements%20&%20Multimedia%20Embedding.html"
+            },
+            {
+                "title": "The Art Of Designing A Form",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20141/The%20Art%20Of%20Designing%20A%20Form.html"
+            },
+            {
+                "title": "Taking Actions With Forms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20142/Taking%20Actions%20With%20Forms.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Induction Session",
+        "items": [
+            {
+                "title": "Course Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25049/Induction-Java-Python-10.0-v2.html"
+            }
+        ]
+    },
+    {
+        "heading": "CSS Fundamentals: From Boxes to Floating Fun",
+        "items": [
+            {
+                "title": "CSS unlocked: Styling Starts Here",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25409/Css%20Unlocked%20-styling%20starts%20here%20%20.html"
+            },
+            {
+                "title": "Deep Dive Into CSS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20578/slides-4-1-deep-dive-into-css.html"
+            },
+            {
+                "title": "Mastering Page Layouts: Floats, Positions, and Details",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20579/slides-4-2-mastering-page-layouts-with-positioning.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlocking CSS' Creative Toolbox",
+        "items": [
+            {
+                "title": "The Flexbox Formula",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20690/slides-5-1-the-flexbox-formula.html"
+            },
+            {
+                "title": "HTML Embedding Tricks & Grid Layouts",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20693/slides-5-4-html-embedding-tricks-grid-layouts.html"
+            },
+            {
+                "title": "Responsive Web Fundamentals -I",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20694/slides-5-5-responsive-web-fundamentals-part-i-dfd61b.html"
+            },
+            {
+                "title": "Responsive Web Fundamentals -II",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/20695/slides-5-6-responsive-web-fundamentals-part-ii-1c6865.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "AnimeVerse: A Bootstrap Journey",
+        "items": [
+            {
+                "title": "AnimeVerse",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25370/AnimeVerse-A-Bootstrap-Powered-Anime-Platform.html"
+            },
+            {
+                "title": "Unlocking The Power Of Bootstrap",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/21130/Unlocking%20The%20Power%20Of%20Bootstrap.html"
+            },
+            {
+                "title": "Crafting Navigations With Bootstrap",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/21131/Crafting%20Navigations%20With%20Bootstrap.html"
+            },
+            {
+                "title": "Creating Engaging Dynamics: Carousels & Icons",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/21132/Creating%20Engaging%20Dynamics%20Carousels%20&%20Icons.html"
+            },
+            {
+                "title": "Mastering Layout: Grids, Containers, and Cards",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/21133/Mastering%20Layout%20Grids,%20Containers,%20and%20Cards.html"
+            },
+            {
+                "title": "The Interactive Duo:Modal and Forms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/21134/The%20Interactive%20DuoModal%20and%20Forms.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Mastery",
+        "items": [
+            {
+                "title": "Understanding Interview flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25051/Understanding%20interview%20flow.html"
+            },
+            {
+                "title": "90-Second Self-Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25052/90-Second%20Self-Introduction.html"
+            }
+        ]
+    }
+]

@@ -1,0 +1,5 @@
+Flask==2.3.2
+Flask-Cors==3.0.10
+gTTS==2.3.2
+googletrans==4.0.0-rc1
+requests==2.31.0

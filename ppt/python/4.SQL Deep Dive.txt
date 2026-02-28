@@ -1,0 +1,206 @@
+[
+    {
+        "heading": "SQL LaunchPad",
+        "items": [
+            {
+                "title": "Exploring the Data Universe",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24993/exploring%20data%20universe.html"
+            },
+            {
+                "title": "SQL Setup and Basics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24994/sql-setup-and-basics.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Advanced DB Creations (DDL)",
+        "items": [
+            {
+                "title": "RideTrack: Cab Booking Analytics (Case Study)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25372/RideTrack%20Cab%20Booking%20Analytics.html"
+            },
+            {
+                "title": "Navigating Database Relationships",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25001/navigating-database-relationships.html"
+            },
+            {
+                "title": "Data Quality and Speed: Keys and Indexing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25000/data-quality-and-speed-keys-and-indexing.html"
+            },
+            {
+                "title": "Normalization and Denormalization Strategies",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25002/normalization-and-denormalization-strategies-8c4d00.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Crafting SQL Databases (DDL)",
+        "items": [
+            {
+                "title": "Blueprinting Database Structures",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24999/blueprinting-database-structures.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Querying into Data (DQL)",
+        "items": [
+            {
+                "title": "Mastering SELECT Statements",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24995/mastering-select-statements.html"
+            },
+            {
+                "title": "Sorting Query Results",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24996/sorting%20query%20results.html"
+            },
+            {
+                "title": "Result Control with LIMIT and OFFSET",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24997/result-control-with-limit-and-offset.html"
+            },
+            {
+                "title": "Nulls Decoded",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25012/nulls%20coded.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Prep",
+        "items": [
+            {
+                "title": "Technical Interview Practice on FrontEnd",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25205/Technical-Interview-Preparation.html"
+            }
+        ]
+    },
+    {
+        "heading": "Mastering Data Control (DML)",
+        "items": [
+            {
+                "title": "SQL's Data Addition Tool : INSERT",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25009/sqls-data-addition-tool-insert.html"
+            },
+            {
+                "title": "Data Maintenance with UPDATE",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25010/Data%20maintenance%20with%20update.html"
+            },
+            {
+                "title": "SQL Cleanup Crew",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25011/Sql%20cleanup%20crew.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlock the Built-Ins",
+        "items": [
+            {
+                "title": "String Manipulation Magic",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25014/string_manipulation_magic.html"
+            },
+            {
+                "title": "Unlocking Math Prowess",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25016/unlocking%20maths%20prowsess.html"
+            },
+            {
+                "title": "Mastering Dates and Times",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25015/mastering%20date%20and%20times.html"
+            },
+            {
+                "title": "Crunching Numbers with SQL",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25004/crunching_numbers_with_sql.html"
+            },
+            {
+                "title": "Discovering SQL Trends",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25005/discovering_sql_trend.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Advanced Querying",
+        "items": [
+            {
+                "title": "Subqueries for Smarter Data Access",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25006/subqeuries_for_smarter_data_access.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Data Connections with Joins",
+        "items": [
+            {
+                "title": "Connecting Data for Better Insights",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25007/connecting-data-for-better-insights.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Customizing SQL",
+        "items": [
+            {
+                "title": "Tapping into SQL Superpowers",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25208/tapping-into-sql-powers.html"
+            },
+            {
+                "title": "Customizing SQL to Your Needs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25209/customizing%20your%20sql%20needs.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Automating SQL (Triggers)",
+        "items": [
+            {
+                "title": "Strategically Automating SQL",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25211/strategically-automating-sql.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Job Application Training",
+        "items": [
+            {
+                "title": "Naukri, Linkedin, Other Portals Training",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25213/Naukri,%20Linkedin,%20Other%20Portals%20Training.html"
+            }
+        ]
+    }
+]

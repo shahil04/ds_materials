@@ -1,0 +1,181 @@
+    [
+    {
+        "heading": "Introduction to Automation & Selenium",
+        "items": [
+            {
+                "title": "Selenium Suite Overview (IDE, WebDriver, Grid)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25964/Selenium-Suite-Overview-IDE-WebDriver-Grid.html"
+            },
+            {
+                "title": "Environment Setup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25965/Environment%20Setup.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Selenium WebDriver Basics",
+        "items": [
+            {
+                "title": "Locators – ID, Name, XPath, CSS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25968/Locators%20%E2%80%93%20ID,%20Name,%20XPath,%20CSS%20.html"
+            },
+            {
+                "title": "Web Element Operations",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25969/WebElement-Operations.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Waits and Handling",
+        "items": [
+            {
+                "title": "Implicit, Explicit, Fluent Waits",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25972/Implicit-Explicit-Fluent-Waits.html"
+            },
+            {
+                "title": "Alerts, Frames, Windows",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25973/Alerts-Frames-Windows.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "TestNG Integration",
+        "items": [
+            {
+                "title": "TestNG Annotations",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25976/TestNG-Annotations.html"
+            },
+            {
+                "title": "Assertions and Reporting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25977/Assertions-and-Reporting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Maven Setup",
+        "items": [
+            {
+                "title": "Project Structure",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25980/Project-Structure.html"
+            },
+            {
+                "title": "POM.xml Configuration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25981/POMxml-Configuration.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Framework Design",
+        "items": [
+            {
+                "title": "Page Object Model (POM)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25984/Page-Object-Model-POM.html"
+            },
+            {
+                "title": "Utilities & Config Management",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25985/Utilities-and-Config-Management.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Reporting & Logging",
+        "items": [
+            {
+                "title": "Log4j Setup",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25988/Log4j-Setup.html"
+            },
+            {
+                "title": "Extent Reports",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25989/Extent-Reports.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Introduction to Cucumber & Step Definitions",
+        "items": [
+            {
+                "title": "Gherkin Syntax",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25992/Gherkin-Syntax.html"
+            },
+            {
+                "title": "Feature Files",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25993/Feature-Files.html"
+            },
+            {
+                "title": "Writing Step  Code",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25994/Writing-Step-Code.html"
+            },
+            {
+                "title": "Hooks, Tags",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25995/Hooks-Tags.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Cucumber + Selenium",
+        "items": [
+            {
+                "title": "Test Execution with TestNG",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25998/Test-Execution-with-TestNG.html"
+            },
+            {
+                "title": "Reporting in BDD",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25999/Reporting%20in%20BDD.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "Using Playwright Tool",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Presentation Skills",
+        "items": [
+            {
+                "title": "Understanding Presentation Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26002/Understanding%20Presentation%20Techniques.html"
+            }
+        ]
+    }
+]

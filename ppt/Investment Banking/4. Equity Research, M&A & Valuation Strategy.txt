@@ -1,0 +1,151 @@
+[
+    {
+        "heading": "Equity Research",
+        "items": [
+            {
+                "title": "Business Models",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26198/Business-Model.html"
+            },
+            {
+                "title": "Drivers",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26199/Drivers.html"
+            },
+            {
+                "title": "Moats",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26200/Moat.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "M&A Fundamentals",
+        "items": [
+            {
+                "title": "Synergies",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26203/MandA-Synergies.html"
+            },
+            {
+                "title": "Deal Structuring",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26204/Deal-Structuring.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Assumptions & Forecasts",
+        "items": [
+            {
+                "title": "Drivers",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26207/Assumptions-and-Forecasts-Drivers.html"
+            },
+            {
+                "title": "Cost/Revenue Planning",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26208/Assumptions-and-Forecasts-CostRevenue-Planning.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "3-Statement Model",
+        "items": [
+            {
+                "title": "Linking IS, BS, CF",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26211/IS-BS-CF.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Valuation Models",
+        "items": [
+            {
+                "title": "DCF",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26213/Valuation-Models-DCF.html"
+            },
+            {
+                "title": "Multiples",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26214/Valuation-Models-Multiples.html"
+            },
+            {
+                "title": "Sensitivity",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26215/Valuation-Models-Sensitivity.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Communication",
+        "items": [
+            {
+                "title": "Emails",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26218/Communication-Emails.html"
+            },
+            {
+                "title": "Reports",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26219/Communication-Reports.html"
+            },
+            {
+                "title": "Notes",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26220/Communication-Notes.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "PowerPoint for IB",
+        "items": [
+            {
+                "title": "Slide Design",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26223/Slide-Design.html"
+            },
+            {
+                "title": "Storytelling",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26224/Storytelling.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Career Accelerator",
+        "items": [
+            {
+                "title": "Linkedin",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26229/LinkedIn%20Introduction.html"
+            },
+            {
+                "title": "Resume Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26230/Resume%20Basics.html"
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "Napkin/Canva",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26232/Capstone-Project-Using-AI-Tool-NapkinCanva.html"
+            }
+        ]
+    }
+]

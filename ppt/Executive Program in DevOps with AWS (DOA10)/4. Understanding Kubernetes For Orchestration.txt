@@ -1,0 +1,62 @@
+[
+    {
+        "heading": "Introduction to K8s and it's Concept",
+        "items": [
+            {
+                "title": "History of Kubernetes? Why Kubernetes? Use Cases. Kubernetes Architecture",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24591/History-of-Kubernetes-Why-Kubernetes-Use-Cases-Kubernetes-Architecture%20(1).html"
+            },
+            {
+                "title": "Concepts: Pods, Nodes, Services, Deployments, ReplicaSets",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24594/Concepts-Pods-Nodes-Services-Deployments-ReplicaSets%20(2).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "K8s Commands & Implementation",
+        "items": [
+            {
+                "title": "Implementation - (CLI Install, Create Cluster, Deploy Cluster Namespaces, Pods, Deployments, Services)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24610/Implementation-CLI-Install-Create-Cluster-Deploy-Cluster-Namespaces-Pods-Deployments-Services.html"
+            },
+            {
+                "title": "kubectl commands - (kubectl get pods,  kubectl create,  kubectl logs,  kubectl apply,  kubectl delete,  kubectl config)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24607/kubectl-commands-kubectl-get-pods-kubectl-create-kubectl-logs-kubectl-apply-kubectl-delete-kubectl-c.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Presentation Skills",
+        "items": [
+            {
+                "title": "Technical Presentation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25034/Technical%20Presentation.html"
+            }
+        ]
+    },
+    {
+        "heading": "K8s on AWS and Scaling",
+        "items": [
+            {
+                "title": "Introduction to EKS, Configuring AWS EKS, ECR Integration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24619/Introduction-to-EKS-Configuring-AWS-EKS-ECR-Integration.html"
+            },
+            {
+                "title": "Horizontal Pod Autoscaler, Cluster Autoscaler",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24622/Horizontal-Pod-Autoscaler-Cluster-Autoscaler.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

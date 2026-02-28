@@ -1,0 +1,200 @@
+[
+    {
+        "heading": "Software Testing Basics",
+        "items": [
+            {
+                "title": "What is Testing?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25887/What-is-Software-Testing%20.html"
+            },
+            {
+                "title": "Importance of Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25889/Importance%20of%20Testing.html"
+            },
+            {
+                "title": "QA vs QC vs Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25890/QA%20vs%20QC%20vs%20Testing.html"
+            },
+            {
+                "title": "SDLC vs STLC",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25891/SDLC-vs-STLC%20(2).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Testing Types",
+        "items": [
+            {
+                "title": "Functional vs Non-Functional",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25893/Functional-vs-Non-Functional-Testing%20(2).html"
+            },
+            {
+                "title": "Smoke, Sanity, Regression",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25895/Smoke-Sanity-and-Regression-Testing-A-Deep-Dive%20(2).html"
+            },
+            {
+                "title": "Alpha, Beta, Acceptance Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25896/Alpha-Beta-and-Acceptance-Testing%20(2).html"
+            },
+            {
+                "title": "System, Integration Testing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25897/System-and-Integration-Testing%20(2).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Induction Session",
+        "items": [
+            {
+                "title": "Course Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26613/Software-Testing-10.0.html"
+            }
+        ]
+    },
+    {
+        "heading": "Testing Techniques",
+        "items": [
+            {
+                "title": "Black Box vs White Box",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/27190/Black-Box-and-White-Box-Testing%20(2).html"
+            },
+            {
+                "title": "Equivalence Partitioning",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/27191/Equivalence-Partitioning%20(2).html"
+            },
+            {
+                "title": "Boundary Value Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/27192/Boundary%20Value%20Analysis.html"
+            },
+            {
+                "title": "Decision Table & State Transition",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/27193/Decision-Table-and-State-Transition%20(1).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Test Documentation & Traceability",
+        "items": [
+            {
+                "title": "ADD, BRD, FRD, Test Plan & Test Strategy",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25901/ADD-BRD-FRD%20(2).html"
+            },
+            {
+                "title": "Test Scenario vs Test Case",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25903/Test-Scenario-vs-Test-Case%20(2)%20(1).html"
+            },
+            {
+                "title": "RTM (Requirement Traceability Matrix)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25904/RTM-Requirement-Traceability-Matrix%20(2).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Defect Management",
+        "items": [
+            {
+                "title": "Bug Life Cycle",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25906/Bug-and-Bugs-Lifecycle%20(3).html"
+            },
+            {
+                "title": "Severity vs Priority Defect",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25908/Severity-vs-Priority%20(2).html"
+            },
+            {
+                "title": "Reporting & Tracking",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25909/Defect-Reporting-and-Tracking%20(2).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Agile Basics",
+        "items": [
+            {
+                "title": "Agile Manifesto & Principles",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25911/Agile%20Manifesto%20&%20Principles.html"
+            },
+            {
+                "title": "Scrum Framework Sprint",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25913/Scrum-Framework%20(2).html"
+            },
+            {
+                "title": "Planning & Retrospective",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25914/Sprint-Planning-and-Retrospective%20.html"
+            },
+            {
+                "title": "Testing in Agile Environment",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25915/Testing-in-Agile-Environment.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "JIRA for Testers",
+        "items": [
+            {
+                "title": "Creating Stories, Tasks, Bugs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25917/Creating-Stories-Tasks-and-Bugs-in-JIRA%20(2).html"
+            },
+            {
+                "title": "Sprint Board, Backlogs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25919/Sprint-Boards-and-Backlogs%20.html"
+            },
+            {
+                "title": "Test Case Management",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25920/Test-Case-Management-in-JIRA.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Mastery",
+        "items": [
+            {
+                "title": "Understanding Interview flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25925/Understanding%20interview%20flow.html"
+            },
+            {
+                "title": "Assignment Crafting a compelling 90-second self-introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25926/90-Second%20Self-Introduction.html"
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "Bugasura: Bug tracking with AI suggestions and analytics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25928/Bugasura%20Bug%20tracking%20with%20AI%20suggestions%20and%20analytics.html"
+            },
+            {
+                "title": "ChatGPT - Test Cases",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25929/ChatGPT%20-%20Test%20Cases.html"
+            }
+        ]
+    }
+]

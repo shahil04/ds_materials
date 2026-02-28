@@ -27,11 +27,7 @@ console.log(data);
 
 
 
-
-
-
-
-=============
+// =============
 
 
 
@@ -40,13 +36,13 @@ console.log(data);
 
 
 
-const items = Array.from(document.querySelectorAll('p.list-group-item'));
-const results = items.map(p => {
-  const title = p.cloneNode(true); 
-  title.querySelectorAll('i, a').forEach(el => el.remove()); 
-  const text = title.textContent.trim();
-  const link = p.querySelector('a')?.href || '';
-  return { title: text, link };
-});
+// const items = Array.from(document.querySelectorAll('p.list-group-item'));
+// const results = items.map(p => {
+//   const title = p.cloneNode(true); 
+//   title.querySelectorAll('i, a').forEach(el => el.remove()); 
+//   const text = title.textContent.trim();
+//   const link = p.querySelector('a')?.href || '';
+//   return { title: text, link };
+// });
 
-console.log(results);
+// console.log(results);

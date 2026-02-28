@@ -1,0 +1,226 @@
+[
+    {
+        "heading": "Accounting Basics",
+        "items": [
+            {
+                "title": "Journals",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26143/Journals.html"
+            },
+            {
+                "title": "Ledgers",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26144/Ledger.html"
+            },
+            {
+                "title": "Double Entry",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26145/Double%20Entry.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Financial Statements",
+        "items": [
+            {
+                "title": "IS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26148/IS.html"
+            },
+            {
+                "title": "BS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26149/BS.html"
+            },
+            {
+                "title": "CF",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26150/CF.html"
+            },
+            {
+                "title": "Equity Statement",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26151/Equity%20Statement.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Ratio Analysis",
+        "items": [
+            {
+                "title": "ROE",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26154/ROE.html"
+            },
+            {
+                "title": "DuPont",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26155/DuPont.html"
+            },
+            {
+                "title": "EPS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26156/EPS.html"
+            },
+            {
+                "title": "Liquidity",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26157/Liquidity.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Equities",
+        "items": [
+            {
+                "title": "Indexes",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26160/Indexes.html"
+            },
+            {
+                "title": "ROE",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26161/ROE..html"
+            },
+            {
+                "title": "Dividends",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26162/Dividends.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Bonds & Debt",
+        "items": [
+            {
+                "title": "Coupons",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26165/Coupons.html"
+            },
+            {
+                "title": "Yields",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26166/Yields.html"
+            },
+            {
+                "title": "Pricing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26167/Pricing.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Mutual Funds & AIF",
+        "items": [
+            {
+                "title": "NAV",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26170/NAV..html"
+            },
+            {
+                "title": "Categories (Excl. Wealth)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26171/Categories%20(Excl.%20Wealth).html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Derivatives",
+        "items": [
+            {
+                "title": "Futures",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26174/Futures.html"
+            },
+            {
+                "title": "Swaps",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26175/Swaps.html"
+            },
+            {
+                "title": "Options",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26176/Options...html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Collateral",
+        "items": [
+            {
+                "title": "Margins",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26179/Margins...html"
+            },
+            {
+                "title": "Reconciliation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26180/Reconciliation.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "IB Operations",
+        "items": [
+            {
+                "title": "Logs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26183/Logs.html"
+            },
+            {
+                "title": "Recon",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26184/Recon.html"
+            },
+            {
+                "title": "Corporate Actions",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "NAV & Asset Servicing",
+        "items": [
+            {
+                "title": "Adjustments",
+                "link": ""
+            },
+            {
+                "title": "Event Processing",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "Perplexity AI",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Flip Learning",
+        "items": [
+            {
+                "title": "Topic Explaination",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26192/Flip-learning.html"
+            }
+        ]
+    }
+]

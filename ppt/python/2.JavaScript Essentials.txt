@@ -1,0 +1,153 @@
+[
+    {
+        "heading": "Journey through JavaScript's Landscape",
+        "items": [
+            {
+                "title": "JavaScript: From Script to Superpower",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25225/JavaScript%20From%20Script%20to%20Superpower.html"
+            },
+            {
+                "title": "Scripting Essentials: From Basics to Execution",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25226/Scripting%20Essentials%20From%20Basics%20to%20Execution.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Unlocking JavaScript's Secrets: Mastering Core Concepts",
+        "items": [
+            {
+                "title": "The Magic of Control  Statements",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25228/The%20Magic%20of%20Control%20Statements.html"
+            },
+            {
+                "title": "Mastering The Loop Machine : For Loop",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25229/Mastering%20The%20Loop%20Machine%20%20For%20Loop.html"
+            },
+            {
+                "title": "The Art of the While Loop",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25230/The%20Art%20of%20the%20While%20Loop.html"
+            },
+            {
+                "title": "Taking Control with do-while and continue",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25231/Taking%20Control%20with%20do-while%20and%20continue.html"
+            },
+            {
+                "title": "Functions: The Backbone of Modular codes-I",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25232/Functions%20The%20Backbone%20of%20Modular%20codes-I%20.html"
+            },
+            {
+                "title": "Functions: The Backbone of Modular codes -II",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25233/Functions%20The%20Backbone%20of%20Modular%20codes%20-II.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Javascript Objects",
+        "items": [
+            {
+                "title": "Data Vaults: Unlocking the Power of Objects",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25235/Data%20Vaults%20Unlocking%20the%20Power%20of%20Objects.html"
+            },
+            {
+                "title": "Object Operations in JavaScript: CRUD & Key Methods",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25236/Object%20Operations%20in%20JavaScript%20CRUD%20&%20Key%20Methods.html"
+            },
+            {
+                "title": "Exploring the Depths of Data with Arrays",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25237/Exploring%20the%20Depths%20of%20Data%20with%20Arrays.html"
+            },
+            {
+                "title": "ArrayMagic: Essential Methods for Managing Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25238/ArrayMagic%20Essential%20Methods%20for%20Managing%20Data.html"
+            },
+            {
+                "title": "Crafting With Characters",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25239/Crafting%20With%20Characters.html"
+            },
+            {
+                "title": "Practical Methods Of String Slicing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25240/Practical%20Methods%20Of%20String%20Slicing.html"
+            },
+            {
+                "title": "Exploring BOM and Timers in JavaScript",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25241/Exploring%20BOM%20and%20Timers%20in%20JavaScript.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "NSDC",
+        "items": [
+            {
+                "title": "NSDC Registration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25243/NSDC%20Process%20Mar-25.html"
+            }
+        ]
+    },
+    {
+        "heading": "Document Object Model",
+        "items": [
+            {
+                "title": "Decoding DOM: Role & Purpose",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25245/Decoding%20DOM%20Role%20&%20Purpose.html"
+            },
+            {
+                "title": "Diving Into Techniques Of DOM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25246/Diving%20Into%20Techniques%20Of%20DOM.html"
+            },
+            {
+                "title": "DOM Navigation: Finding Elements and Handling Events",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25247/DOM%20Navigation%20Finding%20Elements%20and%20Handling%20Events.html"
+            },
+            {
+                "title": "Event Flow in JavaScript: Bubbling, Capturing, and Delegation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25248/Event%20Flow%20in%20JavaScript%20Bubbling,%20Capturing,%20and%20Delegation.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Modern JS Currency Converter",
+        "items": [
+            {
+                "title": "Exploring JavaScript's Array Transformation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25250/Exploring%20JavaScript's%20Array%20Transformation.html"
+            },
+            {
+                "title": "From Callbacks to Promises: Mastering Asynchronous JavaScript",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25251/From%20Callbacks%20to%20Promises%20Mastering%20Asynchronous%20JavaScript.html"
+            },
+            {
+                "title": "Currency Convertor",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25371/Currency_convertor.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Presentation Skills",
+        "items": [
+            {
+                "title": "Understanding Presentation Techniques",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25253/Understanding%20Presentation%20Techniques.html"
+            }
+        ]
+    }
+]

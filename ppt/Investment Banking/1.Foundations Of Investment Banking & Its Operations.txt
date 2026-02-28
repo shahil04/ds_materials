@@ -1,0 +1,233 @@
+[
+    {
+        "heading": "Introduction to Investment Banking",
+        "items": [
+            {
+                "title": "Overview",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26061/Overview.html"
+            },
+            {
+                "title": "Key Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26062/12-Key-Function.html"
+            },
+            {
+                "title": "Business Model",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26063/13-Business-Model%20(1).html"
+            },
+            {
+                "title": "Industry Trends",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26064/14-Industry-Trends-and-Disruptions-in-IB.html"
+            },
+            {
+                "title": "Role in Financial Markets",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26065/15-Role-of-Investment-Banks-in-Financial-Market%20(1).html"
+            },
+            {
+                "title": "Market Participants",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26066/16-Market-Participants.html"
+            },
+            {
+                "title": "Career Path",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26067/17-The-Investment-Banking-Career-Ladder.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Behavioral & Skill Competencies",
+        "items": [
+            {
+                "title": "Core Soft Skills",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26070/Core%20Soft%20Skills.html"
+            },
+            {
+                "title": "Ethics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26071/Ethics.html"
+            },
+            {
+                "title": "Communication",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26072/Communication-in-Investment-Banking.html"
+            },
+            {
+                "title": "Career Opportunities",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26073/Career-Opportunities-in-IB.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Induction Session",
+        "items": [
+            {
+                "title": "Course Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26621/slides-coming-soon.html"
+            }
+        ]
+    },
+    {
+        "heading": "Financial Markets & Institutions",
+        "items": [
+            {
+                "title": "Market Types",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26076/31-Market-Types-in-Investment-Banking.html"
+            },
+            {
+                "title": "Functions",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26077/32-Function-investment-banking.html"
+            },
+            {
+                "title": "Participants",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26078/33-Key-Participants.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Regulatory Environment",
+        "items": [
+            {
+                "title": "SEBI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26081/41-SEBI.html"
+            },
+            {
+                "title": "RBI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26082/42-RBI.html"
+            },
+            {
+                "title": "Basel Norms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26083/43-Basel-Norms.html"
+            },
+            {
+                "title": "FATCA",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26084/44-FATCA.html"
+            },
+            {
+                "title": "MiFID",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26085/45-MiFID.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Financial Intermediation",
+        "items": [
+            {
+                "title": "Issuance",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26088/51-Issuance.html"
+            },
+            {
+                "title": "Underwriting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26089/52-Underwriting.html"
+            },
+            {
+                "title": "Buy/Sell-side roles",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26090/53-BuySell-side-Roles.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Trade Lifecycle & Operations",
+        "items": [
+            {
+                "title": "Trade Flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26093/61-Trade-Flow.html"
+            },
+            {
+                "title": "Matching",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26094/62-Matching.html"
+            },
+            {
+                "title": "Confirmation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26095/63-Confirmation.html"
+            },
+            {
+                "title": "Settlement",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26096/64-Settlements.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Client Onboarding",
+        "items": [
+            {
+                "title": "KYC",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26099/71-KYC.html"
+            },
+            {
+                "title": "AML",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26100/72-AML-Updated.html"
+            },
+            {
+                "title": "Docs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26101/73-Documentation-Updated.html"
+            },
+            {
+                "title": "Workflow Design",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26102/74-Workflow-design-Updated.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Risk & Surveillance",
+        "items": [
+            {
+                "title": "Transaction Monitoring",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26111/81-Transaction-Monitoring-Updated.html"
+            },
+            {
+                "title": "Exception Handling",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26112/82-Exception-Handling-Updated.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Interview Mastery",
+        "items": [
+            {
+                "title": "Understanding interview flow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26117/Understanding%20interview%20flow.html"
+            },
+            {
+                "title": "Crafting a compelling 90-second self-introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26118/90-Second%20Self-Introduction.html"
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "Claude AI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26120/Claude%20AI.html"
+            }
+        ]
+    }
+]

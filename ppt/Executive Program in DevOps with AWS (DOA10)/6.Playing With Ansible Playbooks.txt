@@ -1,0 +1,62 @@
+[
+    {
+        "heading": "Introduction to Ansible & it's basic",
+        "items": [
+            {
+                "title": "History of Ansible? Why Ansible? Agentless Architecture",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24624/History%20of%20Ansible%20Why%20Ansible%20Agentless%20Architecture.html"
+            },
+            {
+                "title": "Concepts: Playbooks, Inventory, Modules",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24627/Concepts%20Playbooks,%20Inventory,%20Modules.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Ansible Roles and Variables",
+        "items": [
+            {
+                "title": "Understanding Roles, Roles Reusability, Variables, Templates",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24629/Understanding-Roles-Roles-Reusability-Variables-Templates.html"
+            },
+            {
+                "title": "Configuring Ansible, Provisioning AWS Resources",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24632/Configuring%20Ansible,%20Provisioning%20AWS%20Resources.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Flip Learning",
+        "items": [
+            {
+                "title": "Topic Assignments",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25038/Flip-learning.html"
+            }
+        ]
+    },
+    {
+        "heading": "Configuring AWS with Ansible",
+        "items": [
+            {
+                "title": "Introduction to Ansible on AWS, Configuring Ansible on AWS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24639/Introduction-to-Ansible-on-AWS-Configuring-Ansible-on-AWS%20(1).html"
+            },
+            {
+                "title": "Provisioning AWS resources using Ansible",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24642/Provisioning-AWS-resources-using-Ansible.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

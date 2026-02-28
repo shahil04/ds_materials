@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ 
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+ 
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1>Hi, I'm Akthar Zaman</h1>
+      <p>A passionate Softwere Engineer crafting modern websites with love & code.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
+  <!-- About Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+ 
+    <!-- Profile Picture -->
+    <div class="profile-pic">
+      <img src="new_pic.jpg" alt="Profile Picture">
+    </div>
+ 
+    <!-- About Text -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Akthar Zaman, a passionate softwere Engineer based in a small futuristic town. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+        <br><br>
+        When I'm not coding, you’ll find me exploring alien planets in fiction or sketching sci-fi interfaces. I believe great design comes from empathy, curiosity, and great coffee.
+      </p>
+    </div>
+ 
+  </div>
+</section>
+ 
+ 
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <div class="projects-container">
+    <h2>My Projects</h2>
+ 
+    <div class="project-card">
+      <h3>Blog Platform</h3>
+      <p>A responsive blog platform built with HTML, CSS, and JavaScript. It features a dark theme, custom post editor, and mobile-friendly design.</p>
+      <a href="#" class="btn" target="_blank">View Demo</a>
+    </div>
+ 
+    <div class="project-card">
+      <h3>TaskOrbit</h3>
+      <p>A sleek to-do app designed to organize daily tasks with priority settings and reminders. Built using localStorage for persistent data.</p>
+      <a href="#" class="btn" target="_blank">Explore App</a>
+    </div>
+ 
+    <div class="project-card">
+      <h3>NovaPortfolio Framework</h3>
+      <p>A lightweight HTML/CSS/JS boilerplate to help beginners launch beautiful portfolios faster. Includes reusable components and responsive layouts.</p>
+ 
+      <!-- 🎬 Demo Video -->
+      <video controls width="100%" style="border-radius: 10px; margin: 10px 0;">
+        <source src="demo_Project.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+ 
+      <a href="#" class="btn" target="_blank">See Framework</a>
+    </div>
+ 
+  </div>
+</section>
+ 
+ 
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate, ask a question, or just say hello — feel free to drop a message!</p>
+ 
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+  <!-- Contact Info -->
+  <div class="contact-info">
+  <p><strong>Email:</strong> aktharzaman10@gmail.com</p>
+  <p><strong>WhatsApp:</strong> +123 345 3458</p>
+  <p><strong>LinkedIn:</strong> 
+    <a href="https://www.linkedin.com/in/aktharzaman" target="_blank">
+      linkedin.com/in/johndoe
+    </a>
+  </p>
+  </div>
+ 
+</section>
+ 
+ 
+ 
+ 
+  <script src="script.js"></script>
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+ 
+</body>
+</html>
+ 

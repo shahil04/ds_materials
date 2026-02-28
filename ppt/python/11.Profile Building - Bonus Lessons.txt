@@ -1,0 +1,114 @@
+[
+    {
+        "heading": "Resume Transformation",
+        "items": [
+            {
+                "title": "Resume Basics",
+                "link": ""
+            },
+            {
+                "title": "Writing Rules",
+                "link": ""
+            },
+            {
+                "title": "HR Friendly Resumes",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Digital Success",
+        "items": [
+            {
+                "title": "Introduction to Web Portfolio",
+                "link": ""
+            },
+            {
+                "title": "Donot  Start From Scratch",
+                "link": ""
+            },
+            {
+                "title": "Publishing to the Web",
+                "link": ""
+            },
+            {
+                "title": "Introduction to Video Resumes",
+                "link": ""
+            },
+            {
+                "title": "Profile Optimization and Networking on LinkedIn",
+                "link": ""
+            },
+            {
+                "title": "Showcasing Projects on Github",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Winning the Interview",
+        "items": [
+            {
+                "title": "Common Interview Stages",
+                "link": ""
+            },
+            {
+                "title": "Communication Skills",
+                "link": ""
+            },
+            {
+                "title": "Popular Interview Questions",
+                "link": ""
+            },
+            {
+                "title": "Tricky Interview Questions",
+                "link": ""
+            },
+            {
+                "title": "Technical Interview Preparation",
+                "link": ""
+            },
+            {
+                "title": "Aptitude Test Overview",
+                "link": ""
+            },
+            {
+                "title": "Interview Day Checklist",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "The Job Hunt",
+        "items": [
+            {
+                "title": "Job Search Resources",
+                "link": ""
+            },
+            {
+                "title": "Understanding Job Descriptions",
+                "link": ""
+            },
+            {
+                "title": "Company Research",
+                "link": ""
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

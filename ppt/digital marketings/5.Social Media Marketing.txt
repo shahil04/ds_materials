@@ -1,0 +1,81 @@
+    [
+    {
+        "heading": "Organic Strategy",
+        "items": [
+            {
+                "title": "Organic vs Paid Marketing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26469/Organic-vs-Paid-Marketing.html"
+            },
+            {
+                "title": "Platforms",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26470/Platform.html"
+            },
+            {
+                "title": "Content Strategy",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26471/Content-Strategy.html"
+            },
+            {
+                "title": "Calendar",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26472/Calendar.html"
+            },
+            {
+                "title": "Engagement",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26473/Engagement.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Paid Social Media",
+        "items": [
+            {
+                "title": "Quora",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26476/Quora.html"
+            },
+            {
+                "title": "X",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26477/X.html"
+            },
+            {
+                "title": "Meta(Facebook, Instagram)",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26478/Meta-Ads-Facebook-and-Instagram.html"
+            },
+            {
+                "title": "LinkedIn",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26479/LinkedIn.html"
+            },
+            {
+                "title": "YouTube: Campaigns",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26480/YouTube-Campaigns.html"
+            },
+            {
+                "title": "Targeting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26481/Targeting.html"
+            },
+            {
+                "title": "Pixel",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26482/Pixels.html"
+            },
+            {
+                "title": "Retargeting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26483/Retargeting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Flip Learning",
+        "items": [
+            {
+                "title": "Topic Discussion",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26486/Flip-learning.html"
+            }
+        ]
+    }
+]

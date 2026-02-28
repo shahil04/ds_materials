@@ -1,0 +1,29 @@
+&nbsp;
+Job details
+Here’s how the job details align with your profile.
+Job type
+
+Full-time
+&nbsp;
+Full job description
+Job Title: GenAI – LLMs & Applied Machine Learning
+Description:
+We are looking for a Machine Learning expert with a strong interest in building real-world applications using modern AI models like OpenAI, Gemini, Claude, etc. You’ll help us implement AI features using LLM frameworks like LangChain and work on deploying these solutions through cloud platforms.
+
+Experience: 1+ Years
+
+Required Skills:
+Good coding skills in Python
+Understanding of machine learning and LLM fundamentals
+Hands-on experience with OpenAI, Gemini, Claude, or similar LLMs
+Experience working with LangChain, LLamaIndex, or similar LLM app frameworks
+Knowledge of Natural Language Processing (NLP) concepts such as tokenization, named entity recognition, summarization, etc.
+Experience with prompt design, chaining logic, and RAG pipelines
+Good knowledge of vector databases (e.g., Pinecone, FAISS, Chroma) is a plus
+Built LLM-based projects or chatbots using LangChain or OpenAI tools
+Experience with frontend/backend integration of LLM apps (e.g., Streamlit, FastAPI)
+Familiarity with cloud tools like Google Cloud and AWS
+Exposure to prompt engineering techniques and evaluation metrics
+Familiarity with tools like Git, Jupyter, and version control systems
+Strong curiosity and willingness to explore and learn new AI tools
+zmoxkkH0MB

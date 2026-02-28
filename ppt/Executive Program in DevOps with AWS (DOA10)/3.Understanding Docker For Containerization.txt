@@ -1,0 +1,70 @@
+[
+    {
+        "heading": "Introduction to Docker and it's basics",
+        "items": [
+            {
+                "title": "History of Docker? Why Docker?",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24567/History-of-Docker-Why-Docker.html"
+            },
+            {
+                "title": "Containers vs Virtual Machines & Docker Daemon",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24570/Containers-vs-Virtual-Machines-and-Docker-Daemon.html"
+            },
+            {
+                "title": "Commands: docker run, docker ps, docker build, docker images, docker logs",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24571/Commands-docker-run-docker-ps-docker-build-docker-images-docker-logs.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Creating Dockerfile and Composing it",
+        "items": [
+            {
+                "title": "Basics of Dockerfile language",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24573/Basics%20of%20Dockerfile%20language.html"
+            },
+            {
+                "title": "Writing and Building Dockerfile",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24576/Writing-and-Building-a-Dockerfile.html"
+            },
+            {
+                "title": "Defining multi-container applications with docker-compose",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24577/Defining-multi-container-applications-with-docker-compose.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Job Search",
+        "items": [
+            {
+                "title": "Job Application Training",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25032/Naukri,%20Linkedin,%20Other%20Portals%20Training.html"
+            }
+        ]
+    },
+    {
+        "heading": "Docker on AWS",
+        "items": [
+            {
+                "title": "Introduction to ECS, ECR, Fargate",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24579/Introduction-to-ECS-ECR-Fargate.html"
+            },
+            {
+                "title": "Setup Docker on EC2, Storing Images in ECR, Running Images in ECS & Fargate",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24582/Setup%20Docker%20on%20EC2,%20Storing%20Images%20in%20ECR,%20Running%20Images%20in%20ECS%20&%20Fargate.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    }
+]

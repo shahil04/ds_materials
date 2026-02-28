@@ -1,0 +1,66 @@
+[
+    {
+        "heading": "API Testing with Postman",
+        "items": [
+            {
+                "title": "HTTP Methods, Headers, Params",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26012/HTTP%20Methods,%20Headers,%20Params.html"
+            },
+            {
+                "title": "Writing Assertions in Postman",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26013/Writing%20Assertions%20in%20Postman.html"
+            },
+            {
+                "title": "Using Environment Variables",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26014/Using%20Environment%20Variable.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "API Automation with Rest Assured",
+        "items": [
+            {
+                "title": "Setup and Configuration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26017/Setup%20and%20Configuration.html"
+            },
+            {
+                "title": "Writing GET, POST, PUT, DELETE Tests",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26018/Writing%20GET,%20POST,%20PUT,%20DELETE%20Tests.html"
+            },
+            {
+                "title": "Validating Response Codes & Body",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26019/Validating%20Response%20Codes%20&%20Body.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "Postbot: AI assistant for Postman scripting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26025/Postbot%20AI%20assistant%20for%20Postman%20scripting.html"
+            }
+        ]
+    },
+    {
+        "heading": "Career Accelerator",
+        "items": [
+            {
+                "title": "Linkedin",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26022/LinkedIn%20Introduction.html"
+            },
+            {
+                "title": "Resume Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26023/Resume%20Basics.html"
+            }
+        ]
+    }
+]

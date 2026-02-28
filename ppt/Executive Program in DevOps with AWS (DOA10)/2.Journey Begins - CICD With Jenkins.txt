@@ -1,0 +1,83 @@
+[
+    {
+        "heading": "Intrroduction and Setup of Jenkins",
+        "items": [
+            {
+                "title": "History of Jenkins? Why Jenkins? Jenkins Use Cases",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24550/History%20of%20Jenkins%20Why%20Jenkins%20Jenkins%20Use%20Cases.html"
+            },
+            {
+                "title": "Setup: Installation, Configuration, Jenkins UI, Master Slave Architecture, Backup and Restore",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24553/Setup%20Installation,%20Configuration,%20Jenkins%20UI,%20Master%20Slave%20Architecture,%20Backup%20and%20Restore.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "NSDC",
+        "items": [
+            {
+                "title": "NSDC Registration",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26285/NSDC%20Process.html"
+            }
+        ]
+    },
+    {
+        "heading": "Understanding Pipeline & CI/CD Concept",
+        "items": [
+            {
+                "title": "Declarative vs. Scripted Pipeline",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24556/Declarative%20vs.%20Scripted%20Pipeline.html"
+            },
+            {
+                "title": "Jenkins file",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24559/Jenkins%20file.html"
+            },
+            {
+                "title": "Continuous Integration workflow & Continuous Delivery workflow",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24560/Continuous-Integration-workflow-and-Continuous-Delivery-workflow.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "CICD on AWS",
+        "items": [
+            {
+                "title": "CICD using AWS",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24562/CICD-Using-AWS.html"
+            },
+            {
+                "title": "CICD Pipeline in AWS Cloud- AWS Code Build, AWS Code Deploy, AWS Code Artifact, AWS Pipeline",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/24565/CICD-Pipeline-in-AWS-Cloud-AWS-Code-Build-AWS-Code-Deploy-AWS-Code-Artifact-AWS-Pipeline.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Career Accelerator",
+        "items": [
+            {
+                "title": "Linkedin Introduction",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25029/LinkedIn%20Introduction.html"
+            },
+            {
+                "title": "Resume Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25713/Resume%20Basics.html"
+            },
+            {
+                "title": "Introduction to HackerRank, LeetCode",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/25699/Introduction%20to%20LeetCode%20and%20HackerRank.html"
+            }
+        ]
+    }
+]

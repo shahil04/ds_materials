@@ -1,0 +1,607 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+import { getMessaging, getToken, onMessage, deleteToken } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+const CONFIG = {
+    API_URL: 'http://localhost:3000',
+    SOCKET_URL: 'http://localhost:3001',
+    SOCKET_PATH: '/socket.io',
+    AUTH_KEY: localStorage.getItem('auth_key_staff') || 'auth_key',
+
+    // Firebase configuration
+    FIREBASE_CONFIG: {
+        apiKey: "AIzaSyBoR20-My0DPGJkcrN4wgwU23E04BRqn7Q",
+        authDomain: "pulse-wingz-notifications.firebaseapp.com",
+        projectId: "pulse-wingz-notifications",
+        storageBucket: "pulse-wingz-notifications.firebasestorage.app",
+        messagingSenderId: "611696101104",
+        appId: "1:611696101104:web:17d044eaed2772763de435",
+        measurementId: "G-84BE5RMWF1"
+    },
+
+    // Firebase cloud messaging
+    FIREBASE_VAPID_KEY: "BNf66DSPcSUhFYrkwVW8nYAtKfHqUwT17GAo6bDifIc5DldxPZdgc8BWH7pxyoDtAfzt5EyyMGbm7FALpmBomF0",
+
+    TOKEN_EXPIRY_CHECK_DURATION: 24 * 60 * 60 * 1000, // 24 hours
+};
+
+// State
+const state = {
+    notifications: [],
+    unreadCount: 0,
+    userId: null,
+    connected: false,
+    pushEnabled: false,
+    pushPermission: 'default'
+};
+
+// Firebase setup
+let firebaseMessaging = null;
+let deviceToken = null;
+
+// Socket.io Connection
+let socket = null;
+
+// Initialize everything
+export async function init({ authKey, notificationApiUrl, notificationSocketUrl, userId }) {
+    CONFIG.API_URL = notificationApiUrl;
+    CONFIG.SOCKET_URL = notificationSocketUrl;
+    CONFIG.AUTH_KEY = authKey;
+    state.userId = userId;
+
+    try {
+        // Try to initialize Firebase first
+        await initializeFirebase();
+
+        // Initialize Socket.io for in-app notifications
+        // await initializeSocket();
+
+        // Fetch existing notifications
+        // await fetchNotifications();
+        await fetchNotificationsCount();
+
+        // updateStatusBadges();
+    } catch (error) {
+        console.error('Initialization error:', error);
+    }
+}
+
+// Initialize Firebase for push notifications
+async function initializeFirebase() {
+    try {
+        // Initialize Firebase
+        const app = initializeApp(CONFIG.FIREBASE_CONFIG);
+        const analytics = getAnalytics(app);
+
+        // Initialize Firebase Cloud Messaging and get a reference to the service
+        firebaseMessaging = getMessaging(app);
+
+        // Check if messaging is supported
+        if (!firebaseMessaging) {
+            console.warn('Firebase messaging is not supported in this browser');
+            return false;
+        }
+        
+        // Check if permission is already granted
+        state.pushPermission = Notification.permission;
+        
+        if (state.pushPermission === 'granted') {
+            try {
+                // Get FCM token
+                deviceToken = await getToken(firebaseMessaging, {
+                    vapidKey: CONFIG.FIREBASE_VAPID_KEY
+                });
+                
+                // console.log('FCM Token:', deviceToken);
+                
+                // Register token with server
+                await registerDeviceToken();
+                
+                // Set up message handler for foreground messages
+                setupFirebaseMessageHandler();
+
+                state.pushEnabled = true;
+                return true;
+            } catch (tokenError) {
+                localStorage.removeItem('sentToServerTime');
+                console.error('Error getting FCM token:', tokenError);
+                // Initialize Socket.io for in-app notifications
+                await initializeSocket();
+                return false;
+            }
+        } else if (state.pushPermission === 'denied') {
+            localStorage.removeItem('sentToServerTime');
+            console.warn('Push notifications permission denied');
+            // Initialize Socket.io for in-app notifications
+            await initializeSocket();
+            return false;
+        } else {
+            localStorage.removeItem('sentToServerTime');
+            console.log('Push notifications permission not requested yet');
+            requestPushPermission();
+            return false;
+        }
+    } catch (error) {
+        console.error('Firebase initialization error:', error);
+        // Initialize Socket.io for in-app notifications
+        await initializeSocket();
+        return false;
+    }
+}
+
+// Receive messages from the service worker
+const channel = new BroadcastChannel('notification-message');
+channel.addEventListener('message', event => {
+    // console.log('Received', event.data);
+    const payload = event.data;
+    // Extract notification data
+    const notification = {
+        id: payload.data?.notificationId || 'firebase-' + Date.now(),
+        title: payload.notification.title,
+        body: payload.notification.body,
+        data: payload.data || {},
+        isRead: false,
+        createdAt: new Date().toISOString(),
+        source: 'firebase'
+    };
+    handleNewNotification(notification);
+});
+
+// Setup Firebase message handler
+function setupFirebaseMessageHandler() {
+    if (!firebaseMessaging) return;
+
+    // Handle incoming messages. Called when:
+    // - a message is received while the app has focus
+    // - the user clicks on an app notification created by a service worker
+    //   `messaging.onBackgroundMessage` handler.
+    onMessage(firebaseMessaging, (payload) => {
+        // console.log('Foreground message received from Firebase:', payload);
+        
+        // Extract notification data
+        const notification = {
+            id: payload.data?.notificationId || 'firebase-' + Date.now(),
+            title: payload.notification.title,
+            body: payload.notification.body,
+            data: payload.data || {},
+            isRead: false,
+            createdAt: new Date().toISOString(),
+            source: 'firebase'
+        };
+        
+        // Show browser notification
+        showBrowserNotification(notification);
+        
+        // Also add to in-app notifications
+        handleNewNotification(notification);
+    });
+}
+
+// Register the device token with the server
+async function registerDeviceToken() {
+    if (!deviceToken) return;
+    
+    try {
+        if (localStorage.getItem('sentToServerTime')
+            && new Date().getTime() - parseInt(localStorage.getItem('sentToServerTime')) < CONFIG.TOKEN_EXPIRY_CHECK_DURATION) {
+            console.log('Token already sent to server');
+            return true;
+        } else {
+            const response = await fetch(`${CONFIG.API_URL}/device-tokens`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Authorization': `Bearer ${getAuthToken()}`
+                },
+                body: JSON.stringify({
+                    token: deviceToken,
+                    userId: `${state.userId}`,
+                    platform: getPlatform()
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Failed to register device token: ${response.statusText}`);
+            }
+
+            localStorage.setItem('sentToServerTime', new Date().getTime());
+            console.log('Device token registered successfully');
+            return true;
+        }
+    } catch (error) {
+        localStorage.removeItem('sentToServerTime');
+        console.error('Error registering device token:', error);
+        return false;
+    }
+}
+
+// Get platform information
+function getPlatform() {
+    const userAgent = navigator.userAgent;
+    let platform = 'web';
+    
+    if (/Android/i.test(userAgent)) {
+        platform = 'android';
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        platform = 'ios';
+    }
+    
+    return platform;
+}
+
+// Initialize Socket.io for in-app notifications
+async function initializeSocket() {
+    try {
+        // Connect to Socket.io server
+        socket = io(CONFIG.SOCKET_URL, {
+            autoConnect: false,
+            path: CONFIG.SOCKET_PATH,
+            transports: ['websocket']
+        });
+
+        const token = localStorage.getItem("token");
+        if (token) {
+            socket.auth = { token };
+            socket.connect();
+        } else {
+            socket.auth = { authKey: CONFIG.AUTH_KEY };
+            socket.connect();
+        }
+        
+        // Connection events
+        socket.on('connect', () => {
+            console.log('Connected to notification server');
+            state.connected = true;
+            
+            // Subscribe to user-specific channel
+            // socket.emit('subscribe', `user:${state.userId}`);
+            
+            // Subscribe to general channel
+            // socket.emit('subscribe', 'general');
+        });
+        
+        socket.on('disconnect', () => {
+            console.log('Disconnected from notification server');
+            state.connected = false;
+        });
+        
+        socket.on('connect_error', (error) => {
+            console.error('Socket connection error:', error);
+            state.connected = false;
+            if (error.message == 'Invalid username') {
+                // localStorage.removeItem("sessionID");
+                localStorage.removeItem("token");
+            } else if (error.message.includes('Authentication error')) {
+                localStorage.removeItem("token");
+                setTimeout(() => {
+                    initializeSocket();
+                }, 1000);
+            }
+        });
+        
+        // Notification events
+        socket.on('notification', (notification) => {
+            // console.log('In-app notification received:', notification);
+            
+            // If push notifications are not enabled 
+            if (!state.pushEnabled) {
+                // Add source information
+                notification.source = 'socket';
+                
+                // Handle the notification
+                handleNewNotification(notification);
+
+                // Also show browser notification
+                showBrowserNotification(notification);
+            }
+        });
+        
+        socket.on('unread_notifications', (notifications) => {
+            // console.log('Received unread notifications:', notifications);
+            if (Array.isArray(notifications) && notifications.length > 0) {
+                notifications.forEach(notification => {
+                    notification.source = 'socket';
+                    handleNewNotification(notification);
+                });
+            }
+        });
+
+        socket.on("token", ({ token, userId }) => {
+            // attach the session ID to the next reconnection attempts
+            if (token) {
+                socket.auth = { token };
+    
+                // store it in the localStorage
+                localStorage.setItem("token", token);
+        
+                // save the ID of the user
+                socket.userID = userId;
+            }
+        });
+        
+        return true;
+    } catch (error) {
+        console.error('Socket.io initialization error:', error);
+        return false;
+    }
+}
+
+// Show browser notification
+function showBrowserNotification(notification) {
+    if (!('Notification' in window)) {
+        console.warn('This browser does not support notifications');
+        return;
+    }
+    
+    if (Notification.permission === 'granted') {
+        const options = {
+            body: notification.body,
+            icon: notification.data?.icon || 'https://pulse.itvedant.com/images/itvedant_logo.png',
+            badge: notification.data?.badge || '/path/to/default-badge.png',
+            data: notification.data || {}
+        };
+        
+        const notif = new Notification(notification.title, options);
+        
+        // Handle notification click
+        notif.onclick = function() {
+            window.focus();
+            handleAction(notification);
+            this.close();
+        };
+        
+        // Play sound if available
+        playNotificationSound();
+    }
+}
+
+// Fetch notifications from API
+async function fetchNotifications(page = 1, limit = 20) {
+    try {
+        const response = await fetch(`${CONFIG.API_URL}/notifications?userId=${state.userId}&page=${page}&limit=${limit}`);
+        const data = await response.json();
+        state.notifications = data.data;
+        state.unreadCount = data.total;
+
+        updateUnreadCount();
+        
+        return true;
+    } catch (error) {
+        console.error('Error fetching notifications:', error);
+        return false;
+    }
+}
+
+// Fetch notifications count from API
+async function fetchNotificationsCount() {
+    try {
+        const response = await fetch(`${CONFIG.API_URL}/notifications/unread/count?userId=${state.userId}`);
+        const data = await response.json();
+        state.unreadCount = data.count;
+
+        updateUnreadCount();
+        
+        return true;
+    } catch (error) {
+        console.error('Error fetching notifications count:', error);
+        return false;
+    }
+}
+
+// Handle new notification
+function handleNewNotification(notification) {
+    // Check if notification already exists
+    /* const exists = state.notifications.some(n => n.id === notification.id);
+    
+    if (!exists) {
+        // Add to state (at the beginning of the array)
+        state.notifications.unshift({
+            ...notification,
+            isRead: false
+        });
+
+        // Update UI
+        updateUnreadCount();
+        
+        // Show toast notification
+        notificationPopup(notification);
+    } */
+
+    state.unreadCount += 1;
+
+    // Update UI
+    updateUnreadCount();
+    
+    // Show toast notification
+    notificationPopup(notification);
+}
+
+// Mark notification as read
+async function markAsRead(id) {
+    try {
+        // In a real app, call your API
+        /* const response = await fetch(`${CONFIG.API_URL}/notifications/${id}/read`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Authorization': `Bearer ${getAuthToken()}`
+            }
+        }); */
+
+        navigator.sendBeacon(`${CONFIG.API_URL}/notifications/${id}/read`, JSON.stringify({ userId: state.userId }));
+
+        /* if (!response.ok) {
+            throw new Error(`Failed to mark notification as read: ${response.statusText}`);
+        }
+        console.log(`Notification ${id} marked as read`, response); */
+
+        // For demo purposes, just update the state
+        /* state.notifications = state.notifications.map(n => {
+            if (n.id === id) {
+                return { ...n, isRead: true };
+            }
+            return n;
+        }); */
+
+        state.unreadCount -= 1;
+
+        updateUnreadCount();
+        
+        return true;
+    } catch (error) {
+        console.error('Error marking notification as read:', error);
+        return false;
+    }
+}
+
+// Update unread count
+function updateUnreadCount() {
+    // const unreadNotifications = state.notifications.filter(n => !n.isRead);
+    // state.unreadCount = unreadNotifications.length;
+    
+    const notificationCountEl = document.querySelector('#noty-count');
+    notificationCountEl.textContent = state.unreadCount > 99 ? '99+' : state.unreadCount;
+
+    const notificationCountEl1 = document.querySelector('.notification-count');
+    if (notificationCountEl1) {
+        notificationCountEl1.textContent = state.unreadCount > 99 ? '99+' : state.unreadCount;
+    }
+}
+
+// Handle notification action
+function handleAction(notification) {
+    if (notification.data) {
+        if (notification.data.url) {
+            window.open(notification.data.url, '_blank');
+        } else if (notification.data.action) {
+            switch (notification.data.action) {
+                case 'VIEW_DETAILS':
+                    // Show details (demo)
+                    // showToast(`Viewing details for: ${notification.title}`, 'info');
+                    break;
+                case 'OPEN_PROFILE':
+                    // Navigate to profile page
+                    window.location.href = '/profile';
+                    break;
+                case 'SHOW_MESSAGE':
+                    // Show message dialog
+                    alert(notification.data.message || notification.body);
+                    break;
+                default:
+                    console.log('Unknown action:', notification.data.action);
+            }
+        }
+    }
+}
+
+function notificationPopup(notification) {
+    // console.log(notification);
+    const template =
+        "<div style='padding: 10px;'>" +
+        "<h6 style='margin-top:0;'>" + notification.title + "</h6>" +
+        // "<p>" + data.description + "</p>" +
+        "<p>" + notification.body + "</p>" +
+        "</div>";
+
+    const config = {
+        class: 'my-noty',
+        theme: 'mint',
+        type: 'info',
+        layout: 'topRight',
+        text: template,
+        timeout: 10000,
+        sounds: {
+            conditions: ['docVisible', 'docHidden'],
+            sources: ['/js/plugins/noty/notification.wav']
+        },
+        callbacks: {
+            onClick: async function () {
+                // window.location = notification.data.link;
+                await markAsRead(notification.data.notificationId);
+                window.location = notification.data.link;
+            }
+        }
+    };
+
+    if (notification.data.priority == 'low') {
+        config['type'] = 'info';
+    } /* else if (notification.data.priority == 'normal') {
+        config['type'] = 'warning';
+    } */ else if (notification.data.priority == 'high') {
+        config['type'] = 'error';
+    } else if (notification.data.priority == 'normal') {
+        config['type'] = 'success';
+    }
+
+    // Calling notification popup
+    new Noty(config).show();
+}
+
+// Play notification sound
+function playNotificationSound() {
+    try {
+        const audio = new Audio('/js/plugins/noty/notification.mp3');
+        audio.play().catch(error => {
+            // Handle autoplay restrictions
+            console.log('Could not play notification sound', error);
+        });
+    } catch (error) {
+        console.error('Error playing notification sound:', error);
+    }
+}
+
+// Request push notification permission
+async function requestPushPermission() {
+    try {
+        if (!('Notification' in window)) {
+            console.log('This browser does not support notifications');
+            return false;
+        }
+        
+        if (Notification.permission === 'granted') {
+            console.log('Push notifications already enabled');
+            state.pushEnabled = true;
+            return true;
+        }
+        
+        if (Notification.permission === 'denied') {
+            console.log('Push notifications have been blocked. Please enable them in your browser settings.');
+            return false;
+        }
+        
+        // Request permission
+        const permission = await Notification.requestPermission();
+        state.pushPermission = permission;
+        
+        if (permission === 'granted') {
+            console.log('Push notifications enabled!');
+            
+            // Try to initialize Firebase again
+            const result = await initializeFirebase();
+            
+            // Update state and UI
+            state.pushEnabled = result;
+            
+            return result;
+        } else {
+            console.log('Push notifications not enabled');
+            // Initialize Socket.io for in-app notifications
+            await initializeSocket();
+            return false;
+        }
+    } catch (error) {
+        console.error('Error requesting push permission:', error);
+        // Initialize Socket.io for in-app notifications
+        await initializeSocket();
+        return false;
+    }
+}
+
+window.addEventListener('notification_params', (event) => {
+    // console.log('notification_params:', event.detail);
+    const { authKey, notificationApiUrl, notificationSocketUrl, userId } = event.detail;
+    init({ authKey, notificationApiUrl, notificationSocketUrl, userId });
+});

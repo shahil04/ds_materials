@@ -1,0 +1,106 @@
+[
+    {
+        "heading": "Excel for Digital Marketing",
+        "items": [
+            {
+                "title": "Excel Interface",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26524/Excel-Interface.html"
+            },
+            {
+                "title": "Data Cleaning & Preprocessing",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26525/Data-Cleaning-and-Preprocessing-for-Marketing-Analytics.html"
+            },
+            {
+                "title": "Formulas for Marketing Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26526/Formulas-for-Marketing-Data.html"
+            },
+            {
+                "title": "Working with Campaign Data",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26527/Working-with-Campaign-Data.html"
+            },
+            {
+                "title": "KPI Calculations",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26528/KPI-Calculations.html"
+            },
+            {
+                "title": "Pivot Tables for Funnel & Campaign Analysis",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26529/Pivot-Tables-for-Funnel-and-Campaign-Analysis.html"
+            },
+            {
+                "title": "Dashboard Creation",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26530/Dashboard-Creation-for-Digital-Marketing.html"
+            },
+            {
+                "title": "Budget Planning & Forecasting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26531/Budget-Planning-and-Forecasting.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Data Analytics & Reporting",
+        "items": [
+            {
+                "title": "GA4",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26534/GA4.html"
+            },
+            {
+                "title": "UTM",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26535/Search-Console.html"
+            },
+            {
+                "title": "Search Console",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/28780/Search-Console.html"
+            },
+            {
+                "title": "Heatmaps",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26537/Heatmaps.html"
+            },
+            {
+                "title": "Dashboards",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26538/Dashboards.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "AI in Digital Marketing",
+        "items": [
+            {
+                "title": "ChatGPT for Copywriting",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26541/ChatGPT-for-Copywriting.html"
+            },
+            {
+                "title": "DALL·E",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26542/DALLE.html"
+            },
+            {
+                "title": "Predictive Analytics",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26543/Predictive-Analytics-in-Digital-Marketing.html"
+            },
+            {
+                "title": "AI SEO",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26544/AI-SEO.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Aptitude Session",
+        "items": [
+            {
+                "title": "Exam and Solution Discussion",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26547/Aptitude%20test-Activity.html"
+            }
+        ]
+    }
+]

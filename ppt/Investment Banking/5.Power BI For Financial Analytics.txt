@@ -1,0 +1,54 @@
+    [
+    {
+        "heading": "Dashboards & DAX",
+        "items": [
+            {
+                "title": "KPI Building",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26234/KPI%20Building.html"
+            },
+            {
+                "title": "Time Series",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26235/Time%20Series.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Visuals & Filters",
+        "items": [
+            {
+                "title": "Reports",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26238/Reports.html"
+            },
+            {
+                "title": "Drilldowns",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26239/Drilldowns.html"
+            },
+            {
+                "title": "Assignment",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Aptitude Session",
+        "items": [
+            {
+                "title": "Aptitude Exam & Solution Discussion",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "heading": "Capstone Project Using AI Tool",
+        "items": [
+            {
+                "title": "PBI with AI",
+                "link": "https://itv-uploads.s3.ap-south-1.amazonaws.com/digi-presentation/26244/PBI%20with%20AI.html"
+            }
+        ]
+    }
+]
