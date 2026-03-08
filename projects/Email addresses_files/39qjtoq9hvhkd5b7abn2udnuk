@@ -1,0 +1,88 @@
+"use strict";(()=>{var e=Object.defineProperty,t=(t,s,i)=>(((t,s,i)=>{s in t?e(t,s,{enumerable:!0,configurable:!0,writable:!0,value:i}):t[s]=i})(t,"symbol"!=typeof s?s+"":s,i),i),s=(e,t,s)=>{if(!t.has(e))throw TypeError("Cannot "+s)},i=(e,t,i)=>(s(e,t,"read from private field"),i?i.call(e):t.get(e)),n=(e,t,s)=>{if(t.has(e))throw TypeError("Cannot add the same private member more than once")
+t instanceof WeakSet?t.add(e):t.set(e,s)},r=(e,t,i,n)=>(s(e,t,"write to private field"),n?n.call(e,i):t.set(e,i),i)
+var a,o=()=>{if(!window||"node"!==window.appEnvironment){let e=document.getElementsByName("renderingMode")
+return 1!==e.length?null:e[0].getAttribute("data-mode")}return null},h=class{constructor(e,s=!1,i=!1,n){t(this,"type"),t(this,"bubbles"),t(this,"cancelable"),t(this,"target"),t(this,"defaultPrevented"),this.type=e,this.bubbles=s,this.cancelable=i,this.target=n,this.defaultPrevented=void 0}stopPropagation(){}preventDefault(){this.defaultPrevented=!0}},d=class{constructor(){n(this,a,new Map)}dispatchEvent(e){var t
+let{type:s}=e
+i(this,a).has(s)&&(null==(t=i(this,a).get(s))||t.forEach(t=>{"function"==typeof t?t.call(this,e):t.handleEvent(e)}))}addEventListener(e,t){if(i(this,a).has(e)){let s=i(this,a).get(e)
+void 0!==s&&s.push(t)}else i(this,a).set(e,[t])}removeEventListener(e,t){if(i(this,a).has(e)){let s=i(this,a).get(e),n=void 0===s?-1:s.indexOf(t);-1!==n&&(null==s||s.splice(n,1))}}}
+function l(){return!!(window&&window.performance&&window.performance.getEntriesByName)}function u(e){if("string"!=typeof e)throw new Error("Expecting to receive a string but got "+typeof e)}a=new WeakMap
+var p,c,f,w,g,m,v,y,E,b,R=new WeakMap,M=class{constructor(e,s,a){n(this,p,{}),n(this,c,0),n(this,f,new Set),n(this,w,!0),n(this,g,""),n(this,m,void 0),n(this,v,void 0),n(this,y,void 0),n(this,E,void 0),n(this,b,void 0),t(this,"status",0),t(this,"readyState",0),t(this,"response"),t(this,"responseText"),t(this,"responseHeaders"),r(this,v,e),r(this,y,s),r(this,m,a)
+for(let t in s)i(this,f).add(t)
+let o=["loadstart","load","loadend"]
+for(let t of o)e.addEventListener(t,e=>{let s=`on${t}`,n=i(this,y)[s]
+n&&"function"==typeof n&&n.call(e.target,e)})}INSPECT(){}getHeader(e){return"Content-Type"===e?"application/json":this.responseHeaders?this.responseHeaders[e]:void 0}getAllHeaders(){return this.readyState<2?"":this.responseHeaders?Object.entries(this.responseHeaders).reduce((e,t)=>{let[s,i]=t
+return e+`${s}: ${i}\r\n`},"Content-Type: application/json\r\n"):"Content-Type: application/json\r\n"}addEvent(e,t){i(this,v).addEventListener(e,t)}removeEvent(e,t){i(this,v).removeEventListener(e,t)}isKnownKey(e){return i(this,f).has(e)}getState(){return void 0===i(this,E)?0:i(this,m).hasResponse(i(this,E))?(r(this,c,2),i(this,c)):G(i(this,E))||!i(this,m).isBufferingRequests()?(r(this,c,1),i(this,c)):i(this,c)}attachPostData(e){"POST"===i(this,b)&&(r(this,g,e),u(i(this,E)),r(this,E,X(i(this,E),e)))}open(e,t,s=!0){r(this,b,e.toUpperCase()),r(this,E,t),r(this,w,s),this.readyState=1}setRequestHeader(e,t){i(this,p)[e]?i(this,p)[e]+=`,${t}`:i(this,p)[e]=t}send(){u(i(this,E)),this.emitStartMarker(),i(this,m).addRequest(i(this,E),this),this.readyState=1,i(this,v).dispatchEvent(new h("loadstart"))}resolve(){this.send(),this.fulfill(),this.remove()}refire(){r(this,c,1),i(this,y).send(i(this,g)),this.remove()}fulfill(){u(i(this,E))
+let e=i(this,m).getResponse(i(this,E));(function(e){if(!("object"==typeof e&&null!==e&&"url"in e&&"status"in e&&"data"in e))throw new Error(`Expecting to receive a response but got ${typeof e} ${JSON.stringify(e)}`)})(e)
+let{status:t,headers:s={},data:n}=e
+this.status=t,this.headers(s),this.body(n),this.markFullfillment()}checkRequestBypass(){u(i(this,b)),J(i(this,b),K(i(this,b),i(this,p)))&&r(this,c,1)}remove(){u(i(this,E)),i(this,m).removeRequest(i(this,E),this)}markFullfillment(){if(l()){u(i(this,E))
+let{start:e,end:t,measure:s}=this.createMarkerNames()
+window.performance.getEntriesByName(e).length>0?(window.performance.mark(t),window.performance.measure(s,e,t)):window.jet&&window.jet.error(new Error(`start marker not found: ${e}`),["bpr","perf_measure"],!1)}}emitStartMarker(){if(l()){let{start:e}=this.createMarkerNames()
+0===window.performance.getEntriesByName(e).length&&window.performance.mark(e)}}createMarkerNames(){u(i(this,E))
+let e=`mark_bigpipe_${i(this,E)}`
+return{measure:`${e}_phase`,start:`${e}_start`,end:`${e}_end`}}headers(e){this.responseHeaders=e,i(this,w)?this.stateChange(2):this.readyState=2}stateChange(e){this.readyState=e,"function"==typeof i(this,y).onreadystatechange&&i(this,y).onreadystatechange(new h("readystatechange")),i(this,v).dispatchEvent(new h("readystatechange")),4===this.readyState&&i(this,v).dispatchEvent(new h("load",!1,!1,i(this,y))),(0===this.readyState||4===this.readyState)&&i(this,v).dispatchEvent(new h("loadend",!1,!1,i(this,y)))}body(e){i(this,w)&&this.stateChange(3),this.responseText=e,this.response=e,i(this,w)?this.stateChange(4):this.readyState=4}}
+p=new WeakMap,c=new WeakMap,f=new WeakMap,w=new WeakMap,g=new WeakMap,m=new WeakMap,v=new WeakMap,y=new WeakMap,E=new WeakMap,b=new WeakMap
+var k=e=>new Proxy(XMLHttpRequest,{construct:t=>function(e,t){let s=new d,i=new Proxy(e,{set:(e,t,s)=>(e[t]=s,!0),get(e,t){let s=function(e,t){let s=e[t]
+return"function"==typeof s?s.bind(e):s}(e,t)
+switch(t){case"getResponseHeader":return function(e,t){return s=>{let i=R.get(e)
+return S(i),1===i.getState()?t(s):i.getHeader(s)}}(i,s)
+case"getAllResponseHeaders":return function(e,t){return()=>{let s=R.get(e)
+return S(s),1===s.getState()?t():s.getAllHeaders()}}(i,s)
+case"setRequestHeader":return function(e,t){return(s,i)=>{t(s,i)
+let n=R.get(e)
+S(n),0===n.getState()&&n.setRequestHeader(s,i)}}(i,s)
+case"addEventListener":return function(e,t){return(s,i,n)=>{t(s,i,n)
+let r=R.get(e)
+S(r),r.addEvent(s,i)}}(i,s)
+case"removeEventListener":return function(e,t){return(s,i)=>{t(s,i)
+let n=R.get(e)
+S(n),n.removeEvent(s,i)}}(i,s)
+case"send":return function(e,t){return(s="")=>{let i=R.get(e)
+if(S(i),1!==i.readyState&&1!==i.getState())throw new DOMException("Failed to execute 'send' on 'XMLHttpRequest': The object's state must be OPENED.")
+switch(i.checkRequestBypass(),i.attachPostData(s),i.getState()){case 1:t(s)
+break
+case 2:i.resolve()
+break
+case 0:i.send()
+break
+default:return t(s)}}}(i,s)
+case"open":return function(e,t){return(s,i,n=!0,r=null,a=null)=>{let o=R.get(e)
+S(o),0===o.getState()&&o.open(s,i,n),t(s,i,n,r,a)}}(i,s)
+default:return function(e,t,s,i){let n=R.get(e)
+S(n)
+let r=n.getState(),a=!n.isKnownKey(s)
+if(1===r||a)return i
+let o=n[s]
+if(void 0!==o)return o
+let h=t[s]
+return function(e){return"function"==typeof e}(h)?0===r?h.bind(t):h.bind(e):i}(i,e,t,s)}}}),n=new M(s,i,t)
+return R.set(i,n),i}(new t,e)})
+function S(e){if(!(e instanceof M))throw new Error("Expecting a ShadowXHR but got "+typeof e)}function q(e,t){let s=document.querySelector(`meta[name="${e}"]`)
+return s&&s.getAttribute("content")||t}var P=q("bigpipeResponseTimeout","12000"),T="string"==typeof P?parseInt(P):P,W=JSON.parse(q("bigpipeDenylistUrls","[]")),H=JSON.parse(q("bigpipeBlacklistUrls","[]"))
+W.push(...H)
+var _,$,L,B=W.map(e=>new RegExp(e)),N=class{constructor(e){n(this,_,new Map),n(this,$,new Map),n(this,L,!0),t(this,"debugSentinel")}isBufferingRequests(){return i(this,L)}freeAllRequests(){r(this,L,!1)}hasResponse(e){return i(this,$).has(e)}hasRequest(e){return i(this,_).has(e)}removeRequest(e,t){var s,n
+this.hasRequest(e)&&(null==(s=i(this,_).get(e))||s.delete(t),0===(null==(n=i(this,_).get(e))?void 0:n.size)&&i(this,_).delete(e))}addRequest(e,t){var s
+i(this,_).has(e)?null==(s=i(this,_).get(e))||s.add(t):i(this,_).set(e,new Set([t]))}getResponse(e){if(this.hasResponse(e))return i(this,$).get(e)}fulfillAllPendingRequests(){for(let[e]of i(this,_))this.fulfillPendingRequestsFor(e)}fulfillPendingRequestsFor(e){var t
+if(i(this,_).has(e))for(let s of null!=(t=i(this,_).get(e))?t:[])this.hasResponse(e)&&(s.fulfill(),s.remove())}refirePending(){for(let[e,t]of i(this,_))t.forEach(e=>e.refire()),i(this,$).delete(e)}addResponse(e){let{url:t}=e
+i(this,$).set(t,e)}reset(){i(this,_).clear(),i(this,$).clear()}}
+_=new WeakMap,$=new WeakMap,L=new WeakMap
+var C,x,O,D,j,A,I,F="mark_data_streaming"
+function X(e,t){return t?`${e};${t}`:e}C=new WeakMap,x=new WeakMap,O=new WeakMap,D=new WeakMap,j=new WeakMap,A=new WeakMap,I=new WeakMap
+var G=e=>B.some(t=>t.test(e)),J=(e,t)=>"GET"!==e&&!t,K=(e,t={})=>"POST"===e&&"GET"===t["x-http-method-override"]
+window._bpr=class{constructor(e){n(this,C,!1),n(this,x,!1),n(this,O,!1),n(this,D,!1),n(this,j,void 0),n(this,A,setTimeout(()=>{this.handleResponseTimeout()},T)),n(this,I,void 0),r(this,j,e),r(this,I,XMLHttpRequest),window.XMLHttpRequest=k(i(this,j)),this.attachDataletEventListener()}static create(){return new this(new N)}get isTerminated(){return i(this,x)}get isRendered(){return i(this,O)}get isLoaded(){return i(this,D)}getRenderMode(){return o()}isBigPipeMode(){return(()=>{let e=o()
+return null!==e&&["BIGPIPE","SSRPIPE"].includes(e)})()}response(e){let t
+t="object"!=typeof e?JSON.parse(this.getResponseData(e)):e
+let{request:s}=t,{status:n,body:r,headers:a={}}=t,o=this.getResponseData(r)
+t.method&&"POST"===t.method&&(s=X(s,t.encodedRequestBody))
+let h={url:s,status:n,headers:a,data:o}
+i(this,j).addResponse(h),i(this,j).fulfillPendingRequestsFor(s)}done(){if(i(this,x))throw new Error("Terminator cannot be called multiple times.")
+r(this,x,!0),i(this,j).freeAllRequests(),this.clearResponseTimer(),i(this,j).fulfillAllPendingRequests(),i(this,j).refirePending(),i(this,O)&&this.reset()}rendered(){if(i(this,O))throw new Error("Initial page render cannot be called multiple times.")
+r(this,O,!0),i(this,x)&&this.reset()}measureStreamingStart(){!1===i(this,C)&&(r(this,C,!0),l()&&window.performance.mark(`${F}_start`))}measureStreamingEnd(){if(l()){let e=`${F}_start`,t=`${F}_end`,s=`${F}_phase`
+window.performance.getEntriesByName(e).length>0&&(window.performance.mark(t),window.performance.measure(s,e,t))}}attachDataletEventListener(){let e="datalet-bpr-guid",t=s=>{let i=s.target
+if(i instanceof Element&&"IMG"===i.tagName){let s=i.classList
+s=s||[],1===s.length&&s[0].substring(0,16)===e&&(this.measureStreamingStart(),this.response(s[0])),1===s.length&&"terminatorlet"===s[0]&&(this.measureStreamingEnd(),this.done(),document.removeEventListener("load",t,!0))}}
+document.addEventListener("load",t,!0)}getResponseData(e){var t
+let s=document.getElementById(e),i="{}"
+return s&&(s.normalize(),i=(null==(t=s.firstChild)?void 0:t.nodeValue)||""),i}handleResponseTimeout(){console.info(`Terminator datalet is not seen within ${P} ms.`)}reset(){if(i(this,D))throw new Error("Bigpipe Client cannot be reset multiple times.")
+i(this,j).reset(),r(this,D,!0),window.XMLHttpRequest=i(this,I)}clearResponseTimer(){i(this,A)&&clearTimeout(i(this,A))}}.create(),window._bigpipeClient=window._bpr,window._getRenderMode=window._bpr.getRenderMode.bind(window._bpr),window._isBigPipeMode=window._bpr.isBigPipeMode.bind(window._bpr)})()
+
+//# sourceMappingURL=bigpipe-v2.min.map

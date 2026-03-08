@@ -1,0 +1,4 @@
+APP_NAME = "Uber Streamlit Demo"
+DEFAULT_CITY = "Delhi"
+DEFAULT_LAT = 28.6448
+DEFAULT_LON = 77.2167

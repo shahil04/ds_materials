@@ -1,0 +1,5 @@
+streamlit>=1.20
+pymysql>=1.0.3
+pandas>=2.0
+geopy>=2.4.0
+python-dotenv>=1.0
