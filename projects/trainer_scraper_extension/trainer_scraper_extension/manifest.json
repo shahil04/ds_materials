@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Trainer Metadata Scraper",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://pulse.itvedant.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pulse.itvedant.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
