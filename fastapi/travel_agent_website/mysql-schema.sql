@@ -1,0 +1,55 @@
+CREATE DATABASE IF NOT EXISTS peacetimetravellers;
+USE peacetimetravellers;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  password_hash VARCHAR(256) NOT NULL,
+  name VARCHAR(100),
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS destinations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(128) NOT NULL UNIQUE,
+  description TEXT,
+  image_url VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS packages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  destination VARCHAR(100) NOT NULL,
+  duration_days INT NOT NULL,
+  price FLOAT NOT NULL,
+  tags VARCHAR(255),
+  description TEXT,
+  image_url VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS bookings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  package_id INT NOT NULL,
+  booked_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  status VARCHAR(64) DEFAULT 'pending',
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (package_id) REFERENCES packages(id)
+);
+
+CREATE TABLE IF NOT EXISTS chatbot_logs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_query TEXT,
+  llm_response TEXT,
+  context_used TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS blogs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  category VARCHAR(100) NOT NULL,
+  content TEXT,
+  publish_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);

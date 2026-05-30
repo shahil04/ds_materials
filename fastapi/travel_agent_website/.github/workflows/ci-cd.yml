@@ -1,0 +1,52 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install backend deps
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run backend tests (if exist)
+        run: |
+          cd backend
+          echo "No tests configured; add pytest suits."
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build frontend
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - run: |
+          cd frontend
+          npm install
+          npm run build
+      - name: Build backend image
+        run: |
+          docker build -t peacetimetravellers-backend ./backend
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy to EC2 placeholder
+        run: |
+          echo "Note: Add deploy commands for AWS CLI, SSH, Docker Compose."

@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+aiomysql
+python-dotenv
+passlib[bcrypt]
+python-jose
+pydantic
+langchain
+openai
+faiss-cpu

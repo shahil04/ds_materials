@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Media Downloader",
+  "version": "2.0",
+  "description": "Download videos and images from the current page or from a direct URL. Detects video requests as they load.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage",
+    "webRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Media Downloader"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
