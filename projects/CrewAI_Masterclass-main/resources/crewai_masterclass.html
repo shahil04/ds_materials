@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrewAI Masterclass Notes</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #4f46e5;
+            --accent-color: #10b981;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --code-bg: #0d1117;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .toc {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .toc a:hover {
+            background: var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h4 {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        tr:hover {
+            background: rgba(99, 102, 241, 0.2);
+        }
+
+        pre {
+            background: var(--code-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+            color: #e6db74;
+        }
+
+        .inline-code {
+            background: var(--code-bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(16, 185, 129, 0.2));
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid var(--primary-color);
+        }
+
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .pipeline {
+            background: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .subsection {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 CrewAI Masterclass</h1>
+            <p>Comprehensive Notes for building Multi-Agent AI Systems</p>
+        </header>
+
+        <nav class="toc">
+            <h2>📑 Table of Contents</h2>
+            <ul>
+                <li><a href="#llm-vs-agent">1. LLM vs Agent</a></li>
+                <li><a href="#components">2. Components of Agents</a></li>
+                <li><a href="#characteristics">3. Characteristics of Agents</a></li>
+                <li><a href="#multi-agent">4. Why Multi-Agent Systems?</a></li>
+                <li><a href="#newsletter-example">5. Newsletter Pipeline Example</a></li>
+                <li><a href="#design-question">6. Design Question: Agent Overkill</a></li>
+                <li><a href="#crewai-intro">7. CrewAI — What Is It?</a></li>
+                <li><a href="#crewai-philosophy">8. CrewAI Philosophy</a></li>
+                <li><a href="#crewai-components">9. CrewAI Components</a></li>
+                <li><a href="#process-types">10. CrewAI Process Types</a></li>
+                <li><a href="#tools">11. Adding Tools to the Crew</a></li>
+                <li><a href="#structured-outputs">12. Structured Outputs with Pydantic</a></li>
+                <li><a href="#guardrails">13. Guardrails</a></li>
+                <li><a href="#hierarchical">14. Hierarchical Process</a></li>
+                <li><a href="#memory">15. Memory in CrewAI</a></li>
+                <li><a href="#crewai-vs-chatbots">16. CrewAI vs Chatbots</a></li>
+                <li><a href="#flows">17. Flows in CrewAI</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section 1: LLM vs Agent -->
+        <section id="llm-vs-agent">
+            <h2>1. LLM vs Agent</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>LLM</th>
+                        <th>Agent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Completes prompts</td>20:51 24-12-2025
+                        <td>Completes tasks</td>
+                    </tr>
+                    <tr>
+                        <td>Holds conversations</td>
+                        <td>Plans and executes goals</td>
+                    </tr>
+                    <tr>
+                        <td>Reactive (you ask, it responds)</td>
+                        <td>Proactive (you give goal, it figures out steps)</td>
+                    </tr>
+                    <tr>
+                        <td>Brain in a jar</td>
+                        <td>Brain with body, memory, and tools</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 2: Components of Agents -->
+        <section id="components">
+            <h2>2. Components of Agents</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Brain (LLM)</strong></td>
+                        <td>The cognitive engine — enables planning, reasoning, and understanding user intent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory</strong></td>
+                        <td>Stores what's been done, what's to be done, and accumulated knowledge</td>
+                    </tr>
+                    <tr>
+                        <td>→ Short-term</td>
+                        <td>Current conversation and working context</td>
+                    </tr>
+                    <tr>
+                        <td>→ Long-term</td>
+                        <td>Persistent knowledge across sessions</td>
+                    </tr>
+                    <tr>
+                        <td>→ Episodic</td>
+                        <td>Learnings from past attempts ("X failed because Y")</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tools</strong></td>
+                        <td>Enable the agent to perform actions and interact with the external world</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 3: Characteristics of Agents -->
+        <section id="characteristics">
+            <h2>3. Characteristics of Agents</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Autonomy</strong></td>
+                        <td>Performs tasks independently without human intervention</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Planning</strong></td>
+                        <td>Formulates roadmaps to achieve goals with high accuracy and efficiency</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reasoning</strong></td>
+                        <td>Thinks before acting — maps actions to expected results</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Orchestration</strong></td>
+                        <td>Executes steps in logical sequence, knows what to do when</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal-Oriented</strong></td>
+                        <td>Stays focused on the end goal and works toward achieving it</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adaptability</strong></td>
+                        <td>Notices when something's off and adjusts the plan accordingly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 4: Why Multi-Agent Systems? -->
+        <section id="multi-agent">
+            <h2>4. Why Multi-Agent Systems?</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Single Agent</th>
+                        <th>Multi-Agent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Generalist — "jack of all trades"</td>
+                        <td>Specialists collaborating</td>
+                    </tr>
+                    <tr>
+                        <td>Works well for simple tasks</td>
+                        <td>Shines for complex, multi-step tasks</td>
+                    </tr>
+                    <tr>
+                        <td>Context gets cluttered</td>
+                        <td>Each agent maintains focused context</td>
+                    </tr>
+                    <tr>
+                        <td>One failure = everything lost</td>
+                        <td>Failure isolation — retry just one step</td>
+                    </tr>
+                    <tr>
+                        <td>Inherently sequential</td>
+                        <td>Potential for parallel execution</td>
+                    </tr>
+                    <tr>
+                        <td>Hard to debug (black box)</td>
+                        <td>Easier debugging — tweak the specific agent</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="highlight-box">
+                <strong>Core idea:</strong> Break down main goal into sub-goals, assign each to a specialist agent based on role and tools.
+            </div>
+        </section>
+
+        <!-- Section 5: Newsletter Pipeline Example -->
+        <section id="newsletter-example">
+            <h2>5. Example: Newsletter Pipeline (Sequential Pattern)</h2>
+            <div class="pipeline">
+                Researcher → Analyzer → Creator → Editor → Reviewer → (Human) → Publisher
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Agent</th>
+                        <th>Responsibility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Researcher</strong></td>
+                        <td>Gathers information/content from the web</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Analyzer</strong></td>
+                        <td>Filters, de-duplicates, keeps only relevant parts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Creator</strong></td>
+                        <td>Writes the newsletter with proper formatting and design</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Editor</strong></td>
+                        <td>Makes design/copy changes as needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reviewer</strong></td>
+                        <td>Reviews final draft from reader's perspective, waits for human approval</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Publisher</strong></td>
+                        <td>Sends the newsletter to subscribers via mail</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 6: Design Question -->
+        <section id="design-question">
+            <h2>6. Design Question: When Is Adding More Agents Overkill?</h2>
+            
+            <h3>Signs of Over-Fragmentation</h3>
+            <ul>
+                <li>Agents with paper-thin responsibilities (one-liner jobs)</li>
+                <li>Excessive handoffs creating latency</li>
+                <li>Context loss at boundaries</li>
+                <li>Debugging becomes harder, not easier</li>
+            </ul>
+
+            <h3>Should Editor & Reviewer Merge?</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Separate</th>
+                        <th>Merged</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Editor = craft (grammar, flow, formatting)</td>
+                        <td>Simpler pipeline, fewer handoffs</td>
+                    </tr>
+                    <tr>
+                        <td>Reviewer = impact (reader perspective, clarity)</td>
+                        <td>Less context loss</td>
+                    </tr>
+                    <tr>
+                        <td>Clear accountability</td>
+                        <td>Risk: agent juggles two mental modes</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Verdict:</strong> Merge for simple use cases, separate for high-stakes publications.</p>
+
+            <blockquote>
+                <strong>Guiding principle:</strong> Split agents when they need different tools, different context, or represent genuinely different modes of thinking. Merge them when separation creates friction without adding clarity.
+            </blockquote>
+
+            <blockquote>
+                <strong>Rule of thumb:</strong> "If you can't clearly articulate what one agent knows or can do that the other can't — you probably don't need both."
+            </blockquote>
+        </section>
+
+        <!-- Section 7: CrewAI — What Is It? -->
+        <section id="crewai-intro">
+            <h2>7. CrewAI — What Is It?</h2>
+            <p>A Python framework for orchestrating multiple AI agents working together as a "crew." It's the <strong>coordination layer</strong> above LLMs — opinionated, focused, and built specifically for multi-agent collaboration.</p>
+            
+            <h3>The Problem It Solves</h3>
+            <p>Building multi-agent systems from scratch requires handling agent definitions, task sequencing, context passing, tool integration, memory, and output formatting. CrewAI abstracts all of this.</p>
+
+            <h3>Core Mental Model</h3>
+            <div class="pipeline">
+                Define AGENTS (who) → Define TASKS (what) → Assemble CREW (how) → Run
+            </div>
+        </section>
+
+        <!-- Section 8: CrewAI Philosophy -->
+        <section id="crewai-philosophy">
+            <h2>8. CrewAI Philosophy</h2>
+            
+            <h3>Separation of Concerns</h3>
+            <ul>
+                <li><strong>YAML files</strong> = declarations (who exists, what needs doing) — human-readable, easy to tweak</li>
+                <li><strong>Python files</strong> = orchestration (how things wire together, process type, custom logic)</li>
+            </ul>
+
+            <h3>Role-Playing Metaphor</h3>
+            <p>Agents aren't just LLMs with system prompts. They have <em>role</em>, <em>goal</em>, and <em>backstory</em>. This makes LLMs commit to the persona and improves output quality.</p>
+
+            <h3>What Makes CrewAI Different?</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>CrewAI's Approach</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abstraction level</td>
+                        <td>High — think in roles and tasks, not prompt chains</td>
+                    </tr>
+                    <tr>
+                        <td>Agent identity</td>
+                        <td>Strong emphasis on role, goal, backstory</td>
+                    </tr>
+                    <tr>
+                        <td>Process types</td>
+                        <td>Built-in sequential and hierarchical orchestration</td>
+                    </tr>
+                    <tr>
+                        <td>Tool integration</td>
+                        <td>Simple decorator-based or pre-built tool attachment</td>
+                    </tr>
+                    <tr>
+                        <td>Output control</td>
+                        <td>Native Pydantic support for structured output</td>
+                    </tr>
+                    <tr>
+                        <td>Human-in-the-loop</td>
+                        <td>Easy to add human checkpoints mid-flow</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 9: CrewAI Components -->
+        <section id="crewai-components">
+            <h2>9. CrewAI Components</h2>
+            
+            <h3>Agent Definition</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Role</strong></td>
+                        <td>Agent's role in the crew</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal</strong></td>
+                        <td>What the agent is trying to achieve</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backstory</strong></td>
+                        <td>Gives unique identity and persona to the agent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tools</strong> <em>(optional)</em></td>
+                        <td>Which tools this specific agent can access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Allow Delegation</strong> <em>(optional)</em></td>
+                        <td>Can this agent hand off work to others? (matters in hierarchical)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Task Definition</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Description</strong></td>
+                        <td>What the task is about and steps to perform</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected Output</strong></td>
+                        <td>How the final task output should look</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agent</strong></td>
+                        <td>Which agent performs this task</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Context</strong> <em>(optional)</em></td>
+                        <td>Other tasks' outputs to feed as input (chaining)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Output File</strong> <em>(optional)</em></td>
+                        <td>Write result to a file automatically</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Output Pydantic / JSON</strong> <em>(optional)</em></td>
+                        <td>Force structured output format</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 10: Process Types -->
+        <section id="process-types">
+            <h2>10. CrewAI Process Types</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>How It Works</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sequential</strong></td>
+                        <td>Tasks execute in defined order. Agent A → Agent B → Agent C. Predictable, linear.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hierarchical</strong></td>
+                        <td>A "manager" agent dynamically decides which agent handles what and when. Flexible, requires manager LLM.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 11: Adding Tools -->
+        <section id="tools">
+            <h2>11. Adding Tools to the Crew</h2>
+            <p>Tools turn agents from "thinkers" into "doers" — enabling interaction with the real world.</p>
+
+            <h3>Pre-built Tools (CrewAI Toolkit)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>What It Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="inline-code">SerperDevTool</code></td>
+                        <td>Web search via Serper API</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">ScrapeWebsiteTool</code></td>
+                        <td>Extract content from websites</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">FileReadTool</code></td>
+                        <td>Read files from disk</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">DirectoryReadTool</code></td>
+                        <td>List directory contents</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">PDFSearchTool</code></td>
+                        <td>Search within PDF documents</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">CodeInterpreterTool</code></td>
+                        <td>Execute Python code</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Usage Example</h3>
+            <pre><code>from crewai_tools import SerperDevTool, ScrapeWebsiteTool
+
+@agent
+def research_agent(self) -> Agent:
+    return Agent(
+        config=self.agents_config["research_agent"],
+        tools=[SerperDevTool(), ScrapeWebsiteTool()]
+    )</code></pre>
+
+            <h3>Custom Tools (Build Your Own)</h3>
+            <pre><code>from crewai.tools import tool
+
+@tool("Company Database Search")
+def search_company_db(query: str) -> str:
+    """Searches the internal company database for relevant information."""
+    results = my_database.search(query)
+    return results</code></pre>
+            <p>Custom tools live in <code class="inline-code">src/my_project/tools/</code> directory.</p>
+
+            <h3>Tool Assignment Principles</h3>
+            <div class="highlight-box">
+                <strong>Tools = Capabilities. Capabilities should match the role.</strong>
+                <p style="margin-top: 0.5rem; margin-bottom: 0;">"Give a paintbrush to a painter, a test tube to a scientist — not the other way round."</p>
+            </div>
+
+            <h4>Why not give all tools to all agents?</h4>
+            <ul>
+                <li><strong>Decision fatigue:</strong> Too many tools = LLM picks wrong one</li>
+                <li><strong>Accidental misuse:</strong> Agent might use a tool when it shouldn't</li>
+            </ul>
+
+            <h3>Tool Assignment Levels</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>How It Works</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Agent level</strong></td>
+                        <td>Tools passed directly to agent — only that agent can use them</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Task level</strong></td>
+                        <td>Tools passed to specific task — overrides agent's defaults for that task</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Task-level Example</h4>
+            <pre><code>@task
+def deep_research_task(self) -> Task:
+    return Task(
+        config=self.tasks_config["deep_research_task"],
+        tools=[SerperDevTool(), ScrapeWebsiteTool(), PDFSearchTool()]
+    )</code></pre>
+        </section>
+
+        <!-- Section 12: Structured Outputs -->
+        <section id="structured-outputs">
+            <h2>12. Structured Outputs with Pydantic</h2>
+            <p>Ensures task output conforms to a predictable schema — no more parsing free-form text.</p>
+
+            <h3>Step 1: Define Your Schema</h3>
+            <pre><code>from pydantic import BaseModel
+from typing import List
+
+class HeadlineItem(BaseModel):
+    title: str
+    source_url: str
+    relevance_score: float
+
+class AnalyzerOutput(BaseModel):
+    headlines: List[HeadlineItem]
+    summary: str
+    total_sources_reviewed: int</code></pre>
+
+            <h3>Step 2: Attach to Task</h3>
+            <pre><code>@task
+def analysis_task(self) -> Task:
+    return Task(
+        config=self.tasks_config["analysis_task"],
+        output_pydantic=AnalyzerOutput
+    )</code></pre>
+
+            <h3>Step 3: Access Structured Output</h3>
+            <pre><code>result = crew.kickoff(inputs={"topic": "AI Trends"})
+analysis_result = result.pydantic
+
+for headline in analysis_result.headlines:
+    print(f"{headline.title} - Score: {headline.relevance_score}")</code></pre>
+
+            <h3>When to Use Structured Outputs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>Structured Output?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Final report for humans</td>
+                        <td>No — free text is fine</td>
+                    </tr>
+                    <tr>
+                        <td>Data passed to another agent</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Output fed into database/API</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>JSON for frontend</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Creative writing</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>What Passes Between Tasks?</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>What Happens</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Task → Next Task (internal)</td>
+                        <td>Raw text output passed as context</td>
+                    </tr>
+                    <tr>
+                        <td>Crew → Your Code (after kickoff)</td>
+                        <td>Access structured Pydantic via <code class="inline-code">result.pydantic</code></td>
+                    </tr>
+                    <tr>
+                        <td>Crew → Next Flow Step</td>
+                        <td>Extract manually via <code class="inline-code">result.pydantic.model_dump()</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 13: Guardrails -->
+        <section id="guardrails">
+            <h2>13. Guardrails</h2>
+            <p>Validations imposed on task output. CrewAI guardrails are Python functions that return <code class="inline-code">tuple[bool, Any]</code>.</p>
+
+            <h3>Implementation</h3>
+            <pre><code>def validate_newsletter_length(output: TaskOutput) -> tuple[bool, Any]:
+    """Ensure newsletter is between 500-2000 words."""
+    word_count = len(output.raw.split())
+    if word_count < 500:
+        return (False, f"Too short ({word_count} words). Minimum 500.")
+    if word_count > 2000:
+        return (False, f"Too long ({word_count} words). Maximum 2000.")
+    return (True, output)</code></pre>
+
+            <h3>Attach to Task</h3>
+            <pre><code>@task
+def newsletter_task(self) -> Task:
+    return Task(
+        config=self.tasks_config["newsletter_task"],
+        guardrails=[validate_newsletter_length]
+    )</code></pre>
+
+            <h3>Guardrail Behavior</h3>
+            <p>When guardrail fails → Agent receives feedback → Retries → Guardrail checks again</p>
+            <div class="pipeline">
+                Agent output → Guardrail → Fails → Retry with feedback → Guardrail → Passes
+            </div>
+
+            <h3>Common Guardrail Use Cases</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>What It Checks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Length validation</td>
+                        <td>Not too short/long</td>
+                    </tr>
+                    <tr>
+                        <td>Required fields</td>
+                        <td>Keywords or sections present</td>
+                    </tr>
+                    <tr>
+                        <td>Format compliance</td>
+                        <td>Valid JSON, proper headers</td>
+                    </tr>
+                    <tr>
+                        <td>Factual sanity</td>
+                        <td>No obviously wrong data</td>
+                    </tr>
+                    <tr>
+                        <td>Safety filters</td>
+                        <td>No prohibited content</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 14: Hierarchical Process -->
+        <section id="hierarchical">
+            <h2>14. Hierarchical Process</h2>
+            <p>A manager agent dynamically delegates tasks to specialists based on capabilities.</p>
+
+            <h3>How It Works</h3>
+            <ul>
+                <li>Manager agent = generalist team leader</li>
+                <li>Receives all tasks, decides who does what</li>
+                <li>Reformulates tasks based on agent personas</li>
+                <li>Compiles final output from all agents</li>
+            </ul>
+
+            <h3>Setup Option 1: Auto-created Manager</h3>
+            <pre><code>@crew
+def crew(self) -> Crew:
+    return Crew(
+        agents=self.agents,
+        tasks=self.tasks,
+        process=Process.hierarchical,
+        manager_llm="gpt-4o"
+    )</code></pre>
+
+            <h3>Setup Option 2: Custom Manager Agent (Recommended)</h3>
+            <pre><code>@agent
+def manager(self) -> Agent:
+    return Agent(
+        role="Project Manager",
+        goal="Coordinate the team to deliver high-quality output efficiently",
+        backstory="You are a seasoned project manager with 10+ years leading cross-functional teams.",
+        allow_delegation=True
+    )
+
+@crew
+def crew(self) -> Crew:
+    return Crew(
+        agents=self.agents,
+        tasks=self.tasks,
+        process=Process.hierarchical,
+        manager_agent=self.manager()
+    )</code></pre>
+
+            <h3>Key Rules</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Don't assign tasks to specific agents</td>
+                        <td>Manager needs freedom to delegate</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">allow_delegation=True</code> only for manager</td>
+                        <td>Prevents member agents from re-delegating</td>
+                    </tr>
+                    <tr>
+                        <td>Give manager a team leader persona</td>
+                        <td>Improves delegation quality</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Sequential vs Hierarchical</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Sequential</th>
+                        <th>Hierarchical</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Task assignment</td>
+                        <td>Pre-defined</td>
+                        <td>Manager decides at runtime</td>
+                    </tr>
+                    <tr>
+                        <td>Task order</td>
+                        <td>Fixed</td>
+                        <td>Dynamic</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibility</td>
+                        <td>Low</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Overhead</td>
+                        <td>Lower</td>
+                        <td>Higher (extra LLM calls)</td>
+                    </tr>
+                    <tr>
+                        <td>Best for</td>
+                        <td>Predictable pipelines</td>
+                        <td>Complex, adaptive workflows</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>When to Use Hierarchical</h3>
+            <ul>
+                <li>Task order isn't obvious upfront</li>
+                <li>Need dynamic re-prioritization</li>
+                <li>Some tasks might be skipped based on results</li>
+                <li>Exploratory problems (research, investigation)</li>
+            </ul>
+
+            <h3>When NOT to Use Hierarchical</h3>
+            <ul>
+                <li>Simple linear workflows</li>
+                <li>Need predictable, repeatable execution</li>
+                <li>Cost/latency sensitive</li>
+            </ul>
+        </section>
+
+        <!-- Section 15: Memory -->
+        <section id="memory">
+            <h2>15. Memory in CrewAI</h2>
+            <p>Enables crews to remember context within and across executions.</p>
+
+            <h3>Memory Types</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>What It Stores</th>
+                        <th>Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Short-term</strong></td>
+                        <td>Current crew execution context</td>
+                        <td>Single run</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Long-term</strong></td>
+                        <td>Learnings and insights across runs</td>
+                        <td>Persistent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Entity</strong></td>
+                        <td>Information about specific entities (people, companies, concepts)</td>
+                        <td>Persistent</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Enabling Memory</h3>
+            <pre><code>@crew
+def crew(self) -> Crew:
+    return Crew(
+        agents=self.agents,
+        tasks=self.tasks,
+        process=Process.sequential,
+        memory=True
+    )</code></pre>
+
+            <h3>With Embeddings (for Semantic Retrieval)</h3>
+            <pre><code>@crew
+def crew(self) -> Crew:
+    return Crew(
+        agents=self.agents,
+        tasks=self.tasks,
+        memory=True,
+        embedder={
+            "provider": "openai",
+            "config": {
+                "model": "text-embedding-3-small"
+            }
+        }
+    )</code></pre>
+
+            <h3>When to Use Memory</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Memory Useful?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>One-off batch processing</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Interactive assistant with follow-ups</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Long-running project with multiple sessions</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Stateless API endpoint</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Research crew building on past findings</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <h4>⚠️ Caution</h4>
+                <ul>
+                    <li><strong>Storage costs</strong> — persistent memory needs storage</li>
+                    <li><strong>Stale context</strong> — old memories may become irrelevant</li>
+                    <li><strong>Debugging difficulty</strong> — behavior might trace to old memories</li>
+                </ul>
+                <p>Use memory intentionally, not by default.</p>
+            </div>
+        </section>
+
+        <!-- Section 16: CrewAI vs Chatbots -->
+        <section id="crewai-vs-chatbots">
+            <h2>16. CrewAI vs Chatbots — Key Distinction</h2>
+            <div class="highlight-box">
+                <strong>CrewAI is designed for orchestrated multi-agent systems, not conversational chatbots.</strong>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Chatbot Pattern</th>
+                        <th>CrewAI Pattern</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Interaction</strong></td>
+                        <td>Continuous back-and-forth</td>
+                        <td>Kick off → Execute → Output</td>
+                    </tr>
+                    <tr>
+                        <td><strong>State</strong></td>
+                        <td>Conversation history is core</td>
+                        <td>Memory is optional, workflow is core</td>
+                    </tr>
+                    <tr>
+                        <td><strong>User role</strong></td>
+                        <td>User drives each turn</td>
+                        <td>User provides input, crew takes over</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Structure</strong></td>
+                        <td>Loose, reactive</td>
+                        <td>Predefined agents, tasks, process</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal</strong></td>
+                        <td>Answer questions, assist</td>
+                        <td>Complete a defined mission</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Can You Build Chat-like Experiences?</h3>
+            <p>Technically yes, but you're fighting the grain. Each "turn" is a full crew execution — heavy for simple follow-ups.</p>
+
+            <blockquote>
+                <strong>The Takeaway:</strong><br>
+                <strong>CrewAI = Mission-oriented orchestration</strong><br>
+                <strong>Chatbot frameworks = Conversation-oriented interaction</strong><br><br>
+                Use CrewAI when you have a defined workflow with specialized agents collaborating toward a goal.
+            </blockquote>
+        </section>
+
+        <!-- Section 17: Flows -->
+        <section id="flows">
+            <h2>17. Flows in CrewAI</h2>
+            <p>Flows are the orchestration layer that connects multiple crews, Python functions, and conditional logic into a unified pipeline.</p>
+
+            <h3>Flows vs Crews</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Crew</th>
+                        <th>Flow</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Purpose</strong></td>
+                        <td>Multi-agent collaboration on one goal</td>
+                        <td>Orchestrate multiple steps/crews with logic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Building blocks</strong></td>
+                        <td>Agents + Tasks</td>
+                        <td>Nodes (functions) + Edges (decorators)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Branching</strong></td>
+                        <td>Only in hierarchical (manager decides)</td>
+                        <td>Explicit with <code class="inline-code">@router()</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Python code between steps</strong></td>
+                        <td>Not really</td>
+                        <td>Yes — flows are Python-native</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Composability</strong></td>
+                        <td>Self-contained</td>
+                        <td>Can contain multiple crews</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Use case</strong></td>
+                        <td>"Do this mission"</td>
+                        <td>"Do this pipeline with decision points"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>When to Use What</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>Use This</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Single mission, multiple agents collaborating</td>
+                        <td>Crew</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-step pipeline mixing crews + regular code</td>
+                        <td>Flow</td>
+                    </tr>
+                    <tr>
+                        <td>Need conditional branching between steps</td>
+                        <td>Flow with <code class="inline-code">@router()</code></td>
+                    </tr>
+                    <tr>
+                        <td>Need to run a crew, process output, then run another crew</td>
+                        <td>Flow</td>
+                    </tr>
+                    <tr>
+                        <td>Pure agent collaboration, no external logic needed</td>
+                        <td>Crew alone</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Flow as the "Glue Layer"</h3>
+            <p>Flows let you compose:</p>
+            <div class="pipeline">
+                [Input] → [Validate with Python] → [Research Crew] → [Transform output] → [Decision Router] → [Writing Crew OR Rejection Handler]
+            </div>
+            <p>A Crew alone can't do this — Flows let you compose multiple units with logic in between.</p>
+
+            <h3>Flow Decorators</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Decorator</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="inline-code">@start()</code></td>
+                        <td>Marks the entry point of the flow — executes first when <code class="inline-code">kickoff()</code> is called</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">@listen(method_or_label)</code></td>
+                        <td>Triggers when the specified method completes or when a router returns the specified label</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">@router(method)</code></td>
+                        <td>Defines conditional routing logic — returns a string label to determine which path to take next</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Conditional Functions (for @listen)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="inline-code">and_(method1, method2, ...)</code></td>
+                        <td>Triggers listener only when <strong>all</strong> specified methods have completed</td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">or_(method1, method2, ...)</code></td>
+                        <td>Triggers listener when <strong>any</strong> of the specified methods completes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Flow Examples</h3>
+            
+            <h4>Basic Flow</h4>
+            <pre><code>from crewai.flow.flow import Flow, listen, start, router
+
+class MyFlow(Flow):
+
+    @start()
+    def receive_input(self):
+        return self.inputs["topic"]
+
+    @listen(receive_input)
+    def process_data(self, topic):
+        return f"Processed: {topic}"</code></pre>
+
+            <h4>Conditional Routing</h4>
+            <pre><code>    @router(process_data)
+    def decide_path(self, result):
+        if result["score"] > 0.8:
+            return "high_quality"
+        return "needs_review"
+
+    @listen("high_quality")
+    def publish(self, data):
+        ...
+
+    @listen("needs_review")
+    def send_for_review(self, data):
+        ...</code></pre>
+
+            <h4>Parallel Join with and_</h4>
+            <pre><code>from crewai.flow.flow import and_
+
+@listen(and_(research_task, analysis_task))
+def combine_results(self):
+    # Only runs when BOTH tasks complete
+    ...</code></pre>
+
+            <h4>First-to-Finish with or_</h4>
+            <pre><code>from crewai.flow.flow import or_
+
+@listen(or_(fast_path, slow_path))
+def handle_result(self, result):
+    # Runs when EITHER completes
+    ...</code></pre>
+        </section>
+
+        <footer>
+            <p>📚 CrewAI Masterclass Notes</p>
+        </footer>
+    </div>
+</body>
+</html>
