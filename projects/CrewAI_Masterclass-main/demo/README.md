@@ -18,6 +18,28 @@ Next, navigate to your project directory and install the dependencies:
 ```bash
 crewai install
 ```
+
+## Quick Start Visual Reference
+For a visual guide to the demo setup and run process, see `steps.md`. The images below show the main setup and execution steps for the demo.
+
+- `img/img1_code.png`: Code setup and project structure
+- `img/img2_run.png`: Running the demo with `crewai run`
+- `img/img3_process.png`: Agent process and task flow
+- `img/img4_result.png`: Generated output and results
+- `img/img5_final.png`: Final demo summary and verification
+
+![Code setup](img/img1_code.png)
+
+![Run demo](img/img2_run.png)
+
+![Process flow](img/img3_process.png)
+
+![Result example](img/img4_result.png)
+
+![Final summary](img/img5_final.png)
+
+This gallery illustrates the main commands and workflow steps referenced in `steps.md`.
+
 ### Customizing
 
 **Add your `OPENAI_API_KEY` into the `.env` file**

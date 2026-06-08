@@ -1,17 +1,17 @@
-research_task:
+report_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Based on the input topic: {topic}, generate a detailed report including all the
+    latest facts and future trends in a structured way. The report should be around
+    2000 words.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    2000 words long report on the topic: {topic}
+  agent: report_generator
 
-reporting_task:
+blog_writing_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Based on the report on {topic}, create a well written and structured blog that
+    even a 5 year old can understand. The blog should be around 500 words.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    500 words long blog post on topic: {topic}. The blog should be well structured
+    with a creative and fun heading.
+  agent: blog_writer

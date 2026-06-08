@@ -39,6 +39,30 @@ This command initializes the market-research-crew Crew, assembling the agents an
 
 This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
+## Streamlit Frontend
+
+A multi-page Streamlit frontend is available in `streamlit_app.py`.
+
+Run it from the project root with:
+
+```bash
+$ streamlit run streamlit_app.py
+```
+
+### Features
+
+**Run Crew Page**
+- Enter a product idea prompt
+- Click **Run MarketResearchCrew** to execute the crew
+- View the generated report in real-time
+- Download the report as **Markdown** or **Text**
+
+**Settings Page**
+- Configure your **OpenAI API Key** and **Model Name**
+- Add optional **Serper API Key** for web search
+- Save configuration directly to `.env` file
+- View current `.env` content
+
 ## Understanding Your Crew
 
 The market-research-crew Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
