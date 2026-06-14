@@ -2,7 +2,8 @@ import streamlit as st
 from langgraph_tool_backend import chatbot, retrieve_all_threads
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 import uuid
-
+import os
+os.environ['LANGCHAIN_PROJECT'] = 'tools'
 # =========================== Utilities ===========================
 def generate_thread_id():
     return uuid.uuid4()

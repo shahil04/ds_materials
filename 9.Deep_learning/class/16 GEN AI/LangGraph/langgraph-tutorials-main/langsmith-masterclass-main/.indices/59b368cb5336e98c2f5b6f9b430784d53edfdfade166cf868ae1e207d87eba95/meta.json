@@ -1,0 +1,6 @@
+{
+  "pdf_path": "C:\\Users\\hp\\Documents\\ds_materials\\9.Deep_learning\\class\\16 GEN AI\\LangGraph\\langgraph-tutorials-main\\langsmith-masterclass-main\\islr.pdf",
+  "chunk_size": 1000,
+  "chunk_overlap": 150,
+  "embedding_model": "text-embedding-3-small"
+}
