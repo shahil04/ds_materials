@@ -8,46 +8,45 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.tools import tool
 import asyncio
-from langchain_mcp_adapters.client import MultiServerMCPClient
 
 load_dotenv()  # Load environment variables from .env file
 
 llm = ChatOpenAI(model="gpt-5")
 
-# MCP client for local FastMCP server
-client = MultiServerMCPClient(
-    {
-        "math": {
-        "command": "python",
-        "args": [
-            r"C:\Users\hp\Documents\ds_materials\9.Deep_learning\class\16 GEN AI\LangGraph\langgraph-tutorials-main\mcp-client-langgraph-main\main_mcp_math.py"
-        ],
-        "transport": "stdio"
-    },
-        "expense": {
-            "transport": "streamable_http",  # if this fails, try "sse"
-            "url": "https://splendid-gold-dingo.fastmcp.app/mcp"
-        }
-    }
-)
-import os
+@tool
+def calculator(first_num: float, second_num: float, operation: str) -> dict:
+    """
+    Perform a basic arithmetic operation on two numbers.
+    Supported operations: add, sub, mul, div
+    """
+    try:
+        if operation == "add":
+            result = first_num + second_num
+        elif operation == "sub":
+            result = first_num - second_num
+        elif operation == "mul":
+            result = first_num * second_num
+        elif operation == "div":
+            if second_num == 0:
+                return {"error": "Division by zero is not allowed"}
+            result = first_num / second_num
+        else:
+            return {"error": f"Unsupported operation '{operation}'"}
+        
+        return {"first_num": first_num, "second_num": second_num, "operation": operation, "result": result}
+    except Exception as e:
+        return {"error": str(e)}
 
-print(os.path.exists(
-    r"C:\Users\hp\Documents\ds_materials\9.Deep_learning\class\16 GEN AI\LangGraph\langgraph-tutorials-main\mcp-client-langgraph-main\main_mcp_math.py"
-))
+tools = [calculator]
+
+llm_with_tools = llm.bind_tools(tools)
 
 # state
 class ChatState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
 
 
-async def build_graph():
-
-    tools = await client.get_tools()
-
-    print(tools)
-
-    llm_with_tools = llm.bind_tools(tools)
+def build_graph():
 
     # nodes
     async def chat_node(state: ChatState):
@@ -75,10 +74,10 @@ async def build_graph():
 
 async def main():
 
-    chatbot = await build_graph()
+    chatbot = build_graph()
 
     # running the graph
-    result = await chatbot.ainvoke({"messages": [HumanMessage(content="Give me all my expenses for the month of Nov from 1 Nov to 30 Nov")]})
+    result = await chatbot.ainvoke({"messages": [HumanMessage(content="Find the modulus of 132354 and 23 and give answer like a cricket commentator.")]})
 
     print(result['messages'][-1].content)
 

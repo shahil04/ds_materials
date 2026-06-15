@@ -17,24 +17,18 @@ llm = ChatOpenAI(model="gpt-5")
 # MCP client for local FastMCP server
 client = MultiServerMCPClient(
     {
-        "math": {
-        "command": "python",
-        "args": [
-            r"C:\Users\hp\Documents\ds_materials\9.Deep_learning\class\16 GEN AI\LangGraph\langgraph-tutorials-main\mcp-client-langgraph-main\main_mcp_math.py"
-        ],
-        "transport": "stdio"
-    },
+        "arith": {
+            "transport": "stdio",
+            "command": "python3",          
+            "args": ["/Users/nitish/Desktop/mcp-math-server/main.py"],
+        },
         "expense": {
             "transport": "streamable_http",  # if this fails, try "sse"
             "url": "https://splendid-gold-dingo.fastmcp.app/mcp"
         }
     }
 )
-import os
 
-print(os.path.exists(
-    r"C:\Users\hp\Documents\ds_materials\9.Deep_learning\class\16 GEN AI\LangGraph\langgraph-tutorials-main\mcp-client-langgraph-main\main_mcp_math.py"
-))
 
 # state
 class ChatState(TypedDict):

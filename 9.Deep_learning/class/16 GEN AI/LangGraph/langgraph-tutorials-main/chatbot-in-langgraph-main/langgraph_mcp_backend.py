@@ -59,11 +59,13 @@ def get_stock_price(symbol: str) -> dict:
 
 client = MultiServerMCPClient(
     {
-        "arith": {
-            "transport": "stdio",
-            "command": "python3",
-            "args": ["/Users/nitish/Desktop/mcp-math-server/main.py"],
-        },
+     "math": {
+        "command": "python",
+        "args": [
+            r"C:\Users\hp\Documents\ds_materials\9.Deep_learning\class\16 GEN AI\LangGraph\langgraph-tutorials-main\mcp-client-langgraph-main\main_mcp_math.py"
+        ],
+        "transport": "stdio"
+    },
         "expense": {
             "transport": "streamable_http",  # if this fails, try "sse"
             "url": "https://splendid-gold-dingo.fastmcp.app/mcp"
@@ -75,7 +77,7 @@ client = MultiServerMCPClient(
 def load_mcp_tools() -> list[BaseTool]:
     try:
         return run_async(client.get_tools())
-    except Exception:
+    except Exception: 
         return []
 
 
