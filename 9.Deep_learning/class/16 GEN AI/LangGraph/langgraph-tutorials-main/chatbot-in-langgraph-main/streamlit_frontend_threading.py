@@ -6,20 +6,27 @@ import uuid
 # **************************************** utility functions *************************
 
 def generate_thread_id():
+    """Create a new unique thread ID for a chat conversation."""
     thread_id = uuid.uuid4()
     return thread_id
 
+
 def reset_chat():
+    """Start a fresh pythonchat by creating a new thread and clearing history."""
     thread_id = generate_thread_id()
     st.session_state['thread_id'] = thread_id
     add_thread(st.session_state['thread_id'])
     st.session_state['message_history'] = []
 
+
 def add_thread(thread_id):
+    """Store a thread ID in the session if it is not already present."""
     if thread_id not in st.session_state['chat_threads']:
         st.session_state['chat_threads'].append(thread_id)
 
+
 def load_conversation(thread_id):
+    """Retrieve saved messages for a specific thread from the chatbot state."""
     state = chatbot.get_state(config={'configurable': {'thread_id': thread_id}})
     # Check if messages key exists in state values, return empty list if not
     return state.values.get('messages', [])
