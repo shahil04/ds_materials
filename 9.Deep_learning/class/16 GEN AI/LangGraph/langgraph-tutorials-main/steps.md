@@ -1,0 +1,6 @@
+langchain_mcp_adapters
+fastmcp
+pip install langchain-text-splitters
+# from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+s

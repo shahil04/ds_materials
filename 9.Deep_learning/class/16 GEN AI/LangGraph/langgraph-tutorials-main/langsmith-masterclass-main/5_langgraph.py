@@ -10,6 +10,12 @@ from langsmith import traceable
 from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, START, END
 
+<<<<<<< HEAD
+=======
+import os
+os.environ['LANGCHAIN_PROJECT'] = 'agent_langgraph_demo'
+
+>>>>>>> 8db78abd3048b3607821d2e78dc198c0324f1839
 # ---------- Setup ----------
 load_dotenv()
 model = ChatOpenAI(model="gpt-4o-mini", temperature=0)
