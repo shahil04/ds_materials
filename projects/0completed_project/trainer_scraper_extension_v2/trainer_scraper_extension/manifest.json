@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Trainer Details Scraper",
+  "version": "1.0",
+  "description": "Scrapes trainer details automatically from pulse.itvedant.com",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://pulse.itvedant.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://pulse.itvedant.com/trainer-metadata/view*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

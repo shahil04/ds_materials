@@ -1,0 +1,6 @@
+// background.js
+
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.local.set({ scrapedData: [], isScraping: false });
+    console.log("Student Profile Scraper Extension Installed!");
+});

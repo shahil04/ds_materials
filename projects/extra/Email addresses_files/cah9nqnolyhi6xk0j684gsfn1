@@ -1,0 +1,350 @@
+#app-boot-bg-skeleton {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-background-canvas);
+  z-index: 999;
+}
+.mobile #app-boot-bg-skeleton {
+  background-color: var(--color-background-canvas-mobile);
+}
+
+.desktop-shimmer-enabled #app-boot-bg-skeleton {
+  top: 0;
+}
+
+.app-boot-bg-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.desktop-shimmer-enabled .app-boot-bg-loader,
+.mobile-shimmer-enabled .app-boot-bg-loader {
+  display: none;
+}
+
+.app-boot-shimmer {
+  display: none;
+}
+
+.desktop-shimmer-enabled .app-boot-shimmer {
+  display: block;
+  margin-bottom: 24px;
+  margin-right: 24px;
+}
+
+.mobile-shimmer-enabled .app-boot-shimmer {
+  display: block;
+}
+
+.desktop-shimmer-enabled .app-boot-shimmer__main-content {
+  display: none;
+}
+
+.app-boot-shimmer__main-content {
+  padding-bottom: 64px;
+}
+
+.app-boot-shimmer__categories-container {
+  background: var(--color-background-container);
+}
+
+.desktop-shimmer-enabled .app-boot-shimmer__categories-container {
+  margin-right: -24px;
+}
+
+
+.desktop-shimmer-enabled .app-boot-shimmer__main-container {
+  display: grid;
+  min-height: calc(100vh - 64px);
+  grid-template-rows: auto 1fr auto;
+}
+
+.desktop-shimmer-enabled .app-boot-shimmer__footer-content {
+  display: none;
+}
+
+/*
+ * The animation should run for var(--duration-xslow) (560ms)
+ * indefinitely, and there should be a delay of var(--delay-slow) (336ms)
+ * between each iteration of the animation.
+ *
+ * The animation-delay property can be used to delay the start of the
+ * animation, but doesn't add a delay between iterations. The delay thus
+ * needs to be faked using keyframes.
+ * Reference: https://css-tricks.com/css-keyframe-animation-delay-iterations/
+ *
+ * Total animation duration
+ * => var(--duration-xslow) + var(--delay-slow)
+ * => 560ms + 336ms
+ * => 896ms
+
+ * Animation starts at 0%.
+ * Animation ends at 560ms, which is 62.5% of 896ms.
+ * Delay (i.e. no change) from 560ms (62.5%) to 896ms (100%).
+ */
+@keyframes horizontal-shimmer {
+  0% {
+    background-position: -66vw 0;
+  }
+  62.5%,
+  100% {
+    background-position: 66vw 0;
+  }
+}
+
+.app-boot-shimmer__loader {
+  animation-name: horizontal-shimmer;
+  animation-duration: calc(var(--duration-xslow) + var(--delay-slow));
+  animation-iteration-count: infinite;
+  animation-timing-function: var(--ease-standard);
+  background-attachment: fixed;
+  background-color: var(--settings-color-skeleton-content);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-transparent) 0%,
+    var(--settings-color-skeleton-content) 50%,
+    var(--color-transparent) 100%
+  );
+  background-size: 100vw 100vh;
+}
+
+.app-boot-shimmer__loader--fill-area {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.app-boot-shimmer__header-content {
+  display: flex;
+  align-items: center;
+  padding: 32px 20px 24px;
+}
+
+.app-boot-shimmer__member-icon {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.app-boot-shimmer__setting-title {
+  width: 114px;
+  height: 24px;
+  margin-left: 16px;
+  border-radius: 16px;
+}
+
+.app-boot-shimmer__category-container {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+}
+
+.app-boot-shimmer__category-icon {
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+}
+
+.app-boot-shimmer__category-title {
+  height: 16px;
+  margin-left: 16px;
+  border-radius: 16px;
+}
+
+.app-boot-shimmer__category-container:nth-of-type(1)
+  .app-boot-shimmer__category-title {
+  width: 175px;
+}
+
+.app-boot-shimmer__category-container:nth-of-type(2)
+  .app-boot-shimmer__category-title {
+  width: 157px;
+}
+
+.app-boot-shimmer__category-container:nth-of-type(3)
+  .app-boot-shimmer__category-title {
+  width: 108px;
+}
+
+.app-boot-shimmer__category-container:nth-of-type(4)
+  .app-boot-shimmer__category-title {
+  width: 121px;
+}
+
+.app-boot-shimmer__category-container:nth-of-type(5)
+  .app-boot-shimmer__category-title {
+  width: 158px;
+}
+
+.app-boot-shimmer__footer-content {
+  padding-left: 24px;
+  padding-bottom: 48px;
+}
+
+.app-boot-shimmer__footer-content > * + * {
+  padding-top: 32px;
+}
+
+.app-boot-shimmer__footer-link {
+  height: 10px;
+  border-radius: 16px;
+}
+
+.app-boot-shimmer__footer-link:nth-of-type(1) {
+  width: 67px;
+}
+
+.app-boot-shimmer__footer-link:nth-of-type(2) {
+  width: 67px;
+}
+
+.app-boot-shimmer__footer-link:nth-of-type(3) {
+  width: 92px;
+}
+
+.app-boot-shimmer__footer-link:nth-of-type(4) {
+  width: 81px;
+}
+
+.app-boot-shimmer__subcategories-container {
+  max-width: 726px;
+  margin: 16px 12px 24px;
+  width: 100%;
+}
+
+.mobile-shimmer-enabled .app-boot-shimmer__subcategories-container {
+  display: none;
+}
+
+.app-boot-shimmer__subcategory-container {
+  background: var(--color-background-container);
+  padding: 24px 32px;
+  margin-bottom: 16px;
+  border-radius: var(--corner-radius-medium);
+}
+
+.app-boot-shimmer__subcategory-container > * + * {
+  padding-top: 32px;
+}
+
+.app-boot-shimmer__subcategory-title {
+  height: 16px;
+  width: 26%;
+  border-radius: 16px;
+}
+
+.app-boot-shimmer__subcategory-setting {
+  display: flex;
+  justify-content: space-between;
+  gap: 29%;
+}
+
+.app-boot-shimmer__subcategory-setting-name {
+  height: 16px;
+  border-radius: 16px;
+  flex: 0 1 326px;
+}
+
+.app-boot-shimmer__subcategory-setting-sneakpeek {
+  height: 16px;
+  border-radius: 16px;
+  flex: 0 1 140px;
+}
+
+.mobile-shimmer-enabled .app-boot-shimmer__navbar-container {
+  display: none;
+}
+
+.desktop-shimmer-enabled .app-boot-shimmer__navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 52px;
+  padding: 0 24px;
+  z-index: 100;
+  background-color: var(--color-background-container);
+  border-bottom: 1px solid var(--color-border-faint);
+  margin-right: -24px;
+}
+
+.app-boot-shimmer__navbar-content-logo {
+  padding-top: 3px;
+  line-height: 0;
+}
+
+.app-boot-shimmer__profile-dropdown {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.app-boot-shimmer__category-tab {
+  width: 125px;
+  height: 16px;
+  border-radius: 16px;
+  padding: 16px 0;
+}
+
+.app-boot-shimmer__categories-dropdown {
+  height: 16px;
+  border-radius: 16px;
+  padding: 16px 18px;
+  flex: 0 0 75px;
+}
+
+.mobile-shimmer-enabled .app-boot-shimmer__categories-tabs-container {
+  display: none;
+}
+
+.desktop-shimmer-enabled .app-boot-shimmer__categories-tabs-container {
+  display: flex;
+  background-color: var(--color-background-container);
+  border-top: 1px solid var(--color-border-faint);
+}
+
+.app-boot-shimmer_categories-tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  height: 48px;
+  padding-left: 24px;
+  padding-right: 18px;
+  gap: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-shimmer-enabled .app-boot-shimmer__main-content {
+    display: block;
+  }
+
+  .desktop-shimmer-enabled .app-boot-shimmer__categories-container {
+    margin-right: 0;
+  }
+
+  .desktop-shimmer-enabled .app-boot-shimmer__main-container {
+    grid-template-columns: minmax(280px, 3fr) minmax(0, 21fr);
+    grid-template-rows: 1fr auto;
+    min-height: calc(100vh - 76px);
+    column-gap: 24px;
+  }
+
+  .desktop-shimmer-enabled .app-boot-shimmer__main-container-without-sidebar {
+    grid-template-rows: 1fr auto;
+    min-height: calc(100vh - 76px);
+  }
+
+  .app-boot-shimmer__subcategories-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .desktop-shimmer-enabled .app-boot-shimmer__categories-tabs-container {
+    display: none;
+  }
+}
