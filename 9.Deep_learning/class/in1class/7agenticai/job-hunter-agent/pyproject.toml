@@ -1,0 +1,18 @@
+[project]
+name = "job-hunter-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain",
+    "langchain-core",
+    "langchain-openai",
+    "openai",
+    "pdfplumber",
+    "python-dotenv",
+    "python-telegram-bot",
+    "requests",
+    "streamlit",
+    "tavily-python",
+]

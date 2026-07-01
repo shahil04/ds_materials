@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Web/LinkedIn Email Scraper",
+  "version": "1.0",
+  "description": "Scrape emails from Web pages",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
