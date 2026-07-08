@@ -1,0 +1,10 @@
+langchain
+langchain-openai
+langchain-core
+openai
+python-dotenv
+tavily-python
+python-telegram-bot 
+pdfplumber
+requests
+streamlit
