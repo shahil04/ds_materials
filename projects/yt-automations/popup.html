@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YT Auto-Transcriber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-container">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">YT Auto-<span class="highlight">Transcriber</span></span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- Input Section -->
+      <div class="input-group">
+        <label for="yt-url" class="field-label">YouTube Video Link</label>
+        <div class="input-wrapper">
+          <input type="text" id="yt-url" placeholder="Paste YouTube link here..." autocomplete="off" spellcheck="false">
+          <button id="clear-btn" class="clear-btn hidden" title="Clear">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="preview-container" class="preview-container empty">
+        <div class="empty-state">
+          <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          <p class="empty-text">Enter a YouTube link above to detect the video</p>
+        </div>
+        <div class="video-card hidden">
+          <div class="thumbnail-wrapper">
+            <img id="video-thumbnail" src="" alt="Video Thumbnail">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="8 5 19 12 8 19 8 5" />
+              </svg>
+            </div>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">Ready to Transcribe</span>
+            <h3 id="video-title" class="video-title">YouTube Video Link Detected</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Site Selection Section -->
+      <div class="selection-group">
+        <label class="field-label">Select Service Provider</label>
+        <div class="provider-options">
+          <label class="provider-card active" id="provider-com-label">
+            <input type="radio" name="provider" value="com" checked>
+            <div class="provider-info">
+              <span class="provider-name">youtubetotranscript.com</span>
+              <span class="provider-badge recommended">Recommended</span>
+            </div>
+          </label>
+          <label class="provider-card" id="provider-io-label">
+            <input type="radio" name="provider" value="io">
+            <div class="provider-info">
+              <span class="provider-name">youtubetotranscript.io</span>
+              <span class="provider-badge">Alternative</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button id="transcribe-btn" class="transcribe-btn disabled" disabled>
+        <span>Transcribe Video</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <span>Auto-opens and transcribes in a new tab</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
