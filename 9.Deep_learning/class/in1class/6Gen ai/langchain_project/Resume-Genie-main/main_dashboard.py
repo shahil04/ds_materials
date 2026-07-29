@@ -155,7 +155,7 @@ Resume: {context}
 # ───────────────────────────────────────────────
 st.title("🚀 Resume Genie")
 st.markdown("""
-**Powered by Grok-4 (xAI)** • Your all-in-one solution for job applications  
+**Powered by Shahil AI ** • Your all-in-one solution for job applications  
 **AI Tools** to craft winning resumes, cover letters & career strategies 💼✨
 """)
 
@@ -302,9 +302,9 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.caption("✅ **Ready**: All 4 tools live")
 with col2:
-    st.caption("🔑 **API**: Grok-4 (xAI)")
+    st.caption("🔑 **API**: (AI)")
 with col3:
-    st.caption("📅 **Built**: Jan 2026 • Satyajit")
+    st.caption("📅 **Built**: 2026 • Shahil")
 
 st.sidebar.markdown("---")
 st.sidebar.caption("**Pro Tips**: Use sidebar to switch tools instantly ⚡")
