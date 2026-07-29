@@ -77,11 +77,9 @@ st.sidebar.markdown("**Resume Genie**")
 # OpenAI API Key
 from langchain_openai import ChatOpenAI
 
-OPENAI_API_KEY = "OPENAI_API_KEY"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", "")
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", "")
-print(OPENAI_API_KEY)
 if not OPENAI_API_KEY:
     st.error("❌ **OPENAI_API_KEY missing**. Add it to `.streamlit/secrets.toml` or environment variables.")
     st.stop()
@@ -90,7 +88,7 @@ if not OPENAI_API_KEY:
 @st.cache_resource(show_spinner="🔄 Initializing ChatGPT...")
 def get_llm():
     return ChatOpenAI(
-        model="gpt-3.5-turbo-instruct",
+        model="gpt-4.1-mini",
         api_key=OPENAI_API_KEY,
         temperature=0.2,
         max_tokens=2000,

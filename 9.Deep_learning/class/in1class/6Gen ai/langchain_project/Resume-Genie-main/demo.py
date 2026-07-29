@@ -18,17 +18,14 @@
 
 import os
 from dotenv import load_dotenv
-
-load_dotenv()
-print(os.getenv("OPENAI_API_KEY"))
-# llm DEMO using langchain
-from langchain_openai import OpenAI
-from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
-llm = OpenAI(model='gpt-4.1-mini')
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY is missing. Add it to your .env file or environment variables.")
 
+llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0.2)
 result = llm.invoke("What is the capital of India")
-
-print(result)
+print(result.content)
