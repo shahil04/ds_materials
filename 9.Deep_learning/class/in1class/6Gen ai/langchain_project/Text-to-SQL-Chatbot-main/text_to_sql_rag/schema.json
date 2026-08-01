@@ -1,5 +1,5 @@
 {
-    "database": "uber",
+    "database": "uber.db",
     "tables": [
         {
             "table_name": "bookings",
