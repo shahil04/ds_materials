@@ -6,12 +6,12 @@
             "columns": [
                 {
                     "name": "booking_id",
-                    "type": "VARCHAR(100)",
-                    "nullable": false
+                    "type": "TEXT",
+                    "nullable": true
                 },
                 {
                     "name": "customer_id",
-                    "type": "VARCHAR(100)",
+                    "type": "TEXT",
                     "nullable": true
                 },
                 {
@@ -79,16 +79,28 @@
                     "nullable": true
                 }
             ],
-            "primary_keys": [],
-            "foreign_keys": []
+            "primary_keys": [
+                "cab_id"
+            ],
+            "foreign_keys": [
+                {
+                    "column": [
+                        "driver_id"
+                    ],
+                    "references_table": "drivers",
+                    "references_column": [
+                        "driver_id"
+                    ]
+                }
+            ]
         },
         {
             "table_name": "customers",
             "columns": [
                 {
                     "name": "customer_id",
-                    "type": "VARCHAR(100)",
-                    "nullable": false
+                    "type": "TEXT",
+                    "nullable": true
                 },
                 {
                     "name": "name",
@@ -97,7 +109,7 @@
                 },
                 {
                     "name": "phone",
-                    "type": "BIGINT",
+                    "type": "INTEGER",
                     "nullable": true
                 },
                 {
@@ -131,16 +143,18 @@
                 },
                 {
                     "name": "phone",
-                    "type": "BIGINT",
+                    "type": "INTEGER",
                     "nullable": true
                 },
                 {
                     "name": "rating",
-                    "type": "DOUBLE",
+                    "type": "REAL",
                     "nullable": true
                 }
             ],
-            "primary_keys": [],
+            "primary_keys": [
+                "driver_id"
+            ],
             "foreign_keys": []
         },
         {
@@ -172,20 +186,32 @@
                     "nullable": true
                 }
             ],
-            "primary_keys": [],
-            "foreign_keys": []
+            "primary_keys": [
+                "feedback_id"
+            ],
+            "foreign_keys": [
+                {
+                    "column": [
+                        "booking_id"
+                    ],
+                    "references_table": "bookings",
+                    "references_column": [
+                        "booking_id"
+                    ]
+                }
+            ]
         },
         {
             "table_name": "trip_details",
             "columns": [
                 {
                     "name": "trip_id",
-                    "type": "VARCHAR(100)",
-                    "nullable": false
+                    "type": "TEXT",
+                    "nullable": true
                 },
                 {
                     "name": "booking_id",
-                    "type": "VARCHAR(100)",
+                    "type": "TEXT",
                     "nullable": true
                 },
                 {
@@ -200,12 +226,12 @@
                 },
                 {
                     "name": "distance_km",
-                    "type": "DOUBLE",
+                    "type": "REAL",
                     "nullable": true
                 },
                 {
                     "name": "fare",
-                    "type": "DOUBLE",
+                    "type": "REAL",
                     "nullable": true
                 }
             ],
@@ -230,21 +256,21 @@
                 {
                     "name": "request_id",
                     "type": "INTEGER",
-                    "nullable": false
+                    "nullable": true
                 },
                 {
                     "name": "pickup_location",
-                    "type": "VARCHAR(100)",
+                    "type": "TEXT",
                     "nullable": true
                 },
                 {
                     "name": "dropoff_location",
-                    "type": "VARCHAR(100)",
+                    "type": "TEXT",
                     "nullable": true
                 },
                 {
                     "name": "request_time",
-                    "type": "DATETIME",
+                    "type": "TEXT",
                     "nullable": true
                 }
             ],
