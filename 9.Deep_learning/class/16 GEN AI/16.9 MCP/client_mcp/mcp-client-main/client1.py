@@ -15,7 +15,7 @@ SERVERS = {
             "run",
             "fastmcp",
             "run",
-            "/Users/nitish/Desktop/mcp-math-server/main.py"
+            "/Users/shahil/Desktop/mcp-math-server/main.py"
        ]
     },
     "expense": {
@@ -26,7 +26,7 @@ SERVERS = {
         "transport": "stdio",
         "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
         "args": [
-        "/Users/nitish/desktop/manim-mcp-server/src/manim_server.py"
+        "/Users/shahil/desktop/manim-mcp-server/src/manim_server.py"
       ],
         "env": {
         "MANIM_EXECUTABLE": "/Library/Frameworks/Python.framework/Versions/3.11/bin/manim"
