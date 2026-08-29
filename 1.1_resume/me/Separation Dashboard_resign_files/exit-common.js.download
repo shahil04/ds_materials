@@ -1,0 +1,428 @@
+/**
+ * Common Exit Functionality JavaScript Module
+ * Shared JavaScript for all exit views (HR, Manager, Asset, Account)
+ */
+
+(function() {
+    'use strict';
+    
+    /**
+     * Exit Common Namespace
+     */
+    window.ExitCommon = {
+        /**
+         * Initialize common exit functionality
+         * @param {Object} config Configuration object
+         */
+        init: function(config) {
+            this.config = config || {};
+            this.initTooltips();
+            this.initTimelineHeight();
+        },
+        
+        /**
+         * Initialize Bootstrap tooltips
+         */
+        initTooltips: function() {
+            if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+            }
+        },
+        
+        /**
+         * Update timeline line height to match last comment item
+         */
+        initTimelineHeight: function() {
+            var self = this;
+            function updateTimelineLine() {
+                var timeline = document.querySelector('.department-comments-timeline');
+                if (!timeline) return;
+                
+                var lastItem = timeline.querySelector('.department-comment-item:not(.department-comment-empty):last-child');
+                var emptyItem = timeline.querySelector('.department-comment-empty:only-child');
+                
+                if (emptyItem) {
+                    timeline.style.setProperty('--timeline-height', '0px');
+                    return;
+                }
+                
+                if (lastItem) {
+                    var lastItemOffset = lastItem.offsetTop + lastItem.offsetHeight;
+                    timeline.style.setProperty('--timeline-height', (lastItemOffset + 4) + 'px');
+                } else {
+                    timeline.style.setProperty('--timeline-height', '0px');
+                }
+            }
+            
+            // Update on load
+            setTimeout(updateTimelineLine, 100);
+            
+            // Update on window resize
+            if (window.jQuery) {
+                jQuery(window).on('resize', function() {
+                    setTimeout(updateTimelineLine, 50);
+                });
+            } else {
+                window.addEventListener('resize', function() {
+                    setTimeout(updateTimelineLine, 50);
+                });
+            }
+        },
+        
+        /**
+         * Get CSRF token
+         * @returns {string} CSRF token
+         */
+        getCsrfToken: function() {
+            if (typeof yii !== 'undefined' && typeof yii.getCsrfToken === 'function') {
+                return yii.getCsrfToken();
+            }
+            var metaTag = document.querySelector('meta[name="csrf-token"]');
+            return metaTag ? metaTag.getAttribute('content') : '';
+        },
+        
+        /**
+         * Make AJAX request with common error handling
+         * @param {Object} options AJAX options
+         * @returns {Promise} jQuery AJAX promise
+         */
+        ajax: function(options) {
+            var self = this;
+            var defaultOptions = {
+                type: 'POST',
+                dataType: 'json',
+                beforeSend: function(xhr) {
+                    // Add CSRF token if not already present
+                    if (!options.data || !options.data._csrf) {
+                        var csrfToken = self.getCsrfToken();
+                        if (csrfToken) {
+                            if (!options.data) {
+                                options.data = {};
+                            }
+                            options.data._csrf = csrfToken;
+                        }
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', status, error);
+                    var errorMsg = 'An error occurred while processing your request';
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        errorMsg = xhr.responseJSON.message;
+                    } else if (xhr.responseText) {
+                        try {
+                            var jsonResponse = JSON.parse(xhr.responseText);
+                            if (jsonResponse.message) {
+                                errorMsg = jsonResponse.message;
+                            }
+                        } catch(e) {
+                            errorMsg = xhr.responseText.substring(0, 200);
+                        }
+                    }
+                    if (options.onError) {
+                        options.onError(errorMsg);
+                    } else {
+                        alert(errorMsg);
+                    }
+                }
+            };
+            
+            var mergedOptions = jQuery.extend(true, {}, defaultOptions, options);
+            return jQuery.ajax(mergedOptions);
+        },
+        
+        /**
+         * Checklist Management
+         */
+        Checklist: {
+            /**
+             * Update completion count for a checklist section
+             * @param {string} checklistSelector Checklist container selector
+             * @param {string} completedCountSelector Completed count display selector
+             * @param {string} totalCountSelector Total count display selector
+             * @returns {Object} Object with completed and total counts
+             */
+            updateCount: function(checklistSelector, completedCountSelector, totalCountSelector) {
+                var $checklist = jQuery(checklistSelector);
+                var completed = $checklist.find('.checklist-checkbox:checked').length;
+                var total = $checklist.find('.checklist-checkbox').length;
+                
+                if (completedCountSelector) {
+                    jQuery(completedCountSelector).text(completed);
+                }
+                if (totalCountSelector) {
+                    jQuery(totalCountSelector).text(total);
+                }
+                
+                return { completed: completed, total: total };
+            },
+            
+            /**
+             * Collect checklist data from checkboxes
+             * @param {string} checklistSelector Checklist container selector
+             * @returns {Object} Checklist data object with item names as keys
+             */
+            collectData: function(checklistSelector) {
+                var checklistData = {};
+                jQuery(checklistSelector + ' .checklist-checkbox').each(function() {
+                    var checkbox = jQuery(this);
+                    var label = checkbox.closest('.form-check').find('label');
+                    var itemName = label.find('.fw-semibold').first().text().trim();
+                    var isChecked = checkbox.is(':checked');
+                    if (itemName) {
+                        checklistData[itemName] = isChecked ? 'completed' : 'pending';
+                    }
+                });
+                return checklistData;
+            },
+            
+            /**
+             * Enable/disable Sign NOC button based on checklist completion
+             * @param {string} buttonSelector Button selector
+             * @param {number} requiredCount Required completed items
+             * @param {number} currentCount Current completed items
+             */
+            toggleSignNocButton: function(buttonSelector, requiredCount, currentCount) {
+                var $btn = jQuery(buttonSelector);
+                if (currentCount === requiredCount && requiredCount > 0) {
+                    $btn.prop('disabled', false)
+                        .removeClass('disabled')
+                        .css({'opacity': '1', 'cursor': 'pointer'});
+                } else {
+                    $btn.prop('disabled', true)
+                        .addClass('disabled')
+                        .css({'opacity': '0.5', 'cursor': 'not-allowed'});
+                }
+            }
+        },
+        
+        /**
+         * Comment Management
+         */
+        Comment: {
+            /**
+             * Update comment button state based on textarea content
+             * @param {string} textareaSelector Textarea selector
+             * @param {string} buttonSelector Button selector
+             */
+            updateButtonState: function(textareaSelector, buttonSelector) {
+                var $textarea = jQuery(textareaSelector);
+                var $btn = jQuery(buttonSelector);
+                
+                // Check if elements exist
+                if (!$textarea.length || !$btn.length) {
+                    return;
+                }
+                
+                var commentValue = $textarea.val();
+                var comment = (commentValue && typeof commentValue === 'string') ? commentValue.trim() : '';
+                
+                if (comment) {
+                    $btn.prop('disabled', false)
+                        .css({'opacity': '1', 'cursor': 'pointer'});
+                } else {
+                    $btn.prop('disabled', true)
+                        .css({'opacity': '0.5', 'cursor': 'not-allowed'});
+                }
+            },
+            
+            /**
+             * Submit comment via AJAX
+             * @param {Object} options Options object
+             */
+            submit: function(options) {
+                var self = ExitCommon;
+                var textarea = jQuery(options.textareaSelector);
+                var btn = jQuery(options.buttonSelector);
+                
+                // Check if elements exist
+                if (!textarea.length || !btn.length) {
+                    console.warn('Textarea or button not found');
+                    return;
+                }
+                
+                var commentValue = textarea.val();
+                var comment = (commentValue && typeof commentValue === 'string') ? commentValue.trim() : '';
+                
+                if (!comment) {
+                    console.warn('Please enter a comment');
+                    return;
+                }
+                
+                var originalText = btn.html();
+                btn.prop('disabled', true).html('<i class="icon-spinner spinner me-2"></i> Adding...');
+                
+                if (!options.exitId) {
+                    console.error('Exit ID is required');
+                    btn.prop('disabled', false).html(originalText);
+                    self.Comment.updateButtonState(options.textareaSelector, options.buttonSelector);
+                    return;
+                }
+                
+                self.ajax({
+                    url: options.url,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        exit_id: options.exitId,
+                        id: options.exitId,
+                        comment: comment,
+                        _csrf: self.getCsrfToken()
+                    },
+                    success: function(response) {
+                        if (response && response.success) {
+                            textarea.val('');
+                            
+                            // Show success notification
+                            if (typeof noty !== 'undefined') {
+                                noty({
+                                    text: response.message || 'Comment added successfully',
+                                    type: 'success',
+                                    dismissQueue: true,
+                                    timeout: 3000,
+                                    layout: 'topRight'
+                                });
+                            }
+                            
+                            if (options.onSuccess) {
+                                options.onSuccess(response);
+                            } else {
+                                setTimeout(function() {
+                                    window.location.reload();
+                                }, 500);
+                            }
+                        } else {
+                            // Show error notification
+                            if (typeof noty !== 'undefined') {
+                                noty({
+                                    text: response.message || 'Failed to add comment',
+                                    type: 'error',
+                                    dismissQueue: true,
+                                    timeout: 5000,
+                                    layout: 'topRight'
+                                });
+                            } else {
+                                console.error('Error: ' + (response.message || 'Failed to add comment'));
+                            }
+                            btn.prop('disabled', false).html(originalText);
+                            self.Comment.updateButtonState(options.textareaSelector, options.buttonSelector);
+                        }
+                    },
+                    onError: function(errorMsg) {
+                        // Show error notification
+                        if (typeof noty !== 'undefined') {
+                            noty({
+                                text: 'Failed to add comment. ' + errorMsg,
+                                type: 'error',
+                                dismissQueue: true,
+                                timeout: 5000,
+                                layout: 'topRight'
+                            });
+                        } else {
+                            console.error('Error: Failed to add comment. ' + errorMsg);
+                        }
+                        btn.prop('disabled', false).html(originalText);
+                        self.Comment.updateButtonState(options.textareaSelector, options.buttonSelector);
+                    }
+                });
+            }
+        },
+        
+        /**
+         * Deduction Management
+         */
+        Deduction: {
+            /**
+             * Update net amount display
+             * @param {Object} amounts Amounts object
+             * @param {string} displaySelector Display selector
+             */
+            updateNetAmount: function(amounts, displaySelector) {
+                var totalDeduction = (amounts.itAssetDeduction || 0) + 
+                                     (amounts.accountsDeduction || 0) + 
+                                     (amounts.currentDeduction || 0);
+                jQuery(displaySelector).text('₹' + Math.abs(totalDeduction).toLocaleString('en-IN', {maximumFractionDigits: 0}));
+            },
+            
+            /**
+             * Submit deduction via AJAX
+             * @param {Object} options Options object
+             */
+            submit: function(options) {
+                var self = ExitCommon;
+                var deductionAmount = parseFloat(jQuery(options.amountInputSelector).val());
+                var reasonTextarea = jQuery(options.reasonTextareaSelector);
+                
+                // Check if textarea exists
+                if (!reasonTextarea.length) {
+                    console.warn('Reason textarea not found');
+                    return;
+                }
+                
+                var reasonValue = reasonTextarea.val();
+                var deductionReason = (reasonValue && typeof reasonValue === 'string') ? reasonValue.trim() : '';
+                
+                if (isNaN(deductionAmount) || deductionAmount < 0) {
+                    alert('Please enter a valid positive number for deduction amount');
+                    return;
+                }
+                
+                if (!deductionReason) {
+                    alert('Please enter a reason for the deduction');
+                    jQuery(options.reasonTextareaSelector).focus();
+                    return;
+                }
+                
+                var btn = jQuery(options.buttonSelector);
+                var originalText = btn.html();
+                btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Saving...');
+                
+                self.ajax({
+                    url: options.url,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        exit_id: options.exitId,
+                        deduction_amount: deductionAmount,
+                        deduction_reason: deductionReason,
+                        _csrf: self.getCsrfToken()
+                    },
+                    success: function(response) {
+                        if (response && response.success) {
+                            if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+                                var modal = bootstrap.Modal.getInstance(document.getElementById(options.modalId));
+                                if (modal) {
+                                    modal.hide();
+                                }
+                            }
+                            if (options.onSuccess) {
+                                options.onSuccess(response);
+                            } else {
+                                window.location.reload();
+                            }
+                        } else {
+                            alert('Error: ' + (response.message || 'Failed to save deduction'));
+                            btn.prop('disabled', false).html(originalText);
+                        }
+                    },
+                    onError: function(errorMsg) {
+                        alert('Error: Failed to save deduction. ' + errorMsg);
+                        btn.prop('disabled', false).html(originalText);
+                    }
+                });
+            }
+        }
+    };
+    
+    // Auto-initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            ExitCommon.init();
+        });
+    } else {
+        ExitCommon.init();
+    }
+})();
+

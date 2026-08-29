@@ -1,0 +1,292 @@
+/**
+ * Exit Index Page Common JavaScript
+ * 
+ * Handles filters, search, and common functionality for exit index pages
+ */
+(function($) {
+    'use strict';
+
+    var ExitIndex = {
+        /**
+         * Initialize exit index page functionality
+         * @param {Object} config Configuration object
+         * @param {boolean} config.hasChecklistStatus Whether checklist status filter exists
+         */
+        init: function(config) {
+            config = config || {};
+            var hasChecklistStatus = config.hasChecklistStatus || false;
+
+            // Initialize Select2 for all filter dropdowns
+            this.initSelect2Filters(hasChecklistStatus);
+
+            // Initialize search functionality
+            this.initSearch();
+
+            // Initialize clear filters
+            this.initClearFilters(hasChecklistStatus);
+        },
+
+        /**
+         * Initialize Select2 for filter dropdowns
+         */
+        initSelect2Filters: function(hasChecklistStatus) {
+            var self = this;
+
+            // Exit type filter
+            if ($('#exit-type-filter').length) {
+                var $exitTypeSelect = $('#exit-type-filter');
+                var urlParams = new URLSearchParams(window.location.search);
+                var urlExitType = urlParams.get('exit_type');
+                
+                // Only use URL parameter if it exists and is not empty
+                // If no URL parameter, always use empty string (no filter)
+                var currentExitTypeValue = '';
+                if (urlExitType && urlExitType !== '' && urlExitType !== 'null') {
+                    currentExitTypeValue = urlExitType;
+                }
+                
+                // Explicitly set empty value before Select2 initialization
+                $exitTypeSelect.val(currentExitTypeValue);
+                
+                $exitTypeSelect.select2({
+                    theme: 'krajee-bs5',
+                    allowClear: true,
+                    placeholder: 'All Types',
+                    width: '180px'
+                });
+                
+                // Ensure value is set after Select2 initialization
+                setTimeout(function() {
+                    if (currentExitTypeValue && currentExitTypeValue !== '') {
+                        $exitTypeSelect.val(currentExitTypeValue).trigger('change.select2');
+                    } else {
+                        // Always set to empty when no URL parameter
+                        $exitTypeSelect.val('').trigger('change.select2');
+                    }
+                }, 100);
+                
+                $exitTypeSelect.on('change', function() {
+                    self.applyFilters(hasChecklistStatus);
+                });
+            }
+
+            // Department filter
+            if ($('#department-filter').length) {
+                var $deptSelect = $('#department-filter');
+                var urlParams = new URLSearchParams(window.location.search);
+                var urlDept = urlParams.get('department');
+                
+                // Preserve selected value from HTML or URL
+                var currentDeptValue = $deptSelect.val() || urlDept || '';
+                if (currentDeptValue) {
+                    $deptSelect.val(currentDeptValue);
+                }
+                
+                $deptSelect.select2({
+                    theme: 'krajee-bs5',
+                    allowClear: true,
+                    placeholder: 'All Departments',
+                    width: '180px'
+                });
+                
+                // Ensure value is set after Select2 initialization
+                if (currentDeptValue) {
+                    setTimeout(function() {
+                        $deptSelect.val(currentDeptValue).trigger('change.select2');
+                    }, 100);
+                }
+                
+                $deptSelect.on('change', function() {
+                    self.applyFilters(hasChecklistStatus);
+                });
+            }
+
+            // Status filter
+            if ($('#status-filter').length) {
+                var $statusSelect = $('#status-filter');
+                var urlParams = new URLSearchParams(window.location.search);
+                var urlStatus = urlParams.get('status');
+                
+                // Priority: 1) URL param (if exists), 2) Select element value (from PHP), 3) default 'pending'
+                // If status param is not in URL (null), PHP controller defaults to 'pending' and renders it in select
+                // If status param is empty string in URL, user cleared filter - show all
+                var currentStatusValue = '';
+                if (urlStatus !== null) {
+                    // Status param exists in URL (could be empty string for "show all")
+                    currentStatusValue = urlStatus;
+                } else {
+                    // Status param not in URL - use value from select (PHP sets it to 'pending' by default)
+                    currentStatusValue = $statusSelect.val() || 'pending';
+                }
+                
+                $statusSelect.val(currentStatusValue);
+                
+                $statusSelect.select2({
+                    theme: 'krajee-bs5',
+                    allowClear: true,
+                    placeholder: 'All Status',
+                    width: '180px'
+                });
+                
+                // Ensure value is set after Select2 initialization
+                setTimeout(function() {
+                    $statusSelect.val(currentStatusValue).trigger('change.select2');
+                }, 100);
+                
+                $statusSelect.on('change', function() {
+                    self.applyFilters(hasChecklistStatus);
+                });
+            }
+
+            // Checklist status filter (if exists)
+            if (hasChecklistStatus && $('#checklist-status-filter').length) {
+                var $checklistSelect = $('#checklist-status-filter');
+                var urlParams = new URLSearchParams(window.location.search);
+                var urlChecklistStatus = urlParams.get('checklist_status');
+                
+                // Preserve selected value from HTML or URL
+                var currentChecklistValue = $checklistSelect.val() || urlChecklistStatus || '';
+                if (currentChecklistValue) {
+                    $checklistSelect.val(currentChecklistValue);
+                }
+                
+                $checklistSelect.select2({
+                    theme: 'krajee-bs5',
+                    allowClear: true,
+                    placeholder: 'All Checklist Status',
+                    width: '180px'
+                });
+                
+                // Ensure value is set after Select2 initialization
+                if (currentChecklistValue) {
+                    setTimeout(function() {
+                        $checklistSelect.val(currentChecklistValue).trigger('change.select2');
+                    }, 100);
+                }
+                
+                $checklistSelect.on('change', function() {
+                    self.applyFilters(hasChecklistStatus);
+                });
+            }
+        },
+
+        /**
+         * Initialize search input
+         */
+        initSearch: function() {
+            var self = this;
+            var hasChecklistStatus = $('#checklist-status-filter').length > 0;
+
+            $('#search-input').on('keypress', function(e) {
+                if (e.which === 13) { // Enter key
+                    self.applyFilters(hasChecklistStatus);
+                }
+            });
+        },
+
+        /**
+         * Initialize clear filters button
+         */
+        initClearFilters: function(hasChecklistStatus) {
+            var self = this;
+
+            $('#clear-filters').on('click', function() {
+                $('#search-input').val('');
+                
+                // Clear all filters by setting to empty string (matching the empty option)
+                if ($('#exit-type-filter').length) {
+                    $('#exit-type-filter').val('').trigger('change.select2');
+                }
+                
+                if ($('#department-filter').length) {
+                    $('#department-filter').val('').trigger('change.select2');
+                }
+                
+                // For status filter: set to empty string (not remove) so it shows all, not default pending
+                if ($('#status-filter').length) {
+                    $('#status-filter').val('').trigger('change.select2');
+                }
+                
+                if (hasChecklistStatus && $('#checklist-status-filter').length) {
+                    $('#checklist-status-filter').val('').trigger('change.select2');
+                }
+                
+                setTimeout(function() {
+                    self.applyFilters(hasChecklistStatus);
+                }, 100);
+            });
+        },
+
+        /**
+         * Apply filters and reload page
+         */
+        applyFilters: function(hasChecklistStatus) {
+            var search = $('#search-input').val() || '';
+            var exitTypeRaw = $('#exit-type-filter').val();
+            var exitType = (exitTypeRaw === null || exitTypeRaw === undefined || exitTypeRaw === '' || exitTypeRaw === 'null') ? '' : exitTypeRaw;
+            var department = $('#department-filter').val() || '';
+            var status = $('#status-filter').val() || '';
+            var checklistStatus = '';
+
+            if (hasChecklistStatus && $('#checklist-status-filter').length) {
+                checklistStatus = $('#checklist-status-filter').val() || '';
+            }
+
+            var url = new URL(window.location.href);
+            
+            // Only add parameters if they have values, remove if empty
+            if (search) {
+                url.searchParams.set('search', search);
+            } else {
+                url.searchParams.delete('search');
+            }
+            
+            // Remove exit_type from URL if empty (don't apply filter)
+            if (exitType && exitType !== '' && exitType !== 'null') {
+                url.searchParams.set('exit_type', exitType);
+            } else {
+                url.searchParams.delete('exit_type');
+            }
+            
+            if (department) {
+                url.searchParams.set('department', department);
+            } else {
+                url.searchParams.delete('department');
+            }
+            
+            // For status filter: keep empty string in URL to distinguish from "not set" (which defaults to pending)
+            // If status is empty, set it to empty string (don't delete param)
+            if (status) {
+                url.searchParams.set('status', status);
+            } else {
+                // Set to empty string instead of deleting, so controller knows it was explicitly cleared
+                url.searchParams.set('status', '');
+            }
+            
+            if (hasChecklistStatus) {
+                if (checklistStatus) {
+                    url.searchParams.set('checklist_status', checklistStatus);
+                } else {
+                    url.searchParams.delete('checklist_status');
+                }
+            }
+            
+            // Reset to first page when filters change
+            url.searchParams.set('page', '1');
+
+            window.location.href = url.toString();
+        }
+    };
+
+    // Make ExitIndex available globally
+    window.ExitIndex = ExitIndex;
+
+    // Auto-initialize on document ready if config is available
+    $(document).ready(function() {
+        if (typeof exitIndexConfig !== 'undefined') {
+            ExitIndex.init(exitIndexConfig);
+        }
+    });
+
+})(jQuery);
+

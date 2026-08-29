@@ -1,0 +1,486 @@
+/**
+ * Common Exit Functionality CSS
+ * Shared styles for all exit views (HR, Manager, Asset, Account)
+ */
+
+/* ==========================================================================
+   Employee Information Card
+   ========================================================================== */
+.exit-employee-info-card {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem !important;
+}
+
+.exit-employee-info-card .timeline-heading {
+    font-size: 0.875rem !important;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.5rem !important;
+}
+
+.exit-employee-info-card .timeline-item {
+    padding: 0.1rem 0;
+    /* border-bottom: 1px solid #f0f0f0; */
+}
+
+.exit-employee-info-card .timeline-item:last-child {
+    border-bottom: none;
+}
+
+.exit-employee-info-card .exit-meta-label {
+    font-size: 0.875rem !important;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.exit-employee-info-card .exit-meta-value {
+    font-size: 0.875rem !important;
+    color: #212529;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Financial Overview Card
+   ========================================================================== */
+.exit-financial-overview .financial-icon {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212529;
+    margin-right: 0.75rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.exit-financial-overview .financial-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0;
+}
+
+.exit-financial-overview .financial-subtitle {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.exit-financial-overview .financial-deduction-box {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+}
+
+.exit-financial-overview .financial-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.exit-financial-overview .financial-amount {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.exit-financial-overview .financial-description {
+    font-size: 0.75rem;
+    color: #6c757d;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+}
+
+.exit-financial-overview .financial-total-box {
+    background-color: #e0f2fe;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+}
+
+.exit-financial-overview .financial-total-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.exit-financial-overview .financial-total-amount {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+/* ==========================================================================
+   Department Comments Card
+   ========================================================================== */
+.exit-comment-card {
+    border-radius: 0.5rem;
+}
+
+.exit-comment-card .comment-icon {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-right: 0.75rem;
+}
+
+.exit-comment-card .comment-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0;
+}
+
+.exit-comment-card .comment-subtitle {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.exit-comment-card .department-comments-timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.exit-comment-card .department-comments-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 4px;
+    bottom: 0;
+    width: 2px;
+    background-color: #93c5fd;
+}
+
+.exit-comment-card .department-comment-item {
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.exit-comment-card .department-comment-item:last-child {
+    padding-bottom: 0;
+}
+
+.exit-comment-card .department-comment-item::before {
+    content: '';
+    position: absolute;
+    left: -1.3rem;
+    top: 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #93c5fd;
+    border: 2px solid #ffffff;
+    z-index: 1;
+}
+
+.exit-comment-card .department-comment-empty::before {
+    display: none;
+}
+
+.exit-comment-card .department-comment-content {
+    background-color: #ffffff;
+}
+
+.exit-comment-card .department-comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.exit-comment-card .department-comment-header .fw-semibold {
+    font-size: 0.875rem;
+    color: #212529;
+}
+
+.exit-comment-card .department-comment-header .text-muted {
+    font-size: 0.75rem;
+}
+
+.exit-comment-card .department-comment-empty {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.exit-comment-card .department-comment-empty .department-comment-content {
+    width: 100%;
+}
+
+.exit-comment-card .department-comment-empty .text-muted {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* ==========================================================================
+   Comment Form
+   ========================================================================== */
+.exit-comment-form .additional-comments-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.exit-comment-form .additional-comments-subtitle {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.exit-comment-form .additional-comments-textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+    resize: vertical;
+}
+
+.exit-comment-form .additional-comments-textarea:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+}
+
+.exit-comment-form .additional-comments-btn {
+    border-radius: 0.375rem;
+    font-weight: 500;
+}
+
+.exit-comment-form .additional-comments-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Checklist Cards
+   ========================================================================== */
+.exit-checklist-card {
+    border-radius: 0.5rem;
+}
+
+.exit-checklist-card .card-section-pre,
+.exit-checklist-card .card-section-post {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.exit-checklist-card .checklist-item {
+    transition: all 0.2s ease;
+    border-color: #e0e0e0 !important;
+}
+
+.exit-checklist-card .checklist-item:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+.exit-checklist-card .checklist-checkbox:checked {
+    background-color: #1976d2;
+    border-color: #1976d2;
+}
+
+.exit-checklist-card .checklist-checkbox:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+}
+
+.exit-checklist-card .checklist-completed {
+    position: relative;
+    background: #f8f9fa;
+}
+
+.exit-checklist-card .checklist-completed .checklist-item {
+    background-color: #f0f0f0 !important;
+    border-color: #d0d0d0 !important;
+}
+
+.exit-checklist-card .checklist-completed .checklist-item .form-check-label {
+    color: #6c757d;
+}
+
+.exit-checklist-card .checklist-completion-message {
+    position: relative;
+    z-index: 2;
+    background: #e8f5e9 !important;
+    border: 1px solid #81c784 !important;
+    margin-top: auto;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+    transition: all 0.3s ease;
+}
+
+.exit-checklist-card .checklist-completion-message:hover {
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+/* Post-checklist disabled state */
+.exit-checklist-card .post-checklist-disabled {
+    position: relative;
+    user-select: none;
+}
+
+.exit-checklist-card .post-checklist-disabled * {
+    pointer-events: none;
+}
+
+.exit-checklist-card .post-checklist-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 0.5rem;
+    z-index: 5;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.exit-checklist-card .post-checklist-disabled:hover .post-checklist-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.exit-checklist-card .post-checklist-lock-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.exit-checklist-card .post-checklist-disabled:hover .post-checklist-lock-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Common Button Styles
+   ========================================================================== */
+.exit-action-btn {
+    min-height: 48px;
+    height: 48px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exit-action-btn:not(:disabled) {
+    background-color: #1976d2 !important;
+    border-color: #1976d2 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+
+.exit-action-btn:not(:disabled):hover {
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+}
+
+.exit-action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Equal Height Cards
+   ========================================================================== */
+.exit-equal-height-cards {
+    display: flex;
+}
+
+.exit-equal-height-cards > .col-md-6 {
+    display: flex;
+}
+
+.exit-equal-height-cards > .col-md-6 > .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.exit-equal-height-cards > .col-md-6 > .card > .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Complete Post-Exit Checklist Button
+   ========================================================================== */
+#complete-post-checklist-btn,
+#sign-noc-btn,
+#hr-overview-sign-noc-btn,
+#hr-overview-complete-post-checklist-btn {
+    min-height: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#complete-post-checklist-btn:not(:disabled) {
+    background-color: #1976d2 !important;
+    border-color: #1976d2 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+
+#complete-post-checklist-btn:not(:disabled):hover {
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+}
+
+#complete-post-checklist-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Spacing for button after Additional Comments section */
+.exit-comment-form + .row {
+    margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   Inline Validation Error Messages
+   ========================================================================== */
+.invalid-feedback {
+    display: block !important;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+.form-control.is-invalid,
+.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+textarea.form-control.is-invalid,
+textarea.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+

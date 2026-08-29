@@ -1,0 +1,244 @@
+/* Hide number input spinner/stepper controls (Chrome, Safari, Edge, Opera, Firefox) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Bootstrap 5 invalid-feedback styling */
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+/* For help-block class compatibility (if you have existing help-block usage) */
+.help-block {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* Valid feedback styling */
+.valid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #198754;
+}
+
+/* Form validation states */
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='m5.8 4.6 2.4 2.4m0-2.4L5.8 7'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Select2 validation styling */
+.was-validated .select2-container--default .select2-selection--single,
+.select2-container--default.is-invalid .select2-selection--single {
+    border-color: #dc3545;
+}
+
+.was-validated .select2-container--default.select2-container--focus .select2-selection--single,
+.select2-container--default.is-valid .select2-selection--single {
+    border-color: #198754;
+} 
+
+  /* Error message styling */
+  .help-block {
+    color: #dc3545 !important;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.has-error .form-control {
+    border-color: #dc3545;
+}
+
+.has-error .help-block {
+    color: #dc3545 !important;
+}
+
+.breadcrumb-elements {
+    list-style: none;
+    padding-right: 5px;
+    margin-bottom: 0;
+ }
+
+
+
+
+
+
+ .select2-selection--single .select2-selection__clear:after {
+    content: none;
+    font-family: icomoon;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Select2: proper spacing between clear (x) and dropdown arrow */
+.select2-container .select2-selection--single .select2-selection__clear {
+    margin-right: 0.5rem;
+}
+.select2-container .select2-selection--single .select2-selection__arrow {
+    margin-left: 0;
+    padding-left: 0.25rem;
+}
+.select2-container--krajee-bs5 .select2-selection--single .select2-selection__clear,
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    margin-right: 0.5rem;
+}
+.select2-container--krajee-bs5 .select2-selection--single .select2-selection__arrow,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    padding-left: 0.25rem;
+}
+
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-with-icon input {
+    padding-right: 30px; /* space for the icon */
+}
+.input-with-icon .date-filter {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+    font-size: 16px;
+    z-index: 2;
+}
+.input-with-icon .date-filter:hover {
+    color: #333;
+}
+
+.select2-search--dropdown:after {
+    content: " " !important;   
+}
+.select2-search--dropdown .select2-search__field {
+    padding: 6px !important;
+    width: 100% !important;
+}
+.control-label {
+    margin-bottom: 8px !important;
+}
+
+/* Global anchor tag cursor pointer */
+a {
+    cursor: pointer !important;
+}
+
+a:hover {
+    cursor: pointer !important;
+}
+
+/* Global table row cursor pointer for clickable rows */
+tr[onclick],
+td[onclick],
+tr[data-href],
+tr[data-sid],
+td[data-sid],
+.clickable-row,
+.cursor-pointer,
+.grid-view tbody tr[onclick],
+.grid-view tbody tr.clickable-row,
+.grid-view tbody tr.cursor-pointer {
+    cursor: pointer !important;
+}
+
+tr[onclick]:hover,
+td[onclick]:hover,
+tr[data-href]:hover,
+tr[data-sid]:hover,
+td[data-sid]:hover,
+.clickable-row:hover,
+.cursor-pointer:hover,
+.grid-view tbody tr[onclick]:hover,
+.grid-view tbody tr.clickable-row:hover,
+.grid-view tbody tr.cursor-pointer:hover {
+    cursor: pointer !important;
+}
+
+/* DetailView rows are not clickable by default */
+table.detail-view tbody tr:not([onclick]):not([data-href]):not([data-sid]),
+table.detail-view tbody tr:not([onclick]):not([data-href]):not([data-sid]) td,
+table.detail-view tbody tr:not([onclick]):not([data-href]):not([data-sid]) th {
+    cursor: default !important;
+}
+
+/*
+ * Branch Target widgets (admission / branch manager dashboards).
+ * Dashboard layout uses DashboardAsset → themes/pulse2/css (not backend/web/css/site.css).
+ * Normalize BS5 heading scale + equal-height columns so all branch cards match.
+ */
+.row.branch-month-target > [class*="col-"],
+.row.branch-month-target-panels > [class*="col-"] {
+    display: flex;
+}
+.branch-target-stat-card {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.card.branch-target-stat-card h3.branch-target-stat,
+.card-body.branch-target-stat-card h3.branch-target-stat,
+h3.branch-target-stat.no-margin {
+    white-space: nowrap;
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.25rem !important;
+    font-weight: 600 !important;
+}
+
+
+.branch-target-stat{
+    font-size: 1rem !important;
+}
+
+/* Sidebar: no grey hover background on nav items */
+.sidebar-dark .nav-sidebar .nav-link:hover,
+.sidebar-dark .nav-sidebar .nav-link:focus {
+    background-color: transparent;
+}
