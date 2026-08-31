@@ -1,0 +1,36 @@
+git & github -->  https://youtube.com/playlist?list=PLbdsuU_MGf0ceELl0fzjBnK_udMxn_GFb&si=i3jePGxwI0nELqZr
+excel --> https://youtube.com/playlist?list=PLbdsuU_MGf0cJolt7k6EKdSxa9JSUEqex&si=HZ9ducRTkbv91RZ9
+excel projects --> https://youtube.com/playlist?list=PLbdsuU_MGf0caeXS8_cPgi8-wA_ARMZ0a&si=7115w9LGgKO23a21
+sql -->
+sql project -->
+powerbi -->
+power bi project-->
+tableau -->
+tableau project -->
+python -->
+python project-->
+maths for ml-->
+numpy-->
+pandas-->
+pandas project -->
+matplotlib & seaborn-->
+matplotlib & seaborn project -->
+ML -->
+ML project -->
+Deep Learinig -->
+deep Learning project -->
+time series -->
+time series project -->
+computer vision -->
+computer vision project -->
+NLP -->
+NLP --> project
+LLM -->
+GEN AI -->
+GEN AI project -->
+ai agent project -->
+Agentic AI -->
+Agentic AI Project -->
+chatgpt how to use as a developer-->
+gemini how to use as a developer -->
+claude code/desktop how to use as a developer-->
