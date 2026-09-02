@@ -1,8 +1,11 @@
 git & github -->  https://youtube.com/playlist?list=PLbdsuU_MGf0ceELl0fzjBnK_udMxn_GFb&si=i3jePGxwI0nELqZr
 excel --> https://youtube.com/playlist?list=PLbdsuU_MGf0cJolt7k6EKdSxa9JSUEqex&si=HZ9ducRTkbv91RZ9
 excel projects --> https://youtube.com/playlist?list=PLbdsuU_MGf0caeXS8_cPgi8-wA_ARMZ0a&si=7115w9LGgKO23a21
+excel practice--> https://spreadsheetcenter.com/, https://nextleap.app/interview-preparation/excel/practice-online
+
 sql -->
 sql project -->
+sql practice --> https://www.sql-practice.online/?mode=scenario&category=select-statements&engine=core-sql,https://www.sql-practice.com/,https://www.hackerrank.com/domains/sql
 powerbi -->
 power bi project-->
 tableau -->
