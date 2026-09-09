@@ -1,0 +1,10 @@
+[project]
+name = "manim-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "manim>=0.21.0",
+    "mcp<2",
+]

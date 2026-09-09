@@ -1,0 +1,283 @@
+{
+    "database": "uber.db",
+    "tables": [
+        {
+            "table_name": "bookings",
+            "columns": [
+                {
+                    "name": "booking_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "customer_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "cab_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "booking_time",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "pickup_location",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "dropoff_location",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "status",
+                    "type": "TEXT",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "booking_id"
+            ],
+            "foreign_keys": [
+                {
+                    "column": [
+                        "customer_id"
+                    ],
+                    "references_table": "customers",
+                    "references_column": [
+                        "customer_id"
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "cabs",
+            "columns": [
+                {
+                    "name": "cab_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "vehicle_type",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "registration_no",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "driver_id",
+                    "type": "TEXT",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "cab_id"
+            ],
+            "foreign_keys": [
+                {
+                    "column": [
+                        "driver_id"
+                    ],
+                    "references_table": "drivers",
+                    "references_column": [
+                        "driver_id"
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "customers",
+            "columns": [
+                {
+                    "name": "customer_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "name",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "phone",
+                    "type": "INTEGER",
+                    "nullable": true
+                },
+                {
+                    "name": "email",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "join_date",
+                    "type": "TEXT",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "customer_id"
+            ],
+            "foreign_keys": []
+        },
+        {
+            "table_name": "drivers",
+            "columns": [
+                {
+                    "name": "driver_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "name",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "phone",
+                    "type": "INTEGER",
+                    "nullable": true
+                },
+                {
+                    "name": "rating",
+                    "type": "REAL",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "driver_id"
+            ],
+            "foreign_keys": []
+        },
+        {
+            "table_name": "feedback",
+            "columns": [
+                {
+                    "name": "feedback_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "booking_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "customer_rating",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "driver_rating",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "cancellation_reason",
+                    "type": "TEXT",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "feedback_id"
+            ],
+            "foreign_keys": [
+                {
+                    "column": [
+                        "booking_id"
+                    ],
+                    "references_table": "bookings",
+                    "references_column": [
+                        "booking_id"
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "trip_details",
+            "columns": [
+                {
+                    "name": "trip_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "booking_id",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "start_time",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "end_time",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "distance_km",
+                    "type": "REAL",
+                    "nullable": true
+                },
+                {
+                    "name": "fare",
+                    "type": "REAL",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "trip_id"
+            ],
+            "foreign_keys": [
+                {
+                    "column": [
+                        "booking_id"
+                    ],
+                    "references_table": "bookings",
+                    "references_column": [
+                        "booking_id"
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "trip_requests",
+            "columns": [
+                {
+                    "name": "request_id",
+                    "type": "INTEGER",
+                    "nullable": true
+                },
+                {
+                    "name": "pickup_location",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "dropoff_location",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "request_time",
+                    "type": "TEXT",
+                    "nullable": true
+                }
+            ],
+            "primary_keys": [
+                "request_id"
+            ],
+            "foreign_keys": []
+        }
+    ]
+}
