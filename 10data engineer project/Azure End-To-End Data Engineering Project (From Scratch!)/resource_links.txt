@@ -1,0 +1,5 @@
+Data Source Link: https://github.com/anshlamba03/Adventure-Works-Data-Engineering-Project/tree/main/Data
+Spark & Synapse Script: https://github.com/anshlamba03/Adventure-Works-Data-Engineering-Project/tree/main/Reference%20Script
+Azure Portal Account: https://portal.azure.com/
+Original Dataset Link: https://www.kaggle.com/datasets/ukveteran/adventure-works
+yt : https://www.youtube.com/watch?v=0GTZ-12hYtU&t=70s
