@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DS Materials Course Roadmap</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #121a2b;
+        --panel-soft: #182338;
+        --card: #1d2942;
+        --line: #2d3d5e;
+        --text: #e8eefc;
+        --muted: #a9b7d3;
+        --accent: #66d9ef;
+        --accent-2: #7bf1a8;
+        --warning: #ffc857;
+        --shadow: rgba(7, 10, 18, 0.35);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(180deg, #0b1020 0%, #111827 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 20px 80px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(102, 217, 239, 0.12), rgba(123, 241, 168, 0.08));
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 32px 28px;
+        box-shadow: 0 18px 50px var(--shadow);
+      }
+
+      .hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 26px;
+      }
+
+      .card {
+        background: rgba(18, 26, 43, 0.95);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 28px var(--shadow);
+      }
+
+      details summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 20px 24px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        background: linear-gradient(90deg, rgba(102, 217, 239, 0.08), rgba(123, 241, 168, 0.04));
+        border-bottom: 1px solid var(--line);
+      }
+
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .course-tag {
+        font-size: 0.8rem;
+        color: var(--accent-2);
+        background: rgba(123, 241, 168, 0.08);
+        border: 1px solid rgba(123, 241, 168, 0.3);
+        border-radius: 999px;
+        padding: 5px 10px;
+      }
+
+      .content {
+        padding: 18px 22px 22px;
+      }
+
+      .content ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .content li {
+        margin: 8px 0;
+        color: var(--muted);
+      }
+
+      .content a {
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(102, 217, 239, 0.4);
+      }
+
+      .content a:hover {
+        color: var(--accent);
+      }
+
+      .folder {
+        color: var(--warning);
+        font-weight: 600;
+      }
+
+      .section-title {
+        margin: 28px 0 14px;
+        font-size: 1.5rem;
+      }
+
+      .footer {
+        margin-top: 28px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 700px) {
+        .container {
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+
+        .hero {
+          padding: 24px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <h1>DS Materials Learning Roadmap</h1>
+        <p class="subtitle">
+          A course-structured overview of notebooks, notes, projects, and resources in this repository.
+        </p>
+        <div class="meta">
+          <span class="pill">📚 Data Science</span>
+          <span class="pill">🧠 Machine Learning</span>
+          <span class="pill">📊 BI + SQL + Python</span>
+          <span class="pill">🚀 GitHub Pages Ready</span>
+        </div>
+      </header>
+
+      <div class="grid">
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 00 — Repository Overview</span>
+                <span class="course-tag">Start Here</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">README.md</span> — <a href="README.md">Repository overview and study guide</a></li>
+                <li><span class="folder">demo.txt</span> — <a href="demo.txt">Quick demo notes</a></li>
+                <li><span class="folder">replacements.txt</span> — <a href="replacements.txt">Reference text replacements</a></li>
+                <li><span class="folder">requirements.txt</span> — <a href="requirements.txt">Python package dependencies</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 01 — Git & GitHub Fundamentals</span>
+                <span class="course-tag">Version Control</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">0.git_github/</span> — <a href="0.git_github/">Git & GitHub folder</a></li>
+                <li><a href="0.git_github/Git_GitHub_Mastery_Syllabus.md">Git_GitHub_Mastery_Syllabus.md</a></li>
+                <li><a href="0.git_github/git_commands.txt">git_commands.txt</a></li>
+                <li><a href="0.git_github/project/">project/</a></li>
+                <li><a href="0.git_github/project1/">project1/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 02 — Excel & Data Handling</span>
+                <span class="course-tag">Spreadsheet</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">1.0excel/</span> — <a href="1.0excel/">Excel course folder</a></li>
+                <li><a href="1.0excel/class/">class/</a></li>
+                <li><a href="1.0excel/Extra/">Extra/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 03 — Resume, Interviews & Portfolio</span>
+                <span class="course-tag">Career Prep</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">1.1_resume/</span> — <a href="1.1_resume/">Resume and interview prep folder</a></li>
+                <li><a href="1.1_resume/Project_eda.ipynb">Project_eda.ipynb</a></li>
+                <li><a href="1.1_resume/Project+8+-+Source+Code.ipynb">Project+8+-+Source+Code.ipynb</a></li>
+                <li><a href="1.1_resume/resume_guide_questions.txt">resume_guide_questions.txt</a></li>
+                <li><a href="1.1_resume/interview.txt">interview.txt</a></li>
+                <li><a href="1.1_resume/portfolio_website/">portfolio_website/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 04 — SQL & Database Management</span>
+                <span class="course-tag">Database</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">2.0_sql_dbms/</span> — <a href="2.0_sql_dbms/">SQL and DBMS folder</a></li>
+                <li><a href="2.0_sql_dbms/class1_sql.sql">class1_sql.sql</a></li>
+                <li><a href="2.0_sql_dbms/view_cte_index.sql">view_cte_index.sql</a></li>
+                <li><a href="2.0_sql_dbms/window_functions.sql">window_functions.sql</a></li>
+                <li><a href="2.0_sql_dbms/subquery_mavenmovies.sql">subquery_mavenmovies.sql</a></li>
+                <li><a href="2.0_sql_dbms/mock project/">mock project/</a></li>
+                <li><a href="2.0_sql_dbms/uber_project/">uber_project/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 05 — MongoDB</span>
+                <span class="course-tag">NoSQL</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">2.1_mongodb/</span> — <a href="2.1_mongodb/">MongoDB course folder</a></li>
+                <li><a href="2.1_mongodb/mongo_thapa_course/">mongo_thapa_course/</a></li>
+                <li><a href="2.1_mongodb/Thapa Technical MongoDB Import Files/">Thapa Technical MongoDB Import Files/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 06 — Power BI</span>
+                <span class="course-tag">Visualization</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">3.0_powerbi/</span> — <a href="3.0_powerbi/">Power BI folder</a></li>
+                <li><a href="3.0_powerbi/class_practice/">class_practice/</a></li>
+                <li><a href="3.0_powerbi/datasets/">datasets/</a></li>
+                <li><a href="3.0_powerbi/projects/">projects/</a></li>
+                <li><a href="3.0_powerbi/questions/">questions/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 07 — Tableau</span>
+                <span class="course-tag">Dashboarding</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">4.tableau/</span> — <a href="4.tableau/">Tableau folder</a></li>
+                <li><a href="4.tableau/Book1_3_5.twb">Book1_3_5.twb</a></li>
+                <li><a href="4.tableau/class_3_5.twb">class_3_5.twb</a></li>
+                <li><a href="4.tableau/class_practice data/">class_practice data/</a></li>
+                <li><a href="4.tableau/Electric Vehicle Data/">Electric Vehicle Data/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 08 — Python Libraries & Data Science Toolkit</span>
+                <span class="course-tag">Python</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">5.0_python_6.libraries/</span> — <a href="5.0_python_6.libraries/">Python libraries and notebooks</a></li>
+                <li><a href="5.0_python_6.libraries/laptop_price_data.ipynb">laptop_price_data.ipynb</a></li>
+                <li><a href="5.0_python_6.libraries/laptop_prices_raw_data.csv">laptop_prices_raw_data.csv</a></li>
+                <li><a href="5.0_python_6.libraries/module_create/">module_create/</a></li>
+                <li><a href="5.0_python_6.libraries/python/">python/</a></li>
+                <li><a href="5.0_python_6.libraries/python_libraries/">python_libraries/</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 09 — Flask & Web Apps</span>
+                <span class="course-tag">Web</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">5.1flask/</span> — <a href="5.1flask/">Flask learning folder</a></li>
+                <li><a href="5.1flask/">Open all Flask resources</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 10 — Statistics & Mathematics</span>
+                <span class="course-tag">Analytics</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">7.stats_notes/</span> — <a href="7.stats_notes/">Statistics notes</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 11 — Machine Learning</span>
+                <span class="course-tag">ML</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">8.0_Machine Learning/</span> — <a href="8.0_Machine Learning/">Machine learning folder</a></li>
+                <li><span class="folder">car-insurance_claim_classificaion-ml/</span> — <a href="car-insurance_claim_classificaion-ml/">Project notebook set</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 12 — Streamlit</span>
+                <span class="course-tag">App UI</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">8.1_streamlit/</span> — <a href="8.1_streamlit/">Streamlit project folder</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 13 — Deep Learning</span>
+                <span class="course-tag">AI</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">9.Deep_learning/</span> — <a href="9.Deep_learning/">Deep learning learning path</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 14 — Cloud & Data Engineering</span>
+                <span class="course-tag">AWS + DE</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">aws/</span> — <a href="aws/">AWS notes and projects</a></li>
+                <li><span class="folder">10data engineer project/</span> — <a href="10data engineer project/">Data engineering project collection</a></li>
+                <li><span class="folder">data engineer project/</span> — <a href="data engineer project/">Additional data engineering material</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>
+              <div class="summary-row">
+                <span>Lesson 15 — Additional Practice & Extras</span>
+                <span class="course-tag">Labs</span>
+              </div>
+            </summary>
+            <div class="content">
+              <ul>
+                <li><span class="folder">blogs/</span> — <a href="blogs/">Blog and learning resources</a></li>
+                <li><span class="folder">class/</span> — <a href="class/">Class materials</a></li>
+                <li><span class="folder">cyber_security/</span> — <a href="cyber_security/">Cyber security resources</a></li>
+                <li><span class="folder">data_cleaning/</span> — <a href="data_cleaning/">Data cleaning practice</a></li>
+                <li><span class="folder">django/</span> — <a href="django/">Django projects</a></li>
+                <li><span class="folder">fastapi/</span> — <a href="fastapi/">FastAPI projects</a></li>
+                <li><span class="folder">FLASK/</span> — <a href="FLASK/">Flask materials</a></li>
+                <li><span class="folder">projects/</span> — <a href="projects/">Portfolio projects</a></li>
+                <li><span class="folder">student_notes/</span> — <a href="student_notes/">Study notes</a></li>
+                <li><span class="folder">yt_/</span> — <a href="yt_/">YouTube learning materials</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <p class="footer">
+        Tip: rename this file to <strong>index.html</strong> for direct GitHub Pages publishing, or publish the repository with the "docs" folder and keep this page as the landing page.
+      </p>
+    </div>
+  </body>
+</html>
