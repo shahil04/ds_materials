@@ -1,0 +1,28 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+venv/
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+build/
+out/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+

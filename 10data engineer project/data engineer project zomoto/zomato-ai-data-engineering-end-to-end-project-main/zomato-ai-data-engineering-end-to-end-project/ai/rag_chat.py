@@ -78,7 +78,7 @@ def ask_llm(question, top_reviews):
 
     system_prompt = (
         "Answer ONLY using the customer reviews provided. "
-        "Be concise. If the reviews don't covert it, say so"
+        "Be concise. If the reviews don't covert it, say No"
     )
 
     user_prompt = f"Questions: {question}\n\nReviews:\n{conext}"
