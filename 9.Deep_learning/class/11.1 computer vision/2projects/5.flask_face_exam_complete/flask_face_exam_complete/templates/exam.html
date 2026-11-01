@@ -1,37 +1,420 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Online MCQ Exam — Proctored</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    #video { border: 1px solid #ccc; background: #000; }
-    #status { font-weight: bold; margin-top: 10px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Proctored Examination Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/exam.css') }}">
 </head>
 <body>
-  <h2>Online MCQ Exam (Proctored)</h2>
-  <div>
-    <form id="examForm" method="POST" action="/submit">
-      <p><b>Q1.</b> What is 2 + 2?</p>
-      <label><input type="radio" name="q1" value="3"> 3</label><br>
-      <label><input type="radio" name="q1" value="4"> 4</label><br>
-      <label><input type="radio" name="q1" value="5"> 5</label><br><br>
 
-      <p><b>Q2.</b> Capital of India?</p>
-      <label><input type="radio" name="q2" value="Delhi"> Delhi</label><br>
-      <label><input type="radio" name="q2" value="Mumbai"> Mumbai</label><br>
-      <label><input type="radio" name="q2" value="Chennai"> Chennai</label><br><br>
+  <!-- ==========================================
+       TOP APP HEADER
+       ========================================== -->
+  <header class="assessment-header">
+    <div class="brand-section">
+      <div class="brand-logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <circle cx="12" cy="11" r="3"/>
+        </svg>
+      </div>
+      <div class="brand-details">
+        <h1>PROCTOR-AI SECURE EXAM</h1>
+        <div class="brand-badges">
+          <span class="badge-pill badge-ai-active">
+            <span class="pulse-dot"></span>
+            AI Face Tracking Active
+          </span>
+          <span class="badge-pill badge-code">{{ candidate.exam_code }}</span>
+        </div>
+      </div>
+    </div>
 
-      <input type="submit" value="Submit Exam">
-    </form>
+    <!-- Center Live Countdown Timer -->
+    <div class="timer-container">
+      <span class="timer-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </span>
+      <span class="timer-label">Time Remaining:</span>
+      <span id="timerDisplay" class="timer-display">15:00</span>
+    </div>
+
+    <!-- Right Header Actions: Candidate Meta & Fullscreen -->
+    <div class="header-actions">
+      <div class="candidate-chip">
+        <div class="candidate-avatar">AM</div>
+        <div class="candidate-meta">
+          <div class="candidate-name">{{ candidate.name }}</div>
+          <div class="candidate-id">{{ candidate.roll_no }}</div>
+        </div>
+      </div>
+
+      <button id="fullscreenToggleBtn" class="btn-header-icon" title="Toggle Fullscreen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN EXAM LAYOUT
+       ========================================== -->
+  <main class="exam-container">
+    
+    <!-- LEFT COLUMN: QUESTION WORKSPACE -->
+    <section class="exam-workspace">
+      
+      <!-- Top Progress Step Bar -->
+      <div class="exam-progress-bar-card">
+        <div class="progress-info">
+          <span class="progress-label">Overall Completion:</span>
+          <div class="progress-track">
+            <div id="answeredProgressFill" class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+        <span id="answeredBadge" class="answered-count-badge">0 / {{ total_questions }} Answered</span>
+      </div>
+
+      <!-- Question Form -->
+      <form id="examForm" method="POST" action="/submit">
+        {% for q in questions %}
+        <div class="question-panel {% if loop.first %}active{% endif %}" id="qpanel-{{ loop.index0 }}">
+          
+          <div class="question-meta-header">
+            <span class="question-number-pill">Question {{ loop.index }} of {{ questions|length }}</span>
+            <div class="question-tags">
+              <span class="category-tag">{{ q.category }}</span>
+              <span class="marks-tag">+{{ q.marks }} Mark</span>
+            </div>
+          </div>
+
+          <h2 class="question-text">{{ q.question }}</h2>
+
+          <!-- Interactive Option Cards -->
+          <div class="options-list">
+            {% set letters = ['A', 'B', 'C', 'D'] %}
+            {% for opt in q.options %}
+            <label class="option-card" for="opt-{{ q.id }}-{{ loop.index }}">
+              <input type="radio" id="opt-{{ q.id }}-{{ loop.index }}" name="{{ q.id }}" value="{{ opt.val }}">
+              <div class="option-letter">{{ letters[loop.index0] }}</div>
+              <div class="option-content">{{ opt.text }}</div>
+              <div class="option-check-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+            </label>
+            {% endfor %}
+          </div>
+
+        </div>
+        {% endfor %}
+      </form>
+
+      <!-- Exam Navigation Toolbar -->
+      <div class="exam-nav-toolbar">
+        <div class="nav-group-left">
+          <button type="button" id="prevQuestionBtn" class="btn btn-secondary" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Previous
+          </button>
+          <button type="button" id="clearResponseBtn" class="btn btn-secondary">
+            Clear Selection
+          </button>
+        </div>
+
+        <div class="nav-group-right">
+          <button type="button" id="markReviewBtn" class="btn btn-review">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+            Mark for Review
+          </button>
+          <button type="button" id="nextQuestionBtn" class="btn btn-primary">
+            Save & Next
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN: PROCTORING & PALETTE SIDEBAR -->
+    <aside class="sidebar-panel">
+      
+      <!-- AI Camera HUD Card -->
+      <div id="proctorCameraCard" class="proctor-camera-card status-ok">
+        
+        <div class="camera-card-header">
+          <div class="camera-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+            AI Proctor Feed
+          </div>
+          <div class="rec-indicator">
+            <span class="rec-dot"></span>
+            LIVE REC
+          </div>
+        </div>
+
+        <!-- Video stage with HUD corner reticles & scanning line -->
+        <div class="video-stage">
+          <video id="video" autoplay muted playsinline></video>
+          
+          <div class="hud-reticle">
+            <div class="reticle-corner corner-tl"></div>
+            <div class="reticle-corner corner-tr"></div>
+            <div class="reticle-corner corner-bl"></div>
+            <div class="reticle-corner corner-br"></div>
+          </div>
+          <div class="hud-scanline"></div>
+
+          <!-- Live Status Overlay Pill -->
+          <div class="live-status-pill">
+            <div class="status-badge-text">
+              <span id="statusDot" class="status-indicator-dot ok"></span>
+              <span id="statusBadge">Initializing...</span>
+            </div>
+            <span style="font-size: 0.72rem; color: #94a3b8; font-family: var(--font-mono);">30 FPS</span>
+          </div>
+        </div>
+
+        <!-- Camera Metrics / Faults Bar -->
+        <div class="camera-metrics">
+          <div class="faults-header">
+            <span class="faults-title">Integrity Violations</span>
+            <span id="faultsCount" class="faults-count-val">0 / {{ max_faults }}</span>
+          </div>
+          <div class="faults-track">
+            <div id="faultsBar" class="faults-bar-fill" style="width: 0%;"></div>
+          </div>
+
+          <!-- Live Ticker -->
+          <div class="violation-ticker">
+            <span class="ticker-icon">⚡</span>
+            <span id="tickerText" class="ticker-text">Proctoring active: Camera calibrated & ready.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Question Navigation Palette -->
+      <div class="palette-card">
+        <div class="palette-card-title">
+          <span>Question Palette</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted); font-weight: 500;">Click to jump</span>
+        </div>
+
+        <div class="question-grid">
+          {% for q in questions %}
+          <button type="button" class="palette-btn {% if loop.first %}current{% endif %}" data-qindex="{{ loop.index0 }}">
+            {{ loop.index }}
+          </button>
+          {% endfor %}
+        </div>
+
+        <div class="palette-legend">
+          <div class="legend-item"><span class="legend-dot dot-answered"></span> Answered</div>
+          <div class="legend-item"><span class="legend-dot dot-unanswered"></span> Not Visited</div>
+          <div class="legend-item"><span class="legend-dot dot-review"></span> In Review</div>
+          <div class="legend-item"><span class="legend-dot dot-current"></span> Current</div>
+        </div>
+      </div>
+
+      <!-- Security Rules Card -->
+      <div class="rules-card">
+        <div class="rules-title">Exam Integrity Rules</div>
+        <ul class="rules-list">
+          <li>
+            <span class="rule-check-icon">✓</span>
+            Keep face centered & clearly visible
+          </li>
+          <li>
+            <span class="rule-check-icon">✓</span>
+            No head turning away from screen
+          </li>
+          <li>
+            <span class="rule-check-icon">✓</span>
+            Zero window blur or tab switching
+          </li>
+          <li>
+            <span class="rule-check-icon">✓</span>
+            Exceeding 10 faults triggers auto-submit
+          </li>
+        </ul>
+      </div>
+
+      <!-- Finish Assessment Card -->
+      <div class="finish-exam-card">
+        <button type="button" class="btn-finish-exam trigger-finish-exam">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+          Finish & Submit Exam
+        </button>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- ==========================================
+       MODALS
+       ========================================== -->
+
+  <!-- 1. Pre-Exam Calibration & Start Modal -->
+  <div id="welcomeModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-wrap info">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4M12 16h.01"/>
+          </svg>
+        </div>
+        <div class="modal-title-group">
+          <h3>Proctored Assessment Briefing</h3>
+          <p>{{ candidate.exam_title }} ({{ candidate.exam_code }})</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p style="margin-bottom: 12px;">
+          Welcome, <b>{{ candidate.name }}</b>. You are about to begin a secure AI-monitored examination.
+        </p>
+        <ul style="padding-left: 20px; font-size: 0.88rem; color: #475569; display: flex; flex-direction: column; gap: 8px;">
+          <li>Your webcam will continuously track facial presence and head orientation.</li>
+          <li>Looking away from the screen or face absence records an automated fault snapshot.</li>
+          <li>Navigating away from the browser window triggers a security violation.</li>
+          <li>Duration is <b>{{ candidate.duration_minutes }} minutes</b>. The assessment auto-submits upon timeout or max faults.</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="startExamBtn" class="btn btn-primary" style="padding: 12px 24px;">
+          Start Assessment Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 
-  <h3>Webcam Monitor</h3>
-  <video id="video" width="420" height="320" autoplay muted></video>
-  <p id="status">Status: —</p>
-  <p id="faults">Faults: 0</p>
+  <!-- 2. Submit Confirmation Modal -->
+  <div id="confirmModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-wrap warn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <div class="modal-title-group">
+          <h3>Submit Final Assessment?</h3>
+          <p>Please review your progress before submitting</p>
+        </div>
+      </div>
 
-  <script src="/static/js/camera.js"></script>
+      <div class="modal-body">
+        <p id="confirmSummaryText" style="margin-bottom: 12px;">
+          Checking responses...
+        </p>
+        <p style="font-size: 0.85rem; color: #64748b;">
+          Once submitted, your answers and proctoring audit log will be permanently locked and graded.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="cancelSubmitBtn" class="btn btn-secondary">
+          Continue Exam
+        </button>
+        <button type="button" id="finalSubmitBtn" class="btn btn-success">
+          Confirm & Submit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Tab Switch Security Alert Modal -->
+  <div id="tabWarningModal" class="modal-overlay">
+    <div class="modal-card" style="border: 2px solid #ef4444;">
+      <div class="modal-header">
+        <div class="modal-icon-wrap danger">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="modal-title-group">
+          <h3 style="color: #b91c1c;">Security Alert: Tab Switch Detected</h3>
+          <p>Unsupervised window activity</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p style="color: #334155;">
+          You navigated away from the exam tab. Navigating between applications, opening new tabs, or minimizing the window is prohibited.
+        </p>
+        <p style="font-weight: 700; color: #b91c1c; margin-top: 8px;">
+          This incident has been logged into your Proctoring Integrity Report.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="dismissTabWarnBtn" class="btn btn-primary">
+          I Understand, Return to Assessment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Auto-Submit Exceeded Faults Modal -->
+  <div id="autoSubmitModal" class="modal-overlay">
+    <div class="modal-card" style="border: 2px solid #ef4444;">
+      <div class="modal-header">
+        <div class="modal-icon-wrap danger">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div class="modal-title-group">
+          <h3 style="color: #b91c1c;">Maximum Faults Exceeded</h3>
+          <p>Assessment Terminated by AI Proctor</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p>
+          You have reached the maximum threshold of <b>10 proctoring violations</b>. Your examination session has been halted and is being submitted automatically.
+        </p>
+        <p style="margin-top: 14px; font-weight: 700; color: #b91c1c;">
+          Auto-submitting in <span id="autoSubmitCountdown" style="font-size: 1.3rem;">4</span> seconds...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Notifications Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
 </body>
 </html>
