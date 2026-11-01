@@ -1,0 +1,25 @@
+[project]
+name = "1-sentiment-analysisimdb-movie-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "shahil04", email = "ansarirahish455@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "kagglehub>=1.0.3",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "tensorflow>=2.21.0",
+]
+
+[project.scripts]
+1-sentiment-analysisimdb-movie-project = "1_sentiment_analysisimdb_movie_project:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
