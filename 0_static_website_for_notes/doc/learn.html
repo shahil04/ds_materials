@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Study Python lessons and notebooks in a guided course with a searchable module sidebar.">
+  <title>Learn Python · Python Learning Path</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b2850;
+      --muted: #68738e;
+      --paper: #f8f9fc;
+      --card: #fff;
+      --line: #dfe4ef;
+      --blue: #1769e0;
+      --blue-dark: #1052b8;
+      --sidebar-width: 302px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    .site-header {
+      position: sticky;
+      z-index: 5;
+      top: 0;
+      display: flex;
+      height: 66px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 0 25px;
+      border-bottom: 1px solid var(--line);
+      background: rgb(255 255 255 / 96%);
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: .94rem;
+      font-weight: 780;
+      letter-spacing: -.03em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--blue);
+      color: white;
+      font-size: 1rem;
+    }
+    .header-links { display: flex; align-items: center; gap: 18px; }
+    .header-links a {
+      color: var(--muted);
+      font-size: .84rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .header-links a:hover { color: var(--blue); }
+    .layout {
+      display: grid;
+      min-height: calc(100vh - 66px);
+      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    }
+    .sidebar {
+      position: sticky;
+      top: 66px;
+      display: flex;
+      height: calc(100vh - 66px);
+      flex-direction: column;
+      border-right: 1px solid var(--line);
+      background: #fff;
+    }
+    .sidebar-top { padding: 20px 16px 13px; }
+    .sidebar-heading { margin: 0 0 4px; font-size: 1rem; letter-spacing: -.03em; }
+    .sidebar-caption { margin: 0 0 14px; color: var(--muted); font-size: .78rem; }
+    .lesson-search {
+      width: 100%;
+      min-height: 40px;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: #fbfcfe;
+      color: var(--ink);
+      font-size: .83rem;
+    }
+    .lesson-search:focus { border-color: var(--blue); outline: 3px solid rgb(23 105 224 / 12%); }
+    .sidebar-scroll { flex: 1; overflow: auto; padding-bottom: 18px; }
+    .sidebar-status { margin: 6px 16px; color: var(--muted); font-size: .8rem; }
+    .course-group { border-top: 1px solid var(--line); }
+    .course-group summary {
+      display: flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 17px;
+      cursor: pointer;
+      font-size: .84rem;
+      font-weight: 710;
+      list-style: none;
+    }
+    .course-group summary::-webkit-details-marker { display: none; }
+    .course-group summary::after { color: #8792ac; content: "›"; font-size: 1.3rem; transition: transform .15s ease; }
+    .course-group[open] summary::after { transform: rotate(90deg); }
+    .group-name { min-width: 0; overflow-wrap: anywhere; }
+    .group-count { flex: 0 0 auto; color: var(--muted); font-size: .72rem; font-weight: 600; }
+    .lesson-link {
+      position: relative;
+      display: flex;
+      min-height: 42px;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px 8px 29px;
+      color: #53617e;
+      font-size: .79rem;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+    .lesson-link:hover { background: #f4f7fd; color: var(--blue); }
+    .lesson-link[aria-current="page"] { background: #edf4ff; color: #0758c7; font-weight: 740; }
+    .lesson-link[aria-current="page"]::before {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 0;
+      width: 3px;
+      border-radius: 0 3px 3px 0;
+      background: var(--blue);
+      content: "";
+    }
+    .lesson-link[hidden], .course-group[hidden] { display: none; }
+    .lesson-name { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+    .file-type {
+      flex: 0 0 auto;
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: #f0f2f7;
+      color: #73809a;
+      font-size: .62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .sidebar-footer { padding: 12px 16px; border-top: 1px solid var(--line); }
+    .sidebar-footer a { color: var(--muted); font-size: .78rem; text-decoration: none; }
+    .sidebar-footer a:hover { color: var(--blue); }
+    .mobile-menu-button {
+      display: none;
+      min-height: 38px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: white;
+      color: var(--ink);
+      font-size: .82rem;
+      font-weight: 680;
+    }
+    .lesson-main { min-width: 0; }
+    .article-wrap { width: min(860px, calc(100% - 56px)); margin: 0 auto; padding: 56px 0 100px; }
+    .breadcrumb { margin: 0 0 12px; color: var(--blue); font-size: .76rem; font-weight: 780; letter-spacing: .1em; text-transform: uppercase; }
+    .article-title { margin: 0; color: #202c58; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.055em; line-height: 1.16; }
+    .article-meta { margin: 12px 0 30px; color: var(--muted); font-size: .83rem; }
+    .article-content {
+      color: #384562;
+      font-size: 1.04rem;
+      line-height: 1.85;
+      overflow-wrap: anywhere;
+    }
+    .article-content h1, .article-content h2, .article-content h3,
+    .article-content h4, .article-content h5, .article-content h6 {
+      margin: 1.8em 0 .55em;
+      color: #202c58;
+      font-size: revert;
+      font-weight: 760;
+      letter-spacing: -.04em;
+      line-height: 1.3;
+    }
+    .article-content h1 { margin-top: 0; font-size: 2rem; }
+    .article-content h2 { font-size: 1.65rem; }
+    .article-content h3 { font-size: 1.3rem; }
+    .article-content p { margin: 0 0 1.1em; }
+    .article-content ul, .article-content ol { padding-left: 1.5em; }
+    .article-content li { margin: .35em 0; }
+    .article-content a { color: var(--blue); text-underline-offset: 3px; }
+    .article-content blockquote {
+      margin: 1.3em 0;
+      padding: 10px 18px;
+      border-left: 3px solid #8db8fa;
+      background: #f2f7ff;
+      color: #4a5873;
+    }
+    .article-content pre {
+      margin: 1.15em 0;
+      padding: 17px 19px;
+      overflow: auto;
+      border: 1px solid #e1e6ef;
+      border-radius: 11px;
+      background: #f5f7fa;
+      color: #24314c;
+      font: .87rem/1.7 ui-monospace, SFMono-Regular, Consolas, monospace;
+      tab-size: 4;
+    }
+    .article-content :not(pre) > code {
+      padding: 2px 6px;
+      border-radius: 5px;
+      background: #eef2f8;
+      color: #294874;
+      font: .9em ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+    .article-content table { width: 100%; margin: 1.2em 0; border-collapse: collapse; font-size: .9rem; }
+    .article-content th, .article-content td { padding: 9px 11px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .article-content th { background: #f2f6fc; color: #26345b; }
+    .article-content img { max-width: 100%; height: auto; }
+    .notebook-cell { margin: 0 0 22px; }
+    .notebook-markdown { padding: 1px 0; }
+    .notebook-code {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 12px;
+    }
+    .notebook-prompt { padding-top: 15px; color: #667794; font: .72rem ui-monospace, SFMono-Regular, Consolas, monospace; text-align: right; }
+    .notebook-input { min-width: 0; }
+    .notebook-input pre { margin-top: 0; }
+    .notebook-output { grid-column: 2; min-width: 0; }
+    .notebook-output pre { margin-top: 0; }
+    .notebook-output img { display: block; max-width: 100%; height: auto; margin: 8px 0; }
+    .empty-state {
+      padding: clamp(24px, 6vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+    }
+    .empty-state h1 { margin: 0; color: #202c58; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.06em; line-height: 1.1; }
+    .empty-state p { max-width: 600px; color: var(--muted); }
+    .empty-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .button {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      background: var(--blue);
+      color: white;
+      font-size: .83rem;
+      font-weight: 730;
+      text-decoration: none;
+    }
+    .button:hover { background: var(--blue-dark); }
+    .button.secondary { border-color: var(--line); background: white; color: var(--ink); }
+    .lesson-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    .lesson-navigation a { max-width: 48%; color: var(--blue); font-size: .85rem; font-weight: 700; text-decoration: none; }
+    .reader-error { padding: 16px; border: 1px solid #ecd6ae; border-radius: 10px; background: #fff8eb; color: #684c1d; font-size: .88rem; }
+    .loading { color: var(--muted); }
+    @media (max-width: 760px) {
+      .site-header { height: 58px; padding: 0 14px; }
+      .header-links { gap: 10px; }
+      .header-links a { font-size: .76rem; }
+      .header-links .hide-mobile { display: none; }
+      .mobile-menu-button { display: inline-flex; align-items: center; }
+      .layout { min-height: calc(100vh - 58px); grid-template-columns: minmax(0, 1fr); }
+      .sidebar {
+        position: fixed;
+        z-index: 4;
+        top: 58px;
+        bottom: 0;
+        left: 0;
+        width: min(var(--sidebar-width), 88vw);
+        height: auto;
+        transform: translateX(-102%);
+        transition: transform .2s ease;
+        box-shadow: 12px 0 35px rgb(24 39 71 / 10%);
+      }
+      body.sidebar-open .sidebar { transform: translateX(0); }
+      .lesson-main { grid-column: 1; }
+      .article-wrap { width: min(100% - 34px, 680px); padding: 34px 0 74px; }
+      .article-content { font-size: .98rem; }
+      .notebook-code { grid-template-columns: 38px minmax(0, 1fr); gap: 7px; }
+      .notebook-prompt { font-size: .63rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Python Learning Path home">
+      <span class="brand-mark" aria-hidden="true">Py</span>
+      <span>Python learning path</span>
+    </a>
+    <button class="mobile-menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="course-sidebar">☰ Lessons</button>
+    <nav class="header-links" aria-label="Main navigation">
+      <a class="hide-mobile" href="index.html#curriculum">Course home</a>
+      <a href="index.html#practice">Practice</a>
+      <a class="hide-mobile" href="README.md">About</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="course-sidebar" aria-label="Course lessons">
+      <div class="sidebar-top">
+        <h2 class="sidebar-heading">Python course</h2>
+        <p class="sidebar-caption">Browse modules and open a lesson</p>
+        <label>
+          <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search course lessons</span>
+          <input class="lesson-search" id="sidebar-search" type="search" placeholder="Search modules and lessons…" autocomplete="off">
+        </label>
+      </div>
+      <div class="sidebar-scroll" id="sidebar-list">
+        <p class="sidebar-status" id="sidebar-status" role="status">Loading course modules…</p>
+      </div>
+      <div class="sidebar-footer"><a href="index.html">← Back to course overview</a></div>
+    </aside>
+
+    <main class="lesson-main" id="lesson-main" data-file-base="../">
+      <article class="article-wrap">
+        <div id="article-area" aria-live="polite">
+          <section class="empty-state">
+            <p class="breadcrumb">Self-paced course</p>
+            <h1>Learn Python one lesson at a time.</h1>
+            <p>Choose a module from the sidebar to read its lesson notes or notebook. Modules are ordered numerically, and notebook code is shown for learning without being executed on this website.</p>
+            <div class="empty-actions">
+              <button class="button" id="first-lesson" type="button">Start with Module 1</button>
+              <a class="button secondary" href="index.html">Course overview</a>
+            </div>
+          </section>
+        </div>
+        <nav class="lesson-navigation" id="lesson-navigation" aria-label="Lesson navigation" hidden>
+          <a id="previous-lesson" href="#" hidden></a>
+          <a id="next-lesson" href="#" hidden></a>
+        </nav>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    const fileBase = document.querySelector("#lesson-main").dataset.fileBase ?? "";
+    const sidebarList = document.querySelector("#sidebar-list");
+    const sidebarStatus = document.querySelector("#sidebar-status");
+    const sidebarSearch = document.querySelector("#sidebar-search");
+    const articleArea = document.querySelector("#article-area");
+    const lessonNavigation = document.querySelector("#lesson-navigation");
+    const previousLesson = document.querySelector("#previous-lesson");
+    const nextLesson = document.querySelector("#next-lesson");
+    const menuToggle = document.querySelector("#menu-toggle");
+    let lessons = [];
+    let currentLessonIndex = -1;
+
+    const naturalCompare = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+    const directReadExtensions = new Set([".doc", ".docx", ".htm", ".html", ".ipynb", ".md", ".markdown", ".pdf", ".ppt", ".pptx", ".py"]);
+
+    function displayName(filename) {
+      return filename.replace(/\.[^.]+$/, "").replaceAll("_", " ").replace(/\s+/g, " ").trim();
+    }
+
+    function moduleName(filename) {
+      const match = filename.match(/^module\s*(\d+(?:\.\d+)*)/i);
+      return match ? `Module ${match[1]}` : null;
+    }
+
+    function catalogHref(path) {
+      return `${fileBase}${path.split("/").map(encodeURIComponent).join("/")}`;
+    }
+
+    function lessonAnchor(path) {
+      return `#lesson=${encodeURIComponent(path)}`;
+    }
+
+    function renderSidebar(catalog) {
+      const courseFolder = "5.python basic to Advance";
+      lessons = catalog
+        .filter(item => item.folder === courseFolder && item.extension !== "file" && directReadExtensions.has(item.extension))
+        .sort((first, second) => naturalCompare.compare(first.name, second.name));
+
+      const moduleGroups = new Map();
+      const otherFolders = new Map();
+      for (const item of catalog) {
+        if (!directReadExtensions.has(item.extension)) continue;
+        const number = moduleName(item.name);
+        if (item.folder === courseFolder && number) {
+          if (!moduleGroups.has(number)) moduleGroups.set(number, []);
+          moduleGroups.get(number).push(item);
+          continue;
+        }
+        const section = item.folder === courseFolder ? "Course resources" : item.folder || "Repository root";
+        if (!otherFolders.has(section)) otherFolders.set(section, []);
+        otherFolders.get(section).push(item);
+      }
+
+      sidebarList.replaceChildren();
+      const sortedModules = [...moduleGroups].sort(([first], [second]) => naturalCompare.compare(first, second));
+      for (const [module, items] of sortedModules) {
+        appendGroup(module, items, true);
+      }
+      for (const [folder, items] of otherFolders) {
+        appendGroup(folder, items, false);
+      }
+
+      sidebarStatus.hidden = true;
+      if (!moduleGroups.size) {
+        sidebarStatus.hidden = false;
+        sidebarStatus.textContent = "No course modules were found in the generated catalog.";
+      }
+
+      const requestedPath = currentPath();
+      if (requestedPath && lessons.some(item => item.path === requestedPath)) {
+        selectLesson(requestedPath, false);
+      }
+    }
+
+    function appendGroup(title, items, isModule) {
+      items.sort((first, second) => naturalCompare.compare(first.name, second.name));
+      const group = document.createElement("details");
+      group.className = "course-group";
+      group.open = isModule && title === "Module 1";
+      group.dataset.search = `${title} ${items.map(item => item.name).join(" ")}`.toLowerCase();
+      const summary = document.createElement("summary");
+      const name = document.createElement("span");
+      name.className = "group-name";
+      name.textContent = title;
+      const count = document.createElement("span");
+      count.className = "group-count";
+      count.textContent = String(items.length);
+      summary.append(name, count);
+      const list = document.createElement("div");
+      list.className = "course-items";
+
+      for (const item of items) {
+        const link = document.createElement("a");
+        link.className = "lesson-link";
+        link.href = lessonAnchor(item.path);
+        link.dataset.path = item.path;
+        const label = document.createElement("span");
+        label.className = "lesson-name";
+        label.textContent = displayName(item.name);
+        const type = document.createElement("span");
+        type.className = "file-type";
+        type.textContent = item.extension.slice(1);
+        type.setAttribute("aria-hidden", "true");
+        link.append(label, type);
+        list.append(link);
+        link.addEventListener("click", event => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          selectLesson(item.path, true);
+        });
+      }
+
+      if (!items.length) return;
+      group.append(summary, list);
+      sidebarList.append(group);
+    }
+
+    function currentPath() {
+      const match = location.hash.match(/^#lesson=(.*)$/);
+      if (!match) return "";
+      try {
+        return decodeURIComponent(match[1]);
+      } catch {
+        return "";
+      }
+    }
+
+    function createTitle(item, module) {
+      const heading = document.createElement("h1");
+      heading.className = "article-title";
+      heading.textContent = displayName(item.name) || item.name;
+      const breadcrumb = document.createElement("p");
+      breadcrumb.className = "breadcrumb";
+      breadcrumb.textContent = module ?? "Course material";
+      const meta = document.createElement("p");
+      meta.className = "article-meta";
+      meta.textContent = `${item.extension.slice(1).toUpperCase()} · ${item.folder}`;
+      return [breadcrumb, heading, meta];
+    }
+
+    function selectLesson(path, updateHistory) {
+      const item = lessons.find(lesson => lesson.path === path);
+      if (!item) {
+        showError("This lesson was not found in the course catalog.");
+        return;
+      }
+      currentLessonIndex = lessons.findIndex(lesson => lesson.path === path);
+      for (const link of sidebarList.querySelectorAll(".lesson-link")) {
+        if (link.dataset.path === path) {
+          link.setAttribute("aria-current", "page");
+          const parent = link.closest("details");
+          if (parent) parent.open = true;
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      }
+
+      if (updateHistory) history.pushState(null, "", lessonAnchor(path));
+      document.title = `${displayName(item.name)} · Learn Python`;
+      articleArea.replaceChildren();
+      const content = document.createElement("div");
+      content.className = "article-content";
+      const titleParts = createTitle(item, moduleName(item.name));
+      articleArea.append(...titleParts, content);
+      updateLessonNavigation();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.body.classList.remove("sidebar-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      loadLessonContent(item, content);
+    }
+
+    function updateLessonNavigation() {
+      lessonNavigation.hidden = lessons.length < 2;
+      setNavigationLink(previousLesson, lessons[currentLessonIndex - 1], "← Previous lesson");
+      setNavigationLink(nextLesson, lessons[currentLessonIndex + 1], "Next lesson →");
+    }
+
+    function setNavigationLink(link, lesson, direction) {
+      link.hidden = !lesson;
+      if (!lesson) {
+        link.removeAttribute("href");
+        link.textContent = "";
+        return;
+      }
+      link.href = lessonAnchor(lesson.path);
+      link.textContent = `${direction} ${displayName(lesson.name)}`;
+      link.onclick = event => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        selectLesson(lesson.path, true);
+      };
+    }
+
+    function addInlineMarkdown(parent, text, baseUrl) {
+      const pattern = /(\[([^\]]+)\]\(([^)]+)\)|`([^`]+)`|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\n]+)\*|_([^_\n]+)_)/g;
+      let lastIndex = 0;
+      for (const match of text.matchAll(pattern)) {
+        parent.append(document.createTextNode(text.slice(lastIndex, match.index)));
+        if (match[2] !== undefined) {
+          try {
+            const target = new URL(match[3], baseUrl);
+            if (["https:", "http:"].includes(target.protocol)) {
+              const link = document.createElement("a");
+              link.href = target.href;
+              link.textContent = match[2];
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+              parent.append(link);
+            } else {
+              parent.append(document.createTextNode(match[2]));
+            }
+          } catch {
+            parent.append(document.createTextNode(match[2]));
+          }
+        } else {
+          const tag = match[4] ? "code" : match[5] || match[6] ? "strong" : "em";
+          const element = document.createElement(tag);
+          element.textContent = match[4] ?? match[5] ?? match[6] ?? match[7] ?? match[8];
+          parent.append(element);
+        }
+        lastIndex = match.index + match[0].length;
+      }
+      parent.append(document.createTextNode(text.slice(lastIndex)));
+    }
+
+    function renderMarkdown(markdown, container, baseUrl) {
+      const lines = markdown.replace(/\r\n?/g, "\n").split("\n");
+      let paragraph = [];
+      let list;
+      let code;
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        const element = document.createElement("p");
+        addInlineMarkdown(element, paragraph.join(" "), baseUrl);
+        container.append(element);
+        paragraph = [];
+      };
+      for (const line of lines) {
+        if (code) {
+          if (/^\s*```/.test(line)) {
+            const pre = document.createElement("pre");
+            const element = document.createElement("code");
+            element.textContent = code.join("\n");
+            pre.append(element);
+            container.append(pre);
+            code = null;
+          } else code.push(line);
+          continue;
+        }
+        if (/^\s*```/.test(line)) {
+          flushParagraph();
+          list = null;
+          code = [];
+          continue;
+        }
+        const heading = line.match(/^(#{1,6})\s+(.+?)\s*#*\s*$/);
+        if (heading) {
+          flushParagraph();
+          list = null;
+          const element = document.createElement(`h${heading[1].length}`);
+          addInlineMarkdown(element, heading[2], baseUrl);
+          container.append(element);
+          continue;
+        }
+        const item = line.match(/^\s*(?:[-*+]\s+|\d+\.\s+)(.+)$/);
+        if (item) {
+          flushParagraph();
+          const ordered = /^\s*\d+\.\s+/.test(line);
+          const tag = ordered ? "ol" : "ul";
+          if (!list || list.tagName.toLowerCase() !== tag) {
+            list = document.createElement(tag);
+            container.append(list);
+          }
+          const element = document.createElement("li");
+          addInlineMarkdown(element, item[1], baseUrl);
+          list.append(element);
+          continue;
+        }
+        const quote = line.match(/^\s*>\s?(.*)$/);
+        if (quote) {
+          flushParagraph();
+          list = null;
+          const block = document.createElement("blockquote");
+          const element = document.createElement("p");
+          addInlineMarkdown(element, quote[1], baseUrl);
+          block.append(element);
+          container.append(block);
+          continue;
+        }
+        if (!line.trim()) {
+          flushParagraph();
+          list = null;
+          continue;
+        }
+        list = null;
+        paragraph.push(line.trim());
+      }
+      if (code) {
+        const pre = document.createElement("pre");
+        const element = document.createElement("code");
+        element.textContent = code.join("\n");
+        pre.append(element);
+        container.append(pre);
+      }
+      flushParagraph();
+    }
+
+    function renderNotebook(notebook, container, baseUrl) {
+      if (!Array.isArray(notebook.cells)) throw new Error("The notebook does not contain a valid cells list.");
+      for (const source of notebook.cells) {
+        const cell = document.createElement("section");
+        cell.className = "notebook-cell";
+        const text = Array.isArray(source.source) ? source.source.join("") : source.source ?? "";
+        if (source.cell_type === "markdown") {
+          cell.classList.add("notebook-markdown");
+          renderMarkdown(text, cell, baseUrl);
+        } else {
+          cell.classList.add("notebook-code");
+          const prompt = document.createElement("div");
+          prompt.className = "notebook-prompt";
+          prompt.textContent = source.execution_count == null ? "In [ ]:" : `In [${source.execution_count}]:`;
+          const input = document.createElement("div");
+          input.className = "notebook-input";
+          const pre = document.createElement("pre");
+          const code = document.createElement("code");
+          code.textContent = text;
+          pre.append(code);
+          input.append(pre);
+          cell.append(prompt, input);
+          for (const output of source.outputs ?? []) renderNotebookOutput(cell, output);
+        }
+        if (cell.childNodes.length) container.append(cell);
+      }
+    }
+
+    function renderNotebookOutput(cell, output) {
+      const area = document.createElement("div");
+      area.className = "notebook-output";
+      if (output.output_type === "stream" && output.text !== undefined) {
+        const pre = document.createElement("pre");
+        pre.textContent = Array.isArray(output.text) ? output.text.join("") : output.text;
+        area.append(pre);
+      } else if (output.output_type === "error") {
+        const pre = document.createElement("pre");
+        pre.textContent = [...(output.traceback ?? []), `${output.ename ?? "Error"}: ${output.evalue ?? ""}`].join("\n");
+        area.append(pre);
+      } else if (output.data) {
+        for (const mime of ["image/png", "image/jpeg"]) {
+          if (!output.data[mime]) continue;
+          const image = document.createElement("img");
+          image.alt = "Saved notebook output";
+          image.src = `data:${mime};base64,${Array.isArray(output.data[mime]) ? output.data[mime].join("") : output.data[mime]}`;
+          area.append(image);
+        }
+        if (!area.childNodes.length && output.data["text/plain"] !== undefined) {
+          const pre = document.createElement("pre");
+          const text = output.data["text/plain"];
+          pre.textContent = Array.isArray(text) ? text.join("") : text;
+          area.append(pre);
+        }
+      }
+      if (area.childNodes.length) cell.append(area);
+    }
+
+    function loadScript(url, integrity, globalName) {
+      if (globalThis[globalName]) return Promise.resolve(globalThis[globalName]);
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = url;
+        script.integrity = integrity;
+        script.crossOrigin = "anonymous";
+        script.onload = () => globalThis[globalName]
+          ? resolve(globalThis[globalName])
+          : reject(new Error("The document reader library did not initialize."));
+        script.onerror = () => reject(new Error("The document reader library could not be loaded."));
+        document.head.append(script);
+      });
+    }
+
+    function appendSafeDocumentNode(source, parent) {
+      const allowed = new Set(["A", "BLOCKQUOTE", "BR", "CODE", "DD", "DEL", "DIV", "DL", "DT", "EM", "H1", "H2", "H3", "H4", "H5", "H6", "HR", "LI", "OL", "P", "PRE", "S", "SPAN", "STRONG", "SUB", "SUP", "TABLE", "TBODY", "TD", "TH", "THEAD", "TR", "U", "UL"]);
+      if (source.nodeType === Node.TEXT_NODE) {
+        parent.append(document.createTextNode(source.textContent));
+        return;
+      }
+      if (source.nodeType !== Node.ELEMENT_NODE) return;
+      if (!allowed.has(source.tagName)) {
+        for (const child of source.childNodes) appendSafeDocumentNode(child, parent);
+        return;
+      }
+      const element = document.createElement(source.tagName.toLowerCase());
+      if (source.tagName === "A") {
+        try {
+          const href = new URL(source.getAttribute("href"), location.href);
+          if (["http:", "https:", "mailto:"].includes(href.protocol)) {
+            element.href = href.href;
+            element.target = "_blank";
+            element.rel = "noopener noreferrer";
+          }
+        } catch {
+          element.textContent = source.textContent;
+        }
+      }
+      for (const child of source.childNodes) appendSafeDocumentNode(child, element);
+      parent.append(element);
+    }
+
+    async function renderDocx(response, container) {
+      const mammoth = await loadScript(
+        "https://cdn.jsdelivr.net/npm/mammoth@1.9.1/mammoth.browser.min.js",
+        "sha384-Dmql2RDFhRnFI5K9k2OlF+n+0KL1nR4scY5Akjy8jw8GEbmChSzpsB6Q4Mv+xF0L",
+        "mammoth"
+      );
+      const result = await mammoth.convertToHtml({ arrayBuffer: await response.arrayBuffer() });
+      const parsed = new DOMParser().parseFromString(result.value, "text/html");
+      for (const child of parsed.body.childNodes) appendSafeDocumentNode(child, container);
+    }
+
+    async function loadLessonContent(item, container) {
+      const url = new URL(catalogHref(item.path), location.href);
+      container.replaceChildren();
+      const loading = document.createElement("p");
+      loading.className = "loading";
+      loading.textContent = "Loading lesson…";
+      container.append(loading);
+      try {
+        const response = await fetch(url.href);
+        if (!response.ok) throw new Error(`File request failed (${response.status}).`);
+        if (item.extension === ".docx") {
+          await renderDocx(response, container);
+        } else if (item.extension === ".ipynb") {
+          renderNotebook(await response.json(), container, url);
+        } else if (item.extension === ".md" || item.extension === ".markdown") {
+          renderMarkdown(await response.text(), container, url);
+        } else if (item.extension === ".py") {
+          const pre = document.createElement("pre");
+          const code = document.createElement("code");
+          code.textContent = await response.text();
+          pre.append(code);
+          container.append(pre);
+        } else if ([".pdf", ".html", ".htm", ".ppt", ".pptx", ".doc"].includes(item.extension)) {
+          const message = document.createElement("div");
+          message.className = "reader-error";
+          message.textContent = "This file is available from the course overview’s file library. Open it there for its supported preview or download the original file.";
+          container.append(message);
+        } else {
+          const message = document.createElement("div");
+          message.className = "reader-error";
+          message.textContent = "This file type is available as a download from the course overview.";
+          container.append(message);
+        }
+        if (!container.childNodes.length) {
+          const empty = document.createElement("p");
+          empty.textContent = "This lesson does not contain previewable content.";
+          container.append(empty);
+        }
+        loading.remove();
+      } catch (error) {
+        loading.remove();
+        const message = document.createElement("div");
+        message.className = "reader-error";
+        message.textContent = `Could not load this lesson: ${error.message}. Serve the site over HTTP or HTTPS and check the file is included in the repository. DOCX previews also need internet access to load their reader library.`;
+        container.append(message);
+      }
+    }
+
+    function showError(message) {
+      articleArea.replaceChildren();
+      const box = document.createElement("div");
+      box.className = "reader-error";
+      box.textContent = message;
+      articleArea.append(box);
+    }
+
+    sidebarSearch.addEventListener("input", () => {
+      const query = sidebarSearch.value.trim().toLowerCase();
+      for (const group of sidebarList.querySelectorAll(".course-group")) {
+        let visible = 0;
+        for (const link of group.querySelectorAll(".lesson-link")) {
+          const match = `${link.textContent} ${link.dataset.path}`.toLowerCase().includes(query);
+          link.hidden = !match;
+          if (match) visible += 1;
+        }
+        group.hidden = visible === 0 && !group.dataset.search.includes(query);
+        if (query && visible) group.open = true;
+      }
+    });
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = document.body.classList.toggle("sidebar-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    document.querySelector("#first-lesson").addEventListener("click", () => {
+      const first = lessons.find(item => moduleName(item.name) === "Module 1");
+      if (first) selectLesson(first.path, true);
+      else sidebarStatus.textContent = "Module 1 was not found in the course catalog.";
+    });
+    window.addEventListener("popstate", () => {
+      const path = currentPath();
+      if (path) selectLesson(path, false);
+      else location.reload();
+    });
+
+    async function loadCatalog() {
+      try {
+        const response = await fetch(new URL(`${fileBase}catalog.json`, location.href), { cache: "no-cache" });
+        if (!response.ok) throw new Error(`Catalog request failed (${response.status}).`);
+        const catalog = await response.json();
+        if (!Array.isArray(catalog)) throw new Error("The catalog is not a file list.");
+        renderSidebar(catalog);
+      } catch (error) {
+        sidebarStatus.textContent = `Could not load course modules: ${error.message}. Generate catalog.json and serve this website over HTTP or HTTPS.`;
+      }
+    }
+
+    loadCatalog();
+  </script>
+</body>
+</html>

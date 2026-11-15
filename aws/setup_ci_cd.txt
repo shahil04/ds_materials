@@ -1,0 +1,23 @@
+- git --> install 
+--> go to same file location in cmd (in loction bar CMD )
+or open code folder in vs --> cmd type --> code .
+git config username and email
+
+--> git init (initilize 1st time in git 
+2. git status
+3. git add * --> add all file to track
+4. git commit -m "notes write "
+
+** github 
+	1.login the github
+	2.create a repositiory
+	3.
+git (cmd)--> 1.git remote add origin repositiory
+	2. git push -u origin master(your branch name) 
+
+---
+update code or version of update in github
+1. git status
+3. git add * --> add all file to track
+4. git commit -m "notes write "
+5. git push 

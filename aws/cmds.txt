@@ -1,0 +1,26 @@
+dir --> show the files and folders in current dirictory
+cd (change directory)--> switch from 1 folder to another
+cls (clear) -->clean the CMD 
+cd .. --> go back to previous folders
+mkdir(make the diricory) --> create new folder
+rmdir(remove directory) --> delete the folder
+CTRL+ C --> terminate the commands
+del [filename]: Permanently deletes a file (bypasses the Recycle Bi
+echo [content] > filename.txt
+cd --> only cd command use for get current working directory
+
+code. (. --> dot means same folder ) open in vs code"
+ 
+
+=================================================
+Setup & Configuration
+git config --global user.name "Your Name": Sets your username across all your repositories.
+git config --global user.email "your.email@example.com": Links your email to your code commits.
+git init: Initializes a brand new local Git repository in your current folder.
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/shahil04/portfolio2.git
+git push -u origin master

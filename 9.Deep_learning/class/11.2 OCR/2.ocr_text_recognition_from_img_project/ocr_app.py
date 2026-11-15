@@ -8,6 +8,7 @@ st.title("📝 OCR Text Recognition with Pytesseract")
 
 uploaded_file = st.file_uploader("Upload an image with text", type=["jpg", "jpeg", "png"])
 if uploaded_file:
+    "this functions use to upload a file "
     image = load_image(uploaded_file.read())
     st.image(image, caption="Original Image", use_column_width=True)
 
