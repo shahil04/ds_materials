@@ -22,10 +22,10 @@ Here is the summary of AI news articles in markdown format:
 
 ### 2025-06-04
 * **Meraqui: Building Bharat's Workforce OS with Tech, Trust, and Vision.** [Read more](https://yourstory.com/2025/06/meraqui-workforce-ai-platform-india)
-* **AI in Predictive Maintenance: A Strategic Advantage for India’s B2B Sector.** [Read more](https://www.bisinfotech.com/ai-in-predictive-maintenance-a-strategic-advantage-for-indias-b2b-sector/)
+* **AI in Predictive Maintenance: A Strategic Advantage for Indiaï¿½s B2B Sector.** [Read more](https://www.bisinfotech.com/ai-in-predictive-maintenance-a-strategic-advantage-for-indias-b2b-sector/)
 * **Microsoft is offering free cybersecurity program to European governments to bolster defenses against cyber threats.** [Read more](https://www.insurancejournal.com/news/international/2025/06/04/826287.htm)
 
 ### 2025-06-03
 * **Stack AI at FinovateSpring 2025: How executives are navigating AI implementation today.** [Read more](https://www.fintechfutures.com/fintech/video-stack-ai-at-finovatespring-2025-how-executives-are-navigating-ai-implementation-today)
 * **This month in AI: Layoffs, agentic tools, and mega acquisitions.** [Read more](https://www.fintechfutures.com/fintech-start-ups/this-month-in-ai-layoffs-agentic-tools-and-mega-acquisitions)
-* **AI-powered Smart Keyword Filters to limit content you don’t want to see.** [Read more](https://techcrunch.com/podcast/solo-capitalist-elad-gils-newest-gig-teaching-old-companies-new-tricks-with-ai/)
+* **AI-powered Smart Keyword Filters to limit content you donï¿½t want to see.** [Read more](https://techcrunch.com/podcast/solo-capitalist-elad-gils-newest-gig-teaching-old-companies-new-tricks-with-ai/)

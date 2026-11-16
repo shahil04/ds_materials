@@ -11,14 +11,14 @@ Here are the AI news articles summarized in markdown format:
 - Why Looking Poor Is Important: The Psychology of Wealth in Disguise [https://yourstory.com/2025/06/why-looking-poor-is-important-psychology-of-wealth](https://yourstory.com/2025/06/why-looking-poor-is-important-psychology-of-wealth)
 - Quick commerce unicorn Zepto unlikely to go public in 2026 [https://yourstory.com/2025/06/zepto-quick-commerce-unicorn](https://yourstory.com/2025/06/zepto-quick-commerce-unicorn)
 - 7 Non-fiction books so bold they deserve a warning label [https://yourstory.com/2025/06/7-non-fiction-books-bold](https://yourstory.com/2025/06/7-non-fiction-books-bold)
-- Inside Myntra’s fashion playbook; Marico’s D2C gameplan [https://yourstory.com/2025/06/myntra-fashion-playbook-marico-d2c-gameplan](https://yourstory.com/2025/06/myntra-fashion-playbook-marico-d2c-gameplan)
+- Inside Myntraï¿½s fashion playbook; Maricoï¿½s D2C gameplan [https://yourstory.com/2025/06/myntra-fashion-playbook-marico-d2c-gameplan](https://yourstory.com/2025/06/myntra-fashion-playbook-marico-d2c-gameplan)
 - Startup news and updates: daily roundup (June 3, 2025) [https://yourstory.com/2025/06/startup-news-updates-daily-roundup-june-3-2025](https://yourstory.com/2025/06/startup-news-updates-daily-roundup-june-3-2025)
 
 ### 2025-05-30
-- Building India’s AI-Ready Workforce: The Launch of Mirai School of Technology [https://www.thehansindia.com/business/building-indias-ai-ready-workforce-the-launch-of-mirai-school-of-technology-975549](https://www.thehansindia.com/business/building-indias-ai-ready-workforce-the-launch-of-mirai-school-of-technology-975549)
+- Building Indiaï¿½s AI-Ready Workforce: The Launch of Mirai School of Technology [https://www.thehansindia.com/business/building-indias-ai-ready-workforce-the-launch-of-mirai-school-of-technology-975549](https://www.thehansindia.com/business/building-indias-ai-ready-workforce-the-launch-of-mirai-school-of-technology-975549)
 
 ### 2025-05-25
-- Business Tech News: Google Rolls Out A Bunch Of AI Tech At It’s I/O Conference [https://www.forbes.com/sites/quickerbettertech/2025/05/25/business-tech-news-google-rolls-out-a-bunch-of-ai-tech-at-its-io-conference/](https://www.forbes.com/sites/quickerbettertech/2025/05/25/business-tech-news-google-rolls-out-a-bunch-of-ai-tech-at-its-io-conference/)
+- Business Tech News: Google Rolls Out A Bunch Of AI Tech At Itï¿½s I/O Conference [https://www.forbes.com/sites/quickerbettertech/2025/05/25/business-tech-news-google-rolls-out-a-bunch-of-ai-tech-at-its-io-conference/](https://www.forbes.com/sites/quickerbettertech/2025/05/25/business-tech-news-google-rolls-out-a-bunch-of-ai-tech-at-its-io-conference/)
 
 ### 2025-05-28
 - Next-gen AI pitchbook rival Finnish Inven grabs $12.75 for its first AI-native deal sourcing platform [https://techfundingnews.com/next-gen-ai-pitchbook-rival-finnish-inven-grabs-12-75-for-its-first-ai-native-deal-sourcing-platform/](https://techfundingnews.com/next-gen-ai-pitchbook-rival-finnish-inven-grabs-12-75-for-its-first-ai-native-deal-sourcing-platform/)
@@ -28,7 +28,7 @@ Here are the AI news articles summarized in markdown format:
 
 ### 2025-05-18
 - Business Tech News: Klarna Reverses On AI, Says Customers Like Talking To People [https://www.forbes.com/sites/quickerbettertech/2025/05/18/business-tech-news-klarna-reverses-on-ai-says-customers-like-talking-to-people/](https://www.forbes.com/sites/quickerbettertech/2025/05/18/business-tech-news-klarna-reverses-on-ai-says-customers-like-talking-to-people/)
-- Teacher's tech tell-all goes viral Welcome to Fox News’ Artificial Intelligence newsletter with the latest AI technology advancements. [https://www.foxnews.com/tech/ai-newsletter-teachers-tech-tell-all-goes-viral](https://www.foxnews.com/tech/ai-newsletter-teachers-tech-tell-all-goes-viral)
+- Teacher's tech tell-all goes viral Welcome to Fox Newsï¿½ Artificial Intelligence newsletter with the latest AI technology advancements. [https://www.foxnews.com/tech/ai-newsletter-teachers-tech-tell-all-goes-viral](https://www.foxnews.com/tech/ai-newsletter-teachers-tech-tell-all-goes-viral)
 
 ### 2025-05-11
 - Business Tech News: Microsoft Is Pushing The Business Benefits Of AI [https://www.forbes.com/sites/quickerbettertech/2025/05/11/business-tech-news-microsoft-is-pushing-the-business-benefits-of-ai/](https://www.forbes.com/sites/quickerbettertech/2025/05/11/business-tech-news-microsoft-is-pushing-the-business-benefits-of-ai/)
