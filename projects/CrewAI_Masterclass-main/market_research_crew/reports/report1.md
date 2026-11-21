@@ -1,5 +1,3 @@
----
-
 # Business Analysis and Final Recommendation Report  
 **AI-Powered YouTube Video Summarization and Cross-Platform Social Media Posting Tool**
 

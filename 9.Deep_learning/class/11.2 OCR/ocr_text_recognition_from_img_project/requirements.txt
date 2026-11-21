@@ -2,3 +2,6 @@ streamlit
 opencv-python
 pytesseract
 numpy
+pillow
+pymupdf
+scikit-learn
