@@ -1,0 +1,13 @@
+[project]
+name = "3-weather-forcasting"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.5",
+    "pandas>=3.1.1",
+    "plotly>=7.1.0",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "statsmodels>=0.15.0",
+    "streamlit>=1.67.0",
+]

@@ -1,0 +1,5 @@
+streamlit>=1.57
+pandas
+numpy
+plotly
+statsmodels
